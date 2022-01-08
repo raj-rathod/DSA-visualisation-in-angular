@@ -2,11 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import { Location } from '@angular/common';
 
 @Component({
-  selector: 'app-algorithm',
-  templateUrl: './algorithm.component.html',
-  styleUrls: ['./algorithm.component.css']
+  selector: 'app-boolean',
+  templateUrl: './boolean.component.html',
+  styleUrls: ['./boolean.component.css']
 })
-export class AlgorithmComponent implements OnInit {
+export class BooleanComponent implements OnInit {
 
   constructor(
     private location: Location

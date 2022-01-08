@@ -6,3 +6,33 @@
 .tab{
     cursor: pointer;
 }
+@media (max-width: 767.98px) {
+    h1 {
+        font-size: 1.5rem !important;
+        line-height: 2rem !important ;
+        font-weight: 600 !important;
+        
+      }
+      h2 {
+        font-size: 0.875rem !important;
+        line-height: 1.25rem !important;
+        font-weight: 600 !important;
+      }
+      h4 {
+        font-size: 0.875rem !important;
+        line-height: 1.25rem !important;
+        font-weight: 600 !important;
+      }
+
+      p{
+          font-size: 0.75rem !important;
+          line-height: 1.125rem !important;
+      }
+      
+      .fz-xs-10{
+        font-size:0.625rem !important;
+    }
+    .fz-xs-12{
+        font-size:0.75rem !important;
+    }
+}

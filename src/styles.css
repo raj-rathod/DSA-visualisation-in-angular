@@ -1,1 +1,8 @@
 @import "~bootstrap/dist/css/bootstrap.css";
+.box{
+    background:rgba(16, 203, 236, 0.76);
+    border-radius: 8px;
+}
+.tab{
+    cursor: pointer;
+}

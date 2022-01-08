@@ -18,6 +18,18 @@ const routes: Routes = [
     path: 'algorithm', component: AlgorithmComponent
   },
   {
+    path:'primitive',
+    loadChildren: () =>
+          import('./components/primitiveData/primitivedata.module').then(
+            (m) => m.PrimitiveDataModule),
+  },
+  {
+    path:'non-primitive',
+    loadChildren: () =>
+          import('./components/NonprimitiveData/non-primitiveData.module').then(
+            (m) => m.NonPrimitiveDataModule),
+  },
+  {
     path: '**', component: HomeComponent
   }
 ];

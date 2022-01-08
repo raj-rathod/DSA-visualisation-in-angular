@@ -2,11 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import { Location } from '@angular/common';
 
 @Component({
-  selector: 'app-algorithm',
-  templateUrl: './algorithm.component.html',
-  styleUrls: ['./algorithm.component.css']
+  selector: 'app-linked-list',
+  templateUrl: './linked-list.component.html',
+  styleUrls: ['./linked-list.component.css']
 })
-export class AlgorithmComponent implements OnInit {
+export class LinkedListComponent implements OnInit {
 
   constructor(
     private location: Location

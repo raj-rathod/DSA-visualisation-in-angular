@@ -1,1 +1,142 @@
-<p>data-structure works!</p>
+<h1 class="text-center mt-5">Data Structure Hierarchy</h1>
+<div class="d-flex justify-content-center mt-5">
+    <div class="box p-lg-3 p-2">
+        <p class="m-0">Types of data structure</p>
+    </div>
+</div>
+<div class="d-flex justify-content-center">
+    <div class="border-end pt-lg-5 pt-4 border-2 border-secondary w-0"></div>
+</div>
+<div class="d-flex justify-content-center w-100">
+    <div class="border-top border-2 border-secondary col-10"></div>
+</div>
+<div class="d-flex justify-content-center margin-top">
+    <div class="d-flex justify-content-between col-10">
+        <div class="border-end pt-lg-5 pt-4 border-2 border-secondary w-0 margin-left"></div>
+        <div class="border-end pt-lg-5 pt-4 border-2 border-secondary w-0"></div>
+    </div>
+</div>
+<div class="d-flex justify-content-between">
+    <div class="box p-lg-3 p-2 ms-lg-4 tab" (click)="primitiveDataTypeShow()">
+        <p class="m-0">Primitive Data</p>
+    </div>
+    <div class="box p-lg-3 p-2 tab" (click)="nonprimitiveDataTypeShow()">
+        <p class="m-0">Nonprimitive Data</p>
+    </div>
+</div>
+<ng-container *ngIf="primitiveTypeShow">
+    <div class="ms-lg-5 ms-3 ps-2">
+        <div class="border-end pt-lg-5 pt-4 border-2 border-secondary w-0 ms-lg-5"></div>
+    </div>
+    <div class="border-top border-2 border-secondary col-lg-9 col-11 ms-lg-5 ms-2"></div>
+    <div class="d-flex justify-content-between col-lg-9 col-11 margin-top ms-lg-5 ms-2">
+        <div class="border-end pt-lg-5 pt-4 border-2 border-secondary w-0 margin-left"></div>
+        <div class="border-end pt-lg-5 pt-4 border-2 border-secondary w-0"></div>
+        <div class="border-end pt-lg-5 pt-4 border-2 border-secondary w-0 margin-left"></div>
+        <div class="border-end pt-lg-5 pt-4 border-2 border-secondary w-0"></div>
+    </div>
+    <div class="d-flex justify-content-between col-lg-10">
+        <div class="box p-lg-3 p-2 tab">
+            <p class="m-0">Integer</p>
+        </div>
+        <div class="box p-lg-3 p-2 tab">
+            <p class="m-0">Float</p>
+        </div>
+        <div class="box p-lg-3 p-2 tab">
+            <p class="m-0">Character</p>
+        </div>
+        <div class="box p-lg-3 p-2 tab">
+            <p class="m-0">Boolean</p>
+        </div>
+    </div>
+</ng-container>
+<ng-container *ngIf="nonprimitiveTypeShow">
+    <div class='float-end'>
+        <div class="me-lg-5 me-5 pe-5">
+            <div class="border-end pt-lg-5 pt-4 border-2 border-secondary w-0"></div>
+        </div>
+    </div>
+   <div class='margin-top d-flex justify-content-end col-12'>
+      <div class="border-top border-2 border-secondary col-lg-10 col-10 me-lg-5 me-4"></div>
+   </div>
+   <div class="d-flex justify-content-end col-12">
+       <div class="d-flex justify-content-between col-lg-10 col-10 margin-top me-lg-5 me-4">
+          <div class="border-end pt-lg-5 pt-4 border-2 border-secondary w-0 margin-left"></div>
+          <div class="border-end pt-lg-5 pt-4 border-2 border-secondary w-0"></div>
+       </div>
+   </div>
+   <div class="d-flex justify-content-end col-12">
+        <div class="d-flex justify-content-between col-lg-11 col-12">
+            <div class="box p-lg-3 p-2 tab" (click)="linearDataShow()">
+                <p class="m-0">Linear Data</p>
+            </div>
+            <div class="box p-lg-3 p-2 tab" (click)="nonlinearDataShow()">
+                <p class="m-0">Non-linear Data</p>
+            </div>
+        </div>
+   </div>
+   <ng-container *ngIf="linearData">
+    <div class="ms-lg-5 ms-3 ps-lg-5 ps-2">
+        <div class="border-end pt-lg-5 pt-4 border-2 border-secondary w-0 ms-lg-5"></div>
+    </div>
+    <div class="border-top border-2 border-secondary col-lg-9 col-11 ms-lg-5 ms-2"></div>
+    <div class="d-flex justify-content-between col-lg-9 col-11 margin-top ms-lg-5 ms-2">
+        <div class="border-end pt-lg-5 pt-4 border-2 border-secondary w-0 margin-left"></div>
+        <div class="border-end pt-lg-5 pt-4 border-2 border-secondary w-0"></div>
+        <div class="border-end pt-lg-5 pt-4 border-2 border-secondary w-0 margin-left"></div>
+        <div class="border-end pt-lg-5 pt-4 border-2 border-secondary w-0"></div>
+    </div>
+    <div class="d-flex justify-content-between col-lg-10">
+        <div class="box p-lg-3 p-2 tab">
+            <p class="m-0">Array</p>
+        </div>
+        <div class="box p-lg-3 p-2 tab">
+            <p class="m-0">Stack</p>
+        </div>
+        <div class="box p-lg-3 p-2 tab">
+            <p class="m-0">Queue</p>
+        </div>
+        <div class="box p-lg-3 p-2 tab">
+            <p class="m-0">Linked list</p>
+        </div>
+    </div>
+   </ng-container>
+   <ng-container *ngIf="nonLinearData">
+    <div class="d-flex justify-content-end">
+        <div class="me-lg-5 me-3 pe-lg-5 pe-2">
+            <div class="border-end pt-lg-5 pt-4 border-2 border-secondary w-0 ms-lg-5"></div>
+        </div>
+    </div>
+    <div class="d-flex justify-content-end">
+        <div class="border-top border-2 border-secondary col-lg-9 col-11 me-lg-5 me-3"></div>
+    </div>
+     <div class="d-flex justify-content-end">
+        <div class="d-flex justify-content-between col-lg-9 col-11 margin-top me-lg-5 me-3">
+            <div class="border-end pt-lg-5 pt-4 border-2 border-secondary w-0 margin-left"></div>
+            <div class="border-end pt-lg-5 pt-4 border-2 border-secondary w-0"></div>
+            <div class="border-end pt-lg-5 pt-4 border-2 border-secondary w-0 margin-left me-4"></div>
+            <div class="border-end pt-lg-5 pt-4 border-2 border-secondary w-0"></div>
+        </div>
+     </div>
+    <div class="d-flex justify-content-end">
+        <div class="d-flex justify-content-between col-lg-10 col-12">
+            <div class="box p-lg-3 p-2 tab ms-lg-4">
+                <p class="m-0">Tree</p>
+            </div>
+            <div class="box p-lg-3 p-2 tab">
+                <p class="m-0">Graph</p>
+            </div>
+            <div class="box p-lg-3 p-2 tab ">
+                <p class="m-0">Trie</p>
+            </div>
+            <div class="box p-lg-3 p-2 tab">
+                <p class="m-0">Hash table</p>
+            </div>
+        </div>
+    </div>
+   </ng-container>
+</ng-container>
+
+
+
+

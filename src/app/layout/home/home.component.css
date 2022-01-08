@@ -1,0 +1,10 @@
+.circle{
+    cursor: pointer;
+    border-radius: 50%;
+    width: 140px;
+    height: 140px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    background-color:rgb(13, 212, 238);
+}

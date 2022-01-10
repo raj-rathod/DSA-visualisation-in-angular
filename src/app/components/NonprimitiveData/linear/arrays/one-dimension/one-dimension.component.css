@@ -1,0 +1,22 @@
+.index{
+    background:none;
+}
+.index:hover{
+    background:rgba(240, 92, 92, 0.418);
+    color:white;
+}
+.index-active{
+    background:rgba(212, 62, 62, 0.829);
+    color:white;
+}
+.data{
+    background:none;
+}
+.data:hover{
+    background: rgba(42, 145, 230, 0.568);
+    color:white;
+}
+.data-active{
+    background: rgba(17, 133, 228, 0.918);
+    color:white;
+}

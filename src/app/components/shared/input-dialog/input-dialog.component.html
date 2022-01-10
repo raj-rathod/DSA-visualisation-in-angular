@@ -1,0 +1,22 @@
+<div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="staticBackdropLabel">Enter the input values</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form>
+            <div class="mb-3">
+              <input type="text" name="input" 
+              class="form-control" [(ngModel)]="input" 
+              placeholder="1 2 3 4 or just 1"
+              autocomplete="off"
+              >
+            </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn box" data-bs-dismiss="modal" (click)="submit()">Submit</button>
+      </div>
+    </div>
+  </div>

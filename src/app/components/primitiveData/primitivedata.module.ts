@@ -5,6 +5,7 @@ import { IntegerComponent } from './integer/integer.component';
 import { FloatComponent } from './float/float.component';
 import { CharacterComponent } from './character/character.component';
 import { BooleanComponent } from './boolean/boolean.component';
+import { ReadMoreComponent } from './read-more/read-more.component';
 
 
 @NgModule({
@@ -12,7 +13,8 @@ import { BooleanComponent } from './boolean/boolean.component';
     IntegerComponent,
     FloatComponent,
     CharacterComponent,
-    BooleanComponent
+    BooleanComponent,
+    ReadMoreComponent
   ],
   imports: [CommonModule, PrimitiveDataRoutingModule]
 })

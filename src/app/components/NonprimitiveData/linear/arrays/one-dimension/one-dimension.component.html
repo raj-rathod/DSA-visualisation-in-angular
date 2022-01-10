@@ -1,0 +1,178 @@
+<h4>One Dimension array operations</h4>
+<div class="d-flex flex-wrap align-items-center mt-3">
+    <div class="box p-lg-2 p-1 px-lg-3 px-2 btn me-lg-4 me-3 mb-2 opbtn"
+     data-bs-toggle="modal" data-bs-target="#input-dialog"
+     (click)="opbtnSection(0)"
+     >
+        <p class="m-0">Create a new array</p>
+    </div>
+    <div [class]="operationShow ?'box p-lg-2 p-1 px-lg-3 px-2 tab me-lg-4 me-3 mb-2 opbtn':'d-none'"  (click)="opbtnSection(1)">
+        <p class="m-0">Insertion</p>
+    </div>
+    <div [class]="operationShow ?'box p-lg-2 p-1 px-lg-3 px-2 tab me-lg-4 me-3 mb-2 opbtn':'d-none'"  (click)="opbtnSection(2)">
+        <p class="m-0">Deletion</p>
+    </div>
+    <div [class]="operationShow ?'box p-lg-2 p-1 px-lg-3 px-2 tab me-lg-4 me-3 mb-2 opbtn':'d-none'"  (click)="opbtnSection(3)">
+        <p class="m-0">Update</p>
+    </div>
+    <div [class]="operationShow ?'box p-lg-2 p-1 px-lg-3 px-2 tab me-lg-4 me-3 mb-2 opbtn':'d-none'"  (click)="opbtnSection(4)">
+        <p class="m-0">Rotate Array</p>
+    </div>
+</div>
+<div class="mt-4" *ngIf="insertSubMenu">
+    <h5>Insertion sub menu</h5>
+    <div class="d-flex flex-wrap align-items-center mt-3">
+        <div class="box p-lg-2 p-1 px-lg-3 px-2 btn me-lg-4 me-3 mb-2 opInsBtn" 
+        data-bs-toggle="modal" data-bs-target="#insert-dialog"
+        (click)="opInsBtnSelection(0)"
+        >
+           <p class="m-0">Insert</p>
+        </div>
+        <div class="box p-lg-2 p-1 px-lg-3 px-2 btn me-lg-4 me-3 mb-2 opInsBtn" 
+        data-bs-toggle="modal" data-bs-target="#insert-at-first-dialog"
+        (click)="opInsBtnSelection(1)"
+        >
+            <p class="m-0">Insert at first</p>
+         </div>
+         <div class="box p-lg-2 p-1 px-lg-3 px-2 btn me-lg-4 me-3 mb-2 opInsBtn" 
+         data-bs-toggle="modal" data-bs-target="#insert-at-index-dialog"
+         (click)="opInsBtnSelection(2)"
+         >
+            <p class="m-0">Insert at Index</p>
+         </div>
+    </div>
+</div>
+<div class="mt-4" *ngIf="deleteSubMenu">
+    <h5>Deletion sub menu</h5>
+    <div class="d-flex flex-wrap align-items-center mt-3">
+        <div class="box p-lg-2 p-1 px-lg-3 px-2 btn me-lg-4 me-3 mb-2 opDltBtn"
+         (click)="opDltBtnSelection(0)"
+        >
+           <p class="m-0">Delete at end</p>
+        </div>
+        <div class="box p-lg-2 p-1 px-lg-3 px-2 btn me-lg-4 me-3 mb-2 opDltBtn"
+         (click)="opDltBtnSelection(1)"
+        >
+            <p class="m-0">Delete at first</p>
+         </div>
+         <div class="box p-lg-2 p-1 px-lg-3 px-2 btn me-lg-4 me-3 mb-2 opDltBtn"
+         data-bs-toggle="modal" data-bs-target="#delete-at-index-dialog"
+         (click)="opDltBtnSelection(2)"
+         >
+            <p class="m-0">Delete at Index</p>
+         </div>
+         <div class="box p-lg-2 p-1 px-lg-3 px-2 btn me-lg-4 me-3 mb-2 opDltBtn"
+         (click)="opDltBtnSelection(3)"
+         >
+            <p class="m-0">Delete all</p>
+         </div>
+    </div>
+</div>
+<div class="mt-4" *ngIf="updateSubMenu">
+    <h5>Upadation sub menu</h5>
+    <div class="d-flex flex-wrap align-items-center mt-3">
+        <div class="box p-lg-2 p-1 px-lg-3 px-2 btn me-lg-4 me-3 mb-2 opUpdBtn" 
+        data-bs-toggle="modal" data-bs-target="#update-at-end-dialog"
+        (click)="opUpdBtnSelection(0)"
+        >
+           <p class="m-0">Update at end</p>
+        </div>
+        <div class="box p-lg-2 p-1 px-lg-3 px-2 btn me-lg-4 me-3 mb-2 opUpdBtn" 
+        data-bs-toggle="modal" data-bs-target="#update-at-first-dialog"
+        (click)="opUpdBtnSelection(1)"
+        >
+            <p class="m-0">Update at first</p>
+         </div>
+         <div class="box p-lg-2 p-1 px-lg-3 px-2 btn me-lg-4 me-3 mb-2 opUpdBtn" 
+         data-bs-toggle="modal" data-bs-target="#update-at-index-dialog"
+         (click)="opUpdBtnSelection(2)"
+         >
+            <p class="m-0">Update at Index</p>
+         </div>
+         <div class="box p-lg-2 p-1 px-lg-3 px-2 btn me-lg-4 me-3 mb-2 opUpdBtn" 
+         data-bs-toggle="modal" data-bs-target="#input-dialog"
+         (click)="opUpdBtnSelection(3)"
+         >
+            <p class="m-0">Update all</p>
+         </div>
+    </div>
+</div>
+<!---Array section-->
+<div class="mt-5 mb-5" *ngIf="createdArr.length > 0">
+  <h4 class="text-center">Generated Array</h4>
+  <div class="d-flex flex-wrap mt-3">
+    <div class='me-lg-3 me-2 mb-2'>
+        <div class='border border-2 border-info'>
+           <div class="tab w-100 px-lg-3 px-2 py-lg-2 py-1 text-center
+                border-bottom border-2 border-danger"
+                >
+               <p class="m-0">Index</p>
+           </div>
+           <div class='tab w-100 px-lg-3 px-2 py-lg-2 py-1 text-center'>
+             <p class="m-0">Data</p>
+           </div>
+         </div>
+     </div>
+      <div class='me-lg-3 me-2 mb-2' *ngFor="let data of createdArr; let i = index">
+         <div class='border border-2 border-info'>
+            <div 
+                class="index tab w-100 px-lg-3 px-2 py-lg-2 py-1 text-center 
+                border-bottom border-2 border-danger"
+                (click)="selectedIndex(i)"
+                >
+                <p class="m-0">{{i}}</p>
+            </div>
+            <div 
+            class='data tab w-100 px-lg-3 px-2 py-lg-2 py-1 text-center'
+            (click)="selectedData(i)"
+            >
+              <p class="m-0">{{data}}</p>
+            </div>
+         </div>
+      </div>
+  </div>
+  <div class="mt-4" *ngIf="indexWiseShow">
+      <h5 class="text-center">Index wise value</h5>
+      <p>Selected index is : {{index}} </p>
+      <p class="m-0">Data of selected index is: {{value}}</p>
+      <p class="m-0">
+          <small>it works like as arr[index]</small>
+      </p>
+  </div>
+  <div class="mt-4" *ngIf="datawiseShow">
+    <h5 class="text-center">Data wise Index</h5>
+    <p>Selected data is : {{datavalue}} </p>
+    <p class="m-0">Index of selected data is: {{dataindex}}</p>
+    <p class="m-0">
+        <small>it works like as arr.indexOff(data)</small>
+    </p>
+</div>
+</div>
+ <!--Input dialog Modal -->
+<div class="modal fade" id="input-dialog" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <app-input-dialog (inputValues)="createNewArray($event)"></app-input-dialog>
+</div>
+<!--insert or update dialog Modal --> 
+<div class="modal fade" id="insert-dialog" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <app-insert-update-data [indexShow]="false" (inputValues)="insertIntoArray($event)"></app-insert-update-data>
+</div>
+<div class="modal fade" id="insert-at-first-dialog" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <app-insert-update-data [indexShow]="false" (inputValues)="insertAtFirst($event)"></app-insert-update-data>
+</div>
+<div class="modal fade" id="insert-at-index-dialog" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <app-insert-update-data [indexShow]="true" (inputValues)="insertAtIndex($event)"></app-insert-update-data>
+</div>
+<!---Delete --->
+<div class="modal fade" id="delete-at-index-dialog" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <app-enter-value [title]="'Enter index'" (inputValues)="deleteAtIndex(+$event)"></app-enter-value>
+</div>
+<!---update--->
+<div class="modal fade" id="update-at-first-dialog" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <app-insert-update-data [indexShow]="false" (inputValues)="updateAtFirst($event)"></app-insert-update-data>
+</div>
+<div class="modal fade" id="update-at-end-dialog" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <app-insert-update-data [indexShow]="false" (inputValues)="updateAtEnd($event)"></app-insert-update-data>
+</div>
+<div class="modal fade" id="update-at-index-dialog" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <app-insert-update-data [indexShow]="true" (inputValues)="updateAtIndex($event)"></app-insert-update-data>
+</div>

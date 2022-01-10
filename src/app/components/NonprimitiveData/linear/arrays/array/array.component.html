@@ -1,0 +1,24 @@
+<div 
+   class="d-flex align-items-center float-start btn bg-info px-lg-3 px-2 py-lg-2 py-1 mt-lg-3 mt-1"
+   routerLink="/data-structure">
+    <img src="assets/icons/Back-white.png" alt="">
+    <p class="m-0 ms-1 text-light fw-bold d-lg-block d-none">Back</p>
+</div>
+<h1 class="text-center mt-5">Array</h1>
+<div class="mt-lg-5 mt-4">
+    <div class="row">
+        <div class="col-6 pe-0">
+           <div class="btn-bg p-lg-3 p-2 rounded-start tab arraytab " (click)="tabChange(0)">
+               <p class='text-center m-0'>1D-Array</p>
+           </div>
+        </div>
+        <div class="col-6 ps-0">
+            <div class="btn-bg-unactive p-lg-3 p-2 rounded-end tab arraytab" (click)="tabChange(1)">
+                <p class='text-center m-0'>2D-Array</p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="mt-4">
+    <router-outlet></router-outlet>
+</div>

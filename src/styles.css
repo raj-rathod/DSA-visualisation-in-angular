@@ -2,6 +2,28 @@
 .box{
     background:rgba(16, 203, 236, 0.76);
     border-radius: 8px;
+    color:white;
+    font-weight:700;
+}
+.box-active{
+  background:rgba(4, 112, 103, 0.76);
+  border-radius: 8px;
+  color:white;
+  font-weight:700;
+}
+.data-section-active{
+   background:rgba(251, 255, 0, 0.493);
+}
+.btn-bg{
+  background:rgba(16, 203, 236, 0.76);
+  color:white;
+  font-weight:700;
+}
+.btn-bg-unactive{
+  background:rgba(16, 203, 236, 0.76);
+  color:white;
+  font-weight:700;
+  opacity: 0.5;
 }
 .tab{
     cursor: pointer;
@@ -36,3 +58,5 @@
         font-size:0.75rem !important;
     }
 }
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

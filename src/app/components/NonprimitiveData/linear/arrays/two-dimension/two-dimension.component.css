@@ -1,0 +1,27 @@
+.data-box{
+    background:none;
+    border: 2px solid rgba(30, 155, 212, 0.712);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    height:70px;
+    width:70px;
+}
+.data-box:hover{
+    background:rgba(240, 92, 92, 0.418);
+    color:white;
+}
+.data-box-active{
+    background:rgba(212, 62, 62, 0.829);
+    color:white;
+}
+.data-box-adjacent{
+    background:rgba(41, 160, 154, 0.911);
+    color:white;
+}
+@media (max-width: 767.98px) {
+    .data-box{
+        height:50px;
+        width:50px;
+    }
+}

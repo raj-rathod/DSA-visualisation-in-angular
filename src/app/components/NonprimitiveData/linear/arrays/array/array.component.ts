@@ -1,4 +1,4 @@
-import { Component, ElementRef, OnInit } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
@@ -6,14 +6,22 @@ import { Router } from '@angular/router';
   templateUrl: './array.component.html',
   styleUrls: ['./array.component.css']
 })
-export class ArrayComponent implements OnInit {
-
+export class ArrayComponent implements OnInit, AfterViewInit {
+  state = 0;
   constructor(
     private router: Router,
     private elRef: ElementRef
   ) { }
 
   ngOnInit(): void {
+    if(this.router.routerState.snapshot.url.split('/')[4] === 'two-dimension'){
+      this.state = 1;
+    }else{
+      this.state = 0;
+    }
+  }
+  ngAfterViewInit(): void {
+     this.tabChange(this.state);
   }
   tabChange(index: number): void {
     const tabRef = this.elRef.nativeElement.querySelectorAll('.arraytab');

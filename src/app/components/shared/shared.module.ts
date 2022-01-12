@@ -4,6 +4,7 @@ import { InputDialogComponent } from './input-dialog/input-dialog.component';
 import { FormsModule } from '@angular/forms';
 import { InsertUpdateDataComponent } from './insert-update-data/insert-update-data.component';
 import { EnterValueComponent } from './enter-value/enter-value.component';
+import { MatrixInputComponent } from './matrix-input/matrix-input.component';
 
 
 
@@ -11,7 +12,8 @@ import { EnterValueComponent } from './enter-value/enter-value.component';
   declarations: [
     InputDialogComponent,
     InsertUpdateDataComponent,
-    EnterValueComponent
+    EnterValueComponent,
+    MatrixInputComponent
   ],
   imports: [
     CommonModule,
@@ -20,7 +22,8 @@ import { EnterValueComponent } from './enter-value/enter-value.component';
   exports: [
     InputDialogComponent,
     InsertUpdateDataComponent,
-    EnterValueComponent
+    EnterValueComponent,
+    MatrixInputComponent
   ]
 })
 export class SharedModule {}

@@ -1,1 +1,139 @@
-<p>two-dimension works!</p>
+<h4>Two Dimensions array operations</h4>
+<div class="d-flex flex-wrap align-items-center mt-3">
+    <div class="box p-lg-2 p-1 px-lg-3 px-2 btn me-lg-4 me-3 mb-2 matOp"
+    data-bs-toggle="modal" data-bs-target="#input-dialog"
+    (click)="matOperationSelector(0)"
+    >
+       <p class="m-0">Create new Matrix</p>
+   </div>
+   <ng-container *ngIf="operations">
+    <div class="box p-lg-2 p-1 px-lg-3 px-2 btn me-lg-4 me-3 mb-2 matOp"
+    (click)="matOperationSelector(1)"
+   >
+      <p class="m-0">Row Selection</p>
+  </div>
+  <div class="box p-lg-2 p-1 px-lg-3 px-2 btn me-lg-4 me-3 mb-2 matOp"
+     (click)="matOperationSelector(2)"
+   >
+      <p class="m-0">Column Selection</p>
+  </div>
+  <div class="box p-lg-2 p-1 px-lg-3 px-2 btn me-lg-4 me-3 mb-2 matOp"
+     (click)="matOperationSelector(3)"
+   >
+      <p class="m-0">Matrix Transpose</p>
+  </div>
+  <div *ngIf="sizeOfMatrix.column === sizeOfMatrix.row" class="box p-lg-2 p-1 px-lg-3 px-2 btn me-lg-4 me-3 mb-2 matOp"
+     (click)="matOperationSelector(4)"
+   >
+      <p class="m-0">Left Diagonal</p>
+  </div>
+  <div *ngIf="sizeOfMatrix.column === sizeOfMatrix.row" class="box p-lg-2 p-1 px-lg-3 px-2 btn me-lg-4 me-3 mb-2 matOp"
+    (click)="matOperationSelector(5)"
+   >
+      <p class="m-0">Right Diagonal</p>
+  </div>
+   </ng-container>
+</div>
+
+<!---Matrix view--->
+<div class="row mt-5">
+    <div class="col-lg-4 col-12 order-lg-0 order-1 mb-4">
+       <ng-container *ngIf="dataBoxSelectionShow">
+           <h5 class='text-center'>Selected Data Box</h5>
+           <p>selected data is : {{data}} </p>
+           <p>dimensions of selected data are : 
+            <b>
+                M(<small>{{row}}</small>, <small>{{column}}</small>)
+            </b>
+           </p>
+           <div class="mt-lg-5 mt-4">
+                  <div class='box btn px-4 py-3'(click)="showAllAdacent()">
+                      <p class='m-0'>Show all Adjacents</p>
+                  </div>
+           </div>
+       </ng-container>
+       <ng-container *ngIf="rowSelectionShow">
+        <h5 class='text-center'>Select Row</h5>
+        <div class="d-flex flex-wrap align-items-center mt-2">
+            <div 
+            class="box p-lg-2 p-1 px-lg-3 px-2 btn me-lg-4 me-3 mb-2 rowOp"
+            *ngFor="let row of matrix; let i = index"
+            (click)="rowSelectionTab(i)"
+            >
+                <p class='m-0'>
+                     Row {{i+1}}
+                </p>
+            </div>
+            
+        </div>
+       </ng-container>
+       <ng-container *ngIf="columnSelectionShow">
+        <h5 class='text-center'>Select Column</h5>
+        <div class="d-flex flex-wrap align-items-center mt-2">
+            <div 
+            class="box p-lg-2 p-1 px-lg-3 px-2 btn me-lg-4 me-3 mb-2 colOp"
+            *ngFor="let row of matrix[0]; let i = index"
+            (click)="  columnSelectionTab(i)"
+            >
+                <p class='m-0'>
+                    Column {{i+1}}
+                </p>
+            </div>
+            
+        </div>
+       </ng-container>
+    </div>
+    <div class="col-lg-4 col-12 order-lg-1 order-0 mb-4">
+      <ng-container *ngIf="matrix.length > 0">
+        <h5 class="text-center">Matrix view</h5>
+        <div class="d-flex justify-content-center">
+            <div class="mt-3">
+                <div class="d-flex" *ngFor="let row of matrix; let i = index">
+                    <div class="data-box tab" *ngFor="let column of row; let j = index" (click)="selectDataBox(i,j)">
+                        <p class="m-0">{{column}}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+      </ng-container>
+    </div>
+    <div class="col-lg-4 col-12 order-2">
+        <ng-container *ngIf="adjacentShow">
+            <h5 class="text-center">Adjacents operations list</h5>
+            <div class="d-flex flex-wrap align-items-center mt-2">
+                <div class="box p-lg-2 p-1 px-lg-3 px-2 btn me-lg-4 me-3 mb-2 adjOp" (click)="adjacentOperation(0)">
+                    <p class='m-0'>
+                         Vertical Adjacents
+                    </p>
+                </div>
+                <div class="box p-lg-2 p-1 px-lg-3 px-2 btn me-lg-4 me-3 mb-2 adjOp" (click)="adjacentOperation(1)">
+                    <p class='m-0'>
+                         Horizontal Adjacents
+                    </p>
+                </div>
+                <div class="box p-lg-2 p-1 px-lg-3 px-2 btn me-lg-4 me-3 mb-2 adjOp" (click)="adjacentOperation(2)">
+                    <p class='m-0'>
+                         Diagonal Adjacents
+                    </p>
+                </div>
+            </div>
+        </ng-container>
+        <ng-container *ngIf="transposematrixShow">
+            <h5 class="text-center">Transpose Matrix</h5>
+            <div class="d-flex justify-content-center">
+                <div class="mt-3">
+                    <div class="d-flex" *ngFor="let row of newtransposeMatrix; let i = index">
+                        <div class="data-box tab" *ngFor="let column of row; let j = index">
+                            <p class="m-0">{{column}}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </ng-container>
+    </div>
+</div>
+
+<!---matrix input---->
+<div class="modal fade" id="input-dialog" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <app-matrix-input (inputValues)="createMatrix($event)"></app-matrix-input>
+</div>

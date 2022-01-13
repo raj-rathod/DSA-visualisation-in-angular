@@ -3,4 +3,49 @@
     <p class="m-0 ms-1 text-light fw-bold d-lg-block d-none">Back</p>
 </div>
 <h1 class="text-center mt-5">Stack</h1>
+<div class="mt-5">
+    <h5>Stack operations</h5>
+    <div class="d-flex flex-wrap align-items-center mt-3">
+        <div class="box p-lg-2 p-1 px-lg-3 px-2 btn me-lg-4 me-3 mb-2 stkOp"
+        data-bs-toggle="modal" data-bs-target="#input-dialog"
+         (click)="operations(0)">
+            <p class="m-0">Push</p>
+        </div>
+        <div class="box p-lg-2 p-1 px-lg-3 px-2 btn me-lg-4 me-3 mb-2 stkOp" (click)="operations(1)">
+            <p class="m-0">Pop</p>
+        </div>
+        <div class="box p-lg-2 p-1 px-lg-3 px-2 btn me-lg-4 me-3 mb-2 stkOp" (click)="operations(2)">
+            <p class="m-0">Clear All</p>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-lg-4 col-12 order-lg-0 order-1 mb-3"></div>
+    <div class="col-lg-4 col-12 order-lg-1 order-0 mb-3">
+        <div class="d-flex justify-content-center mt-5 align-items-end" [style.height]="heightOfStacksection()">
+            <div class="d-flex">
+                <div class="d-flex flex-column align-items-center justify-content-between">
+                      <div class="mt-2">
+                           <p class="m-0">Head <img height="25" width="40" src="assets/icons/arrow.png" alt=""></p>
+                      </div>
+                      <div *ngIf="stackData.length>1" class="mb-2">
+                        <p class="m-0">Tail<img class="ms-3" height="25" width="40" src="assets/icons/arrow.png" alt=""></p>
+                      </div>
+                </div>
+                <div class="border border-top-0 border-3 border-info ms-1">
+                      <div [class]="i===0 ? 'data-box data-box-top mt-1':'data-box mt-1'" *ngFor="let stack of stackData; let i = index">
+                          <p class="m-0 text-center">{{stack}}</p>
+                      </div>
+                      <div *ngIf='stackData.length === 0' class="data-box mt-1">
+                        <p class="m-0 text-center">Empty</p>
+                      </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-4 col-12 order-2 mb-3"></div>
 
+</div>
+<div class="modal fade" id="input-dialog" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <app-input-dialog (inputValues)="pushElement($event)"></app-input-dialog>
+</div>

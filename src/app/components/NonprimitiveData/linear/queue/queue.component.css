@@ -1,0 +1,20 @@
+.rotate{
+    transform: rotate(-90deg);
+}
+.data-box{
+    height:100px;
+    width:60px;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    background:rgba(240, 92, 92, 0.418);
+    color:white;
+}
+.data-box-head{
+    background:rgba(41, 160, 154, 0.911);
+    color:white;
+}
+.data-box-tail{
+    background:rgba(196, 98, 6, 0.938);
+    color:white;
+}

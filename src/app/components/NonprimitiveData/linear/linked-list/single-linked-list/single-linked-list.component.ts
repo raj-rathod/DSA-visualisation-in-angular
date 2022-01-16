@@ -217,10 +217,17 @@ deleteOperation(index: number): void {
 }
 
 deleteAtFirst(): void {
-  if(this.linkedlist.length >0){
+  if(this.linkedlist.length ===1){
+    this.singleLinkedList = this.singleLinkedList.next;
+    this.updateAction();
+    this.linkedlist = [];
+    this.deletionShown = false; 
+  }
+  else if(this.linkedlist.length >1){
     this.singleLinkedList = this.singleLinkedList.next;
     this.updateAction();
   }else{
+    this.linkedlist = [];
     this.deletionShown = false;
   }
 
@@ -230,6 +237,8 @@ deleteAtEnd(): void {
     this.head = this.singleLinkedList;
     if(this.head.next === null){
       this.singleLinkedList = this.singleLinkedList.next;
+      this.linkedlist = [];
+      this.deletionShown = false;
     }else{
       while(this.head){
         if(this.head.next.next === null){
@@ -241,6 +250,7 @@ deleteAtEnd(): void {
     }
     this.updateAction();
   }else{
+    this.linkedlist = [];
     this.deletionShown = false;
   }
 }

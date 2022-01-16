@@ -1,0 +1,135 @@
+<h5>Single linked list operations</h5>
+<div class="d-flex mt-4 flex-wrap">
+    <div class="box p-lg-2 p-1 px-lg-3 px-2 btn me-lg-4 me-3 mb-2 sigleOp" 
+    data-bs-toggle="modal" data-bs-target="#input-dialog"
+    (click)="operationSelection(0)">
+        <p class="m-0">Create Linked List</p>
+    </div>
+     <ng-container *ngIf="linkedlist.length>0">
+        <div class="box p-lg-2 p-1 px-lg-3 px-2 btn me-lg-4 me-3 mb-2 sigleOp" (click)="operationSelection(1)">
+            <p class="m-0">Insertion</p>
+        </div>
+        <div class="box p-lg-2 p-1 px-lg-3 px-2 btn me-lg-4 me-3 mb-2 sigleOp" (click)="operationSelection(2)">
+            <p class="m-0">Upadation</p>
+        </div>
+        <div class="box p-lg-2 p-1 px-lg-3 px-2 btn me-lg-4 me-3 mb-2 sigleOp" (click)="operationSelection(3)">
+            <p class="m-0">Deletion</p>
+        </div>
+     </ng-container>
+</div>
+
+<ng-container *ngIf="insertionShown">
+<h5 class="mt-3">Single linked list Insertion</h5>
+<div class="d-flex mt-4 flex-wrap">
+    <div class="box p-lg-2 p-1 px-lg-3 px-2 btn me-lg-4 me-3 mb-2 sigleIn" 
+    data-bs-toggle="modal" data-bs-target="#insert-at-first-dialog"
+    (click)="operationInsertion(0)">
+        <p class="m-0">Insert At Head</p>
+    </div>
+    <div class="box p-lg-2 p-1 px-lg-3 px-2 btn me-lg-4 me-3 mb-2 sigleIn" 
+    data-bs-toggle="modal" data-bs-target="#insert-dialog"
+    (click)="operationInsertion(1)">
+        <p class="m-0">Insert At Tail</p>
+    </div>
+    <div class="box p-lg-2 p-1 px-lg-3 px-2 btn me-lg-4 me-3 mb-2 sigleIn"
+    data-bs-toggle="modal" data-bs-target="#insert-at-index-dialog"
+     (click)="operationInsertion(2)">
+        <p class="m-0">Insert At Position</p>
+    </div>
+</div>
+</ng-container>
+<ng-container *ngIf="updationShown">
+    <h5 class="mt-3">Single linked list Upadation</h5>
+    <div class="d-flex mt-4 flex-wrap">
+        <div class="box p-lg-2 p-1 px-lg-3 px-2 btn me-lg-4 me-3 mb-2 sigleUp" 
+        data-bs-toggle="modal" data-bs-target="#update-at-first-dialog"
+        (click)="operationUpdation(0)">
+            <p class="m-0">Update At Head</p>
+        </div>
+        <div class="box p-lg-2 p-1 px-lg-3 px-2 btn me-lg-4 me-3 mb-2 sigleUp" 
+        data-bs-toggle="modal" data-bs-target="#update-at-end-dialog"
+        (click)="operationUpdation(1)">
+            <p class="m-0">Update At Tail</p>
+        </div>
+        <div class="box p-lg-2 p-1 px-lg-3 px-2 btn me-lg-4 me-3 mb-2 sigleUp" 
+        data-bs-toggle="modal" data-bs-target="#update-at-index-dialog"
+        (click)="operationUpdation(2)">
+            <p class="m-0">Update At Position</p>
+        </div>
+    </div>
+</ng-container>
+<ng-container *ngIf="deletionShown">
+    <h5 class="mt-3">Single linked list Deletion</h5>
+    <div class="d-flex mt-4 flex-wrap">
+        <div class="box p-lg-2 p-1 px-lg-3 px-2 btn me-lg-4 me-3 mb-2 sigleDel" (click)="operationDeletion(0)">
+            <p class="m-0">Delete At Head</p>
+        </div>
+        <div class="box p-lg-2 p-1 px-lg-3 px-2 btn me-lg-4 me-3 mb-2 sigleDel" (click)="operationDeletion(1)">
+            <p class="m-0">Delete At Tail</p>
+        </div>
+        <div class="box p-lg-2 p-1 px-lg-3 px-2 btn me-lg-4 me-3 mb-2 sigleDel" 
+        data-bs-toggle="modal" data-bs-target="#delete-at-index-dialog"
+        (click)="operationDeletion(2)">
+            <p class="m-0">Delete At Position</p>
+        </div>
+    </div>
+</ng-container>
+<h5 class="text-center mt-5">
+    Single linked list
+</h5>
+<div class="mt-4 d-flex">
+    <div class="d-flex align-items-center" *ngFor="let node of linkedlist; let i=index">
+        <div class="data-section border border-end-0 border-2 border-info">
+            <p class="m-0">{{node.data}}</p>
+        </div>
+        <div class="link-section border border-2 border-danger">
+            <p class="m-0">Link</p>
+        </div>
+        <div class="arrow">
+            <img src="assets/icons/link-arrow.jpg" width="30" height="10" alt="">
+        </div>
+        <p *ngIf="i=== linkedlist.length-1" class="m-0 ms-1">Null</p>
+    </div>
+    <ng-container *ngIf="linkedlist.length===0">
+        <div class="d-flex align-items-center">
+            <div class="data-section border border-end-0 border-2 border-info">
+                <p class="m-0">Null</p>
+            </div>
+            <div class="link-section border border-2 border-danger">
+                <p class="m-0">Link</p>
+            </div>
+            <div class="arrow">
+                <img src="assets/icons/link-arrow.jpg" width="30" height="10" alt="">
+            </div>
+            <p class="m-0 ms-1">Null</p>
+        </div>
+    </ng-container>
+</div>
+ <!--Input dialog Modal -->
+ <div class="modal fade" id="input-dialog" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <app-input-dialog (inputValues)="createLinkedList($event)"></app-input-dialog>
+</div>
+<!--insert or update dialog Modal --> 
+<div class="modal fade" id="insert-dialog" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <app-insert-update-data [indexShow]="false" (inputValues)="insertAtTail($event)"></app-insert-update-data>
+</div>
+<div class="modal fade" id="insert-at-first-dialog" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <app-insert-update-data [indexShow]="false" (inputValues)="insertAtHead($event)"></app-insert-update-data>
+</div>
+<div class="modal fade" id="insert-at-index-dialog" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <app-insert-update-data [indexShow]="true" (inputValues)="insertAtPosition($event)"></app-insert-update-data>
+</div>
+<!---update--->
+<div class="modal fade" id="update-at-first-dialog" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <app-insert-update-data [indexShow]="false" (inputValues)="updateAtHead($event)"></app-insert-update-data>
+</div>
+<div class="modal fade" id="update-at-end-dialog" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <app-insert-update-data [indexShow]="false" (inputValues)="updateAtTail($event)"></app-insert-update-data>
+</div>
+<div class="modal fade" id="update-at-index-dialog" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <app-insert-update-data [indexShow]="true" (inputValues)="updateAtPosition($event)"></app-insert-update-data>
+</div>
+<!---Delete --->
+<div class="modal fade" id="delete-at-index-dialog" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <app-enter-value [title]="'Enter index'" (inputValues)="deleteAtPosition(+$event)"></app-enter-value>
+</div>

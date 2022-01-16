@@ -3,3 +3,17 @@
     <p class="m-0 ms-1 text-light fw-bold d-lg-block d-none">Back</p>
 </div>
 <h1 class="text-center mt-5">Linked List</h1>
+<div class="d-flex mt-lg-5 mt-4 flex-wrap">
+    <div class="box p-lg-2 p-1 px-lg-3 px-2 btn me-lg-4 me-3 mb-2 linkedType" (click)="selectionOfType(0)">
+        <p class="m-0">Single Linked List</p>
+    </div>
+    <div class="box p-lg-2 p-1 px-lg-3 px-2 btn me-lg-4 me-3 mb-2 linkedType" (click)="selectionOfType(1)">
+        <p class="m-0">Double Linked List</p>
+    </div>
+    <div class="box p-lg-2 p-1 px-lg-3 px-2 btn me-lg-4 me-3 mb-2 linkedType" (click)="selectionOfType(2)">
+        <p class="m-0">Circular Linked List</p>
+    </div>
+</div>
+<div class="mt-3">
+    <router-outlet></router-outlet>
+</div>

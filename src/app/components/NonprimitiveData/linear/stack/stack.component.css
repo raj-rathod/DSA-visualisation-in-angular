@@ -1,0 +1,11 @@
+.data-box{
+    height:40px;
+    width:100px;
+    padding:10px 20px;
+    background:rgba(240, 92, 92, 0.418);
+    color:white;
+}
+.data-box-top{
+    background:rgba(41, 160, 154, 0.911);
+    color:white;
+}

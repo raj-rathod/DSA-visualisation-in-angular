@@ -8,6 +8,9 @@ import { ArrayComponent } from './arrays/array/array.component';
 import { OneDimensionComponent } from './arrays/one-dimension/one-dimension.component';
 import { TwoDimensionComponent } from './arrays/two-dimension/two-dimension.component';
 import { SharedModule } from '../../shared/shared.module';
+import { SingleLinkedListComponent } from './linked-list/single-linked-list/single-linked-list.component';
+import { DoubleLinkedListComponent } from './linked-list/double-linked-list/double-linked-list.component';
+import { CircularLinkedListComponent } from './linked-list/circular-linked-list/circular-linked-list.component';
 
 
 @NgModule({
@@ -17,7 +20,10 @@ import { SharedModule } from '../../shared/shared.module';
     QueueComponent,
     LinkedListComponent,
     OneDimensionComponent,
-    TwoDimensionComponent
+    TwoDimensionComponent,
+    SingleLinkedListComponent,
+    DoubleLinkedListComponent,
+    CircularLinkedListComponent
   ],
   imports: [
     CommonModule, 

@@ -1,7 +1,7 @@
 export class Node{
     data: string| null;
-    previous: Node | null;
-    next: Node | null;
+    previous:any;
+    next:any;
 
     constructor(data: string | null = null){
         this.data = data;

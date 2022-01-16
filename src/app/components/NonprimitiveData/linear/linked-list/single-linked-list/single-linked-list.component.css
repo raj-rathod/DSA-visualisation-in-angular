@@ -1,0 +1,24 @@
+.data-section{
+    width:50px;
+    height: 80px;
+    cursor: pointer;
+    display:flex;
+    justify-content: center;
+    align-items:center;
+}
+.data-section:hover{
+    background-color:rgba(0, 195, 255, 0.664);
+    color:white;
+}
+.link-section:hover{
+    background: rgba(255, 0, 0, 0.678);
+    color:white;
+}
+.link-section{
+    width:50px;
+    height: 80px;
+    cursor: pointer;
+    display:flex;
+    justify-content: center;
+    align-items:center;
+}

@@ -32,8 +32,7 @@
             <p class="m-0">Insert at first</p>
          </div>
          <div class="box p-lg-2 p-1 px-lg-3 px-2 btn me-lg-4 me-3 mb-2 opInsBtn" 
-         data-bs-toggle="modal" data-bs-target="#insert-at-index-dialog"
-         (click)="opInsBtnSelection(2)"
+         (click)="insertAtIndex()"
          >
             <p class="m-0">Insert at Index</p>
          </div>
@@ -53,8 +52,7 @@
             <p class="m-0">Delete at first</p>
          </div>
          <div class="box p-lg-2 p-1 px-lg-3 px-2 btn me-lg-4 me-3 mb-2 opDltBtn"
-         data-bs-toggle="modal" data-bs-target="#delete-at-index-dialog"
-         (click)="opDltBtnSelection(2)"
+         (click)="deleteAtIndex()"
          >
             <p class="m-0">Delete at Index</p>
          </div>
@@ -80,8 +78,7 @@
             <p class="m-0">Update at end</p>
          </div>
          <div class="box p-lg-2 p-1 px-lg-3 px-2 btn me-lg-4 me-3 mb-2 opUpdBtn" 
-         data-bs-toggle="modal" data-bs-target="#update-at-index-dialog"
-         (click)="opUpdBtnSelection(2)"
+         (click)="updateAtIndex()"
          >
             <p class="m-0">Update at Index</p>
         </div>
@@ -137,22 +134,4 @@
         <small>it works like as arr.indexOff(data)</small>
     </p>
 </div>
-</div>
-
-<div class="modal fade" id="insert-at-index-dialog" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-    <app-insert-update-data [indexShow]="true" (inputValues)="insertAtIndex($event)"></app-insert-update-data>
-</div>
-<!---Delete --->
-<div class="modal fade" id="delete-at-index-dialog" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-    <app-enter-value [title]="'Enter index'" (inputValues)="deleteAtIndex(+$event)"></app-enter-value>
-</div>
-<!---update--->
-<!-- <div class="modal fade" id="update-at-first-dialog" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-    <app-insert-update-data [indexShow]="false" (inputValues)="updateAtFirst($event)"></app-insert-update-data>
-</div>
-<div class="modal fade" id="update-at-end-dialog" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-    <app-insert-update-data [indexShow]="false" (inputValues)="updateAtEnd($event)"></app-insert-update-data>
-</div> -->
-<div class="modal fade" id="update-at-index-dialog" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-    <app-insert-update-data [indexShow]="true" (inputValues)="updateAtIndex($event)"></app-insert-update-data>
 </div>

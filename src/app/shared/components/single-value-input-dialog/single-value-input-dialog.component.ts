@@ -1,6 +1,6 @@
 import { Component, Inject, OnInit } from '@angular/core';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
-import { InputTitle } from '../../interfaces/single-input.interface';
+import { SingleInputField } from '../../interfaces/input-dialog.interface';
 
 @Component({
   selector: 'app-single-value-input-dialog',
@@ -8,11 +8,11 @@ import { InputTitle } from '../../interfaces/single-input.interface';
   styleUrls: ['./single-value-input-dialog.component.css']
 })
 export class SingleValueInputDialogComponent implements OnInit {
-  inputTitle: InputTitle;
+  inputTitle: SingleInputField;
 
   constructor(
     private matDialogRef: MatDialogRef<SingleValueInputDialogComponent>,
-    @Inject(MAT_DIALOG_DATA) public data: InputTitle
+    @Inject(MAT_DIALOG_DATA) public data: SingleInputField
   ) { 
     this.inputTitle = data;
   }

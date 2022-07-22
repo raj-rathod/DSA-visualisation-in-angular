@@ -1,4 +1,5 @@
 @import "~bootstrap/dist/css/bootstrap.css";
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 .box{
     background:rgba(16, 203, 236, 0.76);
     border-radius: 8px;
@@ -50,7 +51,27 @@
   background: rgba(17, 133, 228, 0.918);
   color:white;
 }
+.mat-dialog-container {
+  padding: 0 !important;
+}
+.cdk-overlay-pane{
+  max-width: 100% !important;
+  width: 35%;
+  margin: 16px !important;
+}
+.fs-smaller{
+  font-size: 10px;
+}
+
+@media( max-width:992px){
+  .cdk-overlay-pane{
+    width: 45%;
+  }
+}
 @media (max-width: 767.98px) {
+  .cdk-overlay-pane{
+    width: 60%;
+  }
     h1 {
         font-size: 1.5rem !important;
         line-height: 2rem !important ;
@@ -80,4 +101,10 @@
         font-size:0.75rem !important;
     }
 }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+@media (max-width: 500px){
+  .cdk-overlay-pane{
+    width: 100%;
+  }
+}
+

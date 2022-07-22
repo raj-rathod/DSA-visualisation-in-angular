@@ -1,8 +1,7 @@
 <h4>One Dimension array operations</h4>
 <div class="d-flex flex-wrap align-items-center mt-3">
     <div class="box p-lg-2 p-1 px-lg-3 px-2 btn me-lg-4 me-3 mb-2 opbtn"
-     data-bs-toggle="modal" data-bs-target="#input-dialog"
-     (click)="opbtnSection(0)"
+     (click)="createNewArray()"
      >
         <p class="m-0">Create a new array</p>
     </div>
@@ -23,14 +22,12 @@
     <h5>Insertion sub menu</h5>
     <div class="d-flex flex-wrap align-items-center mt-3">
         <div class="box p-lg-2 p-1 px-lg-3 px-2 btn me-lg-4 me-3 mb-2 opInsBtn" 
-        data-bs-toggle="modal" data-bs-target="#insert-dialog"
-        (click)="opInsBtnSelection(0)"
+        (click)="insertIntoArray()"
         >
            <p class="m-0">Insert</p>
         </div>
         <div class="box p-lg-2 p-1 px-lg-3 px-2 btn me-lg-4 me-3 mb-2 opInsBtn" 
-        data-bs-toggle="modal" data-bs-target="#insert-at-first-dialog"
-        (click)="opInsBtnSelection(1)"
+        (click)="insertAtFirst()"
         >
             <p class="m-0">Insert at first</p>
          </div>
@@ -72,29 +69,22 @@
     <h5>Upadation sub menu</h5>
     <div class="d-flex flex-wrap align-items-center mt-3">
         <div class="box p-lg-2 p-1 px-lg-3 px-2 btn me-lg-4 me-3 mb-2 opUpdBtn" 
-        data-bs-toggle="modal" data-bs-target="#update-at-end-dialog"
-        (click)="opUpdBtnSelection(0)"
+        (click)="updateAtFirst()"
         >
-           <p class="m-0">Update at end</p>
+           <p class="m-0">Update at first</p>
         </div>
         <div class="box p-lg-2 p-1 px-lg-3 px-2 btn me-lg-4 me-3 mb-2 opUpdBtn" 
         data-bs-toggle="modal" data-bs-target="#update-at-first-dialog"
-        (click)="opUpdBtnSelection(1)"
+        (click)="updateAtEnd()"
         >
-            <p class="m-0">Update at first</p>
+            <p class="m-0">Update at end</p>
          </div>
          <div class="box p-lg-2 p-1 px-lg-3 px-2 btn me-lg-4 me-3 mb-2 opUpdBtn" 
          data-bs-toggle="modal" data-bs-target="#update-at-index-dialog"
          (click)="opUpdBtnSelection(2)"
          >
             <p class="m-0">Update at Index</p>
-         </div>
-         <div class="box p-lg-2 p-1 px-lg-3 px-2 btn me-lg-4 me-3 mb-2 opUpdBtn" 
-         data-bs-toggle="modal" data-bs-target="#input-dialog"
-         (click)="opUpdBtnSelection(3)"
-         >
-            <p class="m-0">Update all</p>
-         </div>
+        </div>
     </div>
 </div>
 <!---Array section-->
@@ -148,17 +138,7 @@
     </p>
 </div>
 </div>
- <!--Input dialog Modal -->
-<div class="modal fade" id="input-dialog" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-    <app-input-dialog (inputValues)="createNewArray($event)"></app-input-dialog>
-</div>
-<!--insert or update dialog Modal --> 
-<div class="modal fade" id="insert-dialog" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-    <app-insert-update-data [indexShow]="false" (inputValues)="insertIntoArray($event)"></app-insert-update-data>
-</div>
-<div class="modal fade" id="insert-at-first-dialog" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-    <app-insert-update-data [indexShow]="false" (inputValues)="insertAtFirst($event)"></app-insert-update-data>
-</div>
+
 <div class="modal fade" id="insert-at-index-dialog" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
     <app-insert-update-data [indexShow]="true" (inputValues)="insertAtIndex($event)"></app-insert-update-data>
 </div>
@@ -167,12 +147,12 @@
     <app-enter-value [title]="'Enter index'" (inputValues)="deleteAtIndex(+$event)"></app-enter-value>
 </div>
 <!---update--->
-<div class="modal fade" id="update-at-first-dialog" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+<!-- <div class="modal fade" id="update-at-first-dialog" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
     <app-insert-update-data [indexShow]="false" (inputValues)="updateAtFirst($event)"></app-insert-update-data>
 </div>
 <div class="modal fade" id="update-at-end-dialog" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
     <app-insert-update-data [indexShow]="false" (inputValues)="updateAtEnd($event)"></app-insert-update-data>
-</div>
+</div> -->
 <div class="modal fade" id="update-at-index-dialog" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
     <app-insert-update-data [indexShow]="true" (inputValues)="updateAtIndex($event)"></app-insert-update-data>
 </div>

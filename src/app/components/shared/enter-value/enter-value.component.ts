@@ -1,5 +1,4 @@
-import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
-
+import { Component, EventEmitter, Inject, Input, OnInit, Output } from '@angular/core';
 @Component({
   selector: 'app-enter-value',
   templateUrl: './enter-value.component.html',
@@ -11,7 +10,9 @@ export class EnterValueComponent implements OnInit {
 
   value = '';
 
-  constructor() { }
+  constructor(
+ 
+  ) { }
 
   ngOnInit(): void {
   }
@@ -20,5 +21,7 @@ export class EnterValueComponent implements OnInit {
     this.inputValues.emit(this.value);
     this.value = '';
   }
+
+
 
 }

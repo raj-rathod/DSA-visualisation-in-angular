@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { MatDialogModule } from '@angular/material/dialog';
 import { LinearDataRoutingModule } from './linear-routing.module';
 import { StackComponent } from './stack/stack.component';
 import { QueueComponent } from './queue/queue.component';
@@ -28,6 +29,7 @@ import { CircularLinkedListComponent } from './linked-list/circular-linked-list/
   imports: [
     CommonModule, 
     LinearDataRoutingModule,
+    MatDialogModule ,
     SharedModule,
   ]
 })

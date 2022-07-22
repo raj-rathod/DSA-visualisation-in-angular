@@ -1,4 +1,7 @@
 import { Component, ElementRef, OnInit } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
+import { arrayInput, singleInput } from 'src/app/helper/single-input-meta-data';
+import { SingleValueInputDialogComponent } from 'src/app/shared/components/single-value-input-dialog/single-value-input-dialog.component';
 
 @Component({
   selector: 'app-one-dimension',
@@ -20,37 +23,83 @@ export class OneDimensionComponent implements OnInit {
   createdArr:string[]  = [];
   
   constructor(
-    private elRef: ElementRef
+    private elRef: ElementRef,
+    private matDialog: MatDialog
   ) { }
 
   ngOnInit(): void {
   }
 
-  createNewArray(input: string): void {
-    this.operationShow = true;
-    const inputarr = input.split(' '); 
-    this.createdArr = inputarr;
-    this.selectedIndex(-1);
-    this.selectedData(-1);
+  createNewArray(): void {
+    this.opbtnSection(0);
+    const matDialogRef = this.matDialog.open(
+      SingleValueInputDialogComponent,
+      {
+        disableClose: true,
+        position:{
+            top:'120px'
+        },
+        data: arrayInput
+      }
+    );
+    matDialogRef.afterClosed().subscribe(result => {
+      if(result){
+        this.operationShow = true;
+        this.createdArr = result;
+        this.selectedIndex(-1);
+        this.selectedData(-1);
+      }
+    });
   }
 
  // Insert Operations
-  insertIntoArray(data:{index: number, value: string}): void {
-    this.createdArr.push(data.value);
-    this.selectedIndex(-1);
-    this.selectedData(-1);
-    this.delay(30).then(any=>{
-      this.highliteOperation(this.createdArr.length-1);
+  insertIntoArray(): void {
+    this.opUpdBtnSelection(0);
+    const matDialogRef = this.matDialog.open(
+      SingleValueInputDialogComponent,
+      {
+        disableClose: true,
+        position:{
+            top:'120px'
+        },
+        data: singleInput
+      }
+    );
+    matDialogRef.afterClosed().subscribe(result => {
+      if(result){
+        this.createdArr.push(result);
+        this.selectedIndex(-1);
+        this.selectedData(-1);
+        this.delay(30).then(any=>{
+          this.highliteOperation(this.createdArr.length-1);
+        });
+      }
     });
   }
 
-  insertAtFirst(data:{index: number, value: string}): void {
-    this.createdArr.unshift(data.value);
-    this.selectedIndex(-1);
-    this.selectedData(-1);
-    this.delay(30).then(any=>{
-      this.highliteOperation(0);
+  insertAtFirst(): void {
+    this.opInsBtnSelection(1);
+    const matDialogRef = this.matDialog.open(
+      SingleValueInputDialogComponent,
+      {
+        disableClose: true,
+        position:{
+            top:'120px'
+        },
+        data: singleInput
+      }
+    );
+    matDialogRef.afterClosed().subscribe(result => {
+      if(result){
+        this.createdArr.unshift(result);
+        this.selectedIndex(-1);
+        this.selectedData(-1);
+        this.delay(30).then(any=>{
+          this.highliteOperation(0);
+        });
+      }
     });
+    
   }
 
   insertAtIndex(data:{index: number, value: string}): void {
@@ -101,16 +150,47 @@ export class OneDimensionComponent implements OnInit {
    }
  //-----end ----//
  //-----Update operations-----//
-  updateAtFirst(data:{index: number, value: string}): void {
-    this.createdArr[0] = data.value;
-    this.delay(30).then(any=>{
-      this.highliteOperation(0);
+  updateAtFirst(): void {
+    this.opUpdBtnSelection(0);
+    const matDialogRef = this.matDialog.open(
+      SingleValueInputDialogComponent,
+      {
+        disableClose: true,
+        position:{
+            top:'120px'
+        },
+        data: singleInput
+      }
+    );
+    matDialogRef.afterClosed().subscribe(result => {
+      if(result){
+        this.createdArr[0] = result;
+        this.delay(30).then(any=>{
+          this.highliteOperation(0);
+        });
+      }
     });
+    
   }
-  updateAtEnd(data:{index: number, value: string}): void {
-    this.createdArr[this.createdArr.length-1] = data.value;
-    this.delay(30).then(any=>{
-      this.highliteOperation(this.createdArr.length-1);
+  updateAtEnd(): void {
+    this.opUpdBtnSelection(1);
+    const matDialogRef = this.matDialog.open(
+      SingleValueInputDialogComponent,
+      {
+        disableClose: true,
+        position:{
+            top:'120px'
+        },
+        data: singleInput
+      }
+    );
+    matDialogRef.afterClosed().subscribe(result => {
+      if(result){
+        this.createdArr[this.createdArr.length-1] = result;
+        this.delay(30).then(any=>{
+          this.highliteOperation(this.createdArr.length-1);
+        });
+      }
     });
     
   }

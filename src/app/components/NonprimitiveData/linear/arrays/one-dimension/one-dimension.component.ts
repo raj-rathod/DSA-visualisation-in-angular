@@ -1,6 +1,8 @@
 import { Component, ElementRef, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
+import { insertAtIndex } from 'src/app/helper/double-input-field-meta-data';
 import { arrayInput, singleInput } from 'src/app/helper/single-input-meta-data';
+import { DoubleValueInputDialogComponent } from 'src/app/shared/components/double-value-input-dialog/double-value-input-dialog.component';
 import { SingleValueInputDialogComponent } from 'src/app/shared/components/single-value-input-dialog/single-value-input-dialog.component';
 
 @Component({
@@ -102,12 +104,28 @@ export class OneDimensionComponent implements OnInit {
     
   }
 
-  insertAtIndex(data:{index: number, value: string}): void {
-    this.createdArr.splice(data.index, 0 , data.value);
-    this.selectedIndex(-1);
-    this.selectedData(-1);
-    this.delay(30).then(any=>{
-      this.highliteOperation(data.index);
+  insertAtIndex(): void {
+    this.opInsBtnSelection(2);
+    const matDialogRef = this.matDialog.open(
+      DoubleValueInputDialogComponent,
+      {
+        disableClose: true,
+        position:{
+            top:'120px'
+        },
+        data: insertAtIndex
+      }
+    );
+    matDialogRef.afterClosed().subscribe(result => {
+      if(result){
+        this.createdArr.splice(result.firstInput, 0 , result.secondInput);
+        this.selectedIndex(-1);
+        this.selectedData(-1);
+        this.delay(30).then(any=>{
+          this.highliteOperation(result.firstInput);
+        });
+        
+      }
     });
   }
  //-----end-----//
@@ -141,12 +159,34 @@ export class OneDimensionComponent implements OnInit {
      this.selectedData(-1);
    }
     
-   deleteAtIndex(index: number): void {
-     this.createdArr.splice(index, 1);
+   deleteAtIndex(): void {
+    this.opDltBtnSelection(2);
+    const matDialogRef = this.matDialog.open(
+      SingleValueInputDialogComponent,
+      {
+        disableClose: true,
+        position:{
+            top:'120px'
+        },
+        data: singleInput
+      }
+    );
+    matDialogRef.afterClosed().subscribe(result => {
+      if(result){
+        this.createdArr.splice(result, 1);
+        this.selectedIndex(-1);
+        this.selectedData(-1);
+      }
+    });
+     
    }
 
    deletedAll(): void {
      this.createdArr = [];
+     this.selectedIndex(-1);
+     this.selectedData(-1);
+     this.operationShow = false;
+     this.deleteSubMenu = false;
    }
  //-----end ----//
  //-----Update operations-----//
@@ -194,10 +234,25 @@ export class OneDimensionComponent implements OnInit {
     });
     
   }
-  updateAtIndex(data:{index: number, value: string}): void {
-    this.createdArr[data.index] = data.value;
-    this.delay(30).then(any=>{
-      this.highliteOperation(data.index);
+  updateAtIndex(): void {
+    this.opUpdBtnSelection(2);
+    const matDialogRef = this.matDialog.open(
+      DoubleValueInputDialogComponent,
+      {
+        disableClose: true,
+        position:{
+            top:'120px'
+        },
+        data: insertAtIndex
+      }
+    );
+    matDialogRef.afterClosed().subscribe(result => {
+      if(result){
+        this.createdArr[result.firstInput] = result.secondInput;
+        this.delay(30).then(any=>{
+          this.highliteOperation(result.firstInput);
+        });  
+      }
     });
   }
  //-----end-----//

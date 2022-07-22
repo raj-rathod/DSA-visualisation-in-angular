@@ -6,10 +6,7 @@ import { HomeComponent } from './layout/home/home.component';
 
 const routes: Routes = [
   {
-    path: '', redirectTo:'home', pathMatch:'full'
-  },
-  {
-    path: 'home', component: HomeComponent
+    path: '', component: HomeComponent
   },
   {
     path: 'data-structure', component: DataStructureComponent

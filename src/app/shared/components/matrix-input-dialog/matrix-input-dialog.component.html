@@ -1,1 +1,30 @@
-<p>matrix-input-dialog works!</p>
+<img class="m-3 float-end tab" src="assets/icons/cancle-btn.svg" height="18" width="18" alt="cancle btn" (click)="closeDialog()" >
+<div class="pb-md-4 pb-3 pt-3 px-md-4 px-3">
+   <h5>{{matrixInputMetaData[index].title}}</h5>
+   <ng-container *ngIf="count >= 2">
+     <p class="m-0 fs-smaller">row elements are:{{matrix.column}}</p>
+
+     <p class="m-0 fs-smaller">Entered rows are : <b>{{(count - index)}}/{{matrix.row}}</b></p>
+   </ng-container>
+   <div class="mb-3 mt-4">
+     <input type="text" name="input" 
+     class="form-control"
+     value=""
+     #singleInput
+     [placeholder]="matrixInputMetaData[index].placeholder"
+     autocomplete="off"
+     >
+   </div>
+   <p *ngIf="errorShown" class="m-0 fs-smaller text-danger">{{errorMsg}}</p>
+   <p *ngIf="nextBtnShown && !errorShown" class="m-0 fs-smaller text-danger"><b>Note:</b> each non-numeric character consider as 0</p>
+
+   <div *ngIf="nextBtnShown" class="btn box mt-3">
+        <p class="text-white m-0" (click)="nextFieldData(singleInput.value)"> Next</p>
+   </div>
+
+   <div *ngIf="!nextBtnShown" class="btn box mt-3">
+     <p class="text-white m-0" (click)="submit()"> Submit</p>
+   </div>
+
+</div>
+

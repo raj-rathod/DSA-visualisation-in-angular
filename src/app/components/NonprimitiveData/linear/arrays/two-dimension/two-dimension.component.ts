@@ -1,4 +1,7 @@
 import { Component, ElementRef, OnInit } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
+import { matrixInput } from 'src/app/helper/matrix-input-field-meta.data';
+import { MatrixInputDialogComponent } from 'src/app/shared/components/matrix-input-dialog/matrix-input-dialog.component';
 
 @Component({
   selector: 'app-two-dimension',
@@ -25,10 +28,21 @@ export class TwoDimensionComponent implements OnInit {
   matrix:number[][] = [];
   
   constructor(
-    private elRef: ElementRef
+    private elRef: ElementRef,
+    private matDialog: MatDialog
   ) { }
 
   ngOnInit(): void {
+    this,this.matDialog.open(
+      MatrixInputDialogComponent,
+      {
+        disableClose: true,
+        position:{
+            top:'120px'
+        },
+        data: matrixInput
+      }
+    )
   }
 
   createMatrix(input:{ size:{row:number, column:number}, matrix:number[][]}): void {

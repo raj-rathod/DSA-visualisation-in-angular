@@ -6,11 +6,10 @@
 
      <p class="m-0 fs-smaller">Entered rows are : <b>{{(count - index)}}/{{matrix.row}}</b></p>
    </ng-container>
-   <div class="mb-3 mt-4">
+   <div class="mb-3 mt-4" *ngIf="nextBtnShown">
      <input type="text" name="input" 
-     class="form-control"
+     class="form-control inputForm"
      value=""
-     #singleInput
      [placeholder]="matrixInputMetaData[index].placeholder"
      autocomplete="off"
      >
@@ -19,7 +18,7 @@
    <p *ngIf="nextBtnShown && !errorShown" class="m-0 fs-smaller text-danger"><b>Note:</b> each non-numeric character consider as 0</p>
 
    <div *ngIf="nextBtnShown" class="btn box mt-3">
-        <p class="text-white m-0" (click)="nextFieldData(singleInput.value)"> Next</p>
+        <p class="text-white m-0" (click)="nextFieldData()"> Next</p>
    </div>
 
    <div *ngIf="!nextBtnShown" class="btn box mt-3">

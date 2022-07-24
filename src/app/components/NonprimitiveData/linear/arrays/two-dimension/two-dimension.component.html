@@ -1,8 +1,8 @@
 <h4>Two Dimensions array operations</h4>
 <div class="d-flex flex-wrap align-items-center mt-3">
     <div class="box p-lg-2 p-1 px-lg-3 px-2 btn me-lg-4 me-3 mb-2 matOp"
-    data-bs-toggle="modal" data-bs-target="#input-dialog"
-    (click)="matOperationSelector(0)"
+    
+    (click)="createMatrix()"
     >
        <p class="m-0">Create new Matrix</p>
    </div>
@@ -131,9 +131,4 @@
             </div>
         </ng-container>
     </div>
-</div>
-
-<!---matrix input---->
-<div class="modal fade" id="input-dialog" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-    <app-matrix-input (inputValues)="createMatrix($event)"></app-matrix-input>
 </div>

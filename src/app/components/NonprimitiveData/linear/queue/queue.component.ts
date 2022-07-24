@@ -1,5 +1,8 @@
 import { Component, ElementRef, OnInit } from '@angular/core';
 import { Location } from '@angular/common';
+import { MatDialog } from '@angular/material/dialog';
+import { SingleValueInputDialogComponent } from 'src/app/shared/components/single-value-input-dialog/single-value-input-dialog.component';
+import { stackPushElement } from 'src/app/helper/single-input-meta-data';
 
 @Component({
   selector: 'app-queue',
@@ -10,7 +13,8 @@ export class QueueComponent implements OnInit {
   queueData:string[] = [];
   constructor(
     private location: Location,
-    private elRef: ElementRef
+    private elRef: ElementRef,
+    private matDialog: MatDialog
   ) { }
 
   ngOnInit(): void {
@@ -46,8 +50,23 @@ pop(): void {
   }
 }
 
-pushElement(element: string): void {
-  this.queueData.push(element);
+pushElement(): void {
+  this.operations(0)
+  const matDialogRef = this.matDialog.open(
+    SingleValueInputDialogComponent,
+    {
+      disableClose: true,
+      position:{
+          top:'120px'
+      },
+      data: stackPushElement
+    }
+  );
+  matDialogRef.afterClosed().subscribe(result => {
+    if(result || result === 0){
+      this.queueData.push(result);
+    }
+  });
 }
 
 classIndicator(index: number): string {

@@ -17,12 +17,12 @@
    <p *ngIf="errorShown" class="m-0 fs-smaller text-danger">{{errorMsg}}</p>
    <p *ngIf="nextBtnShown && !errorShown" class="m-0 fs-smaller text-danger"><b>Note:</b> each non-numeric character consider as 0</p>
 
-   <div *ngIf="nextBtnShown" class="btn box mt-3">
-        <p class="text-white m-0" (click)="nextFieldData()"> Next</p>
+   <div *ngIf="nextBtnShown" class="btn box mt-3" (click)="nextFieldData()">
+        <p class="text-white m-0"> Next</p>
    </div>
 
-   <div *ngIf="!nextBtnShown" class="btn box mt-3">
-     <p class="text-white m-0" (click)="submit()"> Submit</p>
+   <div *ngIf="!nextBtnShown" class="btn box mt-3" (click)="submit()">
+     <p class="text-white m-0" > Submit</p>
    </div>
 
 </div>

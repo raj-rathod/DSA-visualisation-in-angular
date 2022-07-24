@@ -12,3 +12,8 @@ export const singleInput: SingleInputField ={
    placeholder:"Enter value",
    multiple: false,
 }
+export const stackPushElement: SingleInputField ={
+   title: "Enter the push element",
+   placeholder:"Enter value",
+   multiple: false,
+}

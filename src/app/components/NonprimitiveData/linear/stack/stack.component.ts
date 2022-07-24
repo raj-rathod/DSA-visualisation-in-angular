@@ -1,5 +1,8 @@
 import { Component, ElementRef, OnInit } from '@angular/core';
 import { Location } from '@angular/common';
+import { MatDialog } from '@angular/material/dialog';
+import { SingleValueInputDialogComponent } from 'src/app/shared/components/single-value-input-dialog/single-value-input-dialog.component';
+import { stackPushElement } from 'src/app/helper/single-input-meta-data';
 
 @Component({
   selector: 'app-stack',
@@ -13,7 +16,8 @@ export class StackComponent implements OnInit {
 
   constructor(
     private location: Location,
-    private elRef: ElementRef
+    private elRef: ElementRef,
+    private matDialog: MatDialog
   ) { }
 
   ngOnInit(): void {
@@ -51,11 +55,27 @@ export class StackComponent implements OnInit {
     }
   }
 
-  pushElement(element: string): void {
-    this.stackData.unshift(element);
-    if(this.stackData.length % 6 === 0){
-      this.height += 250;
-    }
+  pushElement(): void {
+    this.operations(0)
+    const matDialogRef = this.matDialog.open(
+      SingleValueInputDialogComponent,
+      {
+        disableClose: true,
+        position:{
+            top:'120px'
+        },
+        data: stackPushElement
+      }
+    );
+    matDialogRef.afterClosed().subscribe(result => {
+      if(result || result === 0){
+        this.stackData.unshift(result);
+        if(this.stackData.length % 6 === 0){
+          this.height += 250;
+        }
+      }
+    });
+    
   }
 
   gotoBack(): void {

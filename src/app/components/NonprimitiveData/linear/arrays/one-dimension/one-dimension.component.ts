@@ -92,7 +92,7 @@ export class OneDimensionComponent implements OnInit {
       }
     );
     matDialogRef.afterClosed().subscribe(result => {
-      if(result){
+      if(result || result === 0){
         this.createdArr.unshift(result);
         this.selectedIndex(-1);
         this.selectedData(-1);
@@ -172,7 +172,7 @@ export class OneDimensionComponent implements OnInit {
       }
     );
     matDialogRef.afterClosed().subscribe(result => {
-      if(result){
+      if(result || result === 0){
         this.createdArr.splice(result, 1);
         this.selectedIndex(-1);
         this.selectedData(-1);
@@ -203,7 +203,7 @@ export class OneDimensionComponent implements OnInit {
       }
     );
     matDialogRef.afterClosed().subscribe(result => {
-      if(result){
+      if(result || result === 0){
         this.createdArr[0] = result;
         this.delay(30).then(any=>{
           this.highliteOperation(0);
@@ -225,7 +225,7 @@ export class OneDimensionComponent implements OnInit {
       }
     );
     matDialogRef.afterClosed().subscribe(result => {
-      if(result){
+      if(result || result === 0){
         this.createdArr[this.createdArr.length-1] = result;
         this.delay(30).then(any=>{
           this.highliteOperation(this.createdArr.length-1);

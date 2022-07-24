@@ -7,8 +7,7 @@
     <h5>Stack operations</h5>
     <div class="d-flex flex-wrap align-items-center mt-3">
         <div class="box p-lg-2 p-1 px-lg-3 px-2 btn me-lg-4 me-3 mb-2 stkOp"
-        data-bs-toggle="modal" data-bs-target="#input-dialog"
-         (click)="operations(0)">
+         (click)="pushElement()">
             <p class="m-0">Push</p>
         </div>
         <div class="box p-lg-2 p-1 px-lg-3 px-2 btn me-lg-4 me-3 mb-2 stkOp" (click)="operations(1)">
@@ -46,6 +45,6 @@
     <div class="col-lg-4 col-12 order-2 mb-3"></div>
 
 </div>
-<div class="modal fade" id="input-dialog" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+<!-- <div class="modal fade" id="input-dialog" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
     <app-input-dialog (inputValues)="pushElement($event)"></app-input-dialog>
-</div>
+</div> -->

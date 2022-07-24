@@ -33,7 +33,12 @@ export class TwoDimensionComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    this,this.matDialog.open(
+   
+  }
+
+  createMatrix(): void {
+    this.matOperationSelector(0);
+    const matDialogRef = this.matDialog.open(
       MatrixInputDialogComponent,
       {
         disableClose: true,
@@ -42,18 +47,20 @@ export class TwoDimensionComponent implements OnInit {
         },
         data: matrixInput
       }
-    )
-  }
-
-  createMatrix(input:{ size:{row:number, column:number}, matrix:number[][]}): void {
-     this.matrix = input.matrix;
-     this.sizeOfMatrix = input.size
-     this.operations = true;
-     this.rowSelectionShow = false;
-    this.columnSelectionShow = false;
-    this.transposematrixShow = false;
-    this.adjacentShow = false;
-    this.dataBoxSelectionShow = false;
+    );
+    matDialogRef.afterClosed().subscribe(result => {
+      if(result){
+        this.matrix = result.data;
+        this.sizeOfMatrix = result.size
+        this.operations = true;
+        this.rowSelectionShow = false;
+       this.columnSelectionShow = false;
+       this.transposematrixShow = false;
+       this.adjacentShow = false;
+       this.dataBoxSelectionShow = false;
+      }
+    });
+    
   }
 
   matOperationSelector(index: number): void {

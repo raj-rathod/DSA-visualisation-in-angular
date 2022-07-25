@@ -1,4 +1,9 @@
 import { Component, ElementRef, OnInit } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
+import { insertAtIndex } from 'src/app/helper/double-input-field-meta-data';
+import { likedListInput, singleInput } from 'src/app/helper/single-input-meta-data';
+import { DoubleValueInputDialogComponent } from 'src/app/shared/components/double-value-input-dialog/double-value-input-dialog.component';
+import { SingleValueInputDialogComponent } from 'src/app/shared/components/single-value-input-dialog/single-value-input-dialog.component';
 import { Node } from '../node'
 
 @Component({
@@ -15,6 +20,7 @@ export class DoubleLinkedListComponent implements OnInit {
   head:Node;
   constructor(
     private elref: ElementRef,
+    private matDialog: MatDialog
   ) {
     this.doubleLinkedList = new Node();
     this.head = this.doubleLinkedList;
@@ -72,11 +78,24 @@ export class DoubleLinkedListComponent implements OnInit {
     }
   }
 
-  createLinkedList(input: string): void {
-    this.generateLinkedlist(input.split(' '));
-    this.insertionShown = false;
-    this.updationShown = false;
-    this.deletionShown = false;
+  createLinkedList(): void {
+    this.operationSelection(0);
+    const matDialogRef = this.matDialog.open(SingleValueInputDialogComponent, {
+      disableClose: true,
+      position: {
+        top: '120px',
+      },
+      data: likedListInput,
+    });
+    matDialogRef.afterClosed().subscribe((result) => {
+      if (result) {
+        this.generateLinkedlist(result);
+        this.insertionShown = false;
+        this.updationShown = false;
+        this.deletionShown = false;
+      }
+    });
+  
   }
 
   generateLinkedlist(arr:string[]): void {
@@ -127,88 +146,180 @@ export class DoubleLinkedListComponent implements OnInit {
     }
   }
 
-  insertAtHead(data:{index: number, value: string}): void {
-    let newNode = new Node(data.value);
-    newNode.next = this.doubleLinkedList
-    this.doubleLinkedList.previous = newNode;
-    this.doubleLinkedList = newNode;
-    this.updateAction();
- }
-
- insertAtTail(data:{index: number, value: string}): void {
-   let newNode = new Node(data.value);
-   this.head = this.doubleLinkedList
-   while(this.head.next){
-     this.head = this.head.next
-   }
-   newNode.previous = this.head;
-   this.head.next = newNode;
-   this.updateAction();
- }
-
- insertAtPosition(data:{index: number, value: string}): void {
-    if(this.doublelinkedlist.length+1 < data.index || data.index < 1){
-      alert("Enter valid Position")
-    }else{
-      if(data.index === 1){
-        this.insertAtHead(data);
-      }else if(data.index === this.doublelinkedlist.length + 1){
-        this.insertAtTail(data);
-      }else{
-         let count = 1;
-         this.head = this.doubleLinkedList;
-         let previous = this.head;
-         while(this.head){
-           if(count === data.index){
-              let newNode = new Node(data.value);
-              newNode.previous = previous;
-              previous.next = newNode;
-              this.head.previous = newNode;
-              newNode.next = this.head;
-              this.updateAction();
-              break;
-           }
-           previous = this.head;
-           this.head = this.head.next;
-           count++;
-         }
+  insertAtHead(): void {
+    this.operationInsertion(0);
+    const matDialogRef = this.matDialog.open(SingleValueInputDialogComponent, {
+      disableClose: true,
+      position: {
+        top: '120px',
+      },
+      data: singleInput,
+    });
+    matDialogRef.afterClosed().subscribe((result) => {
+      if (result || result === 0) {
+        let newNode = new Node(result);
+        newNode.next = this.doubleLinkedList
+        this.doubleLinkedList.previous = newNode;
+        this.doubleLinkedList = newNode;
+        this.updateAction();
       }
+    });
+   
+ }
 
+ insertAtTail(): void {
+  this.operationInsertion(1);
+  const matDialogRef = this.matDialog.open(SingleValueInputDialogComponent, {
+    disableClose: true,
+    position: {
+      top: '120px',
+    },
+    data: singleInput,
+  });
+  matDialogRef.afterClosed().subscribe((result) => {
+    if (result || result === 0) {
+      let newNode = new Node(result);
+      this.head = this.doubleLinkedList
+      while(this.head.next){
+        this.head = this.head.next
+      }
+      newNode.previous = this.head;
+      this.head.next = newNode;
+      this.updateAction();
     }
+  });
+ 
  }
 
- updateAtHead(data:{index: number, value: string}): void {
-    this.doubleLinkedList.data = data.value;
+ insertAtPosition(): void {
+  this.operationInsertion(2);
+  const matDialogRef = this.matDialog.open(DoubleValueInputDialogComponent, {
+    disableClose: true,
+    position: {
+      top: '120px',
+    },
+    data: insertAtIndex,
+  });
+  matDialogRef.afterClosed().subscribe((result) => {
+    if (result) {
+      if(this.doublelinkedlist.length+1 < result.firstInput || result.firstInput < 1){
+        alert("Enter valid Position")
+      }else{
+        if(result.firstInput === 1){
+          let newNode = new Node(result.secondInput);
+          newNode.next = this.doubleLinkedList
+          this.doubleLinkedList.previous = newNode;
+          this.doubleLinkedList = newNode;
+          this.updateAction();
+        }else if(result.firstInput === this.doublelinkedlist.length + 1){
+          let newNode = new Node(result.secondInput);
+          this.head = this.doubleLinkedList
+          while(this.head.next){
+            this.head = this.head.next
+          }
+          newNode.previous = this.head;
+          this.head.next = newNode;
+          this.updateAction();
+        }else{
+           let count = 1;
+           this.head = this.doubleLinkedList;
+           let previous = this.head;
+           while(this.head){
+             if(count === result.firstInput){
+                let newNode = new Node(result.secondInput);
+                newNode.previous = previous;
+                previous.next = newNode;
+                this.head.previous = newNode;
+                newNode.next = this.head;
+                this.updateAction();
+                break;
+             }
+             previous = this.head;
+             this.head = this.head.next;
+             count++;
+           }
+        }
+  
+      }
+    }
+  });
+    
  }
-  updateAtTail(data:{index: number, value: string}): void {
-  this.head = this.doubleLinkedList
-  while(this.head.next){
-    this.head = this.head.next
-  }
-  this.head.data = data.value;
+
+ updateAtHead(): void {
+    this.operationUpdation(0);
+    const matDialogRef = this.matDialog.open(SingleValueInputDialogComponent, {
+      disableClose: true,
+      position: {
+        top: '120px',
+      },
+      data: singleInput,
+    });
+    matDialogRef.afterClosed().subscribe((result) => {
+      if (result || result === 0) {
+        this.doubleLinkedList.data = result;
+      }
+    });
+   
+ }
+  updateAtTail(): void {
+    this.operationUpdation(1);
+    const matDialogRef = this.matDialog.open(SingleValueInputDialogComponent, {
+      disableClose: true,
+      position: {
+        top: '120px',
+      },
+      data: singleInput,
+    });
+    matDialogRef.afterClosed().subscribe((result) => {
+      if (result || result === 0) {
+        this.head = this.doubleLinkedList
+        while(this.head.next){
+          this.head = this.head.next
+        }
+        this.head.data = result;
+      }
+    });
+ 
 }
-updateAtPosition(data:{index: number, value: string}): void {
- if(data.index < 1 || data.index > this.doublelinkedlist.length){
-   alert('Invalid position  '+ data.index);
- }else{
-   if(data.index === 1){
-     this.updateAtHead(data);
-   }else if(data.index === this.doublelinkedlist.length){
-     this.updateAtTail(data);
-   }else{
-     let count = 1;
-     this.head = this.doubleLinkedList
-     while(this.head.next){
-       if(count === data.index){
-         this.head.data = data.value
-         break;
-       }
-       this.head = this.head.next;
-       count++;
-     }
-
-   }
- }
+updateAtPosition(): void {
+  this.operationUpdation(2);
+  const matDialogRef = this.matDialog.open(DoubleValueInputDialogComponent, {
+    disableClose: true,
+    position: {
+      top: '120px',
+    },
+    data: insertAtIndex,
+  });
+  matDialogRef.afterClosed().subscribe((result) => {
+    if (result) {
+      if(result.firstInput < 1 || result.firstInput > this.doublelinkedlist.length){
+        alert('Invalid position  '+ result.firstInput);
+      }else{
+        if(result.firstInput === 1){
+          this.doubleLinkedList.data = result.secondInput;
+        }else if(result.firstInput === this.doublelinkedlist.length){
+          this.head = this.doubleLinkedList
+          while(this.head.next){
+            this.head = this.head.next
+          }
+          this.head.data = result.secondInput;
+        }else{
+          let count = 1;
+          this.head = this.doubleLinkedList
+          while(this.head.next){
+            if(count === result.firstInput){
+              this.head.data = result.secondInput
+              break;
+            }
+            this.head = this.head.next;
+            count++;
+          }
+     
+        }
+      }
+    }
+  });
 }
 
 deleteOperation(index: number): void {
@@ -262,31 +373,43 @@ deleteAtEnd(): void {
   }
 }
 
-deleteAtPosition(index: number): void {
-  if(index > 0 && index < this.doublelinkedlist.length + 1){
-    if(index === 1){
-      this.deleteAtFirst();
-    }else if(index === this.doublelinkedlist.length){
-      this.deleteAtEnd();
-    }else{
-      let count = 1;
-      this.head = this.doubleLinkedList;
-      let prev = this.head;
-      while(this.head){
-        if(count === index){
-          this.head.next.previous = prev;
-          prev.next = this.head.next;
-          this.updateAction();
-          break;
+deleteAtPosition(): void {
+  this.operationDeletion(2);
+  this.operationDeletion(2)
+  const matDialogRef = this.matDialog.open(SingleValueInputDialogComponent, {
+    disableClose: true,
+    position: {
+      top: '120px',
+    },
+    data: singleInput,
+  });
+  matDialogRef.afterClosed().subscribe((result) => {
+    if(result > 0 && result < this.doublelinkedlist.length + 1){
+      if(result === 1){
+        this.deleteAtFirst();
+      }else if(result === this.doublelinkedlist.length){
+        this.deleteAtEnd();
+      }else{
+        let count = 1;
+        this.head = this.doubleLinkedList;
+        let prev = this.head;
+        while(this.head){
+          if(count === result){
+            this.head.next.previous = prev;
+            prev.next = this.head.next;
+            this.updateAction();
+            break;
+          }
+          prev = this.head;
+          this.head = this.head.next;
+          count++;
         }
-        prev = this.head;
-        this.head = this.head.next;
-        count++;
       }
+    }else{
+      alert("Invalid position: " + result);
     }
-  }else{
-    alert("Invalid position: " + index);
-  }
+  });
+ 
 }
 
 }

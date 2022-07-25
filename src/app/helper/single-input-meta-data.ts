@@ -7,6 +7,12 @@ export const arrayInput: SingleInputField ={
    multiple:true
 }
 
+export const likedListInput: SingleInputField ={
+   title: "Enter the linked list elements",
+   placeholder: "space separated numbers like 1 2 3",
+   multiple:true
+}
+
 export const singleInput: SingleInputField ={
    title: "Enter the single input",
    placeholder:"Enter value",

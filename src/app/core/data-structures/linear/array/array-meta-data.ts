@@ -7,6 +7,8 @@ export const properties: string[] = [
   'The name of the array stored the base address of the array. It acts as a pointer to the memory block where the first element has been stored'
 ];
 
+export const example: string = 'assets/ds-image/array.jpg'
+
 export const advantage: string[] = [
   'Arrays store multiple elements of the same type with the same name',
   'You can randomly access elements in the array using an index number',
@@ -26,7 +28,7 @@ export const disadvantage: string[] = [
 export const arrayData:DS = {
      defination: "<p>An Array is a linear data structure that collects elements of the same data type and store them in <b class='text-warning'>Contiguous and Adjacent memory location</b>. Array works on an indexing system start from 0 to (n-1) where n is the size of the array</p>",
      properties: Helper.setListwithTitleHtml('Properties',properties),
-     example: "",
+     example: Helper.setExampleImage('Example', example),
      advantage: Helper.setListwithTitleHtml('Advantage',advantage),
      disadvantage: Helper.setListwithTitleHtml('Disadvantage',disadvantage)
 }

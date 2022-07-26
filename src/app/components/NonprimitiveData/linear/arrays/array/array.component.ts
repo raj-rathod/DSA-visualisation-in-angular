@@ -1,5 +1,6 @@
 import { AfterViewInit, Component, ElementRef, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { arrayData } from 'src/app/core/data-structures/linear/array/array-meta-data';
 
 @Component({
   selector: 'app-array',
@@ -8,6 +9,7 @@ import { Router } from '@angular/router';
 })
 export class ArrayComponent implements OnInit, AfterViewInit {
   state = 0;
+  arrayMetaData = arrayData;
   constructor(
     private router: Router,
     private elRef: ElementRef

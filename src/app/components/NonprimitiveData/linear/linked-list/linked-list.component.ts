@@ -1,6 +1,7 @@
 import { AfterViewInit, Component, ElementRef, OnInit } from '@angular/core';
 import { Location } from '@angular/common';
 import { ActivatedRoute, Router } from '@angular/router';
+import { linkedListMetaData } from 'src/app/core/data-structures/linear/linked-list/linked-list-meta-data';
 
 @Component({
   selector: 'app-linked-list',
@@ -8,6 +9,8 @@ import { ActivatedRoute, Router } from '@angular/router';
   styleUrls: ['./linked-list.component.css']
 })
 export class LinkedListComponent implements OnInit, AfterViewInit{
+  
+  linkedListMetaData = linkedListMetaData;
   step = 0;
   constructor(
     private router: Router,

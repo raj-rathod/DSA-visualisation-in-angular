@@ -3,6 +3,10 @@
     <p class="m-0 ms-1 text-light fw-bold d-lg-block d-none">Back</p>
 </div>
 <h1 class="text-center mt-5">Stack</h1>
+<div class="mt-md-5 mt-3" [innerHtml]="stackMetaData.defination"></div>
+<div class="mt-md-4 mt-3" [innerHtml]="stackMetaData.example"></div>
+<div class="mt-md-4 mt-3" [innerHtml]="stackMetaData.properties"></div>
+<div class="mt-md-4 mt-3" [innerHtml]="stackMetaData.operations"></div>
 <div class="mt-5">
     <h5>Stack operations</h5>
     <div class="d-flex flex-wrap align-items-center mt-3">
@@ -45,6 +49,7 @@
     <div class="col-lg-4 col-12 order-2 mb-3"></div>
 
 </div>
-<!-- <div class="modal fade" id="input-dialog" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-    <app-input-dialog (inputValues)="pushElement($event)"></app-input-dialog>
-</div> -->
+<div class="mt-md-4 mt-3" [innerHtml]="stackMetaData.algorithms"></div>
+<div class="mt-md-4 mt-3" [innerHtml]="stackMetaData.applications"></div>
+<div class="mt-md-4 mt-3" [innerHtml]="stackMetaData.advantage"></div>
+<div class="mt-md-4 mt-3" [innerHtml]="stackMetaData.disadvantage"></div>

@@ -3,6 +3,7 @@ import { Location } from '@angular/common';
 import { MatDialog } from '@angular/material/dialog';
 import { SingleValueInputDialogComponent } from 'src/app/shared/components/single-value-input-dialog/single-value-input-dialog.component';
 import { stackPushElement } from 'src/app/helper/single-input-meta-data';
+import { queueMetaData } from 'src/app/core/data-structures/linear/queue/queue-meta-data';
 
 @Component({
   selector: 'app-queue',
@@ -10,6 +11,7 @@ import { stackPushElement } from 'src/app/helper/single-input-meta-data';
   styleUrls: ['./queue.component.css']
 })
 export class QueueComponent implements OnInit {
+  queueMetaData = queueMetaData;
   queueData:string[] = [];
   constructor(
     private location: Location,

@@ -3,6 +3,7 @@ import { Location } from '@angular/common';
 import { MatDialog } from '@angular/material/dialog';
 import { SingleValueInputDialogComponent } from 'src/app/shared/components/single-value-input-dialog/single-value-input-dialog.component';
 import { stackPushElement } from 'src/app/helper/single-input-meta-data';
+import { stackMetaData } from 'src/app/core/data-structures/linear/stack/stack-meta-data';
 
 @Component({
   selector: 'app-stack',
@@ -10,10 +11,9 @@ import { stackPushElement } from 'src/app/helper/single-input-meta-data';
   styleUrls: ['./stack.component.css']
 })
 export class StackComponent implements OnInit {
-
+  stackMetaData = stackMetaData;
   stackData: string[]= [];
   height = 250;
-
   constructor(
     private location: Location,
     private elRef: ElementRef,

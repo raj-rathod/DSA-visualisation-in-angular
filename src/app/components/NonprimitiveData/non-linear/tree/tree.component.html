@@ -7,6 +7,15 @@
 <div class="mt-md-4 mt-3" [innerHtml]="treeMetaData.terminologies"></div>
 <div class="mt-md-4 mt-3" [innerHtml]="treeMetaData.example"></div>
 <div class="mt-md-4 mt-3" [innerHtml]="treeMetaData.type"></div>
+<div class="mt-md-4 mt-3 d-flex flex-wrap align-items-center">
+    <div class="box p-lg-2 p-1 px-lg-3 px-2 btn me-lg-4 me-3 mb-2"
+    *ngFor="let treeType of treeTypesMetaData"
+    [routerLink]="treeType.url"
+    >
+      <p class="m-0">{{treeType.type}}</p>
+   </div>
+</div>
+
 <div class="mt-md-4 mt-3" [innerHtml]="treeMetaData.properties"></div>
 <div class="mt-md-4 mt-3" [innerHtml]="treeMetaData.applications"></div>
 <div class="mt-md-4 mt-3" [innerHtml]="treeMetaData.advantage"></div>

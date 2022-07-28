@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Location } from '@angular/common';
-import { treeMetaData } from 'src/app/core/data-structures/non-linear/tree/tree-meta-data';
+import { treeMetaData, treeTypesMetaData } from 'src/app/core/data-structures/non-linear/tree/tree-meta-data';
 
 @Component({
   selector: 'app-tree',
@@ -10,6 +10,8 @@ import { treeMetaData } from 'src/app/core/data-structures/non-linear/tree/tree-
 export class TreeComponent implements OnInit {
   
   treeMetaData = treeMetaData;
+  treeTypesMetaData = treeTypesMetaData;
+  
   constructor(
     private location: Location
   ) { }

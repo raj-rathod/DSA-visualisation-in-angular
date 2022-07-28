@@ -9,4 +9,5 @@ export interface DS{
      algorithms?: string;
      applications?: string;
      memoryRepresentation?: string;
+     terminologies?: string;
 }

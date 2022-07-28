@@ -10,7 +10,7 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
   background:rgba(4, 112, 103, 0.76);
   border-radius: 8px;
   color:white;
-  font-weight:600;
+  font-weight:500;
 }
 .data-section-active{
    background:rgba(251, 255, 0, 0.493);

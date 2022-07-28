@@ -5,7 +5,7 @@ const treeData = {
      defination:"A tree is a non-linear type of data structure that organizes data hierarchically. It consists of nodes connected by edges. Each node contains a value and may or may not have a child node",
      example:"assets/ds-image/tree.jpg",
      type: [
-          'Binary tree','Binary search tree','AVL Tree','B-tree'
+          'Binary Tree','Binary Search Tree','AVL Tree','B-Tree'
      ],
      terminologies: [
           '<b>Node</b>: Node is the main component of a tree that stores the data along with the links to other nodes',
@@ -66,3 +66,21 @@ export const treeMetaData:DS = {
      advantage: Helper.setListwithTitleHtml("Advantage", treeData.advantage),
      disadvantage: Helper.setListwithTitleHtml("Disadvantage", treeData.disadvantage)
 }
+export const treeTypesMetaData = [
+     {
+          type: treeData.type[0],
+          url:'/non-primitive/non-linear/binary-tree'
+     },
+     {
+          type: treeData.type[1],
+          url:'/non-primitive/non-linear/binary-search-tree'
+     },
+     {
+          type: treeData.type[2],
+          url:'/non-primitive/non-linear/avl-tree'
+     },
+     {
+          type: treeData.type[3],
+          url:'/non-primitive/non-linear/b-tree'
+     }
+]

@@ -5,6 +5,10 @@ import { TreeComponent } from './tree/tree.component';
 import { GraphComponent } from './graph/graph.component';
 import { TrieComponent } from './trie/trie.component';
 import { HashTableComponent } from './hash-table/hash-table.component';
+import { BinaryTreeComponent } from './tree/binary-tree/binary-tree.component';
+import { BinarySearchTreeComponent } from './tree/binary-search-tree/binary-search-tree.component';
+import { AvlTreeComponent } from './tree/avl-tree/avl-tree.component';
+import { BTreeComponent } from './tree/b-tree/b-tree.component';
 
 
 @NgModule({
@@ -12,7 +16,11 @@ import { HashTableComponent } from './hash-table/hash-table.component';
     TreeComponent,
     GraphComponent,
     TrieComponent,
-    HashTableComponent
+    HashTableComponent,
+    BinaryTreeComponent,
+    BinarySearchTreeComponent,
+    AvlTreeComponent,
+    BTreeComponent
   ],
   imports: [CommonModule, NonLinearDataRoutingModule]
 })

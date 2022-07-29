@@ -138,8 +138,7 @@ const binaryTree = {
           'Deletion node not easy',
           'A basic option is based on the height of tree'
      ]
-}
-
+};
 export const binaryTreeMetaData:DS = {
      defination: Helper.setHeader(binaryTree.defination),
      properties: Helper.setListwithTitleHtml('Properties',binaryTree.properties),
@@ -149,4 +148,48 @@ export const binaryTreeMetaData:DS = {
      disadvantage: Helper.setListwithTitleHtml('Disadvantage', binaryTree.disadvantage),
      applications: Helper.setListwithTitleHtml('Applications', binaryTree.applications),
      type: Helper.setListwithTitleHtml('Types of binary tree', binaryTree.type),
+};
+
+const binarySearchTree = {
+     defination:"A binary search tree (BST), also called an ordered or sorted binary tree, is a rooted binary tree data structure with the key of each internal node being greater than all the keys in the respective node's left subtree and less than the ones in its right subtree. The time complexity of operations on the binary search tree is directly proportional to the height of the tree",
+     properties:[
+          'The left subtree of a node contains only nodes with keys lesser than the node’s key',
+          'The right subtree of a node contains only nodes with keys greater than the node’s key',
+          'The left and right subtree each must also be a binary search tree',
+     ],
+     example:"assets/ds-image/binary-search-tree.jpg",
+     operations:[
+          '<b>Searching in a BST</b>:Searching in BST involves the comparison of the key values. If the key value is equal to root key then, search successful, if lesser than root key then search the key in the left subtree and if the key is greater than root key then search the key in the right subtree',
+          '<b>Insertion in a BST</b>:Insertion in BST involves the comparison of the key values. If the key value is lesser than or equal to root key then go to left subtree, find an empty space following to the search algorithm and insert the data and if the key is greater than root key then go to right subtree, find an empty space following to the search algorithm and insert the data',
+          '<b>Deletion in a BST</b>:Deletion in BST involves three cases.<br>Case 1- If the node to be deleted is leaf node: If the node to be deleted is a leaf node, then delete it.<br>Case 2- If the node to be deleted has one child: If the node to be deleted has one child then, delete the node and place the child of the node at the position of the deleted node. <br>Case 3- If the node to be deleted has two children: If the node to be deleted has two children then, find the inorder successor or inorder predecessor of the node according to the nearest capable value of the node to be deleted. Delete the inorder successor or predecessor using the above cases. Replace the node with the inorder successor or predecessor.',
+          '<b>Traversals in a BST</b>:There are 4 types of traversals of the Binary Search Tree.<br>Level Order Traversal: Each node of the tree is traversed level by level in order of its appearance.<br>Pre-order Traversal: The nodes are traversed in the format of root and then left subtree and then right subtree.<br>Inorder Traversal: The nodes are traversed in the format of left subtree and then root and then right subtree.<br>Post Traversal: The nodes are traversed in the format of left subtree  and then right subtree and then root'
+     ],
+     advantage:[
+          'BST is fast in insertion and deletion when balanced',
+          'BST is efficient',
+          'We can also do range queries – find keys between N and M (N <= M)',
+          'BST code is simple as compared to other data structures'
+     ],
+     disadvantage:[
+          'The main disadvantage is that we should always implement a balanced binary search tree. Otherwise the cost of operations may not be logarithmic and degenerate into a linear search on an array',
+          'Accessing the element in BST is slightly slower than array',
+          'A BST can be imbalanced or degenerated which can increase the complexity'
+     ],
+     applications:[
+          'BSTs are used for indexing',
+          'It is also used to implement various searching algorithms',
+          'IT can be used to implement various data structures',
+          'BSTs are used for indexing in databases',
+          'BSTs are used to implement Huffman coding algorithm',
+          'It is also used to implement dictionaries'
+     ],
+}
+export const binarySearchTreeMetaData:DS = {
+     defination: Helper.setHeader(binarySearchTree.defination),
+     properties: Helper.setListwithTitleHtml('Properties',binarySearchTree.properties),
+     example: Helper.setExampleImage('Example',binarySearchTree.example),
+     operations: Helper.setListwithTitleHtml('Operations', binarySearchTree.operations),
+     advantage: Helper.setListwithTitleHtml('Advantage', binarySearchTree.advantage),
+     disadvantage: Helper.setListwithTitleHtml('Disadvantage', binarySearchTree.disadvantage),
+     applications: Helper.setListwithTitleHtml('Applications', binarySearchTree.applications)
 }

@@ -6,6 +6,7 @@ import { AvlTreeComponent } from './tree/avl-tree/avl-tree.component';
 import { BTreeComponent } from './tree/b-tree/b-tree.component';
 import { BinarySearchTreeComponent } from './tree/binary-search-tree/binary-search-tree.component';
 import { BinaryTreeComponent } from './tree/binary-tree/binary-tree.component';
+import { HeapTreeComponent } from './tree/heap-tree/heap-tree.component';
 import { TreeComponent } from './tree/tree.component';
 import { TrieComponent } from './trie/trie.component';
 
@@ -28,6 +29,9 @@ const routes: Routes = [
     },
     {
       path: 'b-tree', component: BTreeComponent
+    },
+    {
+      path:'heap-tree', component: HeapTreeComponent
     },
    {
      path: 'graph', component: GraphComponent,

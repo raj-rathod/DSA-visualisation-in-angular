@@ -93,6 +93,10 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
           font-size: 0.75rem !important;
           line-height: 1.125rem !important;
       }
+      li{
+        font-size: 0.75rem !important;
+        line-height: 1.125rem !important;
+      }
       
       .fz-xs-10{
         font-size:0.625rem !important;

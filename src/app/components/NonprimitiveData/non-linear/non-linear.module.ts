@@ -9,6 +9,7 @@ import { BinaryTreeComponent } from './tree/binary-tree/binary-tree.component';
 import { BinarySearchTreeComponent } from './tree/binary-search-tree/binary-search-tree.component';
 import { AvlTreeComponent } from './tree/avl-tree/avl-tree.component';
 import { BTreeComponent } from './tree/b-tree/b-tree.component';
+import { HeapTreeComponent } from './tree/heap-tree/heap-tree.component';
 
 
 @NgModule({
@@ -20,7 +21,8 @@ import { BTreeComponent } from './tree/b-tree/b-tree.component';
     BinaryTreeComponent,
     BinarySearchTreeComponent,
     AvlTreeComponent,
-    BTreeComponent
+    BTreeComponent,
+    HeapTreeComponent
   ],
   imports: [CommonModule, NonLinearDataRoutingModule]
 })

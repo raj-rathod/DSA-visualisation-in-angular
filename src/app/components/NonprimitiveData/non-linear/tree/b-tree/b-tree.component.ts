@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Location } from '@angular/common';
-import { avlTreeMetaData } from 'src/app/core/data-structures/non-linear/tree/tree-meta-data';
+import {bTreeMetaData } from 'src/app/core/data-structures/non-linear/tree/tree-meta-data';
 
 @Component({
   selector: 'app-b-tree',
@@ -8,7 +8,7 @@ import { avlTreeMetaData } from 'src/app/core/data-structures/non-linear/tree/tr
   styleUrls: ['./b-tree.component.css']
 })
 export class BTreeComponent implements OnInit {
-  avlTreeMetaData = avlTreeMetaData;
+  bTreeMetaData = bTreeMetaData;
   
   constructor(
     private location: Location

@@ -5,7 +5,7 @@ const treeData = {
   defination:
     'A tree is a non-linear type of data structure that organizes data hierarchically. It consists of nodes connected by edges. Each node contains a value and may or may not have a child node',
   example: 'assets/ds-image/tree.jpg',
-  type: ['Binary Tree', 'Binary Search Tree', 'AVL Tree', 'B-Tree', 'Heap Tree'],
+  type: ['Binary Tree', 'Binary Search Tree', 'AVL Tree', 'Heap Tree'],
   terminologies: [
     '<b>Node</b>: Node is the main component of a tree that stores the data along with the links to other nodes',
     '<b>Edge</b>: Edge( also called branch) connects two nodes of a tree. A node can have more than one edge',
@@ -87,10 +87,6 @@ export const treeTypesMetaData = [
   },
   {
     type: treeData.type[3],
-    url: '/non-primitive/non-linear/b-tree',
-  },
-  {
-    type: treeData.type[4],
     url: '/non-primitive/non-linear/heap-tree',
   }
 ];
@@ -275,4 +271,96 @@ export const avlTreeMetaData:DS={
      advantage: Helper.setListwithTitleHtml('Advantage', avlTree.advantage),
      disadvantage: Helper.setListwithTitleHtml('Disadvantage', avlTree.disadvantage),
      applications: Helper.setListwithTitleHtml('Applications', avlTree.applications),
+};
+
+const bTree = {
+  defination:"B-Tree is a self-balancing search tree. In most of the other self-balancing search trees (like AVL and Red-Black Trees), it is assumed that everything is in main memory. To understand the use of B-Trees, we must think of the huge amount of data that cannot fit in main memory. When the number of keys is high, the data is read from disk in the form of blocks. Disk access time is very high compared to the main memory access time. The main idea of using B-Trees is to reduce the number of disk accesses. Most of the tree operations (search, insert, delete, max, min, ..etc ) require O(h) disk accesses where h is the height of the tree. B-tree is a fat tree. The height of B-Trees is kept low by putting maximum possible keys in a B-Tree node. Generally, the B-Tree node size is kept equal to the disk block size. Since the height of the B-tree is low so total disk accesses for most of the operations are reduced significantly compared to balanced Binary Search Trees like AVL Tree, Red-Black Tree, ..etc.",
+  operations:["?"],
+  applications:[
+    'It is used in large databases to access data stored in the disk',
+    'Searching of data in a data set can be achieved in significantly less time using B tree',
+    'With the indexing feature multilevel indexing can be achieved',
+    'Most of the servers also use B-tree approach'
+  ],
+  example:"assets/ds-image/b-tree.jpg",
+  properties:[
+    "All leaves are at the same level",
+    "A B-Tree is defined by the term minimum degree ‘t’. The value of t depends upon disk block size",
+    "Every node except root must contain at least t-1 keys. The root may contain minimum 1 key",
+    "All nodes (including root) may contain at most 2*t – 1 keys",
+    "Number of children of a node is equal to the number of keys in it plus 1",
+    "All keys of a node are sorted in increasing order. The child between two keys k1 and k2 contains all keys in the range from k1 and k2",
+    "B-Tree grows and shrinks from the root which is unlike Binary Search Tree. Binary Search Trees grow downward and also shrink from downward",
+    "Like other balanced Binary Search Trees, time complexity to search, insert and delete is O(log n)",
+    "Insertion of a Node in B-Tree happens only at Leaf Node"
+
+  ],
+  advantage:[
+    "B-Tree facilitates ordered sequential access, and so it works effectively as compared to a hash table",
+    "It allows iterations over items in a much similar way as what is supported by a binary tree. The iterations arrange the items in the proper order (ascending or descending) as required",
+    "The tree can have millions of items stored in it, and through its flat structure, it facilitates easy and efficient traversal through the data",
+    "When there are millions of records, then deleting a record from a table can turn out to be expensive, because the table may need to be rewritten. However, if B-Tree is used to handle sequential access to the table, or if the entire data is stored in B-Tree nodes, then deletion operation can be made simpler"
+  ],
+  disadvantage:[
+    "?"
+  ],
+} 
+
+export const bTreeMetaData: DS = {
+  defination: Helper.setHeader(bTree.defination),
+  properties: Helper.setListwithTitleHtml('Properties', bTree.properties),
+  example: Helper.setExampleImage('Example', bTree.example),
+  operations: Helper.setListwithTitleHtml('Operations', bTree.operations),
+  advantage: Helper.setListwithTitleHtml('Advantage', bTree.advantage),
+  disadvantage: Helper.setListwithTitleHtml('Disadvantage', bTree.disadvantage),
+}
+
+const heapTree = {
+  defination:"A Heap is a special Tree-based data structure in which the tree is a complete binary tree. Generally, Heaps can be of two types:<br> <b class='text-warning'>Max-Heap</b>: In a Max-Heap the key present at the root node must be greatest among the keys present at all of it’s children. The same property must be recursively true for all sub-trees in that Binary Tree.<br> <b class='text-warning'>Min-Heap</b>: In a Min-Heap the key present at the root node must be minimum among the keys present at all of it’s children. The same property must be recursively true for all sub-trees in that Binary Tree.",
+  example:"assets/ds-image/heap.jpg",
+  operations:[
+    "Heapify:Process to rearrange the heap in order to maintain heap-property",
+    "Find-max (or Find-min):find a maximum item of a max-heap, or a minimum item of a min-heap, respectively",
+    "Insertion:process to insert an element in existing heap time complexity O(log N)",
+    "Deletion: deleting the top element of the heap or the highest priority element, and then organizing the heap and returning the element with time complexity O(log N)",
+    "Extract Min-Max → Returning and deleting the maximum or minimum element in max-heap and min-heap respectively"
+  ],
+  properties:[
+    '<b>Ordering</b>:Nodes must be arranged in an order according to values. The values should follow min-heap or max-heap property',
+    '<b>Structural</b>:All levels in a heap should be full. In other words, it should be a complete binary tree',
+    'Array based implementation, so the last parent node index is always (n/2)-1 and the indexs of left child and right child of nay parent node whose index is `i` are (2i+1) and (2i+2) respectively',
+  ],
+  applications: [
+    "Heap is used in the construction of priority queues. We can insert, delete, identify the highest priority element, or insert and extract with priority, among other things, in O(log N) time using a priority queue. Although data structures such as BST, AVL trees, and the Red-Black tree can accomplish the same functionalities, they are more complex than heaps.Priority queues themselves have more advanced uses, such as bandwidth control in an n/w router, prims and Dijkstra's algorithm, Huffman coding, and the BFS algorithm",
+    "Order statistics: The Heap data structure can be used to find the kth smallest / largest element in an array quickly and effectively",
+    "Heap sort is one of the fastest sorting algorithms with time complexity of O(N* log(N), and it’s easy to implement",
+    "Best First Search (BFS) is an informed search, where unlike the queue in Breadth-First Search, this technique is implemented using a priority queue",
+    "Patient treatment: In a hospital, an emergency patient, or the patient with more injury is treated first. Here the priority is the degree of injury",
+    "Systems concerned with security use heap sort, like the Linux kernel"
+  ],
+  advantage:[
+    'Less time complexity, for inserting or deleting an element in the heap the time complexity is just O(log N)',
+    'It helps to find the minimum number and greatest number',
+    "To just peek at the most prior element the time complexity is constant O(1)",
+    "Can be implemented using an array, it doesn’t need any extra space for pointer",
+    "A binary heap is a balanced binary tree, and easy to implement",
+    "Heap can be created with O(N) time"
+  ],
+  disadvantage: [
+    "The time complexity for searching an element in Heap is O(N)",
+    "To find a successor or predecessor of an element, the heap takes O(N) time, whereas BST takes only O(log N) time",
+    "To print all elements of the heap in sorted order time complexity is O(N*log N), whereas, for BST, it takes only O(N) time",
+    "Memory management is more complex in heap memory because it is used globally. Heap memory is divided into two parts-old generations and the young generation etc. at java garbage collection"
+  ],
+
+}
+
+export const heapMetaData: DS = {
+  defination: Helper.setHeader(heapTree.defination),
+  properties: Helper.setListwithTitleHtml('Properties', heapTree.properties),
+  example: Helper.setExampleImage('Example', heapTree.example),
+  operations: Helper.setListwithTitleHtml('Operations', heapTree.operations),
+  advantage: Helper.setListwithTitleHtml('Advantage', heapTree.advantage),
+  disadvantage: Helper.setListwithTitleHtml('Disadvantage', heapTree.disadvantage),
+  applications: Helper.setListwithTitleHtml('Applications', heapTree.applications),
 };

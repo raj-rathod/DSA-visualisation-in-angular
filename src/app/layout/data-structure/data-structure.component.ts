@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { Location } from '@angular/common';
 @Component({
   selector: 'app-data-structure',
   templateUrl: './data-structure.component.html',
@@ -13,15 +12,11 @@ export class DataStructureComponent implements OnInit {
   linearData = false;
   nonLinearData = false;
   constructor(
-    private location: Location
   ) { }
 
   ngOnInit(): void {
   }
 
-  gotoBack(): void {
-   this.location.back();
-  }
 
   primitiveDataTypeShow(): void {
     this.primitiveTypeShow = true;

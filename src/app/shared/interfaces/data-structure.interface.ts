@@ -10,4 +10,5 @@ export interface DS{
      applications?: string;
      memoryRepresentation?: string;
      terminologies?: string;
+     other?: string;
 }

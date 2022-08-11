@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Location } from '@angular/common';
+import { trieMetaData } from 'src/app/core/data-structures/non-linear/trie/trie-meta-data';
 
 @Component({
   selector: 'app-trie',
@@ -7,7 +8,7 @@ import { Location } from '@angular/common';
   styleUrls: ['./trie.component.css']
 })
 export class TrieComponent implements OnInit {
-
+  trieMetaData = trieMetaData
   constructor(
     private location: Location
   ) { }

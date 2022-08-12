@@ -1,5 +1,10 @@
 @import "~bootstrap/dist/css/bootstrap.css";
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+body { 
+  margin: 0; 
+  font-family: Roboto, "Helvetica Neue", sans-serif; 
+  letter-spacing: 0.025rem;
+  word-spacing: 0.2rem;
+}
 .box{
     background:rgba(16, 203, 236, 0.76);
     border-radius: 8px;
@@ -95,7 +100,7 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
       }
       li{
         font-size: 0.75rem !important;
-        line-height: 1.125rem !important;
+        line-height: 1.5rem !important;
       }
       
       .fz-xs-10{

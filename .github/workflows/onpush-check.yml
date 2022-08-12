@@ -21,8 +21,5 @@ jobs:
       - name: Install deps and build (with cache)
         run: npm install --save --legacy-peer-deps
 
-      - name: Lint
-        run: npm run lint
-
       - name: Build
         run: npm run build

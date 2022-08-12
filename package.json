@@ -8,7 +8,7 @@
     "lint": "ng lint",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "build:prod": "ng build --configuration production --base-href https://raj-rathod.github.io/dsa-visualisation/",
+    "build:prod": "ng build --configuration production --base-href https://raj-rathod.github.io/DSA-visualisation-in-angular/",
     "test:headless": "ng test --watch=false --browsers=ChromeHeadless"
   },
   "private": true,

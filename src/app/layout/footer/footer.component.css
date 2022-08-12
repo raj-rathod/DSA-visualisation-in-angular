@@ -1,3 +1,38 @@
 .margin-top{
-    margin-top: 60px;
+    margin-top: 90px;
+}
+.social-media{
+    background: white;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+.bg-footer{
+    background:rgba(16, 203, 236, 0.76);
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+.image-size{
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+.fs-small{
+    font-size: 12px;
+}
+.item-link{
+    cursor: pointer;
+    color: black !important;
+    text-decoration: none;
+}
+@media(max-width:992px) {
+    .image-size{
+        width: 150px;
+        height: 150px;
+    }
+}
+
+@media(max-width:767px){
+    .image-size{
+        width: 130px;
+        height: 130px;
+    }
 }

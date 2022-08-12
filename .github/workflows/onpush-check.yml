@@ -19,7 +19,7 @@ jobs:
           node-version: ${{ matrix.node }}
 
       - name: Install deps and build (with cache)
-        uses: npm install --save --legacy-peer-deps
+        run: npm install --save --legacy-peer-deps
 
       - name: Lint
         run: npm run lint

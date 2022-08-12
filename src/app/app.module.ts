@@ -8,6 +8,7 @@ import { DataStructureComponent } from './layout/data-structure/data-structure.c
 import { AlgorithmComponent } from './layout/algorithm/algorithm.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SharedModule } from './shared/components/shared.module';
+import { FooterComponent } from './layout/footer/footer.component';
 
 
 @NgModule({
@@ -16,6 +17,7 @@ import { SharedModule } from './shared/components/shared.module';
     HomeComponent,
     DataStructureComponent,
     AlgorithmComponent,
+    FooterComponent,
   ],
   imports: [
     BrowserModule,

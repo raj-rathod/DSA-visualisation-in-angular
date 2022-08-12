@@ -8,4 +8,6 @@
 [![Instagram Badge](https://img.shields.io/badge/-Instagram-e4405f?style=flat-square&logo=Instagram&logoColor=white)](https://www.instagram.com/raj_rathod1313/?hl=en)
 [![Github](https://img.shields.io/github/followers/raj-rathod?label=Follow&style=social)](https://github.com/raj-rathod)
 
+### [Release](https://raj-rathod.github.io/DSA-visualisation-in-angular/)
+
 

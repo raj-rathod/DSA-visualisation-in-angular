@@ -317,7 +317,7 @@ export const bTreeMetaData: DS = {
 
 const heapTree = {
   defination:"A Heap is a special Tree-based data structure in which the tree is a complete binary tree. Generally, Heaps can be of two types:<br> <b class='text-warning'>Max-Heap</b>: In a Max-Heap the key present at the root node must be greatest among the keys present at all of it’s children. The same property must be recursively true for all sub-trees in that Binary Tree.<br> <b class='text-warning'>Min-Heap</b>: In a Min-Heap the key present at the root node must be minimum among the keys present at all of it’s children. The same property must be recursively true for all sub-trees in that Binary Tree.",
-  example:"assets/ds-image/heap.jpg",
+  example:"assets/ds-image/heap-tree.jpg",
   operations:[
     "Heapify:Process to rearrange the heap in order to maintain heap-property",
     "Find-max (or Find-min):find a maximum item of a max-heap, or a minimum item of a min-heap, respectively",

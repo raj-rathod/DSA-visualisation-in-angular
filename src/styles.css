@@ -67,6 +67,9 @@ body {
 .fs-smaller{
   font-size: 10px;
 }
+li{
+  line-height: 1.5rem !important;
+}
 
 @media( max-width:992px){
   .cdk-overlay-pane{

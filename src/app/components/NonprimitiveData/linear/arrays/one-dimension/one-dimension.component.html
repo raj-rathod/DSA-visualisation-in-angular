@@ -1,5 +1,5 @@
 <h4>One Dimension array operations</h4>
-<div class="d-flex flex-wrap align-items-center mt-3">
+<div class="d-flex align-items-center mt-3 horizontal-scroll">
     <div class="box p-lg-2 p-1 px-lg-3 px-2 btn me-lg-4 me-3 mb-2 opbtn"
      (click)="createNewArray()"
      >
@@ -20,7 +20,7 @@
 </div>
 <div class="mt-4" *ngIf="insertSubMenu">
     <h5>Insertion sub menu</h5>
-    <div class="d-flex flex-wrap align-items-center mt-3">
+    <div class="d-flex horizontal-scroll align-items-center mt-3">
         <div class="box p-lg-2 p-1 px-lg-3 px-2 btn me-lg-4 me-3 mb-2 opInsBtn" 
         (click)="insertIntoArray()"
         >
@@ -40,7 +40,7 @@
 </div>
 <div class="mt-4" *ngIf="deleteSubMenu">
     <h5>Deletion sub menu</h5>
-    <div class="d-flex flex-wrap align-items-center mt-3">
+    <div class="d-flex horizontal-scroll align-items-center mt-3">
         <div class="box p-lg-2 p-1 px-lg-3 px-2 btn me-lg-4 me-3 mb-2 opDltBtn"
          (click)="opDltBtnSelection(0)"
         >
@@ -65,7 +65,7 @@
 </div>
 <div class="mt-4" *ngIf="updateSubMenu">
     <h5>Upadation sub menu</h5>
-    <div class="d-flex flex-wrap align-items-center mt-3">
+    <div class="d-flex horizontal-scroll align-items-center mt-3">
         <div class="box p-lg-2 p-1 px-lg-3 px-2 btn me-lg-4 me-3 mb-2 opUpdBtn" 
         (click)="updateAtFirst()"
         >
@@ -87,7 +87,7 @@
 <!---Array section-->
 <div class="mt-5 mb-5" *ngIf="createdArr.length > 0">
   <h4>Generated Array</h4>
-  <div class="d-flex flex-wrap mt-3">
+  <div class="d-flex horizontal-scroll mt-3">
     <div class='me-lg-3 me-2 mb-2'>
         <div class='border border-2 border-info'>
            <div class="tab w-100 px-lg-3 px-2 py-lg-2 py-1 text-center

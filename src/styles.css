@@ -13,12 +13,14 @@ body {
     border-radius: 8px;
     color:white;
     font-weight:500;
+    min-width: fit-content;
 }
 .box-active{
   background:rgba(4, 112, 103, 0.76);
   border-radius: 8px;
   color:white;
   font-weight:500;
+  min-width: fit-content;
 }
 .data-section-active{
    background:rgba(251, 255, 0, 0.493);
@@ -72,6 +74,22 @@ body {
 }
 li{
   line-height: 1.5rem !important;
+}
+
+.horizontal-scroll{
+  width: 100% !important;
+  overflow-x: scroll;
+  overflow-y: hidden;
+}
+/* Hide scrollbar for Chrome, Safari and Opera */
+.horizontal-scroll::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.horizontal-scroll {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
 }
 
 /*-------- WhatsApp------------------------------------------------*/

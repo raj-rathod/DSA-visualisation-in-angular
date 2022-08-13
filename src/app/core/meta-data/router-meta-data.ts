@@ -39,3 +39,50 @@ export const dataStructure: RouterLinkData[] = [
     }
 
 ];
+
+export const algorithms: RouterLinkData[] = [
+    {
+        name: "Algorithms",
+        route: "/algorithm"
+    },
+    {
+        name: "Backtracking",
+        route: "/algorithm/backtracking"
+    },
+    {
+        name: "Brute force",
+        route: "/algorithm/brute-force"
+    },
+    {
+        name: "Divide and conquer",
+        route: "/algorithm/divide-and-conquer"
+    },
+    {
+        name: "Dynamic programming",
+        route: "/algorithm/dynamic-programming"
+    },
+    {
+        name: "Greedy",
+        route: "/algorithm/greedy"
+    },
+    {
+        name: "Hashing",
+        route: "/algorithm/hashing"
+    },
+    {
+        name: "Randomized",
+        route: "/algorithm/randomized"
+    },
+    {
+        name: "Recursive",
+        route: "/algorithm/recursive"
+    },
+    {
+        name: "Searching",
+        route: "/algorithm/searching"
+    },
+    {
+        name: "Sorting",
+        route: "/algorithm/sorting"
+    },
+];

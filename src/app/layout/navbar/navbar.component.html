@@ -22,9 +22,9 @@
                   Algorithms
                 </p>
                 <ul class="dropdown-menu data-link-dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                    <li>
-                        <p class="m-0 px-3 py-1">Test</p>
-                    </li>
+                  <li *ngFor="let data of algorithms" [routerLink]="data.route">
+                    <p class="m-0 px-3 py-1">{{data.name}}</p>
+                  </li>
                 </ul>
             </li>
         </ul>

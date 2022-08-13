@@ -8,6 +8,8 @@ import { dataStructure } from 'src/app/core/meta-data/router-meta-data';
 })
 export class NavbarComponent implements OnInit {
   dataStructure = dataStructure;
+  searchData = dataStructure;
+  searchKey = '';
   constructor(
     private elRef: ElementRef
   ) { }

@@ -10,11 +10,14 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SharedModule } from './shared/components/shared.module';
 import { FooterComponent } from './layout/footer/footer.component';
 import { NavbarComponent } from './layout/navbar/navbar.component';
+import { SearchRoutePipe } from './shared/pipes/search-route';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
   declarations: [
     AppComponent,
+    SearchRoutePipe,
     HomeComponent,
     DataStructureComponent,
     AlgorithmComponent,
@@ -22,6 +25,7 @@ import { NavbarComponent } from './layout/navbar/navbar.component';
     NavbarComponent,
   ],
   imports: [
+    FormsModule,
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,

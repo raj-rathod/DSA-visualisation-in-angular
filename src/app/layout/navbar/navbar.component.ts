@@ -1,5 +1,5 @@
 import { Component, ElementRef, OnInit } from '@angular/core';
-import { dataStructure } from 'src/app/core/meta-data/router-meta-data';
+import { algorithms, dataStructure } from 'src/app/core/meta-data/router-meta-data';
 
 @Component({
   selector: 'app-navbar',
@@ -8,7 +8,8 @@ import { dataStructure } from 'src/app/core/meta-data/router-meta-data';
 })
 export class NavbarComponent implements OnInit {
   dataStructure = dataStructure;
-  searchData = dataStructure;
+  algorithms = algorithms
+  searchData = dataStructure.concat(algorithms);
   searchKey = '';
   constructor(
     private elRef: ElementRef

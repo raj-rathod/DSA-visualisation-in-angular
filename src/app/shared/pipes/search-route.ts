@@ -6,7 +6,6 @@ import { RouterLinkData } from '../interfaces/meta-data.interface';
 })
 export class SearchRoutePipe implements PipeTransform {
   transform(items: RouterLinkData[], searchText: string): RouterLinkData[]{
-    items.sort();
     if (!items){
       return [];
     }

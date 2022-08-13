@@ -10,7 +10,7 @@
                 <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                   Data Structures
                 </a>
-                <ul class="dropdown-menu data-link" aria-labelledby="navbarDropdownMenuLink">
+                <ul class="dropdown-menu data-link-dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                   <li *ngFor="let data of dataStructure" [routerLink]="data.route">
                     <p class="m-0 px-3 py-1">{{data.name}}</p>
                   </li>
@@ -21,10 +21,10 @@
                 <p class="nav-link dropdown-toggle active m-0" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                   Algorithms
                 </p>
-                <ul class="dropdown-menu data-link" aria-labelledby="navbarDropdownMenuLink">
-                    <li>
-                        <p class="m-0 px-3 py-1">Test</p>
-                    </li>
+                <ul class="dropdown-menu data-link-dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                  <li *ngFor="let data of algorithms" [routerLink]="data.route">
+                    <p class="m-0 px-3 py-1">{{data.name}}</p>
+                  </li>
                 </ul>
             </li>
         </ul>

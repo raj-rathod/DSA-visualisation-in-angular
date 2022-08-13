@@ -1,0 +1,36 @@
+<nav class="navbar navbar-expand-lg navbar-light pt-lg-3 pt-2">
+    <div class="container-fluid">
+      <a class="navbar-brand fw-bold" href="/">DSA Visualization</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleMenu" aria-controls="navbarToggleMenu" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarToggleMenu">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Data Structures
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                  <li *ngFor="let data of dataStructure" [routerLink]="data.route">
+                    <p class="m-0 px-3 py-1">{{data.name}}</p>
+                  </li>
+                  
+                </ul>
+            </li>
+            <li class="nav-item dropdown">
+                <p class="nav-link dropdown-toggle active m-0" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Algorithms
+                </p>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                    <li>
+                        <p class="m-0 px-3 py-1">Test</p>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        <div class="d-flex col-xl-3 col-lg-4 col-md-8">
+          <input class="form-control" type="search" placeholder="Search topic" aria-label="Search">
+        </div>
+      </div>
+    </div>
+  </nav>

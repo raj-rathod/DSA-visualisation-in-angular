@@ -8,3 +8,8 @@ export interface SocialLink{
     image: string;
     url: string;
 }
+
+export interface RouterLinkData{
+    name: string;
+    route: string;
+}

@@ -1,0 +1,25 @@
+.nav-item {
+  margin-right: 30px;
+  font-weight: 600;
+}
+.dropdown-menu{
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    font-weight:500;
+    width: 250px;
+    height: 250px;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+.dropdown-menu  li {
+    cursor: pointer;
+}
+.dropdown-menu li:hover{
+    background-color: rgba(16, 203, 236, 0.6);
+}
+
+@media (max-width: 767px){
+    .dropdown-menu{
+        width: 200px;
+        height:200px;
+    }
+}

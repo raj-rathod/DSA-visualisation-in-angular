@@ -1,12 +1,12 @@
 import { Component, OnInit } from '@angular/core';
+import { dataStructureMetaData } from 'src/app/core/data-structures/data-structure-meta-data';
 @Component({
   selector: 'app-data-structure',
   templateUrl: './data-structure.component.html',
   styleUrls: ['./data-structure.component.css']
 })
 export class DataStructureComponent implements OnInit {
-  
-
+  dataStructureMetaData = dataStructureMetaData;
   primitiveTypeShow = false;
   nonprimitiveTypeShow = false;
   linearData = false;

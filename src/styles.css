@@ -8,12 +8,48 @@ body {
   letter-spacing: 0.025rem;
   word-spacing: 0.2rem;
 }
+/* customize scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height:8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  border: 1px solid #939AA9;
+  border-radius: 100px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #939AA9;;
+  border-radius: 100px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #939AA9;;
+}
+.box-data{
+  background:rgba(16, 203, 236, 0.76);
+  border-radius: 8px !important;
+  color:white;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  font-weight:500;
+  min-width: fit-content;
+}
+.box-data:hover{
+  color: #000;
+}
 .box{
     background:rgba(16, 203, 236, 0.76);
-    border-radius: 8px;
+    border-radius: 8px !important;
     color:white;
     font-weight:500;
     min-width: fit-content;
+}
+.box:hover{
+  color: #000;
 }
 .box-active{
   background:rgba(4, 112, 103, 0.76);
@@ -28,10 +64,12 @@ body {
 .btn-bg{
   background:rgba(16, 203, 236, 0.76);
   color:white;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
   font-weight:700;
 }
 .btn-bg-unactive{
   background:rgba(16, 203, 236, 0.76);
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
   color:white;
   font-weight:700;
   opacity: 0.5;

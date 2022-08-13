@@ -261,9 +261,9 @@ export class OneDimensionComponent implements OnInit {
     for (let i = 0; i < opbtnRef.length; i++){
        if(i === index){
          this.showSubmenu(i);
-         opbtnRef[i].className = 'box box-active p-lg-2 p-1 px-lg-3 px-2 btn me-lg-4 me-3 mb-2 opbtn';
+         opbtnRef[i].className = 'box box-active p-lg-2 p-1 px-lg-3 px-2 tab me-lg-4 me-3  opbtn';
        }else{
-        opbtnRef[i].className = 'box p-lg-2 p-1 px-lg-3 px-2 btn me-lg-4 me-3 mb-2 opbtn';
+        opbtnRef[i].className = 'box p-lg-2 p-1 px-lg-3 px-2 tab me-lg-4 me-3  opbtn';
        }
     }
   }

@@ -2,10 +2,15 @@
     <img src="assets/icons/Back-white.png" alt="">
     <p class="m-0 ms-1 text-light fw-bold d-lg-block d-none">Back</p>
 </div>
-<h1 class="text-center mt-4 pt-3">Data Structure Hierarchy</h1>
+<h1 class="text-center mt-4 pt-3">Data Structure</h1>
+<div class="mt-md-4 mt-3" [innerHtml]="dataStructureMetaData.defination"></div>
+<div class="mt-md-4 mt-3" [innerHtml]="dataStructureMetaData.terminologies"></div>
+<div class="mt-md-4 mt-3" [innerHtml]="dataStructureMetaData.choosing"></div>
+<div class="mt-md-4 mt-3" [innerHtml]="dataStructureMetaData.operations"></div>
+<div class="mt-md-4 mt-3" [innerHtml]="dataStructureMetaData.properties"></div>
 <div class="d-flex justify-content-center mt-5">
-    <div class="box p-lg-3 p-2">
-        <p class="m-0">Types of data structure</p>
+    <div class="box-data p-lg-3 p-2">
+        <p class="m-0 text-black">Types of data structure</p>
     </div>
 </div>
 <div class="d-flex justify-content-center">
@@ -21,10 +26,10 @@
     </div>
 </div>
 <div class="d-flex justify-content-between">
-    <div class="box p-lg-3 p-2 ms-lg-4 tab" (click)="primitiveDataTypeShow()">
+    <div class="box-data p-lg-3 p-2 ms-lg-4 tab" (click)="primitiveDataTypeShow()">
         <p class="m-0">Primitive Data</p>
     </div>
-    <div class="box p-lg-3 p-2 tab" (click)="nonprimitiveDataTypeShow()">
+    <div class="box-data p-lg-3 p-2 tab" (click)="nonprimitiveDataTypeShow()">
         <p class="m-0">Nonprimitive Data</p>
     </div>
 </div>
@@ -40,16 +45,16 @@
         <div class="border-end pt-lg-5 pt-4 border-2 border-secondary w-0"></div>
     </div>
     <div class="d-flex justify-content-between col-lg-10">
-        <div class="box p-lg-3 p-2 tab" routerLink="/primitive/integer">
+        <div class="box-data p-lg-3 p-2 tab" routerLink="/primitive/integer">
             <p class="m-0">Integer</p>
         </div>
-        <div class="box p-lg-3 p-2 tab" routerLink="/primitive/float">
+        <div class="box-data p-lg-3 p-2 tab" routerLink="/primitive/float">
             <p class="m-0">Float</p>
         </div>
-        <div class="box p-lg-3 p-2 tab" routerLink="/primitive/character">
+        <div class="box-data p-lg-3 p-2 tab" routerLink="/primitive/character">
             <p class="m-0">Character</p>
         </div>
-        <div class="box p-lg-3 p-2 tab" routerLink="/primitive/boolean">
+        <div class="box-data p-lg-3 p-2 tab" routerLink="/primitive/boolean">
             <p class="m-0">Boolean</p>
         </div>
     </div>
@@ -71,10 +76,10 @@
    </div>
    <div class="d-flex justify-content-end col-12">
         <div class="d-flex justify-content-between col-lg-11 col-12">
-            <div class="box p-lg-3 p-2 tab" (click)="linearDataShow()">
+            <div class="box-data p-lg-3 p-2 tab" (click)="linearDataShow()">
                 <p class="m-0">Linear Data</p>
             </div>
-            <div class="box p-lg-3 p-2 tab" (click)="nonlinearDataShow()">
+            <div class="box-data p-lg-3 p-2 tab" (click)="nonlinearDataShow()">
                 <p class="m-0">Non-linear Data</p>
             </div>
         </div>
@@ -91,16 +96,16 @@
         <div class="border-end pt-lg-5 pt-4 border-2 border-secondary w-0"></div>
     </div>
     <div class="d-flex justify-content-between col-lg-10">
-        <div class="box p-lg-3 p-2 tab" routerLink="/non-primitive/linear/array">
+        <div class="box-data p-lg-3 p-2 tab" routerLink="/non-primitive/linear/array">
             <p class="m-0">Array</p>
         </div>
-        <div class="box p-lg-3 p-2 tab" routerLink="/non-primitive/linear/stack">
+        <div class="box-data p-lg-3 p-2 tab" routerLink="/non-primitive/linear/stack">
             <p class="m-0">Stack</p>
         </div>
-        <div class="box p-lg-3 p-2 tab" routerLink="/non-primitive/linear/queue">
+        <div class="box-data p-lg-3 p-2 tab" routerLink="/non-primitive/linear/queue">
             <p class="m-0">Queue</p>
         </div>
-        <div class="box p-lg-3 p-2 tab" routerLink="/non-primitive/linear/linked-list">
+        <div class="box-data p-lg-3 p-2 tab" routerLink="/non-primitive/linear/linked-list">
             <p class="m-0">Linked list</p>
         </div>
     </div>
@@ -124,16 +129,16 @@
      </div>
     <div class="d-flex justify-content-end">
         <div class="d-flex justify-content-between col-lg-10 col-12">
-            <div class="box p-lg-3 p-2 tab ms-lg-4" routerLink="/non-primitive/non-linear/tree">
+            <div class="box-data p-lg-3 p-2 tab ms-lg-4" routerLink="/non-primitive/non-linear/tree">
                 <p class="m-0">Tree</p>
             </div>
-            <div class="box p-lg-3 p-2 tab" routerLink="/non-primitive/non-linear/graph">
+            <div class="box-data p-lg-3 p-2 tab" routerLink="/non-primitive/non-linear/graph">
                 <p class="m-0">Graph</p>
             </div>
-            <div class="box p-lg-3 p-2 tab " routerLink="/non-primitive/non-linear/trie">
+            <div class="box-data p-lg-3 p-2 tab " routerLink="/non-primitive/non-linear/trie">
                 <p class="m-0">Trie</p>
             </div>
-            <div class="box p-lg-3 p-2 tab" routerLink="/non-primitive/non-linear/hash-table">
+            <div class="box-data p-lg-3 p-2 tab" routerLink="/non-primitive/non-linear/hash-table">
                 <p class="m-0">Hash table</p>
             </div>
         </div>

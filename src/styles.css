@@ -74,12 +74,36 @@ li{
   line-height: 1.5rem !important;
 }
 
+/*-------- WhatsApp------------------------------------------------*/
+.whatsapp-container{
+	position:fixed;
+	width:60px;
+	height:60px;
+	bottom:30px;
+	right:30px;
+	background-color:#25d366;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+	color:#FFF;
+	border-radius:50%;
+	text-align:center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index:99999;
+}
+
+.whatsapp-icon{
+	width: 35px;
+    height: 35px;
+}
+
 @media( max-width:992px){
   .cdk-overlay-pane{
     width: 45%;
   }
 }
 @media (max-width: 767.98px) {
+
   .cdk-overlay-pane{
     width: 60%;
   }
@@ -114,6 +138,18 @@ li{
     }
     .fz-xs-12{
         font-size:0.75rem !important;
+    }
+    .whatsapp-container{
+  
+      width:40px;
+      height:40px;
+      bottom:16px;
+      right:12px;
+    }
+    
+    .whatsapp-icon{
+      width: 25px;
+        height: 25px;
     }
 }
 

@@ -1,5 +1,5 @@
 <h4>Two Dimensions array operations</h4>
-<div class="d-flex flex-wrap align-items-center mt-3">
+<div class="d-flex horizontal-scroll align-items-center mt-3">
     <div class="box p-lg-2 p-1 px-lg-3 px-2 btn me-lg-4 me-3 mb-2 matOp"
     
     (click)="createMatrix()"
@@ -36,7 +36,7 @@
 </div>
 
 <!---Matrix view--->
-<div class="row mt-5">
+<div class="row mt-5" *ngIf="matrix.length > 0">
     <div class="col-lg-4 col-12 order-lg-0 order-1 mb-4">
        <ng-container *ngIf="dataBoxSelectionShow">
            <h5 class='text-center'>Selected Data Box</h5>
@@ -54,7 +54,7 @@
        </ng-container>
        <ng-container *ngIf="rowSelectionShow">
         <h5 class='text-center'>Select Row</h5>
-        <div class="d-flex flex-wrap align-items-center mt-2">
+        <div class="d-flex horizontal-scroll align-items-center mt-2">
             <div 
             class="box p-lg-2 p-1 px-lg-3 px-2 btn me-lg-4 me-3 mb-2 rowOp"
             *ngFor="let row of matrix; let i = index"
@@ -69,7 +69,7 @@
        </ng-container>
        <ng-container *ngIf="columnSelectionShow">
         <h5 class='text-center'>Select Column</h5>
-        <div class="d-flex flex-wrap align-items-center mt-2">
+        <div class="d-flex horizontal-scroll align-items-center mt-2">
             <div 
             class="box p-lg-2 p-1 px-lg-3 px-2 btn me-lg-4 me-3 mb-2 colOp"
             *ngFor="let row of matrix[0]; let i = index"
@@ -100,7 +100,7 @@
     <div class="col-lg-4 col-12 order-2">
         <ng-container *ngIf="adjacentShow">
             <h5 class="text-center">Adjacents operations list</h5>
-            <div class="d-flex flex-wrap align-items-center mt-2">
+            <div class="d-flex horizontal-scroll align-items-center mt-2">
                 <div class="box p-lg-2 p-1 px-lg-3 px-2 btn me-lg-4 me-3 mb-2 adjOp" (click)="adjacentOperation(0)">
                     <p class='m-0'>
                          Vertical Adjacents

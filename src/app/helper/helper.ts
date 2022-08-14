@@ -1,3 +1,5 @@
+import { RouterLinkData } from "../shared/interfaces/meta-data.interface";
+
 export class Helper{
      static setListwithTitleHtml(title: string, list:string[]): string{
           let listHtml = `<h4>${title}</h4>`;
@@ -17,4 +19,5 @@ export class Helper{
      static setHeader(header:string):string {
           return `<p>${header}</p>`
      }
+    
 }

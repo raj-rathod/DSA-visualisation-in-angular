@@ -1,5 +1,4 @@
 import { AfterViewInit, Component, ElementRef, OnInit } from '@angular/core';
-import { Location } from '@angular/common';
 import { ActivatedRoute, Router } from '@angular/router';
 import { linkedListMetaData } from 'src/app/core/data-structures/linear/linked-list/linked-list-meta-data';
 
@@ -30,9 +29,6 @@ export class LinkedListComponent implements OnInit, AfterViewInit{
     this.selectionOfType(this.step);
   }
 
-  gotoBack(): void {
-    this.router.navigate(['/data-structure'])
-  }
 
   selectionOfType(index: number): void {
     const typeRef = this.elRef.nativeElement.querySelectorAll('.linkedType');

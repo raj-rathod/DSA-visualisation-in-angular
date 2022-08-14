@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { recursiveMetaData } from 'src/app/core/algorithms/recursive-meta-data';
 
 @Component({
   selector: 'app-recursive-algorithm',
@@ -6,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./recursive-algorithm.component.css']
 })
 export class RecursiveAlgorithmComponent implements OnInit {
-
+  recursiveMetaData = recursiveMetaData;
   constructor() { }
 
   ngOnInit(): void {

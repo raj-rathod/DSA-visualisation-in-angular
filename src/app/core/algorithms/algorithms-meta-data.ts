@@ -1,6 +1,5 @@
 import { Helper } from "src/app/helper/helper"
-
-const algorithms = {
+const algorithmsData = {
     defination:"An algorithm is a procedure used for solving a problem or performing a computation. Algorithms act as an exact list of instructions that conduct specified actions step by step in either hardware- or software-based routines",
     characteristics:[
         "<b>Clear and Unambiguous</b>: The algorithm should be clear and unambiguous. Each of its steps should be clear in all aspects and must lead to only one meaning",
@@ -49,11 +48,11 @@ const algorithms = {
 }
 
 export const algorithmMetaData = {
-    defination: Helper.setHeader(algorithms.defination),
-    characteristics: Helper.setListwithTitleHtml("What are the Characteristics of an Algorithm", algorithms.characteristics),
-    properties: Helper.setListwithTitleHtml("Properties of Algorithm", algorithms.properties),
-    types: Helper.setListwithTitleHtml("Types of Algorithm", algorithms.types),
-    others: Helper.setListwithTitleHtml("How to Design an Algorithm", algorithms.others),
-    advantages: Helper.setListwithTitleHtml("Advantages", algorithms.advantages),
-    disadvantages: Helper.setListwithTitleHtml("Disadvantages", algorithms.disadvantages),
+    defination: Helper.setHeader(algorithmsData.defination),
+    characteristics: Helper.setListwithTitleHtml("What are the Characteristics of an Algorithm", algorithmsData.characteristics),
+    properties: Helper.setListwithTitleHtml("Properties of Algorithm", algorithmsData.properties),
+    types: Helper.setListwithTitleHtml("Types of Algorithm", algorithmsData.types),
+    others: Helper.setListwithTitleHtml("How to Design an Algorithm", algorithmsData.others),
+    advantages: Helper.setListwithTitleHtml("Advantages", algorithmsData.advantages),
+    disadvantages: Helper.setListwithTitleHtml("Disadvantages", algorithmsData.disadvantages),
 }

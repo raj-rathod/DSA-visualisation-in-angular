@@ -19,5 +19,9 @@ export class Helper{
      static setHeader(header:string):string {
           return `<p>${header}</p>`
      }
+
+     static setTitleDescription(title:string, description:string):string {
+          return `<h4>${title}</h4> <p>${description}</p>`;
+     }
     
 }

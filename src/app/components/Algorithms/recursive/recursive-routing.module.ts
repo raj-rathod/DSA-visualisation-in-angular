@@ -1,10 +1,10 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { RandomizedAlgorithmComponent } from '../randomized/randomized-algorithm/randomized-algorithm.component';
+import { RecursiveAlgorithmComponent } from './recursive-algorithm/recursive-algorithm.component';
 
 const routes: Routes = [
   {
-    path:'', component: RandomizedAlgorithmComponent
+    path:'', component: RecursiveAlgorithmComponent
   }
 ];
 

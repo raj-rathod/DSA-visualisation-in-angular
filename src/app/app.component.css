@@ -1,0 +1,8 @@
+.margin-top{
+    margin-top: 90px;
+}
+@media(max-width:992px){
+    .margin-top{
+        margin-top: 70px;
+    }
+}

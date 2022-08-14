@@ -38,6 +38,9 @@
 @media (max-width: 767px){
     .data-link-dropdown-menu{
         width: 200px;
-        height:200px;
+        height:160px;
+    }
+    .search_menu{
+        height: 160px;
     }
 }

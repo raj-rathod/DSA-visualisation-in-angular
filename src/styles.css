@@ -30,6 +30,13 @@ body {
 ::-webkit-scrollbar-thumb:hover {
   background: #939AA9;;
 }
+.navbar-toggler {
+  font-size: 14px !important;
+}
+.navbar-toggler:focus{
+  text-decoration: none !important;
+  box-shadow: none !important;
+}
 .box-data{
   background:rgba(16, 203, 236, 0.76);
   border-radius: 8px !important;

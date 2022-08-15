@@ -86,3 +86,42 @@ export const algorithms: RouterLinkData[] = [
         route: "/algorithm/sorting"
     },
 ];
+
+export const sorting: RouterLinkData[] = [
+    {
+        name: "Bubble Sort",
+        route: "/algorithm/sorting/bubble-sort"
+    },
+    {
+        name: "Selection Sort",
+        route: "/algorithm/sorting/selection-sort"
+    },
+    {
+        name: "Insertion Sort",
+        route: "/algorithm/sorting/insertion-sort"
+    },
+    {
+        name: "Merge Sort",
+        route: "/algorithm/sorting/merge-sort"
+    }, {
+        name: "Quick Sort",
+        route: "/algorithm/sorting/quick-sort"
+    }, {
+        name: "Counting Sort",
+        route: "/algorithm/sorting/counting-sort"
+    }, {
+        name: "Radix Sort",
+        route: "/algorithm/sorting/radix-sort"
+    },
+    {
+        name: "Bucket Sort",
+        route: "/algorithm/sorting/bucket-sort"
+    }, {
+        name: "Heap Sort",
+        route: "/non-primitive/non-linear/heap-tree"
+    }, 
+    {
+        name: "Shell Sort",
+        route: "/algorithm/sorting/shell-sort"
+    },
+]

@@ -46,5 +46,5 @@ export const socialLinkes: SocialLink[] = [
 
 export const contact: string[] =[
     "rajeshrathore05011998@gmail.com",
-    "9535690207",
+    "9148002717",
 ];

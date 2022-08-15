@@ -1,1 +1,12 @@
-<p class="text-center mt-5">Coming soon</p>
+<h1 class="text-center">Sorting Algorithms</h1>
+<div class="mt-md-4 mt-3" [innerHtml]="sortingMetaData.defination"></div>
+<div class="mt-md-4 mt-3" [innerHtml]="sortingMetaData.properties"></div>
+<div class="mt-md-4 mt-3 d-flex align-items-center horizontal-scroll">
+    <ng-container *ngFor="let data of sortingType; let i = index">
+     <div *ngIf="i !=0" class="box p-lg-2 p-1 px-lg-3 px-2 tab me-lg-4 me-3" [routerLink]="data.route">
+          <p class="m-0">{{data.name}}</p>
+     </div>
+    </ng-container>
+   
+</div>
+<div class="mt-md-4 mt-3" [innerHtml]="sortingMetaData.example"></div>

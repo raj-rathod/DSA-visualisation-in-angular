@@ -4,7 +4,7 @@ const dataStructure = {
     defination:"<b>Data Structure</b>: A data structure is a specialized format to oraganizing, processing, retrieving and storing data.<br> Data structures make it easy for users to access and work with data the need in appropriate ways. <br> Most importantly, data structure frame the organization of information so that machines and humans can better understand it",
     terminologies: [
         "Data structures are the buliding blocks for more sophisticated applications. They are designed by compossing data elements into logical unit representing an abstract data type that has relevance to the algorithm or application",
-        "It is not only important to use data structures, but it is also important to choose the proper type of data structure for eack task. Choosing an ill-suited data structure could result in slow runtimes or unresponsive code",
+        "It is not only important to use data structures, but it is also important to choose the proper type of data structure for each task. Choosing an ill-suited data structure could result in slow runtimes or unresponsive code",
     ],
     choosing:[
         "What kind of information will be stored",

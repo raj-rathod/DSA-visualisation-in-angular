@@ -5,7 +5,7 @@ const defination: string = "The stack data structure is a linear data structure 
 const example: string = "assets/ds-image/stack.jpg";
 const properties: string[] = [
      'The insertion and deletion happens at the same end i.e from the top of the stack',
-     'Stack is implemented through Array or Linkrd list',
+     'Stack is implemented through Array or Linked list',
      'If the allocated space for stack is full, and any attempt to add more elements will lead to stack overflow. The opposite, any attempt to extract elements on an empty stack leads to stack underflow'
 ];
 const operations: string[] = [

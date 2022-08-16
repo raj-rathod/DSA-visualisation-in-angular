@@ -67,7 +67,7 @@ export const algorithms: RouterLinkData[] = [
     },
     {
         name: "Hashing",
-        route: "/algorithm/hashing"
+        route: "/non-primitive/non-linear/hash-table"
     },
     {
         name: "Randomized",
@@ -124,4 +124,31 @@ export const sorting: RouterLinkData[] = [
         name: "Shell Sort",
         route: "/algorithm/sorting/shell-sort"
     },
-]
+];
+
+export const searchingLinks: RouterLinkData[] = [
+    {
+        name: "Linear Search",
+        route: "/algorithm/searching/linear-search"
+    },
+    {
+        name: "Binary Search",
+        route: "/algorithm/searching/binary-search"
+    },
+    {
+        name: "Jump Search",
+        route: "/algorithm/searching/jump-search"
+    },
+    {
+        name: "Interpolation Search",
+        route: "/algorithm/searching/interpolation-search"
+    },
+    {
+        name: "Exponential Search",
+        route: "/algorithm/searching/exponential-search"
+    },
+    {
+        name: "Fibonacci Search",
+        route: "/algorithm/searching/fibonacci-search"
+    },
+];

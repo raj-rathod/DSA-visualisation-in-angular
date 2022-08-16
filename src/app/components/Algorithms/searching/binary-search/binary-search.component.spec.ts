@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { HashingAlgorithmComponent } from './hashing-algorithm.component';
+import { BinarySearchComponent } from './binary-search.component';
 
-describe('HashingAlgorithmComponent', () => {
-  let component: HashingAlgorithmComponent;
-  let fixture: ComponentFixture<HashingAlgorithmComponent>;
+describe('BinarySearchComponent', () => {
+  let component: BinarySearchComponent;
+  let fixture: ComponentFixture<BinarySearchComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ HashingAlgorithmComponent ]
+      declarations: [ BinarySearchComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(HashingAlgorithmComponent);
+    fixture = TestBed.createComponent(BinarySearchComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

@@ -27,10 +27,6 @@ const routes: Routes = [
       loadChildren: () => import('./greedy/greedy.module').then(m => m.GreedyModule)
   },
   {
-      path: 'hashing',
-      loadChildren: () => import('./hashing/hashing.module').then(m => m.HashingModule)
-  },
-  {
       path: 'randomized',
       loadChildren: () => import('./randomized/randomized.module').then(m => m.RandomizedModule)
   },

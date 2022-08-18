@@ -103,20 +103,24 @@ export const sorting: RouterLinkData[] = [
     {
         name: "Merge Sort",
         route: "/algorithm/sorting/merge-sort"
-    }, {
+    }, 
+    {
         name: "Quick Sort",
         route: "/algorithm/sorting/quick-sort"
-    }, {
+    }, 
+    {
         name: "Counting Sort",
         route: "/algorithm/sorting/counting-sort"
-    }, {
+    }, 
+    {
         name: "Radix Sort",
         route: "/algorithm/sorting/radix-sort"
     },
     {
         name: "Bucket Sort",
         route: "/algorithm/sorting/bucket-sort"
-    }, {
+    }, 
+    {
         name: "Heap Sort",
         route: "/non-primitive/non-linear/heap-tree"
     }, 
@@ -151,4 +155,27 @@ export const searchingLinks: RouterLinkData[] = [
         name: "Fibonacci Search",
         route: "/algorithm/searching/fibonacci-search"
     },
+];
+
+export const divideAndConquerLinks: RouterLinkData[] = [
+    {
+        name: "Merge Sort",
+        route: "/algorithm/sorting/merge-sort"
+    }, 
+    {
+        name: "Quick Sort",
+        route: "/algorithm/sorting/quick-sort"
+    },
+    {
+        name: "Strassen's Algorithm",
+        route: "/algorithm/divide-and-conquer/strassen"
+    },
+    {
+        name: "Closest Pair of Points",
+        route: "/algorithm/divide-and-conquer/closest-pair-of-points"
+    },
+    {
+        name: "Karatsuba Algorithm",
+        route: "/algorithm/divide-and-conquer/karatsuba"
+    }
 ];

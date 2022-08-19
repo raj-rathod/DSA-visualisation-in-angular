@@ -1,1 +1,15 @@
-<p class="text-center mt-5">Coming soon</p>
+<h1 class="text-center">Divide And Conquer algorithms</h1>
+<div class="mt-md-4 mt-3" [innerHtml]="divideAndConquerMetaData.defination"></div>
+<div class="mt-md-4 mt-3" [innerHtml]="divideAndConquerMetaData.terminologies"></div>
+<div class="mt-md-4 mt-3" [innerHtml]="divideAndConquerMetaData.algorithms"></div>
+<div class="mt-md-4 mt-3" [innerHtml]="divideAndConquerMetaData.timeComplexity"></div>
+<div class="mt-md-4 mt-3" [innerHtml]="divideAndConquerMetaData.comparison"></div>
+<div class="mt-md-4 mt-3" [innerHtml]="divideAndConquerMetaData.advantage"></div>
+<div class="mt-md-4 mt-3" [innerHtml]="divideAndConquerMetaData.disadvantage"></div>
+<div class="mt-md-4 mt-3 d-flex align-items-center horizontal-scroll">
+    <ng-container *ngFor="let data of divideAndConquerLinks; let i = index">
+     <div  class="box p-lg-2 p-1 px-lg-3 px-2 tab me-lg-4 me-3" [routerLink]="data.route">
+          <p class="m-0">{{data.name}}</p>
+     </div>
+    </ng-container>
+</div>

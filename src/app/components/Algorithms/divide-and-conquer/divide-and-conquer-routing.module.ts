@@ -10,7 +10,7 @@ const routes: Routes = [
     path: '', component: DivideAndConquerAlgorithmComponent
   },
   {
-    path: 'closet-pair-of-points', component: ClosestPairOfPointsComponent,
+    path: 'closest-pair-of-points', component: ClosestPairOfPointsComponent,
 
   },
   {

@@ -119,6 +119,7 @@ body {
 }
 li{
   line-height: 1.5rem !important;
+  margin-bottom: 10px;
 }
 
 .horizontal-scroll{

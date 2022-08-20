@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { dpMetaData } from 'src/app/core/algorithms/dp-meta-data';
 
 @Component({
   selector: 'app-dynamic-programming-algorithm',
@@ -6,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./dynamic-programming-algorithm.component.css']
 })
 export class DynamicProgrammingAlgorithmComponent implements OnInit {
-
+  dpMetaData = dpMetaData;
   constructor() { }
 
   ngOnInit(): void {

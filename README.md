@@ -1,4 +1,4 @@
-# DsaVisualisation(Data structure and algorithms visualisation)
+# Data structure and algorithms visualization
 
 ### Hi there, I'm <a href="https://linktr.ee/rajesh_rathore" target="_blank">Rajesh Rathore</a> <img src="https://media.giphy.com/media/hvRJCLFzcasrR4ia7z/giphy.gif" width="25px">
 

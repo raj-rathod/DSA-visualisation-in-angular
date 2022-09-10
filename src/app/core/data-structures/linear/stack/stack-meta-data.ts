@@ -25,8 +25,8 @@ const applications: string[] = [
 ];
 
 const advantage: string[] = [
-   '<b>Efficient data management</b>: Stack helps you manage the data in a LIFO',
-   '<b>Efficient management of functions</b>: When a function is called , the local variables are stored in stack, and it is automatically destroyed once returned',
+   '<b>Efficient data management</b>:  Stack helps you manage the data in a LIFO',
+   '<b>Efficient management of functions</b>:  When a function is called , the local variables are stored in stack, and it is automatically destroyed once returned',
    'Control over memory',
    'Smart memory management',
    'Not easily corrupted',

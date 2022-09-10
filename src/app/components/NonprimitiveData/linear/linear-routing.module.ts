@@ -26,20 +26,6 @@ const routes: Routes = [
   },
   {
     path: 'linked-list', component: LinkedListComponent,
-    children:[
-      {
-        path: '', redirectTo:'single-linked-list', pathMatch:'full',
-      },
-      {
-        path: 'single-linked-list', component: SingleLinkedListComponent
-      },
-      {
-        path: 'double-linked-list', component: DoubleLinkedListComponent
-      },
-      {
-        path: 'circular-linked-list', component: CircularLinkedListComponent
-      }
-    ]
   }
 ];
 

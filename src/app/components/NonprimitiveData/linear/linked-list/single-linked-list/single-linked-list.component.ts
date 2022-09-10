@@ -81,9 +81,7 @@ export class SingleLinkedListComponent implements OnInit {
     this.operationSelection(0);
     const matDialogRef = this.matDialog.open(SingleValueInputDialogComponent, {
       disableClose: true,
-      position: {
-        top: '120px',
-      },
+     
       data: likedListInput,
     });
     matDialogRef.afterClosed().subscribe((result) => {
@@ -151,9 +149,6 @@ export class SingleLinkedListComponent implements OnInit {
     this.operationInsertion(0);
     const matDialogRef = this.matDialog.open(SingleValueInputDialogComponent, {
       disableClose: true,
-      position: {
-        top: '120px',
-      },
       data: singleInput,
     });
     matDialogRef.afterClosed().subscribe((result) => {
@@ -170,9 +165,7 @@ export class SingleLinkedListComponent implements OnInit {
     this.operationInsertion(1);
     const matDialogRef = this.matDialog.open(SingleValueInputDialogComponent, {
       disableClose: true,
-      position: {
-        top: '120px',
-      },
+     
       data: singleInput,
     });
     matDialogRef.afterClosed().subscribe((result) => {
@@ -192,9 +185,7 @@ export class SingleLinkedListComponent implements OnInit {
     this.operationInsertion(2);
     const matDialogRef = this.matDialog.open(DoubleValueInputDialogComponent, {
       disableClose: true,
-      position: {
-        top: '120px',
-      },
+     
       data: insertAtIndex,
     });
     matDialogRef.afterClosed().subscribe((result) => {
@@ -242,9 +233,7 @@ export class SingleLinkedListComponent implements OnInit {
     this.operationUpdation(0);
     const matDialogRef = this.matDialog.open(SingleValueInputDialogComponent, {
       disableClose: true,
-      position: {
-        top: '120px',
-      },
+     
       data: singleInput,
     });
     matDialogRef.afterClosed().subscribe((result) => {
@@ -259,9 +248,7 @@ export class SingleLinkedListComponent implements OnInit {
     this.operationUpdation(1);
     const matDialogRef = this.matDialog.open(SingleValueInputDialogComponent, {
       disableClose: true,
-      position: {
-        top: '120px',
-      },
+   
       data: singleInput,
     });
     matDialogRef.afterClosed().subscribe((result) => {
@@ -280,9 +267,7 @@ export class SingleLinkedListComponent implements OnInit {
     this.operationUpdation(2);
     const matDialogRef = this.matDialog.open(DoubleValueInputDialogComponent, {
       disableClose: true,
-      position: {
-        top: '120px',
-      },
+     
       data: insertAtIndex,
     });
     matDialogRef.afterClosed().subscribe((result) => {
@@ -369,9 +354,7 @@ export class SingleLinkedListComponent implements OnInit {
     this.operationDeletion(2)
     const matDialogRef = this.matDialog.open(SingleValueInputDialogComponent, {
       disableClose: true,
-      position: {
-        top: '120px',
-      },
+     
       data: singleInput,
     });
     matDialogRef.afterClosed().subscribe((result) => {

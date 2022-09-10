@@ -42,9 +42,6 @@ export class TwoDimensionComponent implements OnInit {
       MatrixInputDialogComponent,
       {
         disableClose: true,
-        position:{
-            top:'120px'
-        },
         data: matrixInput
       }
     );
@@ -68,9 +65,9 @@ export class TwoDimensionComponent implements OnInit {
     for (let i = 0; i <matOpRef.length; i++){
       if(i === index){
         this.matOprations(index);
-        matOpRef[i].className = 'box box-active p-lg-2 p-1 px-lg-3 px-2 btn me-lg-4 me-3 mb-2 matOp';
+        matOpRef[i].className = 'box box-active p-lg-2 p-1 px-lg-3 px-2 tab me-lg-4 me-3  matOp';
       }else{
-        matOpRef[i].className = 'box p-lg-2 p-1 px-lg-3 px-2 btn me-lg-4 me-3 mb-2 matOp'
+        matOpRef[i].className = 'box p-lg-2 p-1 px-lg-3 px-2 tab me-lg-4 me-3  matOp'
       }
     }
   }
@@ -171,9 +168,9 @@ export class TwoDimensionComponent implements OnInit {
     for (let i = 0; i <rowOpRef.length; i++){
       if(i === index){
         this.rowSelect(i);
-        rowOpRef[i].className = 'box box-active p-lg-2 p-1 px-lg-3 px-2 btn me-lg-4 me-3 mb-2 rowOp';
+        rowOpRef[i].className = 'box box-active p-lg-2 p-1 px-lg-3 px-2 tab me-lg-4 me-3 mb-2 rowOp';
       }else{
-        rowOpRef[i].className = 'box p-lg-2 p-1 px-lg-3 px-2 btn me-lg-4 me-3 mb-2 rowOp'
+        rowOpRef[i].className = 'box p-lg-2 p-1 px-lg-3 px-2 tab me-lg-4 me-3 mb-2 rowOp'
       }
     }
   }
@@ -204,9 +201,9 @@ export class TwoDimensionComponent implements OnInit {
     for (let i = 0; i <colOpRef.length; i++){
       if(i === index){
         this.columnSelect(i);
-        colOpRef[i].className = 'box box-active p-lg-2 p-1 px-lg-3 px-2 btn me-lg-4 me-3 mb-2 colOp';
+        colOpRef[i].className = 'box box-active p-lg-2 p-1 px-lg-3 px-2 tab me-lg-4 me-3 mb-2 colOp';
       }else{
-        colOpRef[i].className = 'box p-lg-2 p-1 px-lg-3 px-2 btn me-lg-4 me-3 mb-2 colOp'
+        colOpRef[i].className = 'box p-lg-2 p-1 px-lg-3 px-2 tab me-lg-4 me-3 mb-2 colOp'
       }
     }
   }
@@ -226,9 +223,9 @@ export class TwoDimensionComponent implements OnInit {
     for (let i = 0; i <adjOpRef.length; i++){
       if(i === index){
         this.adjacentOperationSelect(i);
-        adjOpRef[i].className = 'box box-active p-lg-2 p-1 px-lg-3 px-2 btn me-lg-4 me-3 mb-2 adjOp'
+        adjOpRef[i].className = 'box box-active p-lg-2 p-1 px-lg-3 px-2 tab me-lg-4 me-3 mb-2 adjOp'
       }else{
-        adjOpRef[i].className = 'box p-lg-2 p-1 px-lg-3 px-2 btn me-lg-4 me-3 mb-2 adjOp'
+        adjOpRef[i].className = 'box p-lg-2 p-1 px-lg-3 px-2 tab me-lg-4 me-3 mb-2 adjOp'
       }
     }
   }

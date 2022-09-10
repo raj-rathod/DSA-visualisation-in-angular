@@ -54,9 +54,6 @@ pushElement(): void {
     SingleValueInputDialogComponent,
     {
       disableClose: true,
-      position:{
-          top:'120px'
-      },
       data: stackPushElement
     }
   );

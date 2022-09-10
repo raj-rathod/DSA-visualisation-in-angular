@@ -1,33 +1,33 @@
 <h4>Two Dimensions array operations</h4>
 <div class="d-flex horizontal-scroll align-items-center mt-3">
-    <div class="box p-lg-2 p-1 px-lg-3 px-2 btn me-lg-4 me-3 mb-2 matOp"
+    <div class="box p-lg-2 p-1 px-lg-3 px-2 tab me-lg-4 me-3 matOp"
     
     (click)="createMatrix()"
     >
        <p class="m-0">Create new Matrix</p>
    </div>
    <ng-container *ngIf="operations">
-    <div class="box p-lg-2 p-1 px-lg-3 px-2 btn me-lg-4 me-3 mb-2 matOp"
+    <div class="box p-lg-2 p-1 px-lg-3 px-2 tab me-lg-4 me-3  matOp"
     (click)="matOperationSelector(1)"
    >
       <p class="m-0">Row Selection</p>
   </div>
-  <div class="box p-lg-2 p-1 px-lg-3 px-2 btn me-lg-4 me-3 mb-2 matOp"
+  <div class="box p-lg-2 p-1 px-lg-3 px-2 tab me-lg-4 me-3  matOp"
      (click)="matOperationSelector(2)"
    >
       <p class="m-0">Column Selection</p>
   </div>
-  <div class="box p-lg-2 p-1 px-lg-3 px-2 btn me-lg-4 me-3 mb-2 matOp"
+  <div class="box p-lg-2 p-1 px-lg-3 px-2 tab me-lg-4 me-3  matOp"
      (click)="matOperationSelector(3)"
    >
       <p class="m-0">Matrix Transpose</p>
   </div>
-  <div *ngIf="sizeOfMatrix.column === sizeOfMatrix.row" class="box p-lg-2 p-1 px-lg-3 px-2 btn me-lg-4 me-3 mb-2 matOp"
+  <div *ngIf="sizeOfMatrix.column === sizeOfMatrix.row" class="box p-lg-2 p-1 px-lg-3 px-2 tab me-lg-4 me-3 mb-2 matOp"
      (click)="matOperationSelector(4)"
    >
       <p class="m-0">Left Diagonal</p>
   </div>
-  <div *ngIf="sizeOfMatrix.column === sizeOfMatrix.row" class="box p-lg-2 p-1 px-lg-3 px-2 btn me-lg-4 me-3 mb-2 matOp"
+  <div *ngIf="sizeOfMatrix.column === sizeOfMatrix.row" class="box p-lg-2 p-1 px-lg-3 px-2 tab me-lg-4 me-3 mb-2 matOp"
     (click)="matOperationSelector(5)"
    >
       <p class="m-0">Right Diagonal</p>
@@ -47,7 +47,7 @@
             </b>
            </p>
            <div class="mt-lg-5 mt-4">
-                  <div class='box btn px-4 py-3'(click)="showAllAdacent()">
+                  <div class='box tab px-4 py-3'(click)="showAllAdacent()">
                       <p class='m-0'>Show all Adjacents</p>
                   </div>
            </div>
@@ -56,7 +56,7 @@
         <h5 class='text-center'>Select Row</h5>
         <div class="d-flex horizontal-scroll align-items-center mt-2">
             <div 
-            class="box p-lg-2 p-1 px-lg-3 px-2 btn me-lg-4 me-3 mb-2 rowOp"
+            class="box p-lg-2 p-1 px-lg-3 px-2 tab me-lg-4 me-3 mb-2 rowOp"
             *ngFor="let row of matrix; let i = index"
             (click)="rowSelectionTab(i)"
             >
@@ -71,7 +71,7 @@
         <h5 class='text-center'>Select Column</h5>
         <div class="d-flex horizontal-scroll align-items-center mt-2">
             <div 
-            class="box p-lg-2 p-1 px-lg-3 px-2 btn me-lg-4 me-3 mb-2 colOp"
+            class="box p-lg-2 p-1 px-lg-3 px-2 tab me-lg-4 me-3 mb-2 colOp"
             *ngFor="let row of matrix[0]; let i = index"
             (click)="  columnSelectionTab(i)"
             >
@@ -101,17 +101,17 @@
         <ng-container *ngIf="adjacentShow">
             <h5 class="text-center">Adjacents operations list</h5>
             <div class="d-flex horizontal-scroll align-items-center mt-2">
-                <div class="box p-lg-2 p-1 px-lg-3 px-2 btn me-lg-4 me-3 mb-2 adjOp" (click)="adjacentOperation(0)">
+                <div class="box p-lg-2 p-1 px-lg-3 px-2 tab me-lg-4 me-3 mb-2 adjOp" (click)="adjacentOperation(0)">
                     <p class='m-0'>
                          Vertical Adjacents
                     </p>
                 </div>
-                <div class="box p-lg-2 p-1 px-lg-3 px-2 btn me-lg-4 me-3 mb-2 adjOp" (click)="adjacentOperation(1)">
+                <div class="box p-lg-2 p-1 px-lg-3 px-2 tab me-lg-4 me-3 mb-2 adjOp" (click)="adjacentOperation(1)">
                     <p class='m-0'>
                          Horizontal Adjacents
                     </p>
                 </div>
-                <div class="box p-lg-2 p-1 px-lg-3 px-2 btn me-lg-4 me-3 mb-2 adjOp" (click)="adjacentOperation(2)">
+                <div class="box p-lg-2 p-1 px-lg-3 px-2 tab me-lg-4 me-3 mb-2 adjOp" (click)="adjacentOperation(2)">
                     <p class='m-0'>
                          Diagonal Adjacents
                     </p>

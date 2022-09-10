@@ -8,7 +8,7 @@ import { SingleValueInputDialogComponent } from 'src/app/shared/components/singl
 @Component({
   selector: 'app-one-dimension',
   templateUrl: './one-dimension.component.html',
-  styleUrls: ['./one-dimension.component.css']
+  styleUrls: ['./one-dimension.component.css'],
 })
 export class OneDimensionComponent implements OnInit {
   insertSubMenu: boolean = false;
@@ -22,30 +22,20 @@ export class OneDimensionComponent implements OnInit {
   datawiseShow = false;
   value = '';
   datavalue = '';
-  createdArr:string[]  = [];
-  
-  constructor(
-    private elRef: ElementRef,
-    private matDialog: MatDialog
-  ) { }
+  createdArr: string[] = [];
 
-  ngOnInit(): void {
-  }
+  constructor(private elRef: ElementRef, private matDialog: MatDialog) {}
+
+  ngOnInit(): void {}
 
   createNewArray(): void {
     this.opbtnSection(0);
-    const matDialogRef = this.matDialog.open(
-      SingleValueInputDialogComponent,
-      {
-        disableClose: true,
-        position:{
-            top:'120px'
-        },
-        data: arrayInput
-      }
-    );
-    matDialogRef.afterClosed().subscribe(result => {
-      if(result){
+    const matDialogRef = this.matDialog.open(SingleValueInputDialogComponent, {
+      disableClose: true,
+      data: arrayInput,
+    });
+    matDialogRef.afterClosed().subscribe((result) => {
+      if (result) {
         this.operationShow = true;
         this.createdArr = result;
         this.selectedIndex(-1);
@@ -54,26 +44,21 @@ export class OneDimensionComponent implements OnInit {
     });
   }
 
- // Insert Operations
+  // Insert Operations
   insertIntoArray(): void {
     this.opUpdBtnSelection(0);
-    const matDialogRef = this.matDialog.open(
-      SingleValueInputDialogComponent,
-      {
-        disableClose: true,
-        position:{
-            top:'120px'
-        },
-        data: singleInput
-      }
-    );
-    matDialogRef.afterClosed().subscribe(result => {
-      if(result){
+    const matDialogRef = this.matDialog.open(SingleValueInputDialogComponent, {
+      disableClose: true,
+
+      data: singleInput,
+    });
+    matDialogRef.afterClosed().subscribe((result) => {
+      if (result) {
         this.createdArr.push(result);
         this.selectedIndex(-1);
         this.selectedData(-1);
-        this.delay(30).then(any=>{
-          this.highliteOperation(this.createdArr.length-1);
+        this.delay(30).then((any) => {
+          this.highliteOperation(this.createdArr.length - 1);
         });
       }
     });
@@ -81,222 +66,195 @@ export class OneDimensionComponent implements OnInit {
 
   insertAtFirst(): void {
     this.opInsBtnSelection(1);
-    const matDialogRef = this.matDialog.open(
-      SingleValueInputDialogComponent,
-      {
-        disableClose: true,
-        position:{
-            top:'120px'
-        },
-        data: singleInput
-      }
-    );
-    matDialogRef.afterClosed().subscribe(result => {
-      if(result || result === 0){
+    const matDialogRef = this.matDialog.open(SingleValueInputDialogComponent, {
+      disableClose: true,
+
+      data: singleInput,
+    });
+    matDialogRef.afterClosed().subscribe((result) => {
+      if (result || result === 0) {
         this.createdArr.unshift(result);
         this.selectedIndex(-1);
         this.selectedData(-1);
-        this.delay(30).then(any=>{
+        this.delay(30).then((any) => {
           this.highliteOperation(0);
         });
       }
     });
-    
   }
 
   insertAtIndex(): void {
     this.opInsBtnSelection(2);
-    const matDialogRef = this.matDialog.open(
-      DoubleValueInputDialogComponent,
-      {
-        disableClose: true,
-        position:{
-            top:'120px'
-        },
-        data: insertAtIndex
-      }
-    );
-    matDialogRef.afterClosed().subscribe(result => {
-      if(result){
-        this.createdArr.splice(result.firstInput, 0 , result.secondInput);
+    const matDialogRef = this.matDialog.open(DoubleValueInputDialogComponent, {
+      disableClose: true,
+
+      data: insertAtIndex,
+    });
+    matDialogRef.afterClosed().subscribe((result) => {
+      if (result) {
+        this.createdArr.splice(result.firstInput, 0, result.secondInput);
         this.selectedIndex(-1);
         this.selectedData(-1);
-        this.delay(30).then(any=>{
+        this.delay(30).then((any) => {
           this.highliteOperation(result.firstInput);
         });
-        
       }
     });
   }
- //-----end-----//
- //------ Delete operations-------//
-   deleteOperation(index: number): void {
-     switch (index){
-       case 0:{ 
-         this.deleteAtEnd();
-         break;
-        }
-       case 1:{ 
-         this.deleteAtFirst();
-         break; 
-        }
-       case 3:{ 
-         this.deletedAll();
-         break;
-        }
-     }
-   }
-
-   deleteAtEnd(): void {
-     this.createdArr.pop();
-     this.selectedIndex(-1);
-     this.selectedData(-1);
-   }
-
-   deleteAtFirst(): void {
-     this.createdArr = this.createdArr.slice(1);
-     this.selectedIndex(-1);
-     this.selectedData(-1);
-   }
-    
-   deleteAtIndex(): void {
-    this.opDltBtnSelection(2);
-    const matDialogRef = this.matDialog.open(
-      SingleValueInputDialogComponent,
-      {
-        disableClose: true,
-        position:{
-            top:'120px'
-        },
-        data: singleInput
+  //-----end-----//
+  //------ Delete operations-------//
+  deleteOperation(index: number): void {
+    switch (index) {
+      case 0: {
+        this.deleteAtEnd();
+        break;
       }
-    );
-    matDialogRef.afterClosed().subscribe(result => {
-      if(result || result === 0){
+      case 1: {
+        this.deleteAtFirst();
+        break;
+      }
+      case 3: {
+        this.deletedAll();
+        break;
+      }
+    }
+  }
+
+  deleteAtEnd(): void {
+    this.createdArr.pop();
+    this.selectedIndex(-1);
+    this.selectedData(-1);
+  }
+
+  deleteAtFirst(): void {
+    this.createdArr = this.createdArr.slice(1);
+    this.selectedIndex(-1);
+    this.selectedData(-1);
+  }
+
+  deleteAtIndex(): void {
+    this.opDltBtnSelection(2);
+    const matDialogRef = this.matDialog.open(SingleValueInputDialogComponent, {
+      disableClose: true,
+
+      data: singleInput,
+    });
+    matDialogRef.afterClosed().subscribe((result) => {
+      if (result || result === 0) {
         this.createdArr.splice(result, 1);
         this.selectedIndex(-1);
         this.selectedData(-1);
       }
     });
-     
-   }
+  }
 
-   deletedAll(): void {
-     this.createdArr = [];
-     this.selectedIndex(-1);
-     this.selectedData(-1);
-     this.operationShow = false;
-     this.deleteSubMenu = false;
-   }
- //-----end ----//
- //-----Update operations-----//
+  deletedAll(): void {
+    this.createdArr = [];
+    this.selectedIndex(-1);
+    this.selectedData(-1);
+    this.operationShow = false;
+    this.deleteSubMenu = false;
+  }
+  //-----end ----//
+  //-----Update operations-----//
   updateAtFirst(): void {
     this.opUpdBtnSelection(0);
-    const matDialogRef = this.matDialog.open(
-      SingleValueInputDialogComponent,
-      {
-        disableClose: true,
-        position:{
-            top:'120px'
-        },
-        data: singleInput
-      }
-    );
-    matDialogRef.afterClosed().subscribe(result => {
-      if(result || result === 0){
+    const matDialogRef = this.matDialog.open(SingleValueInputDialogComponent, {
+      disableClose: true,
+
+      data: singleInput,
+    });
+    matDialogRef.afterClosed().subscribe((result) => {
+      if (result || result === 0) {
         this.createdArr[0] = result;
-        this.delay(30).then(any=>{
+        this.delay(30).then((any) => {
           this.highliteOperation(0);
         });
       }
     });
-    
   }
   updateAtEnd(): void {
     this.opUpdBtnSelection(1);
-    const matDialogRef = this.matDialog.open(
-      SingleValueInputDialogComponent,
-      {
-        disableClose: true,
-        position:{
-            top:'120px'
-        },
-        data: singleInput
-      }
-    );
-    matDialogRef.afterClosed().subscribe(result => {
-      if(result || result === 0){
-        this.createdArr[this.createdArr.length-1] = result;
-        this.delay(30).then(any=>{
-          this.highliteOperation(this.createdArr.length-1);
+    const matDialogRef = this.matDialog.open(SingleValueInputDialogComponent, {
+      disableClose: true,
+
+      data: singleInput,
+    });
+    matDialogRef.afterClosed().subscribe((result) => {
+      if (result || result === 0) {
+        this.createdArr[this.createdArr.length - 1] = result;
+        this.delay(30).then((any) => {
+          this.highliteOperation(this.createdArr.length - 1);
         });
       }
     });
-    
   }
   updateAtIndex(): void {
     this.opUpdBtnSelection(2);
-    const matDialogRef = this.matDialog.open(
-      DoubleValueInputDialogComponent,
-      {
-        disableClose: true,
-        position:{
-            top:'120px'
-        },
-        data: insertAtIndex
-      }
-    );
-    matDialogRef.afterClosed().subscribe(result => {
-      if(result){
+    const matDialogRef = this.matDialog.open(DoubleValueInputDialogComponent, {
+      disableClose: true,
+
+      data: insertAtIndex,
+    });
+    matDialogRef.afterClosed().subscribe((result) => {
+      if (result) {
         this.createdArr[result.firstInput] = result.secondInput;
-        this.delay(30).then(any=>{
+        this.delay(30).then((any) => {
           this.highliteOperation(result.firstInput);
-        });  
+        });
       }
     });
   }
- //-----end-----//
+  //-----end-----//
   opbtnSection(index: number): void {
-    const opbtnRef  = this.elRef.nativeElement.querySelectorAll('.opbtn');
-    for (let i = 0; i < opbtnRef.length; i++){
-       if(i === index){
-         this.showSubmenu(i);
-         opbtnRef[i].className = 'box box-active p-lg-2 p-1 px-lg-3 px-2 tab me-lg-4 me-3  opbtn';
-       }else{
-        opbtnRef[i].className = 'box p-lg-2 p-1 px-lg-3 px-2 tab me-lg-4 me-3  opbtn';
-       }
+    const opbtnRef = this.elRef.nativeElement.querySelectorAll('.opbtn');
+    for (let i = 0; i < opbtnRef.length; i++) {
+      if (i === index) {
+        this.showSubmenu(i);
+        opbtnRef[i].className =
+          'box box-active p-lg-2 p-1 px-lg-3 px-2 tab me-lg-4 me-3  opbtn';
+      } else {
+        opbtnRef[i].className =
+          'box p-lg-2 p-1 px-lg-3 px-2 tab me-lg-4 me-3  opbtn';
+      }
     }
   }
 
   opInsBtnSelection(index: number): void {
     const opInsRef = this.elRef.nativeElement.querySelectorAll('.opInsBtn');
-    for (let i = 0; i < opInsRef.length; i++){
-      if(i === index){
-        opInsRef[i].className = 'box box-active p-lg-2 p-1 px-lg-3 px-2 btn me-lg-4 me-3 mb-2 opInsBtn';
-      }else{
-        opInsRef[i].className = 'box p-lg-2 p-1 px-lg-3 px-2 btn me-lg-4 me-3 mb-2 opInsBtn';
+    for (let i = 0; i < opInsRef.length; i++) {
+      if (i === index) {
+        opInsRef[i].className =
+          'box box-active p-lg-2 p-1 px-lg-3 px-2 btn me-lg-4 me-3 mb-2 opInsBtn';
+      } else {
+        opInsRef[i].className =
+          'box p-lg-2 p-1 px-lg-3 px-2 btn me-lg-4 me-3 mb-2 opInsBtn';
       }
     }
   }
 
   opDltBtnSelection(index: number): void {
     const opDltRef = this.elRef.nativeElement.querySelectorAll('.opDltBtn');
-    for (let i = 0; i < opDltRef.length; i++){
-      if(i === index){
+    for (let i = 0; i < opDltRef.length; i++) {
+      if (i === index) {
         this.deleteOperation(i);
-        opDltRef[i].className = 'box box-active p-lg-2 p-1 px-lg-3 px-2 btn me-lg-4 me-3 mb-2 opDltBtn';
-      }else{
-        opDltRef[i].className = 'box p-lg-2 p-1 px-lg-3 px-2 btn me-lg-4 me-3 mb-2 opDltBtn';
+        opDltRef[i].className =
+          'box box-active p-lg-2 p-1 px-lg-3 px-2 btn me-lg-4 me-3 mb-2 opDltBtn';
+      } else {
+        opDltRef[i].className =
+          'box p-lg-2 p-1 px-lg-3 px-2 btn me-lg-4 me-3 mb-2 opDltBtn';
       }
     }
   }
   opUpdBtnSelection(index: number): void {
     const opUpdRef = this.elRef.nativeElement.querySelectorAll('.opUpdBtn');
-    for (let i = 0; i < opUpdRef.length; i++){
-      if(i === index){
-        opUpdRef[i].className = 'box box-active p-lg-2 p-1 px-lg-3 px-2 btn me-lg-4 me-3 mb-2 opUpdBtn';
-      }else{
-        opUpdRef[i].className = 'box p-lg-2 p-1 px-lg-3 px-2 btn me-lg-4 me-3 mb-2 opUpdBtn';
+    for (let i = 0; i < opUpdRef.length; i++) {
+      if (i === index) {
+        opUpdRef[i].className =
+          'box box-active p-lg-2 p-1 px-lg-3 px-2 btn me-lg-4 me-3 mb-2 opUpdBtn';
+      } else {
+        opUpdRef[i].className =
+          'box p-lg-2 p-1 px-lg-3 px-2 btn me-lg-4 me-3 mb-2 opUpdBtn';
       }
     }
   }
@@ -304,18 +262,20 @@ export class OneDimensionComponent implements OnInit {
   selectedIndex(index: number): void {
     const indexRef = this.elRef.nativeElement.querySelectorAll('.index');
     let flag = true;
-    for (let i = 0; i < indexRef.length; i++){
-       if(i === index){
-         this.indexWiseShow = true;
-         this.index = index;
-         flag = false;
-         this.value = this.createdArr[index];
-         indexRef[i].className = 'index index-active tab w-100 px-lg-3 px-2 py-lg-2 py-1 text-center border-bottom border-2 border-danger'
-       }else{
-        indexRef[i].className = 'index tab w-100 px-lg-3 px-2 py-lg-2 py-1 text-center border-bottom border-2 border-danger'
-       }
+    for (let i = 0; i < indexRef.length; i++) {
+      if (i === index) {
+        this.indexWiseShow = true;
+        this.index = index;
+        flag = false;
+        this.value = this.createdArr[index];
+        indexRef[i].className =
+          'index index-active tab w-100 px-lg-3 px-2 py-lg-2 py-1 text-center border-bottom border-2 border-danger';
+      } else {
+        indexRef[i].className =
+          'index tab w-100 px-lg-3 px-2 py-lg-2 py-1 text-center border-bottom border-2 border-danger';
+      }
     }
-    if(flag){
+    if (flag) {
       this.indexWiseShow = false;
     }
   }
@@ -323,48 +283,50 @@ export class OneDimensionComponent implements OnInit {
   selectedData(index: number): void {
     const dataRef = this.elRef.nativeElement.querySelectorAll('.data');
     let flag = true;
-    for (let i = 0; i < dataRef.length; i++){
-       if( i === index){
-         this.datawiseShow = true;
-         flag = false;
-         this.dataindex = index;
-         this.datavalue = this.createdArr[index];
-         dataRef[i].className = 'data data-active tab w-100 px-lg-3 px-2 py-lg-2 py-1 text-center';
-        }else{
-        dataRef[i].className = 'data tab w-100 px-lg-3 px-2 py-lg-2 py-1 text-center';
-       }
+    for (let i = 0; i < dataRef.length; i++) {
+      if (i === index) {
+        this.datawiseShow = true;
+        flag = false;
+        this.dataindex = index;
+        this.datavalue = this.createdArr[index];
+        dataRef[i].className =
+          'data data-active tab w-100 px-lg-3 px-2 py-lg-2 py-1 text-center';
+      } else {
+        dataRef[i].className =
+          'data tab w-100 px-lg-3 px-2 py-lg-2 py-1 text-center';
+      }
     }
-    if(flag){
+    if (flag) {
       this.datawiseShow = false;
     }
   }
 
   showSubmenu(index: number): void {
-    switch(index){
-      case 1: { 
+    switch (index) {
+      case 1: {
         this.insertSubMenu = true;
         this.deleteSubMenu = false;
         this.updateSubMenu = false;
-        break; 
+        break;
       }
-      case 2: { 
+      case 2: {
         this.insertSubMenu = false;
         this.deleteSubMenu = true;
         this.updateSubMenu = false;
-        break; 
+        break;
       }
-      case 3:{ 
+      case 3: {
         this.insertSubMenu = false;
         this.deleteSubMenu = false;
         this.updateSubMenu = true;
-        break; 
+        break;
       }
-      case 4:{ 
+      case 4: {
         this.rotateArr();
         this.insertSubMenu = false;
         this.deleteSubMenu = false;
         this.updateSubMenu = false;
-        break; 
+        break;
       }
       default: {
         this.insertSubMenu = false;
@@ -378,12 +340,12 @@ export class OneDimensionComponent implements OnInit {
     const first = this.createdArr[0];
     this.createdArr = this.createdArr.splice(1);
     this.createdArr.push(first);
-    if( this.rotateIndex <= 0){
-      this.rotateIndex = this.createdArr.length-1;
-    }else{
+    if (this.rotateIndex <= 0) {
+      this.rotateIndex = this.createdArr.length - 1;
+    } else {
       this.rotateIndex--;
     }
-    this.delay(30).then(any=>{
+    this.delay(30).then((any) => {
       this.highliteOperation(this.rotateIndex);
     });
   }
@@ -391,19 +353,24 @@ export class OneDimensionComponent implements OnInit {
   highliteOperation(index: number): void {
     const dataRef = this.elRef.nativeElement.querySelectorAll('.data');
     const indexRef = this.elRef.nativeElement.querySelectorAll('.index');
-    for (let i = 0; i < indexRef.length; i++){
-      if(i === index){
-        indexRef[i].className = 'index index-active tab w-100 px-lg-3 px-2 py-lg-2 py-1 text-center border-bottom border-2 border-danger';
-        dataRef[i].className = 'data data-active tab w-100 px-lg-3 px-2 py-lg-2 py-1 text-center';
-      }else{
-       indexRef[i].className = 'index tab w-100 px-lg-3 px-2 py-lg-2 py-1 text-center border-bottom border-2 border-danger';
-       dataRef[i].className = 'data tab w-100 px-lg-3 px-2 py-lg-2 py-1 text-center';
+    for (let i = 0; i < indexRef.length; i++) {
+      if (i === index) {
+        indexRef[i].className =
+          'index index-active tab w-100 px-lg-3 px-2 py-lg-2 py-1 text-center border-bottom border-2 border-danger';
+        dataRef[i].className =
+          'data data-active tab w-100 px-lg-3 px-2 py-lg-2 py-1 text-center';
+      } else {
+        indexRef[i].className =
+          'index tab w-100 px-lg-3 px-2 py-lg-2 py-1 text-center border-bottom border-2 border-danger';
+        dataRef[i].className =
+          'data tab w-100 px-lg-3 px-2 py-lg-2 py-1 text-center';
       }
-   }
+    }
   }
 
   async delay(ms: number) {
-      await new Promise<void>(resolve => setTimeout(()=>resolve(), ms)).then();
+    await new Promise<void>((resolve) =>
+      setTimeout(() => resolve(), ms)
+    ).then();
   }
-
 }

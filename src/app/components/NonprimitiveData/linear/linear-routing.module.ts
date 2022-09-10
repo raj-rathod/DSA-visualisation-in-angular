@@ -17,17 +17,6 @@ const routes: Routes = [
   },
   {
     path: 'array', component: ArrayComponent,
-    children:[
-      {
-        path: '', redirectTo:'one-dimension', pathMatch:'full',
-      },
-      {
-        path: 'one-dimension', component: OneDimensionComponent
-      },
-      {
-        path: 'two-dimension', component: TwoDimensionComponent
-      }
-    ]
   },
   {
     path: 'stack', component: StackComponent

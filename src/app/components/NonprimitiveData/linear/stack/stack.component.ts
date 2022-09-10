@@ -59,9 +59,7 @@ export class StackComponent implements OnInit {
       SingleValueInputDialogComponent,
       {
         disableClose: true,
-        position:{
-            top:'120px'
-        },
+        
         data: stackPushElement
       }
     );

@@ -7,26 +7,26 @@ const treeData = {
   example: 'assets/ds-image/tree.jpg',
   type: ['Binary Tree', 'Binary Search Tree', 'AVL Tree', 'Heap Tree'],
   terminologies: [
-    '<b>Node</b>: Node is the main component of a tree that stores the data along with the links to other nodes',
-    '<b>Edge</b>: Edge( also called branch) connects two nodes of a tree. A node can have more than one edge',
-    '<b>Parent</b>: Parent node is a predecessor to any other node. In simple words, it is a node in the tree that has branches to other nodes',
-    '<b>Child</b>: The node which is connected below to another node is called a child of that node. All nodes except the root node are child nodes',
-    '<b>Root</b>: The first node of the tree which originates it is called the root of the tree. A tree can have only one root',
-    '<b>Leaf node(External node)</b>: Nodes with no child are called leaf nodes or external nodes',
-    '<b>Internal node(Non-Leaf node)</b>: Nodes with at least one child is called an internal node or non-leaf nodes',
-    '<b>Siblings</b>: Nodes having the same parent are called siblings',
-    '<b>Cousins</b>: The nodes belonging to the same level with different parent nodes',
-    '<b>Degree</b>:Degree of a node is defined as the number of children of that node. The degree of the tree is the highest degree of a node among all the nodes',
-    '<b>Path</b>: The nodes in the tree has to be reachable from other nodes through a unique sequence of edges called path. The number of edges in a path is called the length of the path',
-    '<b>Level of a node</b>: The level of a node is defined as the number of edges in the unique path between the root and the node',
-    '<b>Subtree</b>: A tree formed by a node and all of its descendants in the tree is called a subtree',
+    '<b>Node</b>:  Node is the main component of a tree that stores the data along with the links to other nodes',
+    '<b>Edge</b>:  Edge( also called branch) connects two nodes of a tree. A node can have more than one edge',
+    '<b>Parent</b>:  Parent node is a predecessor to any other node. In simple words, it is a node in the tree that has branches to other nodes',
+    '<b>Child</b>:  The node which is connected below to another node is called a child of that node. All nodes except the root node are child nodes',
+    '<b>Root</b>:  The first node of the tree which originates it is called the root of the tree. A tree can have only one root',
+    '<b>Leaf node(External node)</b>:  Nodes with no child are called leaf nodes or external nodes',
+    '<b>Internal node(Non-Leaf node)</b>:  Nodes with at least one child is called an internal node or non-leaf nodes',
+    '<b>Siblings</b>:  Nodes having the same parent are called siblings',
+    '<b>Cousins</b>:  The nodes belonging to the same level with different parent nodes',
+    '<b>Degree</b>: Degree of a node is defined as the number of children of that node. The degree of the tree is the highest degree of a node among all the nodes',
+    '<b>Path</b>:  The nodes in the tree has to be reachable from other nodes through a unique sequence of edges called path. The number of edges in a path is called the length of the path',
+    '<b>Level of a node</b>:  The level of a node is defined as the number of edges in the unique path between the root and the node',
+    '<b>Subtree</b>:  A tree formed by a node and all of its descendants in the tree is called a subtree',
   ],
   properties: [
-    '<b>Number of edges</b>: An edge can be defined as the connection between two nodes. If a tree has N nodes then it will have (N-1) edges. There is only one path from each node to any other node of the tree',
-    '<b>Depth of a node</b>: The depth of a node is defined as the length of the path from the root to that node. Each edge adds 1 unit of length to the path. So, it can also be defined as the number of edges in the path from the root of the tree to the node',
-    '<b>Height of a node</b>: The height of a node can be defined as the length of the longest path from the node to a leaf node of the tree',
-    '<b>Height of the tree</b>: The height of a tree is the length of the longest path from the root of the tree to a leaf node of the tree',
-    '<b>Degree of a Node</b>: The total count of subtrees attached to that node is called the degree of the node. The degree of a leaf node must be 0. The degree of a tree is the maximum degree of a node among all the nodes in the tree',
+    '<b>Number of edges</b>:  An edge can be defined as the connection between two nodes. If a tree has N nodes then it will have (N-1) edges. There is only one path from each node to any other node of the tree',
+    '<b>Depth of a node</b>:  The depth of a node is defined as the length of the path from the root to that node. Each edge adds 1 unit of length to the path. So, it can also be defined as the number of edges in the path from the root of the tree to the node',
+    '<b>Height of a node</b>:  The height of a node can be defined as the length of the longest path from the node to a leaf node of the tree',
+    '<b>Height of the tree</b>:  The height of a tree is the length of the longest path from the root of the tree to a leaf node of the tree',
+    '<b>Degree of a Node</b>:  The total count of subtrees attached to that node is called the degree of the node. The degree of a leaf node must be 0. The degree of a tree is the maximum degree of a node among all the nodes in the tree',
     'Traversing in a tree is done by depth first search and breadth first search algorithm',
     'It has no loop and no circuit',
     'It has no self-loop',
@@ -88,7 +88,7 @@ export const treeTypesMetaData = [
   {
     type: treeData.type[3],
     url: '/non-primitive/non-linear/heap-tree',
-  }
+  },
 ];
 const binaryTree = {
   defination:
@@ -104,12 +104,12 @@ const binaryTree = {
   ],
   operations: [],
   type: [
-    '<b>Full Binary Tree</b>: A Binary Tree is a full binary tree if every node has 0 or 2 children. The following are the examples of a full binary tree. We can also say a full binary tree is a binary tree in which all nodes except leaf nodes have two children. It is also known as a proper binary tree',
-    '<b>Complete Binary Tree</b>: A Binary Tree is a Complete Binary Tree if all the levels are completely filled except possibly the last level and the last level has all keys as left as possible.A complete binary tree is just like a full binary tree, but with two major differences.(I)Every level must be completely filled. (II)All the leaf elements must lean towards the left',
-    '<b>Perfect Binary Tree</b>: A Binary tree is a Perfect Binary Tree in which all the internal nodes have two children and all leaf nodes are at the same level',
-    '<b>Balanced Binary Tree</b>: A binary tree is balanced if the height of the tree is O(Log n) where n is the number of nodes. For Example, the AVL tree maintains O(Log n) height by making sure that the difference between the heights of the left and right subtrees is at most 1. Red-Black trees maintain O(Log n) height by making sure that the number of Black nodes on every root to leaf paths is the same and there are no adjacent red nodes. Balanced Binary Search trees are performance-wise good as they provide O(log n) time for search, insert and delete',
-    '<b>A degenerate (or pathological) tree</b>: A Tree where every internal node has one child. Such trees are performance-wise same as linked list.A degenerate or pathological tree is the tree having a single child either left or right',
-    '<b>Skewed Binary Tree</b>: A skewed binary tree is a pathological/degenerate tree in which the tree is either dominated by the left nodes or the right nodes. Thus, there are two types of skewed binary tree: left-skewed binary tree and right-skewed binary tree',
+    '<b>Full Binary Tree</b>:  A Binary Tree is a full binary tree if every node has 0 or 2 children. The following are the examples of a full binary tree. We can also say a full binary tree is a binary tree in which all nodes except leaf nodes have two children. It is also known as a proper binary tree',
+    '<b>Complete Binary Tree</b>:  A Binary Tree is a Complete Binary Tree if all the levels are completely filled except possibly the last level and the last level has all keys as left as possible.A complete binary tree is just like a full binary tree, but with two major differences.(I)Every level must be completely filled. (II)All the leaf elements must lean towards the left',
+    '<b>Perfect Binary Tree</b>:  A Binary tree is a Perfect Binary Tree in which all the internal nodes have two children and all leaf nodes are at the same level',
+    '<b>Balanced Binary Tree</b>:  A binary tree is balanced if the height of the tree is O(Log n) where n is the number of nodes. For Example, the AVL tree maintains O(Log n) height by making sure that the difference between the heights of the left and right subtrees is at most 1. Red-Black trees maintain O(Log n) height by making sure that the number of Black nodes on every root to leaf paths is the same and there are no adjacent red nodes. Balanced Binary Search trees are performance-wise good as they provide O(log n) time for search, insert and delete',
+    '<b>A degenerate (or pathological) tree</b>:  A Tree where every internal node has one child. Such trees are performance-wise same as linked list.A degenerate or pathological tree is the tree having a single child either left or right',
+    '<b>Skewed Binary Tree</b>:  A skewed binary tree is a pathological/degenerate tree in which the tree is either dominated by the left nodes or the right nodes. Thus, there are two types of skewed binary tree: left-skewed binary tree and right-skewed binary tree',
   ],
   applications: [
     'Huffman coding tree is an application of binary trees that are used in data compression algorithms',
@@ -174,10 +174,10 @@ const binarySearchTree = {
   ],
   example: 'assets/ds-image/binary-search-tree.jpg',
   operations: [
-    '<b>Searching in a BST</b>:Searching in BST involves the comparison of the key values. If the key value is equal to root key then, search successful, if lesser than root key then search the key in the left subtree and if the key is greater than root key then search the key in the right subtree',
-    '<b>Insertion in a BST</b>:Insertion in BST involves the comparison of the key values. If the key value is lesser than or equal to root key then go to left subtree, find an empty space following to the search algorithm and insert the data and if the key is greater than root key then go to right subtree, find an empty space following to the search algorithm and insert the data',
-    '<b>Deletion in a BST</b>:Deletion in BST involves three cases.<br>Case 1- If the node to be deleted is leaf node: If the node to be deleted is a leaf node, then delete it.<br>Case 2- If the node to be deleted has one child: If the node to be deleted has one child then, delete the node and place the child of the node at the position of the deleted node. <br>Case 3- If the node to be deleted has two children: If the node to be deleted has two children then, find the inorder successor or inorder predecessor of the node according to the nearest capable value of the node to be deleted. Delete the inorder successor or predecessor using the above cases. Replace the node with the inorder successor or predecessor.',
-    '<b>Traversals in a BST</b>:There are 4 types of traversals of the Binary Search Tree.<br>Level Order Traversal: Each node of the tree is traversed level by level in order of its appearance.<br>Pre-order Traversal: The nodes are traversed in the format of root and then left subtree and then right subtree.<br>Inorder Traversal: The nodes are traversed in the format of left subtree and then root and then right subtree.<br>Post Traversal: The nodes are traversed in the format of left subtree  and then right subtree and then root',
+    '<b>Searching in a BST</b>:  Searching in BST involves the comparison of the key values. If the key value is equal to root key then, search successful, if lesser than root key then search the key in the left subtree and if the key is greater than root key then search the key in the right subtree',
+    '<b>Insertion in a BST</b>:  Insertion in BST involves the comparison of the key values. If the key value is lesser than or equal to root key then go to left subtree, find an empty space following to the search algorithm and insert the data and if the key is greater than root key then go to right subtree, find an empty space following to the search algorithm and insert the data',
+    '<b>Deletion in a BST</b>:  Deletion in BST involves three cases.<br>Case 1- If the node to be deleted is leaf node: If the node to be deleted is a leaf node, then delete it.<br>Case 2- If the node to be deleted has one child: If the node to be deleted has one child then, delete the node and place the child of the node at the position of the deleted node. <br>Case 3- If the node to be deleted has two children: If the node to be deleted has two children then, find the inorder successor or inorder predecessor of the node according to the nearest capable value of the node to be deleted. Delete the inorder successor or predecessor using the above cases. Replace the node with the inorder successor or predecessor.',
+    '<b>Traversals in a BST</b>:  There are 4 types of traversals of the Binary Search Tree.<br><b>(I) Level Order Traversal</b>: Each node of the tree is traversed level by level in order of its appearance.<br><b>(II) Pre-order Traversal</b>: The nodes are traversed in the format of root and then left subtree and then right subtree.<br><b>(III) Inorder Traversal</b>: The nodes are traversed in the format of left subtree and then root and then right subtree.<br><b>(IV) Postorder Traversal</b>: The nodes are traversed in the format of left subtree  and then right subtree and then root',
   ],
   advantage: [
     'BST is fast in insertion and deletion when balanced',
@@ -263,48 +263,52 @@ const avlTree = {
     'Take more processing for balancing',
   ],
 };
-export const avlTreeMetaData:DS={
-     defination: Helper.setHeader(avlTree.defination),
-     properties: Helper.setListwithTitleHtml('Properties', avlTree.properties),
-     example: Helper.setExampleImage('Example', avlTree.example),
-     operations: Helper.setListwithTitleHtml('Operations', avlTree.operations),
-     advantage: Helper.setListwithTitleHtml('Advantage', avlTree.advantage),
-     disadvantage: Helper.setListwithTitleHtml('Disadvantage', avlTree.disadvantage),
-     applications: Helper.setListwithTitleHtml('Applications', avlTree.applications),
+export const avlTreeMetaData: DS = {
+  defination: Helper.setHeader(avlTree.defination),
+  properties: Helper.setListwithTitleHtml('Properties', avlTree.properties),
+  example: Helper.setExampleImage('Example', avlTree.example),
+  operations: Helper.setListwithTitleHtml('Operations', avlTree.operations),
+  advantage: Helper.setListwithTitleHtml('Advantage', avlTree.advantage),
+  disadvantage: Helper.setListwithTitleHtml(
+    'Disadvantage',
+    avlTree.disadvantage
+  ),
+  applications: Helper.setListwithTitleHtml(
+    'Applications',
+    avlTree.applications
+  ),
 };
 
 const bTree = {
-  defination:"B-Tree is a self-balancing search tree. In most of the other self-balancing search trees (like AVL and Red-Black Trees), it is assumed that everything is in main memory. To understand the use of B-Trees, we must think of the huge amount of data that cannot fit in main memory. When the number of keys is high, the data is read from disk in the form of blocks. Disk access time is very high compared to the main memory access time. The main idea of using B-Trees is to reduce the number of disk accesses. Most of the tree operations (search, insert, delete, max, min, ..etc ) require O(h) disk accesses where h is the height of the tree. B-tree is a fat tree. The height of B-Trees is kept low by putting maximum possible keys in a B-Tree node. Generally, the B-Tree node size is kept equal to the disk block size. Since the height of the B-tree is low so total disk accesses for most of the operations are reduced significantly compared to balanced Binary Search Trees like AVL Tree, Red-Black Tree, ..etc.",
-  operations:["?"],
-  applications:[
+  defination:
+    'B-Tree is a self-balancing search tree. In most of the other self-balancing search trees (like AVL and Red-Black Trees), it is assumed that everything is in main memory. To understand the use of B-Trees, we must think of the huge amount of data that cannot fit in main memory. When the number of keys is high, the data is read from disk in the form of blocks. Disk access time is very high compared to the main memory access time. The main idea of using B-Trees is to reduce the number of disk accesses. Most of the tree operations (search, insert, delete, max, min, ..etc ) require O(h) disk accesses where h is the height of the tree. B-tree is a fat tree. The height of B-Trees is kept low by putting maximum possible keys in a B-Tree node. Generally, the B-Tree node size is kept equal to the disk block size. Since the height of the B-tree is low so total disk accesses for most of the operations are reduced significantly compared to balanced Binary Search Trees like AVL Tree, Red-Black Tree, ..etc.',
+  operations: ['?'],
+  applications: [
     'It is used in large databases to access data stored in the disk',
     'Searching of data in a data set can be achieved in significantly less time using B tree',
     'With the indexing feature multilevel indexing can be achieved',
-    'Most of the servers also use B-tree approach'
+    'Most of the servers also use B-tree approach',
   ],
-  example:"assets/ds-image/b-tree.jpg",
-  properties:[
-    "All leaves are at the same level",
-    "A B-Tree is defined by the term minimum degree ‘t’. The value of t depends upon disk block size",
-    "Every node except root must contain at least t-1 keys. The root may contain minimum 1 key",
-    "All nodes (including root) may contain at most 2*t – 1 keys",
-    "Number of children of a node is equal to the number of keys in it plus 1",
-    "All keys of a node are sorted in increasing order. The child between two keys k1 and k2 contains all keys in the range from k1 and k2",
-    "B-Tree grows and shrinks from the root which is unlike Binary Search Tree. Binary Search Trees grow downward and also shrink from downward",
-    "Like other balanced Binary Search Trees, time complexity to search, insert and delete is O(log n)",
-    "Insertion of a Node in B-Tree happens only at Leaf Node"
-
+  example: 'assets/ds-image/b-tree.jpg',
+  properties: [
+    'All leaves are at the same level',
+    'A B-Tree is defined by the term minimum degree ‘t’. The value of t depends upon disk block size',
+    'Every node except root must contain at least t-1 keys. The root may contain minimum 1 key',
+    'All nodes (including root) may contain at most 2*t – 1 keys',
+    'Number of children of a node is equal to the number of keys in it plus 1',
+    'All keys of a node are sorted in increasing order. The child between two keys k1 and k2 contains all keys in the range from k1 and k2',
+    'B-Tree grows and shrinks from the root which is unlike Binary Search Tree. Binary Search Trees grow downward and also shrink from downward',
+    'Like other balanced Binary Search Trees, time complexity to search, insert and delete is O(log n)',
+    'Insertion of a Node in B-Tree happens only at Leaf Node',
   ],
-  advantage:[
-    "B-Tree facilitates ordered sequential access, and so it works effectively as compared to a hash table",
-    "It allows iterations over items in a much similar way as what is supported by a binary tree. The iterations arrange the items in the proper order (ascending or descending) as required",
-    "The tree can have millions of items stored in it, and through its flat structure, it facilitates easy and efficient traversal through the data",
-    "When there are millions of records, then deleting a record from a table can turn out to be expensive, because the table may need to be rewritten. However, if B-Tree is used to handle sequential access to the table, or if the entire data is stored in B-Tree nodes, then deletion operation can be made simpler"
+  advantage: [
+    'B-Tree facilitates ordered sequential access, and so it works effectively as compared to a hash table',
+    'It allows iterations over items in a much similar way as what is supported by a binary tree. The iterations arrange the items in the proper order (ascending or descending) as required',
+    'The tree can have millions of items stored in it, and through its flat structure, it facilitates easy and efficient traversal through the data',
+    'When there are millions of records, then deleting a record from a table can turn out to be expensive, because the table may need to be rewritten. However, if B-Tree is used to handle sequential access to the table, or if the entire data is stored in B-Tree nodes, then deletion operation can be made simpler',
   ],
-  disadvantage:[
-    "?"
-  ],
-} 
+  disadvantage: ['?'],
+};
 
 export const bTreeMetaData: DS = {
   defination: Helper.setHeader(bTree.defination),
@@ -313,47 +317,47 @@ export const bTreeMetaData: DS = {
   operations: Helper.setListwithTitleHtml('Operations', bTree.operations),
   advantage: Helper.setListwithTitleHtml('Advantage', bTree.advantage),
   disadvantage: Helper.setListwithTitleHtml('Disadvantage', bTree.disadvantage),
-}
+};
 
 const heapTree = {
-  defination:"A Heap is a special Tree-based data structure in which the tree is a complete binary tree. Generally, Heaps can be of two types:<br> <b class='text-warning'>Max-Heap</b>: In a Max-Heap the key present at the root node must be greatest among the keys present at all of it’s children. The same property must be recursively true for all sub-trees in that Binary Tree.<br> <b class='text-warning'>Min-Heap</b>: In a Min-Heap the key present at the root node must be minimum among the keys present at all of it’s children. The same property must be recursively true for all sub-trees in that Binary Tree.",
-  example:"assets/ds-image/heap-tree.jpg",
-  operations:[
-    "Heapify:Process to rearrange the heap in order to maintain heap-property",
-    "Find-max (or Find-min):find a maximum item of a max-heap, or a minimum item of a min-heap, respectively",
-    "Insertion:process to insert an element in existing heap time complexity O(log N)",
-    "Deletion: deleting the top element of the heap or the highest priority element, and then organizing the heap and returning the element with time complexity O(log N)",
-    "Extract Min-Max → Returning and deleting the maximum or minimum element in max-heap and min-heap respectively"
+  defination:
+    "A Heap is a special Tree-based data structure in which the tree is a complete binary tree. Generally, Heaps can be of two types:<br> <b class='text-warning'>Max-Heap</b>:  In a Max-Heap the key present at the root node must be greatest among the keys present at all of it’s children. The same property must be recursively true for all sub-trees in that Binary Tree.<br> <b class='text-warning'>Min-Heap</b>:  In a Min-Heap the key present at the root node must be minimum among the keys present at all of it’s children. The same property must be recursively true for all sub-trees in that Binary Tree.",
+  example: 'assets/ds-image/heap-tree.jpg',
+  operations: [
+    'Heapify:Process to rearrange the heap in order to maintain heap-property',
+    'Find-max (or Find-min):find a maximum item of a max-heap, or a minimum item of a min-heap, respectively',
+    'Insertion:process to insert an element in existing heap time complexity O(log N)',
+    'Deletion: deleting the top element of the heap or the highest priority element, and then organizing the heap and returning the element with time complexity O(log N)',
+    'Extract Min-Max → Returning and deleting the maximum or minimum element in max-heap and min-heap respectively',
   ],
-  properties:[
-    '<b>Ordering</b>:Nodes must be arranged in an order according to values. The values should follow min-heap or max-heap property',
-    '<b>Structural</b>:All levels in a heap should be full. In other words, it should be a complete binary tree',
+  properties: [
+    '<b>Ordering</b>: Nodes must be arranged in an order according to values. The values should follow min-heap or max-heap property',
+    '<b>Structural</b>: All levels in a heap should be full. In other words, it should be a complete binary tree',
     'Array based implementation, so the last parent node index is always (n/2)-1 and the indexs of left child and right child of nay parent node whose index is `i` are (2i+1) and (2i+2) respectively',
   ],
   applications: [
     "Heap is used in the construction of priority queues. We can insert, delete, identify the highest priority element, or insert and extract with priority, among other things, in O(log N) time using a priority queue. Although data structures such as BST, AVL trees, and the Red-Black tree can accomplish the same functionalities, they are more complex than heaps.Priority queues themselves have more advanced uses, such as bandwidth control in an n/w router, prims and Dijkstra's algorithm, Huffman coding, and the BFS algorithm",
-    "Order statistics: The Heap data structure can be used to find the kth smallest / largest element in an array quickly and effectively",
-    "Heap sort is one of the fastest sorting algorithms with time complexity of O(N* log(N), and it’s easy to implement",
-    "Best First Search (BFS) is an informed search, where unlike the queue in Breadth-First Search, this technique is implemented using a priority queue",
-    "Patient treatment: In a hospital, an emergency patient, or the patient with more injury is treated first. Here the priority is the degree of injury",
-    "Systems concerned with security use heap sort, like the Linux kernel"
+    'Order statistics: The Heap data structure can be used to find the kth smallest / largest element in an array quickly and effectively',
+    'Heap sort is one of the fastest sorting algorithms with time complexity of O(N* log(N), and it’s easy to implement',
+    'Best First Search (BFS) is an informed search, where unlike the queue in Breadth-First Search, this technique is implemented using a priority queue',
+    'Patient treatment: In a hospital, an emergency patient, or the patient with more injury is treated first. Here the priority is the degree of injury',
+    'Systems concerned with security use heap sort, like the Linux kernel',
   ],
-  advantage:[
+  advantage: [
     'Less time complexity, for inserting or deleting an element in the heap the time complexity is just O(log N)',
     'It helps to find the minimum number and greatest number',
-    "To just peek at the most prior element the time complexity is constant O(1)",
-    "Can be implemented using an array, it doesn’t need any extra space for pointer",
-    "A binary heap is a balanced binary tree, and easy to implement",
-    "Heap can be created with O(N) time"
+    'To just peek at the most prior element the time complexity is constant O(1)',
+    'Can be implemented using an array, it doesn’t need any extra space for pointer',
+    'A binary heap is a balanced binary tree, and easy to implement',
+    'Heap can be created with O(N) time',
   ],
   disadvantage: [
-    "The time complexity for searching an element in Heap is O(N)",
-    "To find a successor or predecessor of an element, the heap takes O(N) time, whereas BST takes only O(log N) time",
-    "To print all elements of the heap in sorted order time complexity is O(N*log N), whereas, for BST, it takes only O(N) time",
-    "Memory management is more complex in heap memory because it is used globally. Heap memory is divided into two parts-old generations and the young generation etc. at java garbage collection"
+    'The time complexity for searching an element in Heap is O(N)',
+    'To find a successor or predecessor of an element, the heap takes O(N) time, whereas BST takes only O(log N) time',
+    'To print all elements of the heap in sorted order time complexity is O(N*log N), whereas, for BST, it takes only O(N) time',
+    'Memory management is more complex in heap memory because it is used globally. Heap memory is divided into two parts-old generations and the young generation etc. at java garbage collection',
   ],
-
-}
+};
 
 export const heapMetaData: DS = {
   defination: Helper.setHeader(heapTree.defination),
@@ -361,6 +365,12 @@ export const heapMetaData: DS = {
   example: Helper.setExampleImage('Example', heapTree.example),
   operations: Helper.setListwithTitleHtml('Operations', heapTree.operations),
   advantage: Helper.setListwithTitleHtml('Advantage', heapTree.advantage),
-  disadvantage: Helper.setListwithTitleHtml('Disadvantage', heapTree.disadvantage),
-  applications: Helper.setListwithTitleHtml('Applications', heapTree.applications),
+  disadvantage: Helper.setListwithTitleHtml(
+    'Disadvantage',
+    heapTree.disadvantage
+  ),
+  applications: Helper.setListwithTitleHtml(
+    'Applications',
+    heapTree.applications
+  ),
 };

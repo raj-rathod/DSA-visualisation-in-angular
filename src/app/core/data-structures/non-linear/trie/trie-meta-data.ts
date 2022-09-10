@@ -16,9 +16,9 @@ const trie = {
         "Deletion of a node in the Trie:<br> If the key is not found in the trie, the delete operation will stop and exit it.<br>If the key is found in the trie, delete it from the trie."
     ],
     applications: [
-        "<b>Spell Checker</b>:Spell checking is a three-step process. First, look for that word in a dictionary, generate possible suggestions, and then sort the suggestion words with the desired word at the top.<br>Trie is used to store the word in dictionaries. The spell checker can easily be applied in the most efficient way by searching for words on a data structure. Using trie not only makes it easy to see the word in the dictionary, but it is also simple to build an algorithm to include a collection of relevant words or suggestions",
-        "<b>Auto-complete</b>:Auto-complete functionality is widely used on text editors, mobile applications, and the Internet. It provides a simple way to find an alternative word to complete the word",
-        "<b>Browser history</b>:It is also used to complete the URL in the browser. The browser keeps a history of the URLs of the websites you've visited"
+        "<b>Spell Checker</b>: Spell checking is a three-step process. First, look for that word in a dictionary, generate possible suggestions, and then sort the suggestion words with the desired word at the top.<br>Trie is used to store the word in dictionaries. The spell checker can easily be applied in the most efficient way by searching for words on a data structure. Using trie not only makes it easy to see the word in the dictionary, but it is also simple to build an algorithm to include a collection of relevant words or suggestions",
+        "<b>Auto-complete</b>: Auto-complete functionality is widely used on text editors, mobile applications, and the Internet. It provides a simple way to find an alternative word to complete the word",
+        "<b>Browser history</b>: It is also used to complete the URL in the browser. The browser keeps a history of the URLs of the websites you've visited"
     ],
     advantages: [
         "It can be insert faster and search the string than hash tables and binary search trees",

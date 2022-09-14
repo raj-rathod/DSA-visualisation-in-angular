@@ -13,7 +13,6 @@ export class ArrayComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-  
   }
   tabChange(index: number): void {
     this.state = index;

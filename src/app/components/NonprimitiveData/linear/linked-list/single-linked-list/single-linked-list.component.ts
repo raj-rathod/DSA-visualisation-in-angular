@@ -1,4 +1,4 @@
-import { Component, ElementRef, OnInit } from '@angular/core';
+import { Component,  OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { insertAtIndex } from 'src/app/helper/double-input-field-meta-data';
 import {
@@ -7,6 +7,7 @@ import {
 } from 'src/app/helper/single-input-meta-data';
 import { DoubleValueInputDialogComponent } from 'src/app/shared/components/double-value-input-dialog/double-value-input-dialog.component';
 import { SingleValueInputDialogComponent } from 'src/app/shared/components/single-value-input-dialog/single-value-input-dialog.component';
+import { DeletionOperations, InsertionOperations, Operations, UpdationOperations } from 'src/app/shared/enums/basic.enum';
 import { Node } from '../node';
 @Component({
   selector: 'app-single-linked-list',
@@ -14,13 +15,18 @@ import { Node } from '../node';
   styleUrls: ['./single-linked-list.component.css'],
 })
 export class SingleLinkedListComponent implements OnInit {
-  insertionShown: boolean = false;
-  updationShown: boolean = false;
-  deletionShown: boolean = false;
+  operationStep = -1;
+  insertOperationStep = -1;
+  deleteOperationStep = -1;
+  updateOperationStep = -1;
+  operations = Operations;
+  insertOperations = InsertionOperations;
+  deleteOperations = DeletionOperations;
+  updateOperations = UpdationOperations;
   linkedlist: Node[] = [];
   head: Node;
   singleLinkedList: Node;
-  constructor(private elref: ElementRef, private matDialog: MatDialog) {
+  constructor( private matDialog: MatDialog) {
     this.singleLinkedList = new Node();
     this.head = this.singleLinkedList;
   }
@@ -28,97 +34,20 @@ export class SingleLinkedListComponent implements OnInit {
   ngOnInit(): void {}
 
   operationSelection(index: number): void {
-    const opRef = this.elref.nativeElement.querySelectorAll('.sigleOp');
-    for (let i = 0; i < opRef.length; i++) {
-      if (i === index) {
-        this.oprationSelected(i);
-        opRef[i].className =
-          'box box-active p-lg-2 p-1 px-lg-3 px-2 btn me-lg-4 me-3 mb-2 sigleOp';
-      } else {
-        opRef[i].className =
-          'box p-lg-2 p-1 px-lg-3 px-2 btn me-lg-4 me-3 mb-2 sigleOp';
-      }
-    }
-  }
-
-  oprationSelected(index: number): void {
-    switch (index) {
-      case 1: {
-        this.insertionShown = true;
-        this.updationShown = false;
-        this.deletionShown = false;
-        break;
-      }
-      case 2: {
-        this.insertionShown = false;
-        this.updationShown = true;
-        this.deletionShown = false;
-        break;
-      }
-      case 3: {
-        this.insertionShown = false;
-        this.updationShown = false;
-        this.deletionShown = true;
-        break;
-      }
-    }
-  }
-
-  operationInsertion(index: number): void {
-    const opRef = this.elref.nativeElement.querySelectorAll('.sigleIn');
-    for (let i = 0; i < opRef.length; i++) {
-      if (i === index) {
-        opRef[i].className =
-          'box box-active p-lg-2 p-1 px-lg-3 px-2 btn me-lg-4 me-3 mb-2 sigleIn';
-      } else {
-        opRef[i].className =
-          'box p-lg-2 p-1 px-lg-3 px-2 btn me-lg-4 me-3 mb-2 sigleIn';
-      }
-    }
+    this.operationStep = index;
   }
 
   createLinkedList(): void {
     this.operationSelection(0);
     const matDialogRef = this.matDialog.open(SingleValueInputDialogComponent, {
       disableClose: true,
-     
       data: likedListInput,
     });
     matDialogRef.afterClosed().subscribe((result) => {
       if (result) {
         this.generateLinkedlist(result);
-        this.insertionShown = false;
-        this.updationShown = false;
-        this.deletionShown = false;
       }
     });
-  }
-
-  operationUpdation(index: number): void {
-    const opRef = this.elref.nativeElement.querySelectorAll('.sigleUp');
-    for (let i = 0; i < opRef.length; i++) {
-      if (i === index) {
-        opRef[i].className =
-          'box box-active p-lg-2 p-1 px-lg-3 px-2 btn me-lg-4 me-3 mb-2 sigleUp';
-      } else {
-        opRef[i].className =
-          'box p-lg-2 p-1 px-lg-3 px-2 btn me-lg-4 me-3 mb-2 sigleUp';
-      }
-    }
-  }
-
-  operationDeletion(index: number): void {
-    const opRef = this.elref.nativeElement.querySelectorAll('.sigleDel');
-    for (let i = 0; i < opRef.length; i++) {
-      if (i === index) {
-        this.deleteOperation(i);
-        opRef[i].className =
-          'box box-active p-lg-2 p-1 px-lg-3 px-2 btn me-lg-4 me-3 mb-2 sigleDel';
-      } else {
-        opRef[i].className =
-          'box p-lg-2 p-1 px-lg-3 px-2 btn me-lg-4 me-3 mb-2 sigleDel';
-      }
-    }
   }
 
   generateLinkedlist(arr: string[]): void {
@@ -146,7 +75,7 @@ export class SingleLinkedListComponent implements OnInit {
   }
 
   insertAtHead(): void {
-    this.operationInsertion(0);
+    this.insertOperationStep = this.insertOperations.InsertAtFirst;
     const matDialogRef = this.matDialog.open(SingleValueInputDialogComponent, {
       disableClose: true,
       data: singleInput,
@@ -162,7 +91,7 @@ export class SingleLinkedListComponent implements OnInit {
   }
 
   insertAtTail(): void {
-    this.operationInsertion(1);
+    this.insertOperationStep = this.insertOperations.InsertAtEnd;
     const matDialogRef = this.matDialog.open(SingleValueInputDialogComponent, {
       disableClose: true,
      
@@ -182,7 +111,7 @@ export class SingleLinkedListComponent implements OnInit {
   }
 
   insertAtPosition(): void {
-    this.operationInsertion(2);
+    this.insertOperationStep = this.insertOperations.InsertAtPosition;
     const matDialogRef = this.matDialog.open(DoubleValueInputDialogComponent, {
       disableClose: true,
      
@@ -230,10 +159,9 @@ export class SingleLinkedListComponent implements OnInit {
   }
 
   updateAtHead(): void {
-    this.operationUpdation(0);
+    this.updateOperationStep = this.updateOperations.UpdateAtFirst;
     const matDialogRef = this.matDialog.open(SingleValueInputDialogComponent, {
       disableClose: true,
-     
       data: singleInput,
     });
     matDialogRef.afterClosed().subscribe((result) => {
@@ -245,7 +173,7 @@ export class SingleLinkedListComponent implements OnInit {
   }
 
   updateAtTail(): void {
-    this.operationUpdation(1);
+    this.updateOperationStep = this.updateOperations.UpdateAtEnd;
     const matDialogRef = this.matDialog.open(SingleValueInputDialogComponent, {
       disableClose: true,
    
@@ -264,7 +192,7 @@ export class SingleLinkedListComponent implements OnInit {
   }
 
   updateAtPosition(): void {
-    this.operationUpdation(2);
+    this.updateOperationStep = this.updateOperations.UpdateAtPosition;
     const matDialogRef = this.matDialog.open(DoubleValueInputDialogComponent, {
       disableClose: true,
      
@@ -304,10 +232,12 @@ export class SingleLinkedListComponent implements OnInit {
     switch (index) {
       case 0: {
         this.deleteAtFirst();
+        this.deleteOperationStep = this.deleteOperations.DeleteAtFirst;
         break;
       }
       case 1: {
         this.deleteAtEnd();
+        this.deleteOperationStep = this.deleteOperations.DeleteAtEnd;
         break;
       }
     }
@@ -318,13 +248,11 @@ export class SingleLinkedListComponent implements OnInit {
       this.singleLinkedList = this.singleLinkedList.next;
       this.updateAction();
       this.linkedlist = [];
-      this.deletionShown = false;
     } else if (this.linkedlist.length > 1) {
       this.singleLinkedList = this.singleLinkedList.next;
       this.updateAction();
     } else {
       this.linkedlist = [];
-      this.deletionShown = false;
     }
   }
   deleteAtEnd(): void {
@@ -333,7 +261,6 @@ export class SingleLinkedListComponent implements OnInit {
       if (this.head.next === null) {
         this.singleLinkedList = this.singleLinkedList.next;
         this.linkedlist = [];
-        this.deletionShown = false;
       } else {
         while (this.head) {
           if (this.head.next.next === null) {
@@ -346,12 +273,11 @@ export class SingleLinkedListComponent implements OnInit {
       this.updateAction();
     } else {
       this.linkedlist = [];
-      this.deletionShown = false;
     }
   }
 
   deleteAtPosition(): void {
-    this.operationDeletion(2)
+    this.deleteOperationStep = this.deleteOperations.DeleteAtPosition;
     const matDialogRef = this.matDialog.open(SingleValueInputDialogComponent, {
       disableClose: true,
      

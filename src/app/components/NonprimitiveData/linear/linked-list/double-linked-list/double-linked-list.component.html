@@ -53,8 +53,7 @@
         <div class="box p-lg-2 p-1 px-lg-3 px-2 btn me-lg-4 me-3 mb-2 sigleDel" (click)="operationDeletion(1)">
             <p class="m-0">Delete At Tail</p>
         </div>
-        <div class="box p-lg-2 p-1 px-lg-3 px-2 btn me-lg-4 me-3 mb-2 sigleDel" data-bs-toggle="modal"
-            data-bs-target="#delete-at-index-dialog" (click)="deleteAtPosition()">
+        <div class="box p-lg-2 p-1 px-lg-3 px-2 btn me-lg-4 me-3 mb-2 sigleDel"  (click)="deleteAtPosition()">
             <p class="m-0">Delete At Position</p>
         </div>
     </div>
@@ -62,7 +61,7 @@
 <h5 class=" mt-5">
     Double linked list
 </h5>
-<div class="mt-4 d-flex">
+<div class="mt-4 d-flex horizontal-scroll">
     <div class="d-flex align-items-center" *ngFor="let node of doublelinkedlist; let i=index">
         <ng-container *ngIf="i === 0">
             <p class="m-0 ms-1">Null</p>

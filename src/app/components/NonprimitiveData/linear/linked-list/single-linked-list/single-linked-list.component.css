@@ -22,3 +22,14 @@
     justify-content: center;
     align-items:center;
 }
+
+@media (max-width:768px){
+    .data-section{
+        height: 50px;
+        width: 35px;
+    }
+    .link-section{
+        height: 50px;
+        width: 35px;
+    }
+}

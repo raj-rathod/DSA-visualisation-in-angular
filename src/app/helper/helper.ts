@@ -23,5 +23,29 @@ export class Helper{
      static setTitleDescription(title:string, description:string):string {
           return `<h4>${title}</h4> <p>${description}</p>`;
      }
+
+     static treeRepresentation(node: any):string {
+          const { data, leftChild, rightChild } = node;
+          return `
+          <div class="node-element">
+          <p class="m-0">${data}</p>
+          </div>
+          ${ leftChild || rightChild ? `
+          <div class="node-bottom-line"></div>
+          <div class="node-children">
+              ${leftChild ? `
+                <div class="node left-node">
+                    ${this.treeRepresentation(leftChild)}
+                </div>
+              `:''}
+              ${rightChild ? `
+                 <div class="node right-node">
+                    ${this.treeRepresentation(rightChild)}
+                 </div>
+              `:''}
+          </div>
+          `:''}
+          `;
+     }
     
 }

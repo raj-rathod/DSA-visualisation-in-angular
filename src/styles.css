@@ -149,6 +149,7 @@ li {
 }
 
 .horizontal-scroll {
+  width: 100% !important;
   overflow-x: scroll;
   overflow-y: hidden;
 }

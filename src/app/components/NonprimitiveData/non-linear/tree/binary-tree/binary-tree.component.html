@@ -8,61 +8,6 @@
 <div class="mt-md-4 mt-3" [innerHtml]="binaryTreeMetaData.disadvantage"></div>
 <div class="horizontal-scroll">
     <div class="tree">
-        <div class="node node--root">
-            <div class="node-element">
-                <p class="m-0">Root</p>
-            </div>
-            <div class="node-bottom-line"></div>
-            <div class="node-children">
-                <div class="node left-node">
-                    <div class="node-element">
-                        <p class="m-0">Left</p>
-                    </div>
-                    <div class="node-bottom-line"></div>
-                    <div class="node-children">
-                        <div class="node left-node">
-                            <div class="node-element">
-                                <p class="m-0">Left</p>
-                            </div>
-                        </div>
-                        <div class="node right-node">
-                            <div class="node-element">
-                                <p class="m-0">Right</p>
-                            </div>
-                       </div>
-                  </div>
-                </div>
-                <div class="node right-node">
-                    <div class="node-element">
-                        <p class="m-0">Right</p>
-                    </div>
-                    <div class="node-bottom-line"></div>
-                    <div class="node-children">
-                        <div class="node left-node">
-                            <div class="node-element">
-                                <p class="m-0">Left</p>
-                            </div>
-                            <div class="node-bottom-line"></div>
-                            <div class="node-children">
-                                <div class="node left-node">
-                                    <div class="node-element">
-                                        <p class="m-0">Left</p>
-                                    </div>
-                                </div>
-                                <div class="node right-node">
-                                    <div class="node-element">
-                                        <p class="m-0">Right</p>
-                                    </div>
-                               </div>
-                          </div>
-                        </div>
-                        <div class="node right-node">
-                            <div class="node-element">
-                                <p class="m-0">Right</p>
-                            </div>
-                       </div>
-                  </div>
-               </div>
-          </div>
+        <div class="node node--root" [innerHTML]="helper.treeRepresentation(rootNode)"></div>
     </div>
 </div>

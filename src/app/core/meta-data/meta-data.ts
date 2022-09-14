@@ -7,7 +7,7 @@ export const projects: Projects[] = [
     },
     {
         name: "DSA Questions npm package",
-        url: "https://github.com/raj-rathod/DSA-questions/packages/1572865"
+        url: "https://www.npmjs.com/package/@raj-rathod/dsa-methods"
     },
     {
         name: "Calendar without api",

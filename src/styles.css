@@ -1,17 +1,20 @@
 @import "~bootstrap/dist/css/bootstrap.css";
+
 html {
   scroll-behavior: smooth;
 }
-body { 
-  margin: 0; 
-  font-family: Roboto, "Helvetica Neue", sans-serif; 
+
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
   letter-spacing: 0.025rem;
   word-spacing: 0.2rem;
 }
+
 /* customize scrollbar */
 ::-webkit-scrollbar {
   width: 8px;
-  height:8px;
+  height: 8px;
 }
 
 /* Track */
@@ -22,111 +25,134 @@ body {
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: #939AA9;;
+  background: #939AA9;
+  ;
   border-radius: 100px;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: #939AA9;;
+  background: #939AA9;
+  ;
 }
+
 .navbar-toggler {
   font-size: 14px !important;
 }
-.navbar-toggler:focus{
+
+.navbar-toggler:focus {
   text-decoration: none !important;
   box-shadow: none !important;
 }
-.box-data{
-  background:rgba(16, 203, 236, 0.76);
+
+.box-data {
+  background: rgba(16, 203, 236, 0.76);
   border-radius: 8px !important;
-  color:white;
+  color: white;
   box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
-  font-weight:500;
+  font-weight: 500;
   min-width: fit-content;
 }
-.box-data:hover{
+
+.box-data:hover {
   color: #000;
 }
-.box{
-    background:rgba(16, 203, 236, 0.76);
-    border-radius: 8px !important;
-    color:white;
-    font-weight:500;
-    min-width: fit-content;
+
+.box {
+  background: rgba(16, 203, 236, 0.76);
+  border-radius: 8px !important;
+  color: white;
+  font-weight: 500;
+  min-width: fit-content;
 }
-.box:hover{
+
+.box:hover {
   color: #000;
 }
-.box-active{
-  background:rgba(4, 112, 103, 0.76);
+
+.box-active {
+  background: rgba(4, 112, 103, 0.76);
   border-radius: 8px;
-  color:white;
-  font-weight:500;
+  color: white;
+  font-weight: 500;
   min-width: fit-content;
 }
-.data-section-active{
-   background:rgba(251, 255, 0, 0.493);
+
+.data-section-active {
+  background: rgba(251, 255, 0, 0.493);
 }
-.btn-bg{
-  background:rgba(16, 203, 236, 0.76);
-  color:white;
+
+.btn-bg {
+  background: rgba(16, 203, 236, 0.76);
+  color: white;
   box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
-  font-weight:700;
+  font-weight: 700;
 }
-.btn-bg-unactive{
-  background:rgba(16, 203, 236, 0.76);
+
+.btn-bg-unactive {
+  background: rgba(16, 203, 236, 0.76);
   box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
-  color:white;
-  font-weight:700;
+  color: white;
+  font-weight: 700;
   opacity: 0.5;
 }
-.tab{
-    cursor: pointer;
+
+.tab {
+  cursor: pointer;
 }
-.index{
-  background:none;
+
+.index {
+  background: none;
 }
-.index:hover{
-  background:rgba(240, 92, 92, 0.418);
-  color:white;
+
+.index:hover {
+  background: rgba(240, 92, 92, 0.418);
+  color: white;
 }
-.index-active{
-  background:rgba(212, 62, 62, 0.829);
-  color:white;
+
+.index-active {
+  background: rgba(212, 62, 62, 0.829);
+  color: white;
 }
-.data{
-  background:none;
+
+.data {
+  background: none;
 }
-.data:hover{
+
+.data:hover {
   background: rgba(42, 145, 230, 0.568);
-  color:white;
+  color: white;
 }
-.data-active{
+
+.data-active {
   background: rgba(17, 133, 228, 0.918);
-  color:white;
+  color: white;
 }
+
 .mat-dialog-container {
   padding: 0 !important;
 }
-.cdk-overlay-pane{
+
+.cdk-overlay-pane {
   max-width: 100% !important;
   width: 35%;
   margin: 16px !important;
 }
-.fs-smaller{
+
+.fs-smaller {
   font-size: 10px;
 }
-li{
+
+li {
   line-height: 1.5rem !important;
   margin-bottom: 10px;
 }
 
-.horizontal-scroll{
-  width: 100% !important;
+.horizontal-scroll {
   overflow-x: scroll;
   overflow-y: hidden;
 }
+
 /* Hide scrollbar for Chrome, Safari and Opera */
 .horizontal-scroll::-webkit-scrollbar {
   display: none;
@@ -134,92 +160,190 @@ li{
 
 /* Hide scrollbar for IE, Edge and Firefox */
 .horizontal-scroll {
-  -ms-overflow-style: none;  /* IE and Edge */
-  scrollbar-width: none;  /* Firefox */
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */
 }
 
 /*-------- WhatsApp------------------------------------------------*/
-.whatsapp-container{
-	position:fixed;
-	width:60px;
-	height:60px;
-	bottom:30px;
-	right:30px;
-	background-color:#25d366;
+.whatsapp-container {
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  bottom: 30px;
+  right: 30px;
+  background-color: #25d366;
   box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
-	color:#FFF;
-	border-radius:50%;
-	text-align:center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index:99999;
+  color: #FFF;
+  border-radius: 50%;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 99999;
 }
 
-.whatsapp-icon{
-	width: 35px;
-    height: 35px;
+.whatsapp-icon {
+  width: 35px;
+  height: 35px;
 }
 
-@media( max-width:992px){
-  .cdk-overlay-pane{
+/* tree representation classes */
+.tree {
+  min-width: fit-content;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.node-bottom-line {
+  height: 20px;
+  width: 1px;
+  background-color: rgb(64, 63, 63);
+}
+
+.node-children {
+  display: flex;
+  border-top: 1px solid rgb(64, 63, 63);
+}
+
+.node {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+  position: relative;
+}
+
+.left-node {
+  margin-right: 20px;
+}
+
+.right-node {
+  margin-left: 20px;
+}
+
+.node-element {
+  border: 2px solid rgba(16, 203, 236, 0.76);
+  cursor: pointer;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 60px;
+  width: 60px;
+}
+
+.node:not(.node--root) .node-element::before {
+  content: '';
+  position: absolute;
+  width: 1px;
+  height: 20px;
+  top: -20px;
+  background: rgb(64, 63, 63);
+  display: block;
+}
+
+.node-element:hover {
+  border-color: black;
+}
+
+.node-element:hover~.node-children .node-element::before {
+  width: 2px;
+  background-color: black;
+}
+
+.node-element:hover~.node-children,
+.node-element:hover~.node-children .node-children {
+  border-top-width: 2px;
+  border-color: black;
+}
+
+.node-element:hover~.node-bottom-line,
+.node-element:hover~.node-children .node-bottom-line {
+  width: 2px;
+  background-color: black;
+}
+
+.node-element .node-element ::before,
+.node-children,
+.node-bottom-line {
+  transition: all ease 0.15s;
+}
+
+/* tree representation end */
+
+@media(max-width:992px) {
+  .cdk-overlay-pane {
     width: 45%;
   }
 }
+
 @media (max-width: 767.98px) {
 
-  .cdk-overlay-pane{
+  .node-element {
+    height: 40px;
+    width: 40px;
+  }
+
+  .cdk-overlay-pane {
     width: 60%;
   }
-    h1 {
-        font-size: 1.5rem !important;
-        line-height: 2rem !important ;
-        font-weight: 600 !important;
-        
-      }
-      h2 {
-        font-size: 0.875rem !important;
-        line-height: 1.25rem !important;
-        font-weight: 600 !important;
-      }
-      h4 {
-        font-size: 0.875rem !important;
-        line-height: 1.25rem !important;
-        font-weight: 600 !important;
-      }
 
-      p{
-          font-size: 0.75rem !important;
-          line-height: 1.125rem !important;
-      }
-      li{
-        font-size: 0.75rem !important;
-        line-height: 1.5rem !important;
-      }
-      
-      .fz-xs-10{
-        font-size:0.625rem !important;
-    }
-    .fz-xs-12{
-        font-size:0.75rem !important;
-    }
-    .whatsapp-container{
-  
-      width:40px;
-      height:40px;
-      bottom:16px;
-      right:12px;
-    }
-    
-    .whatsapp-icon{
-      width: 25px;
-        height: 25px;
-    }
+  h1 {
+    font-size: 1.5rem !important;
+    line-height: 2rem !important;
+    font-weight: 600 !important;
+
+  }
+
+  h2 {
+    font-size: 0.875rem !important;
+    line-height: 1.25rem !important;
+    font-weight: 600 !important;
+  }
+
+  h4 {
+    font-size: 0.875rem !important;
+    line-height: 1.25rem !important;
+    font-weight: 600 !important;
+  }
+
+  p {
+    font-size: 0.75rem !important;
+    line-height: 1.125rem !important;
+  }
+
+  li {
+    font-size: 0.75rem !important;
+    line-height: 1.5rem !important;
+  }
+
+  .fz-xs-10 {
+    font-size: 0.625rem !important;
+  }
+
+  .fz-xs-12 {
+    font-size: 0.75rem !important;
+  }
+
+  .whatsapp-container {
+
+    width: 40px;
+    height: 40px;
+    bottom: 16px;
+    right: 12px;
+  }
+
+  .whatsapp-icon {
+    width: 25px;
+    height: 25px;
+  }
 }
 
-@media (max-width: 500px){
-  .cdk-overlay-pane{
+@media (max-width: 500px) {
+  .cdk-overlay-pane {
     width: 100%;
   }
 }
-

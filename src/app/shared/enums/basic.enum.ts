@@ -3,7 +3,8 @@ export enum Operations{
     Insertion,
     Updation,
     Deletion,
-    Reverse
+    Reverse,
+    Rotate
 }
 
 export enum InsertionOperations{

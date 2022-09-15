@@ -1,6 +1,8 @@
 import { Component,OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { insertAtIndex } from 'src/app/helper/double-input-field-meta-data';
+import { Helper } from 'src/app/helper/helper';
+import { DoubleLinkedList } from '@raj-rathod/dsa-methods';
 import {
   likedListInput,
   singleInput,
@@ -16,6 +18,7 @@ import { Node } from '../node';
   styleUrls: ['./double-linked-list.component.css'],
 })
 export class DoubleLinkedListComponent implements OnInit {
+  helper = Helper;
   operationStep = -1;
   insertOperationStep = -1;
   deleteOperationStep = -1;
@@ -24,18 +27,18 @@ export class DoubleLinkedListComponent implements OnInit {
   insertOperations = InsertionOperations;
   deleteOperations = DeletionOperations;
   updateOperations = UpdationOperations;
-  doublelinkedlist: Node[] = [];
-  doubleLinkedList: Node;
-  head: Node;
+  doubleLinkedList: DoubleLinkedList;
   constructor(private matDialog: MatDialog) {
-    this.doubleLinkedList = new Node();
-    this.head = this.doubleLinkedList;
+    this.doubleLinkedList = new DoubleLinkedList();
   }
 
   ngOnInit(): void {}
 
   operationSelection(index: number): void {
     this.operationStep = index;
+    this.insertOperationStep = -1;
+    this.deleteOperationStep = -1;
+    this.updateOperationStep = -1;
   }
 
   operationInsertion(index: number): void {
@@ -58,35 +61,14 @@ export class DoubleLinkedListComponent implements OnInit {
     });
     matDialogRef.afterClosed().subscribe((result) => {
       if (result) {
-        this.generateLinkedlist(result);
+        this.doubleLinkedList.createDoubleLinkedList(result);
       }
     });
   }
 
-  generateLinkedlist(arr: string[]): void {
-    this.doubleLinkedList = new Node();
-    for (let i = 0; i < arr.length; i++) {
-      if (this.doubleLinkedList.data === null) {
-        this.doubleLinkedList.data = arr[i];
-        this.head = this.doubleLinkedList;
-      } else {
-        let newNode = new Node(arr[i]);
-        newNode.previous = this.head;
-        this.head.next = newNode;
-        this.head = newNode;
-      }
-    }
-    this.updateAction();
-  }
 
-  updateAction(): void {
-    this.doublelinkedlist = [];
-    this.head = this.doubleLinkedList;
-    while (this.head) {
-      this.doublelinkedlist.push(this.head);
-      this.head = this.head.next;
-    }
-  }
+
+
 
   insertAtHead(): void {
     this.operationInsertion(0);
@@ -96,11 +78,7 @@ export class DoubleLinkedListComponent implements OnInit {
     });
     matDialogRef.afterClosed().subscribe((result) => {
       if (result || result === 0) {
-        let newNode = new Node(result);
-        newNode.next = this.doubleLinkedList;
-        this.doubleLinkedList.previous = newNode;
-        this.doubleLinkedList = newNode;
-        this.updateAction();
+       this.doubleLinkedList.insertNodeAtFirst(result);
       }
     });
   }
@@ -114,14 +92,7 @@ export class DoubleLinkedListComponent implements OnInit {
     });
     matDialogRef.afterClosed().subscribe((result) => {
       if (result || result === 0) {
-        let newNode = new Node(result);
-        this.head = this.doubleLinkedList;
-        while (this.head.next) {
-          this.head = this.head.next;
-        }
-        newNode.previous = this.head;
-        this.head.next = newNode;
-        this.updateAction();
+        this.doubleLinkedList.insertNodeAtEnd(result);
       }
     });
   }
@@ -135,46 +106,10 @@ export class DoubleLinkedListComponent implements OnInit {
     });
     matDialogRef.afterClosed().subscribe((result) => {
       if (result) {
-        if (
-          this.doublelinkedlist.length + 1 < result.firstInput ||
-          result.firstInput < 1
-        ) {
-          alert('Enter valid Position');
+        if (result.firstInput < 1) {
+            alert('Enter valid Position');
         } else {
-          if (result.firstInput === 1) {
-            let newNode = new Node(result.secondInput);
-            newNode.next = this.doubleLinkedList;
-            this.doubleLinkedList.previous = newNode;
-            this.doubleLinkedList = newNode;
-            this.updateAction();
-          } else if (result.firstInput === this.doublelinkedlist.length + 1) {
-            let newNode = new Node(result.secondInput);
-            this.head = this.doubleLinkedList;
-            while (this.head.next) {
-              this.head = this.head.next;
-            }
-            newNode.previous = this.head;
-            this.head.next = newNode;
-            this.updateAction();
-          } else {
-            let count = 1;
-            this.head = this.doubleLinkedList;
-            let previous = this.head;
-            while (this.head) {
-              if (count === result.firstInput) {
-                let newNode = new Node(result.secondInput);
-                newNode.previous = previous;
-                previous.next = newNode;
-                this.head.previous = newNode;
-                newNode.next = this.head;
-                this.updateAction();
-                break;
-              }
-              previous = this.head;
-              this.head = this.head.next;
-              count++;
-            }
-          }
+          this.doubleLinkedList.insertNodeAtPosition(result.secondInput, result.firstInput);
         }
       }
     });
@@ -189,7 +124,7 @@ export class DoubleLinkedListComponent implements OnInit {
     });
     matDialogRef.afterClosed().subscribe((result) => {
       if (result || result === 0) {
-        this.doubleLinkedList.data = result;
+        this.doubleLinkedList.updateNodeAtFirst(result);
       }
     });
   }
@@ -201,11 +136,7 @@ export class DoubleLinkedListComponent implements OnInit {
     });
     matDialogRef.afterClosed().subscribe((result) => {
       if (result || result === 0) {
-        this.head = this.doubleLinkedList;
-        while (this.head.next) {
-          this.head = this.head.next;
-        }
-        this.head.data = result;
+       this.doubleLinkedList.updateNodeAtEnd(result);
       }
     });
   }
@@ -219,31 +150,12 @@ export class DoubleLinkedListComponent implements OnInit {
     matDialogRef.afterClosed().subscribe((result) => {
       if (result) {
         if (
-          result.firstInput < 1 ||
-          result.firstInput > this.doublelinkedlist.length
+          result.firstInput < 1
+          
         ) {
           alert('Invalid position  ' + result.firstInput);
         } else {
-          if (result.firstInput === 1) {
-            this.doubleLinkedList.data = result.secondInput;
-          } else if (result.firstInput === this.doublelinkedlist.length) {
-            this.head = this.doubleLinkedList;
-            while (this.head.next) {
-              this.head = this.head.next;
-            }
-            this.head.data = result.secondInput;
-          } else {
-            let count = 1;
-            this.head = this.doubleLinkedList;
-            while (this.head.next) {
-              if (count === result.firstInput) {
-                this.head.data = result.secondInput;
-                break;
-              }
-              this.head = this.head.next;
-              count++;
-            }
-          }
+         this.doubleLinkedList.updateNodeAtPosition(result.secondInput, result.firstInput);
         }
       }
     });
@@ -252,48 +164,15 @@ export class DoubleLinkedListComponent implements OnInit {
   deleteOperation(index: number): void {
     switch (index) {
       case 0: {
-        this.deleteAtFirst();
+        this.doubleLinkedList.deleteAtFirst();
         this.operationDeletion(0);
         break;
       }
       case 1: {
-        this.deleteAtEnd();
+       this.doubleLinkedList.deleteAtEnd();
         this.operationDeletion(1);
         break;
       }
-    }
-  }
-
-  deleteAtFirst(): void {
-    if (this.doublelinkedlist.length === 1) {
-      this.doubleLinkedList = new Node();
-      this.updateAction();
-      this.doublelinkedlist = [];
-    } else if (this.doublelinkedlist.length > 1) {
-      this.doubleLinkedList = this.doubleLinkedList.next;
-      this.doubleLinkedList.previous = null;
-      this.updateAction();
-    }
-  }
-  deleteAtEnd(): void {
-    if (this.doublelinkedlist.length > 0) {
-      this.head = this.doubleLinkedList;
-      if (this.head.next === null) {
-        this.doubleLinkedList = this.doubleLinkedList.next;
-        this.doublelinkedlist = [];
-      } else {
-        while (this.head) {
-          if (this.head.next.next === null) {
-            this.head.next = null;
-            break;
-          }
-          this.head = this.head.next;
-        }
-      }
-      this.updateAction();
-    } else {
-      this.doublelinkedlist = [];
-      
     }
   }
 
@@ -304,27 +183,8 @@ export class DoubleLinkedListComponent implements OnInit {
       data: singleInput,
     });
     matDialogRef.afterClosed().subscribe((result) => {
-      if (result > 0 && result < this.doublelinkedlist.length + 1) {
-        if (result === 1) {
-          this.deleteAtFirst();
-        } else if (result === this.doublelinkedlist.length) {
-          this.deleteAtEnd();
-        } else {
-          let count = 1;
-          this.head = this.doubleLinkedList;
-          let prev = this.head;
-          while (this.head) {
-            if (count === result) {
-              this.head.next.previous = prev;
-              prev.next = this.head.next;
-              this.updateAction();
-              break;
-            }
-            prev = this.head;
-            this.head = this.head.next;
-            count++;
-          }
-        }
+      if (result > 0) {
+       this.doubleLinkedList.deleteAtPosition(result);
       } else {
         alert('Invalid position: ' + result);
       }

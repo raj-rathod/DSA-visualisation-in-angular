@@ -37,6 +37,9 @@ export class SingleLinkedListComponent implements OnInit {
 
   operationSelection(index: number): void {
     this.operationStep = index;
+    this.insertOperationStep = -1;
+    this.deleteOperationStep = -1;
+    this.updateOperationStep = -1;
   }
 
   createLinkedList(): void {

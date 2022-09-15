@@ -7,7 +7,7 @@
     (click)="createLinkedList()">
         <p class="m-0">Create Linked List</p>
     </div>
-     <ng-container *ngIf="doublelinkedlist.length > 0 ">
+     <ng-container *ngIf="doubleLinkedList.head !== null ">
         <div 
         [class]="operations.Insertion === operationStep 
         ?'box box-active p-lg-2 p-1 px-lg-3 px-2 tab me-lg-4 me-3 mb-2'
@@ -31,7 +31,7 @@
         </div>
      </ng-container>
 </div>
-<ng-container *ngIf="operations.Insertion === operationStep && doublelinkedlist.length > 0">
+<ng-container *ngIf="operations.Insertion === operationStep && doubleLinkedList.head !== null">
     <h5 class="mt-3">Double linked list Insertion</h5>
     <div class="d-flex mt-4 horizontal-scroll">
         <div 
@@ -57,7 +57,7 @@
         </div>
     </div>
     </ng-container>
-    <ng-container *ngIf="operations.Updation === operationStep && doublelinkedlist.length > 0">
+    <ng-container *ngIf="operations.Updation === operationStep && doubleLinkedList.head !== null">
         <h5 class="mt-3">Double linked list Upadation</h5>
         <div class="d-flex mt-4 horizontal-scroll">
             <div 
@@ -85,7 +85,7 @@
             </div>
         </div>
     </ng-container>
-    <ng-container *ngIf="operations.Deletion === operationStep && doublelinkedlist.length > 0">
+    <ng-container *ngIf="operations.Deletion === operationStep && doubleLinkedList.head !== null">
         <h5 class="mt-3">Double linked list Deletion</h5>
         <div class="d-flex mt-4 horizontal-scroll">
             <div 
@@ -114,44 +114,4 @@
 <h5 class=" mt-5">
     Double linked list
 </h5>
-<div class="mt-4 d-flex horizontal-scroll">
-    <div class="d-flex align-items-center" *ngFor="let node of doublelinkedlist; let i=index">
-        <ng-container *ngIf="i === 0">
-            <p class="m-0 ms-1">Null</p>
-            <div>
-                <img class="rotate" src="assets/icons/link-arrow.jpg" width="30" height="10" alt="">
-            </div>
-        </ng-container>
-        <div class="data-section border border-end-0 border-2 border-info">
-            <p class="m-0">{{node.data}}</p>
-        </div>
-        <div class="link-section border border-2 border-danger">
-            <p class="m-0">Link</p>
-        </div>
-        <div class="arrow">
-            <div *ngIf="i < doublelinkedlist.length-1">
-                <img class="rotate" src="assets/icons/link-arrow.jpg" width="30" height="10" alt="">
-            </div>
-            <img src="assets/icons/link-arrow.jpg" width="30" height="10" alt="">
-        </div>
-        <p *ngIf="i=== doublelinkedlist.length-1" class="m-0 ms-1">Null</p>
-    </div>
-    <ng-container *ngIf="doublelinkedlist.length===0">
-        <div class="d-flex align-items-center">
-            <p class="m-0 ms-1">Null</p>
-            <div>
-                <img class="rotate" src="assets/icons/link-arrow.jpg" width="30" height="10" alt="">
-            </div>
-            <div class="data-section border border-end-0 border-2 border-info">
-                <p class="m-0">Null</p>
-            </div>
-            <div class="link-section border border-2 border-danger">
-                <p class="m-0">Link</p>
-            </div>
-            <div class="arrow">
-                <img src="assets/icons/link-arrow.jpg" width="30" height="10" alt="">
-            </div>
-            <p class="m-0 ms-1">Null</p>
-        </div>
-    </ng-container>
-</div>
+<div class="mt-4 d-flex horizontal-scroll" [innerHTML]="helper.doubleLinkedList(doubleLinkedList.head)"></div>

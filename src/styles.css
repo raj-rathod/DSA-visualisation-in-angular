@@ -299,6 +299,9 @@ li {
   justify-content: center;
   align-items:center;
 }
+.rotate{
+  transform: rotate(-180deg);
+}
 
 @media(max-width:992px) {
   .cdk-overlay-pane {

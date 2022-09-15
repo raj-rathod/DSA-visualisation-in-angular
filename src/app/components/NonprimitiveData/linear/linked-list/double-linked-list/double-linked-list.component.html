@@ -1,63 +1,116 @@
 <h5>Double linked list operations</h5>
 <div class="d-flex mt-4 horizontal-scroll">
-    <div class="box p-lg-2 p-1 px-lg-3 px-2 btn me-lg-4 me-3 mb-2 doubleOp" (click)="createLinkedList()">
+    <div 
+    [class]="operations.Creation === operationStep 
+    ?'box box-active p-lg-2 p-1 px-lg-3 px-2 tab me-lg-4 me-3 mb-2'
+    :'box p-lg-2 p-1 px-lg-3 px-2 tab me-lg-4 me-3 mb-2'"
+    (click)="createLinkedList()">
         <p class="m-0">Create Linked List</p>
     </div>
-    <ng-container *ngIf="doublelinkedlist.length > 0">
-        <div class="box p-lg-2 p-1 px-lg-3 px-2 btn me-lg-4 me-3 mb-2 doubleOp" (click)="operationSelection(1)">
+     <ng-container *ngIf="doublelinkedlist.length > 0 ">
+        <div 
+        [class]="operations.Insertion === operationStep 
+        ?'box box-active p-lg-2 p-1 px-lg-3 px-2 tab me-lg-4 me-3 mb-2'
+        :'box p-lg-2 p-1 px-lg-3 px-2 tab me-lg-4 me-3 mb-2'"
+         (click)="operationSelection(1)">
             <p class="m-0">Insertion</p>
         </div>
-        <div class="box p-lg-2 p-1 px-lg-3 px-2 btn me-lg-4 me-3 mb-2 doubleOp" (click)="operationSelection(2)">
+        <div 
+        [class]="operations.Updation === operationStep 
+        ?'box box-active p-lg-2 p-1 px-lg-3 px-2 tab me-lg-4 me-3 mb-2'
+        :'box p-lg-2 p-1 px-lg-3 px-2 tab me-lg-4 me-3 mb-2'"
+        (click)="operationSelection(2)">
             <p class="m-0">Upadation</p>
         </div>
-        <div class="box p-lg-2 p-1 px-lg-3 px-2 btn me-lg-4 me-3 mb-2 doubleOp" (click)="operationSelection(3)">
+        <div 
+        [class]="operations.Deletion === operationStep 
+        ?'box box-active p-lg-2 p-1 px-lg-3 px-2 tab me-lg-4 me-3 mb-2'
+        :'box p-lg-2 p-1 px-lg-3 px-2 tab me-lg-4 me-3 mb-2'"
+        (click)="operationSelection(3)">
             <p class="m-0">Deletion</p>
         </div>
-    </ng-container>
-
+     </ng-container>
 </div>
-<ng-container *ngIf="insertionShown">
+<ng-container *ngIf="operations.Insertion === operationStep && doublelinkedlist.length > 0">
     <h5 class="mt-3">Double linked list Insertion</h5>
     <div class="d-flex mt-4 horizontal-scroll">
-        <div class="box p-lg-2 p-1 px-lg-3 px-2 btn me-lg-4 me-3 mb-2 sigleIn" (click)="insertAtHead()">
+        <div 
+        [class]=" insertOperationStep === insertOperations.InsertAtFirst ?
+        'box box-active p-lg-2 p-1 px-lg-3 px-2 tab me-lg-4 me-3 mb-2 ':
+        'box p-lg-2 p-1 px-lg-3 px-2 tab me-lg-4 me-3 mb-2'" 
+        (click)="insertAtHead()">
             <p class="m-0">Insert At Head</p>
         </div>
-        <div class="box p-lg-2 p-1 px-lg-3 px-2 btn me-lg-4 me-3 mb-2 sigleIn" (click)="insertAtTail()">
+        <div 
+        [class]=" insertOperationStep === insertOperations.InsertAtEnd ?
+        'box box-active p-lg-2 p-1 px-lg-3 px-2 tab me-lg-4 me-3 mb-2 ':
+        'box p-lg-2 p-1 px-lg-3 px-2 tab me-lg-4 me-3 mb-2'" 
+        (click)="insertAtTail()">
             <p class="m-0">Insert At Tail</p>
         </div>
-        <div class="box p-lg-2 p-1 px-lg-3 px-2 btn me-lg-4 me-3 mb-2 sigleIn" (click)="insertAtPosition()">
+        <div 
+        [class]=" insertOperationStep === insertOperations.InsertAtPosition ?
+        'box box-active p-lg-2 p-1 px-lg-3 px-2 tab me-lg-4 me-3 mb-2 ':
+        'box p-lg-2 p-1 px-lg-3 px-2 tab me-lg-4 me-3 mb-2'" 
+         (click)="insertAtPosition()">
             <p class="m-0">Insert At Position</p>
         </div>
     </div>
-</ng-container>
-<ng-container *ngIf="updationShown">
-    <h5 class="mt-3">Double linked list Upadation</h5>
-    <div class="d-flex mt-4 horizontal-scroll">
-        <div class="box p-lg-2 p-1 px-lg-3 px-2 btn me-lg-4 me-3 mb-2 sigleUp" (click)="updateAtHead()">
-            <p class="m-0">Update At Head</p>
+    </ng-container>
+    <ng-container *ngIf="operations.Updation === operationStep && doublelinkedlist.length > 0">
+        <h5 class="mt-3">Double linked list Upadation</h5>
+        <div class="d-flex mt-4 horizontal-scroll">
+            <div 
+            [class]=" updateOperationStep === updateOperations.UpdateAtFirst ?
+            'box box-active p-lg-2 p-1 px-lg-3 px-2 tab me-lg-4 me-3 mb-2':
+            'box p-lg-2 p-1 px-lg-3 px-2 tab me-lg-4 me-3 mb-2'" 
+            
+            (click)="updateAtHead()">
+                <p class="m-0">Update At Head</p>
+            </div>
+            <div 
+            [class]=" updateOperationStep === updateOperations.UpdateAtEnd ?
+            'box box-active p-lg-2 p-1 px-lg-3 px-2 tab me-lg-4 me-3 mb-2':
+            'box p-lg-2 p-1 px-lg-3 px-2 tab me-lg-4 me-3 mb-2'" 
+          
+            (click)="updateAtTail()">
+                <p class="m-0">Update At Tail</p>
+            </div>
+            <div 
+            [class]=" updateOperationStep === updateOperations.UpdateAtPosition ?
+            'box box-active p-lg-2 p-1 px-lg-3 px-2 tab me-lg-4 me-3 mb-2':
+            'box p-lg-2 p-1 px-lg-3 px-2 tab me-lg-4 me-3 mb-2'" 
+            (click)="updateAtPosition()">
+                <p class="m-0">Update At Position</p>
+            </div>
         </div>
-        <div class="box p-lg-2 p-1 px-lg-3 px-2 btn me-lg-4 me-3 mb-2 sigleUp" (click)="updateAtTail()">
-            <p class="m-0">Update At Tail</p>
+    </ng-container>
+    <ng-container *ngIf="operations.Deletion === operationStep && doublelinkedlist.length > 0">
+        <h5 class="mt-3">Double linked list Deletion</h5>
+        <div class="d-flex mt-4 horizontal-scroll">
+            <div 
+            [class]=" deleteOperationStep === deleteOperations.DeleteAtFirst ?
+            'box box-active p-lg-2 p-1 px-lg-3 px-2 tab me-lg-4 me-3 mb-2':
+            'box p-lg-2 p-1 px-lg-3 px-2 tab me-lg-4 me-3 mb-2'" 
+            (click)="deleteOperation(0)">
+                <p class="m-0">Delete At Head</p>
+            </div>
+            <div
+            [class]=" deleteOperationStep === deleteOperations.DeleteAtEnd ?
+            'box box-active p-lg-2 p-1 px-lg-3 px-2 tab me-lg-4 me-3 mb-2':
+            'box p-lg-2 p-1 px-lg-3 px-2 tab me-lg-4 me-3 mb-2'" 
+            (click)="deleteOperation(1)">
+                <p class="m-0">Delete At Tail</p>
+            </div>
+            <div 
+            [class]=" deleteOperationStep === deleteOperations.DeleteAtPosition?
+            'box box-active p-lg-2 p-1 px-lg-3 px-2 tab me-lg-4 me-3 mb-2':
+            'box p-lg-2 p-1 px-lg-3 px-2 tab me-lg-4 me-3 mb-2'"  
+            (click)="deleteAtPosition()">
+                <p class="m-0">Delete At Position</p>
+            </div>
         </div>
-        <div class="box p-lg-2 p-1 px-lg-3 px-2 btn me-lg-4 me-3 mb-2 sigleUp" (click)="updateAtPosition()">
-            <p class="m-0">Update At Position</p>
-        </div>
-    </div>
-</ng-container>
-<ng-container *ngIf="deletionShown">
-    <h5 class="mt-3">Single linked list Deletion</h5>
-    <div class="d-flex mt-4 horizontal-scroll">
-        <div class="box p-lg-2 p-1 px-lg-3 px-2 btn me-lg-4 me-3 mb-2 sigleDel" (click)="operationDeletion(0)">
-            <p class="m-0">Delete At Head</p>
-        </div>
-        <div class="box p-lg-2 p-1 px-lg-3 px-2 btn me-lg-4 me-3 mb-2 sigleDel" (click)="operationDeletion(1)">
-            <p class="m-0">Delete At Tail</p>
-        </div>
-        <div class="box p-lg-2 p-1 px-lg-3 px-2 btn me-lg-4 me-3 mb-2 sigleDel"  (click)="deleteAtPosition()">
-            <p class="m-0">Delete At Position</p>
-        </div>
-    </div>
-</ng-container>
+    </ng-container>
 <h5 class=" mt-5">
     Double linked list
 </h5>

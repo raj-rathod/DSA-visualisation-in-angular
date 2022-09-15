@@ -1,85 +1,127 @@
 <h4>One Dimension array operations</h4>
 <div class="d-flex align-items-center mt-3 horizontal-scroll">
-    <div class="box p-lg-2 p-1 px-lg-3 px-2 tab me-lg-4 me-3 opbtn"
+    <div 
+    [class]=" operationStep === operations.Creation ?
+    'box box-active p-lg-2 p-1 px-lg-3 px-2 tab me-lg-4 me-3':
+    'box p-lg-2 p-1 px-lg-3 px-2 tab me-lg-4 me-3'"
      (click)="createNewArray()"
      >
         <p class="m-0">Create a new array</p>
     </div>
-    <div [class]="operationShow ?'box p-lg-2 p-1 px-lg-3 px-2 tab me-lg-4 me-3 opbtn':'d-none'"  (click)="opbtnSection(1)">
-        <p class="m-0">Insertion</p>
-    </div>
-    <div [class]="operationShow ?'box p-lg-2 p-1 px-lg-3 px-2 tab me-lg-4 me-3  opbtn':'d-none'"  (click)="opbtnSection(2)">
-        <p class="m-0">Deletion</p>
-    </div>
-    <div [class]="operationShow ?'box p-lg-2 p-1 px-lg-3 px-2 tab me-lg-4 me-3  opbtn':'d-none'"  (click)="opbtnSection(3)">
-        <p class="m-0">Update</p>
-    </div>
-    <div [class]="operationShow ?'box p-lg-2 p-1 px-lg-3 px-2 tab me-lg-4 me-3  opbtn':'d-none'"  (click)="opbtnSection(4)">
-        <p class="m-0">Rotate Array</p>
-    </div>
-</div>
-<div class="mt-4" *ngIf="insertSubMenu">
-    <h5>Insertion sub menu</h5>
-    <div class="d-flex horizontal-scroll align-items-center mt-3">
-        <div class="box p-lg-2 p-1 px-lg-3 px-2 btn me-lg-4 me-3 mb-2 opInsBtn" 
-        (click)="insertIntoArray()"
-        >
-           <p class="m-0">Insert</p>
+    <ng-container *ngIf="createdArr.length > 0">
+        <div [class]=" operationStep === operations.Insertion ?
+        'box box-active p-lg-2 p-1 px-lg-3 px-2 tab me-lg-4 me-3':
+        'box p-lg-2 p-1 px-lg-3 px-2 tab me-lg-4 me-3'" 
+        (click)="operationSelection(operations.Insertion)">
+            <p class="m-0">Insertion</p>
         </div>
-        <div class="box p-lg-2 p-1 px-lg-3 px-2 btn me-lg-4 me-3 mb-2 opInsBtn" 
+        <div 
+        [class]=" operationStep === operations.Deletion?
+        'box box-active p-lg-2 p-1 px-lg-3 px-2 tab me-lg-4 me-3':
+        'box p-lg-2 p-1 px-lg-3 px-2 tab me-lg-4 me-3'"
+        (click)="operationSelection(operations.Deletion)">
+            <p class="m-0">Deletion</p>
+        </div>
+        <div 
+        [class]=" operationStep === operations.Updation ?
+        'box box-active p-lg-2 p-1 px-lg-3 px-2 tab me-lg-4 me-3':
+        'box p-lg-2 p-1 px-lg-3 px-2 tab me-lg-4 me-3'"
+        (click)="operationSelection(operations.Updation)">
+            <p class="m-0">Update</p>
+        </div>
+        <div
+        [class]=" operationStep === operations.Rotate ?
+        'box box-active p-lg-2 p-1 px-lg-3 px-2 tab me-lg-4 me-3':
+        'box p-lg-2 p-1 px-lg-3 px-2 tab me-lg-4 me-3'"
+          (click)="rotateArr(operations.Rotate)">
+            <p class="m-0">Rotate Array</p>
+        </div>
+    </ng-container>
+</div>
+<div class="mt-4" *ngIf="operations.Insertion === operationStep && createdArr.length > 0 ">
+    <h5>Insertion In An Array</h5>
+    <div class="d-flex horizontal-scroll align-items-center mt-3">
+        <div 
+        [class]="insertOperations.InsertAtFirst === insertOperationStep?
+        'box box-active p-lg-2 p-1 px-lg-3 px-2 tab me-lg-4 me-3 mb-2':
+        'box p-lg-2 p-1 px-lg-3 px-2 tab me-lg-4 me-3 mb-2'" 
         (click)="insertAtFirst()"
         >
-            <p class="m-0">Insert at first</p>
+            <p class="m-0">Insert At First</p>
          </div>
-         <div class="box p-lg-2 p-1 px-lg-3 px-2 btn me-lg-4 me-3 mb-2 opInsBtn" 
+        <div 
+        [class]="insertOperations.InsertAtEnd === insertOperationStep?
+        'box box-active p-lg-2 p-1 px-lg-3 px-2 tab me-lg-4 me-3 mb-2':
+        'box p-lg-2 p-1 px-lg-3 px-2 tab me-lg-4 me-3 mb-2'"
+        (click)="insertAtEnd()"
+        >
+           <p class="m-0">Insert At End</p>
+        </div>
+         <div 
+         [class]="insertOperations.InsertAtPosition === insertOperationStep?
+        'box box-active p-lg-2 p-1 px-lg-3 px-2 tab me-lg-4 me-3 mb-2':
+        'box p-lg-2 p-1 px-lg-3 px-2 tab me-lg-4 me-3 mb-2'"
          (click)="insertAtIndex()"
          >
-            <p class="m-0">Insert at Index</p>
+            <p class="m-0">Insert At Index</p>
          </div>
     </div>
 </div>
-<div class="mt-4" *ngIf="deleteSubMenu">
-    <h5>Deletion sub menu</h5>
+<div class="mt-4" *ngIf="operations.Deletion === operationStep && createdArr.length > 0 ">
+    <h5>Deletion In An Array</h5>
     <div class="d-flex horizontal-scroll align-items-center mt-3">
-        <div class="box p-lg-2 p-1 px-lg-3 px-2 btn me-lg-4 me-3 mb-2 opDltBtn"
-         (click)="opDltBtnSelection(0)"
+        <div 
+        [class]="deleteOperations.DeleteAtFirst === deleteOperationStep?
+        'box box-active p-lg-2 p-1 px-lg-3 px-2 tab me-lg-4 me-3 mb-2':
+        'box p-lg-2 p-1 px-lg-3 px-2 tab me-lg-4 me-3 mb-2'" 
+         (click)="deleteAtFirst()"
         >
-           <p class="m-0">Delete at end</p>
+           <p class="m-0">Delete At First</p>
         </div>
-        <div class="box p-lg-2 p-1 px-lg-3 px-2 btn me-lg-4 me-3 mb-2 opDltBtn"
-         (click)="opDltBtnSelection(1)"
+        <div 
+        [class]="deleteOperations.DeleteAtEnd === deleteOperationStep?
+        'box box-active p-lg-2 p-1 px-lg-3 px-2 tab me-lg-4 me-3 mb-2':
+        'box p-lg-2 p-1 px-lg-3 px-2 tab me-lg-4 me-3 mb-2'"
+         (click)="deleteAtEnd()"
         >
-            <p class="m-0">Delete at first</p>
+            <p class="m-0">Delete At End</p>
          </div>
-         <div class="box p-lg-2 p-1 px-lg-3 px-2 btn me-lg-4 me-3 mb-2 opDltBtn"
+         <div 
+         [class]="deleteOperations.DeleteAtPosition === deleteOperationStep?
+        'box box-active p-lg-2 p-1 px-lg-3 px-2 tab me-lg-4 me-3 mb-2':
+        'box p-lg-2 p-1 px-lg-3 px-2 tab me-lg-4 me-3 mb-2'"
          (click)="deleteAtIndex()"
          >
-            <p class="m-0">Delete at Index</p>
-         </div>
-         <div class="box p-lg-2 p-1 px-lg-3 px-2 btn me-lg-4 me-3 mb-2 opDltBtn"
-         (click)="opDltBtnSelection(3)"
-         >
-            <p class="m-0">Delete all</p>
+            <p class="m-0">Delete At Index</p>
          </div>
     </div>
 </div>
-<div class="mt-4" *ngIf="updateSubMenu">
-    <h5>Upadation sub menu</h5>
+<div class="mt-4" *ngIf="operations.Updation === operationStep && createdArr.length > 0 ">
+    <h5>Updation In An Array</h5>
     <div class="d-flex horizontal-scroll align-items-center mt-3">
-        <div class="box p-lg-2 p-1 px-lg-3 px-2 btn me-lg-4 me-3 mb-2 opUpdBtn" 
+        <div 
+        [class]="updateOperations.UpdateAtFirst === updateOperationStep?
+        'box box-active p-lg-2 p-1 px-lg-3 px-2 tab me-lg-4 me-3 mb-2':
+        'box p-lg-2 p-1 px-lg-3 px-2 tab me-lg-4 me-3 mb-2'"
         (click)="updateAtFirst()"
         >
-           <p class="m-0">Update at first</p>
+           <p class="m-0">Update At First</p>
         </div>
-        <div class="box p-lg-2 p-1 px-lg-3 px-2 btn me-lg-4 me-3 mb-2 opUpdBtn" 
+        <div 
+        [class]="updateOperations.UpdateAtEnd === updateOperationStep?
+        'box box-active p-lg-2 p-1 px-lg-3 px-2 tab me-lg-4 me-3 mb-2':
+        'box p-lg-2 p-1 px-lg-3 px-2 tab me-lg-4 me-3 mb-2'"
         (click)="updateAtEnd()"
         >
-            <p class="m-0">Update at end</p>
+            <p class="m-0">Update At End</p>
          </div>
-         <div class="box p-lg-2 p-1 px-lg-3 px-2 btn me-lg-4 me-3 mb-2 opUpdBtn" 
+         <div 
+         [class]="updateOperations.UpdateAtPosition === updateOperationStep?
+        'box box-active p-lg-2 p-1 px-lg-3 px-2 tab me-lg-4 me-3 mb-2':
+        'box p-lg-2 p-1 px-lg-3 px-2 tab me-lg-4 me-3 mb-2'"
          (click)="updateAtIndex()"
          >
-            <p class="m-0">Update at Index</p>
+            <p class="m-0">Update At Index</p>
         </div>
     </div>
 </div>
@@ -102,35 +144,21 @@
       <div class='me-lg-3 me-2 mb-2' *ngFor="let data of createdArr; let i = index">
          <div class='border border-2 border-info'>
             <div 
-                class="index tab w-100 px-lg-3 px-2 py-lg-2 py-1 text-center 
-                border-bottom border-2 border-danger"
-                (click)="selectedIndex(i)"
+                [class]=" index === i?
+                'index index-active tab w-100 px-lg-3 px-2 py-lg-2 py-1 text-center border-bottom border-2 border-danger':
+                'index tab w-100 px-lg-3 px-2 py-lg-2 py-1 text-center border-bottom border-2 border-danger'"
                 >
                 <p class="m-0">{{i}}</p>
             </div>
             <div 
-            class='data tab w-100 px-lg-3 px-2 py-lg-2 py-1 text-center'
-            (click)="selectedData(i)"
+            [class]="dataIndex === i?
+            'data data-active tab w-100 px-lg-3 px-2 py-lg-2 py-1 text-center':
+            'data tab w-100 px-lg-3 px-2 py-lg-2 py-1 text-center'"
             >
               <p class="m-0">{{data}}</p>
             </div>
          </div>
       </div>
   </div>
-  <div class="mt-4" *ngIf="indexWiseShow">
-      <h5 >Index wise value</h5>
-      <p>Selected index is : {{index}} </p>
-      <p class="m-0">Data of selected index is: {{value}}</p>
-      <p class="m-0">
-          <small>it works like as arr[index]</small>
-      </p>
-  </div>
-  <div class="mt-4" *ngIf="datawiseShow">
-    <h5 >Data wise Index</h5>
-    <p>Selected data is : {{datavalue}} </p>
-    <p class="m-0">Index of selected data is: {{dataindex}}</p>
-    <p class="m-0">
-        <small>it works like as arr.indexOff(data)</small>
-    </p>
-</div>
+
 </div>

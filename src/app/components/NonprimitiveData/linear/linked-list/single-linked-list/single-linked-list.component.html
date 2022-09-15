@@ -29,6 +29,13 @@
         (click)="operationSelection(3)">
             <p class="m-0">Deletion</p>
         </div>
+        <div 
+        [class]="operations.Reverse === operationStep 
+        ?'box box-active p-lg-2 p-1 px-lg-3 px-2 tab me-lg-4 me-3 mb-2'
+        :'box p-lg-2 p-1 px-lg-3 px-2 tab me-lg-4 me-3 mb-2'"
+        (click)="reverseLinkedList()">
+            <p class="m-0">Reverse Linked List</p>
+        </div>
      </ng-container>
 </div>
 

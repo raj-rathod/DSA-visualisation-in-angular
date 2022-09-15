@@ -40,21 +40,22 @@ export class SingleLinkedListComponent implements OnInit {
   }
 
   createLinkedList(): void {
-    this.operationSelection(0);
+    this.operationSelection(this.operations.Creation);
     const matDialogRef = this.matDialog.open(SingleValueInputDialogComponent, {
       disableClose: true,
       data: likedListInput,
     });
     matDialogRef.afterClosed().subscribe((result) => {
       if (result) {
-        this.generateLinkedlist(result);
+        this.singleLinkedList.createSingleLinkedList(result);
       }
     });
   }
-
-  generateLinkedlist(arr: number[]): void {
-    this.singleLinkedList.createSingleLinkedList(arr);
+  reverseLinkedList(): void {
+    this.singleLinkedList.head = this.singleLinkedList.reverseASingleLinkedList();
+    this.operationSelection(this.operations.Reverse);
   }
+
 
   insertAtHead(): void {
     this.insertOperationStep = this.insertOperations.InsertAtFirst;

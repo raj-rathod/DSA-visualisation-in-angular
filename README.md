@@ -1,4 +1,6 @@
-<img align='right' src="./src/assets/icons/dsa-logo.png"/>
+<p align='center' >
+<img src="./src/assets/icons/dsa-logo.png"/>
+</p>
 
 # Data structure and algorithms visualization
 

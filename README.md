@@ -13,12 +13,15 @@ the operations for better understanding
    Visualization  is the better way to understand of the things
 ``` 
 
-### [Release](https://raj-rathod.github.io/DSA-visualisation-in-angular/)
-
+## [Release](https://raj-rathod.github.io/DSA-visualisation-in-angular/)
 #
 _If you like this project, please leave me a star._ &#9733;
 
-### Connect with me ~Rajesh 
+## Contributing
+Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
+
+
+## Connect with me ~Rajesh 
 
 [![Linkedin Badge](https://img.shields.io/badge/-LinkedIn-0e76a8?style=flat-square&logo=Linkedin&logoColor=white)](https://www.linkedin.com/in/rajesh-rathore-0501/)
 [![Website Badge](https://img.shields.io/badge/Website-3b5998?style=flat-square&logo=google-chrome&logoColor=white)](https://linktr.ee/rajesh_rathore)

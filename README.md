@@ -9,7 +9,12 @@
 [![Github](https://img.shields.io/github/followers/raj-rathod?label=Follow&style=social)](https://github.com/raj-rathod)
 
 # Data structure and algorithms visualization
+<h4>Make sure to :star: my this repo so you can keep up to date on any daily progress!</h4>
 
 ### [Release](https://raj-rathod.github.io/DSA-visualisation-in-angular/)
+
+#
+_If you like this project, please leave me a star._ &#9733;
+
 
 

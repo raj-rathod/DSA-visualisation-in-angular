@@ -1,9 +1,10 @@
 <img align='right' src="./src/assets/icons/dsa-logo.png"/>
 
 # Data structure and algorithms visualization
-<h4>Make sure to :star: my this repo so you can keep up to date on any daily progress!</h4>
 
-> Visualization  is the better way to understand of the things. 
+```HTML
+   Visualization  is the better way to understand of the things
+``` 
 
 ### [Release](https://raj-rathod.github.io/DSA-visualisation-in-angular/)
 

@@ -4,7 +4,7 @@
 
 # Data structure and algorithms visualization
 
-> In this project all the points of data structures and algorithms
+> In this project all the points of **data structures and algorithms**
 like as working approach, properties, operations, applications,
 advantages and disadvantages are well explained and visualize
 the operations for better understanding

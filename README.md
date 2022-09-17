@@ -25,14 +25,14 @@ _If you like this project, please leave me a star._ &#9733;
 
 ## Table of Contents
 
-- Data Structures
-  - Linear Data Structures
+- ### Data Structures
+  - **Linear Data Structures**
     - Array
     - Matrix
     - Stack
     - Queue
     - Linked List
-  - Non-linear Data Structures
+  - **Non-linear Data Structures**
     - Tree
     - Graph
     - Trie

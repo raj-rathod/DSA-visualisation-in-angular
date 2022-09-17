@@ -1,3 +1,9 @@
+![GitHub Repo stars](https://img.shields.io/github/stars/raj-rathod/DSA-visualisation-in-angular?style=social)
+![GitHub forks](https://img.shields.io/github/forks/raj-rathod/DSA-visualisation-in-angular?style=social)
+![GitHub watchers](https://img.shields.io/github/watchers/raj-rathod/DSA-visualisation-in-angular?style=social)
+![GitHub contributors](https://img.shields.io/github/contributors/raj-rathod/DSA-visualisation-in-angular)
+![GitHub issues](https://img.shields.io/github/issues-raw/raj-rathod/DSA-visualisation-in-angular)
+
 <p align='center' >
 <img src="./src/assets/icons/dsa-logo.png"/>
 </p>
@@ -14,7 +20,7 @@ the operations for better understanding
 ``` 
 
 ## [Release](https://raj-rathod.github.io/DSA-visualisation-in-angular/)
-#
+
 _If you like this project, please leave me a star._ &#9733;
 
 ## Contributing

@@ -23,6 +23,20 @@ the operations for better understanding
 
 _If you like this project, please leave me a star._ &#9733;
 
+## Table of Contents
+
+- Data Structures
+  - Linear Data Structures
+    - Array
+    - Matrix
+    - Stack
+    - Queue
+    - Linked List
+  - Non-linear Data Structures
+    - Tree
+    - Graph
+    - Trie
+    - Hash Table
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 

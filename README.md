@@ -70,6 +70,7 @@ _If you like this project, please leave me a star._ &#9733;
 
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
+Please read the [Contribute guide](.github/CONTRIBUTING.md)
 
 
 ## Connect with me ~Rajesh 

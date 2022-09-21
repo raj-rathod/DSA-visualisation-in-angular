@@ -6,7 +6,7 @@ export const projects: Projects[] = [
         url: "https://raj-rathod.github.io/DSA-visualisation-in-angular/"
     },
     {
-        name: "DSA Questions npm package",
+        name: "DSA methods npm package",
         url: "https://www.npmjs.com/package/@raj-rathod/dsa-methods"
     },
     {

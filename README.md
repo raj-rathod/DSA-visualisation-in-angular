@@ -16,7 +16,7 @@ advantages and disadvantages are well explained and visualize
 the operations for better understanding
 
 ```HTML
-   Visualization  is the better way to understand of the things
+Visualization  is the better way to understand of the things
 ``` 
 
 ## [Release](https://raj-rathod.github.io/DSA-visualisation-in-angular/)

@@ -38,6 +38,7 @@ const selectionSortData = {
     The smallest element is selected from the unsorted array and swapped with the leftmost element, and that element becomes 
     a part of the sorted array. This process continues moving unsorted array boundary by one element to the right.`,
     flowChart:"assets/ds-image/selection-sort.jpg",
+    explainImage:"assets/ds-image/explainImage.jpg",
     workingProcedure:[
         'Initialize minimum value(minValue) to location 0.',
         'Traverse the array to find the minimum element in the array.',
@@ -69,6 +70,7 @@ const selectionSortData = {
 export const selectionSortMetaData: Algorithms = {
     defination: Helper.setHeader(selectionSortData.defination),
     properties: Helper.setListwithTitleHtml('Selection Sort Properties', selectionSortData.properties),
+    explainImage: Helper.setExampleImage('Selection Sort Explain Image', selectionSortData.explainImage),
     flowChart: Helper.setExampleImage('Selection Sort Flowchart',selectionSortData.flowChart),
     advantage: Helper.setListwithTitleHtml('Selection Sort Advantages',selectionSortData.advantages),
     disadvantage: Helper.setListwithTitleHtml('Selection Sort Disadvantages',selectionSortData.disadvantages),

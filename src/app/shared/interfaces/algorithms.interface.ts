@@ -2,6 +2,7 @@ export interface Algorithms{
     defination: string;
     properties: string;
     flowChart: string;
+    explainImage?: string;
     advantage: string;
     disadvantage: string;
     type?: string;

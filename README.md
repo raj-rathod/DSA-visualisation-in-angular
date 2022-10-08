@@ -8,7 +8,7 @@
 <img src="./src/assets/icons/dsa-logo.png"/>
 </p>
 
-# Data structure and algorithms visualization [![Tweet](https://img.shields.io/twitter/url/http/shields.io.svg?style=social)](https://twitter.com/intent/tweet?text=Get%20over%20170%20free%20design%20blocks%20based%20on%20Bootstrap%204&url=https://raj-rathod.github.io/DSA-visualisation-in-angular/&via=Rajesh946055&hashtags=dsa,faang,datastructures,Algorithms,developers)
+# Data structure and algorithms visualization [![Tweet](https://img.shields.io/twitter/url/http/shields.io.svg?style=social)](https://twitter.com/intent/tweet?text=Visualization%20is%20the%20better%20way%20to%20understand%20of%20the%20things&url=https://raj-rathod.github.io/DSA-visualisation-in-angular/&via=Rajesh946055&hashtags=dsa,faang,datastructures,Algorithms,developers)
 > In this project all the points of **data structures and algorithms**
 like as working approach, properties, operations, applications,
 advantages and disadvantages are well explained and visualize

@@ -69,10 +69,10 @@ export const algorithms: RouterLinkData[] = [
         name: "Hashing",
         route: "/non-primitive/non-linear/hash-table"
     },
-    {
-        name: "Randomized",
-        route: "/algorithm/randomized"
-    },
+    // {
+    //     name: "Randomized",
+    //     route: "/algorithm/randomized"
+    // },
     {
         name: "Recursive",
         route: "/algorithm/recursive"

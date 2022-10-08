@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { backtrackingMetaData } from 'src/app/core/algorithms/backtracking-meta-data';
 
 @Component({
   selector: 'app-backtracking-algorithm',
@@ -6,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./backtracking-algorithm.component.css']
 })
 export class BacktrackingAlgorithmComponent implements OnInit {
-
+  backtrackingMetaData = backtrackingMetaData;
   constructor() { }
 
   ngOnInit(): void {

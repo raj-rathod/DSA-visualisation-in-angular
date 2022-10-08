@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { greedyMetaData } from 'src/app/core/algorithms/greedy-meta-data';
 
 @Component({
   selector: 'app-greedy-algorithm',
@@ -6,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./greedy-algorithm.component.css']
 })
 export class GreedyAlgorithmComponent implements OnInit {
-
+  greedyMetaData = greedyMetaData;
   constructor() { }
 
   ngOnInit(): void {

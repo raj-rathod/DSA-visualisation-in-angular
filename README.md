@@ -9,10 +9,7 @@
 </p>
 
 # Data structure and algorithms visualization [![Tweet](https://img.shields.io/twitter/url/http/shields.io.svg?style=social)](https://twitter.com/intent/tweet?text=Visualization%20is%20the%20better%20way%20to%20understand%20of%20the%20things&url=https://raj-rathod.github.io/DSA-visualisation-in-angular/&via=Rajesh946055&hashtags=dsa,faang,datastructures,Algorithms,developers)
-> In this project all the points of **data structures and algorithms**
-like as working approach, properties, operations, applications,
-advantages and disadvantages are well explained and visualize
-the operations for better understanding
+> DSA Visualization is a project on **data structures and algorithms**. In this project all points of data structures and algorithms like as working approach, properties, operations, applications, advantages and disadvantages are well explained and visualize the operations for better understanding.
 
 ```HTML
 Visualization  is the better way to understand of the things

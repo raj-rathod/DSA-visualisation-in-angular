@@ -25,13 +25,29 @@
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!-- github button -->
+  <script async defer src="https://buttons.github.io/buttons.js"></script>
 </head>
 <body>
   <app-root></app-root>
-    <!--whatsapp chat--->
-    <a href="https://api.whatsapp.com/send?phone=919148002717&text=Hi!%20" class="whatsapp-container" target="_blank">
-      <img class="whatsapp-icon" src="./assets/icons/whatsapp.svg" alt="whatsapp">
-    </a>
-    <!------>
+    <div class="floating-container">
+      <div class="floating-button">
+        <img src="assets/icons/github.png" height="30" width="30" alt="GitHub">
+      </div>
+      <div class="element-container">
+        <div class="float-element">
+          <a class="github-button" href="https://github.com/raj-rathod" data-size="large" aria-label="Follow @raj-rathod on GitHub">Follow @raj-rathod</a>
+        </div>
+        <div class="float-element">
+          <a class="github-button" href="https://github.com/sponsors/raj-rathod" data-icon="octicon-heart" data-size="large" aria-label="Sponsor @raj-rathod on GitHub">Sponsor</a>
+        </div>
+        <div class="float-element">
+          <a class="github-button" href="https://github.com/raj-rathod/DSA-visualisation-in-angular" data-icon="octicon-star" data-size="large" aria-label="Star raj-rathod/DSA-visualisation-in-angular on GitHub">Star</a>
+        </div>
+        <div class="float-element">
+          <a class="github-button" href="https://github.com/raj-rathod/DSA-visualisation-in-angular/discussions" data-icon="octicon-comment-discussion" data-size="large" aria-label="Discuss raj-rathod/DSA-visualisation-in-angular on GitHub">Discuss</a>
+        </div>
+      </div>
+    </div>
 </body>
 </html>

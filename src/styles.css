@@ -213,13 +213,16 @@ li {
 .floating-container {
   position: fixed;
   z-index: 9999;
-  width: 150px;
-  height: 100px;
+  width: 65px;
+  height: 65px;
+  border-radius: 50%;
   bottom: 0;
   right: 0;
   margin: 35px 25px;
 }
 .floating-container:hover {
+  border-radius: 0%;
+  width: 150px;
   height: 300px;
 }
 .floating-container:hover .floating-button {
@@ -446,9 +449,7 @@ li {
   }
 
   .floating-container {
-    width: 150px;
-    height: 70px;
-    margin: 16px !important;
+    margin: 12px !important;
   }
   .floating-container .floating-button {
     margin-right: 0px !important;

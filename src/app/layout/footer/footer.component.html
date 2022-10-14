@@ -17,7 +17,7 @@
     <div class="row">
         <div class="col-lg-4 col-md-6">
                 <h4 class="fw-bold">Rajesh Rathore</h4>
-                <p class="fz-xs-10 fs-small col-xl-10">I am ambitious learner, always looking to learn something new.
+                <p class="fs-small col-xl-10">I am ambitious learner, always looking to learn something new.
                      I am very passionate about my work and love to solve complex problems and to deep dive 
                      into them for finding the best solution
                 </p>
@@ -30,13 +30,13 @@
                 <div>
                     <h4 class="fw-bold mb-2">Projects</h4>
                     <ng-container *ngFor="let project of projects">
-                        <p class="m-0 mb-2 fz-xs-10 fs-small"><a [href]="project?.url" target="_blank" rel="noopener noreferrer" class="item-link">{{project?.name}}</a></p>
+                        <p class="m-0 mb-2  fs-small"><a [href]="project?.url" target="_blank" rel="noopener noreferrer" class="item-link">{{project?.name}}</a></p>
                     </ng-container>
                 </div>
-                <div>
+                <div class="d-md-block d-none">
                     <h4 class="fw-bold mb-2">Contact</h4>
                     <ng-container *ngFor="let contact of contact">
-                        <p class="m-0 mb-2 fz-xs-10 fs-small">{{contact}}</p>
+                        <p class="m-0 mb-2 fs-small">{{contact}}</p>
                     </ng-container>
                 </div>
             </div>

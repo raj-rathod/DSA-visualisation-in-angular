@@ -7,10 +7,10 @@
       <div class="collapse navbar-collapse" id="navbarToggleMenu">
         <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
             <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <p class="nav-link dropdown-toggle active m-0"  id="navbarDropdownMenuLink1" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                   Data Structures
-                </a>
-                <ul class="dropdown-menu data-link-dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                </p>
+                <ul class="dropdown-menu data-link-dropdown-menu" aria-labelledby="navbarDropdownMenuLink1">
                   <li *ngFor="let data of dataStructure" [routerLink]="data.route" (click)="closeCollapse()">
                     <p class="m-0 px-3 py-1">{{data.name}}</p>
                   </li>
@@ -18,10 +18,10 @@
                 </ul>
             </li>
             <li class="nav-item dropdown">
-                <p class="nav-link dropdown-toggle active m-0" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <p class="nav-link dropdown-toggle active m-0" id="navbarDropdownMenuLink2" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                   Algorithms
                 </p>
-                <ul class="dropdown-menu data-link-dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <ul class="dropdown-menu data-link-dropdown-menu" aria-labelledby="navbarDropdownMenuLink2">
                   <li *ngFor="let data of algorithms" [routerLink]="data.route" (click)="closeCollapse()">
                     <p class="m-0 px-3 py-1">{{data.name}}</p>
                   </li>

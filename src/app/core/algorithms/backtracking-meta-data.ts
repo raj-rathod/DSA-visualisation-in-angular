@@ -17,7 +17,7 @@ const backtracking = {
     at 'A' and we divided our problem into three smaller sub-probelms 'B', 'D' and 'F'. And using this sub-problem, we have three 
     possible path to get to our solution -- 'C', 'E', & 'G'.`,
 
-    example:'assets/ds-image/backtracking.jpg',
+    example:'assets/ds-image/DSA1.jpg',
 
     properties:[
         `A backtracking algorithm uses the depth-first search method. When it starts exploring the solutions, a bounding function is 

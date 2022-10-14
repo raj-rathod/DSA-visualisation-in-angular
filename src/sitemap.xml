@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+
+<url>
+  <loc>https://raj-rathod.github.io/DSA-visualisation-in-angular/</loc>
+  <lastmod>2022-10-14</lastmod>
+  <priority>1.00</priority>
+</url>
+
+<url>
+  <loc>https://raj-rathod.github.io/DSA-visualisation-in-angular/data-structure</loc>
+  <lastmod>2022-10-14</lastmod>
+  <priority>.90</priority>
+</url>
+
+<url>
+  <loc>https://raj-rathod.github.io/DSA-visualisation-in-angular/algorithm</loc>
+  <lastmod>2022-10-14</lastmod>
+  <priority>.90</priority>
+</url>
+
+<url>
+  <loc>https://raj-rathod.github.io/DSA-visualisation-in-angular/non-primitive/linear/array</loc>
+  <lastmod>2022-10-14</lastmod>
+  <priority>.90</priority>
+</url>
+
+<url>
+  <loc>https://raj-rathod.github.io/DSA-visualisation-in-angular/non-primitive/linear/stack</loc>
+  <lastmod>2022-10-14</lastmod>
+  <priority>.90</priority>
+</url>
+
+<url>
+  <loc>https://raj-rathod.github.io/DSA-visualisation-in-angular/non-primitive/linear/queue</loc>
+  <lastmod>2022-10-14</lastmod>
+  <priority>.90</priority>
+</url>
+
+<url>
+  <loc>https://raj-rathod.github.io/DSA-visualisation-in-angular/non-primitive/linear/linked-list</loc>
+  <lastmod>2022-10-14</lastmod>
+  <priority>.90</priority>
+</url>
+
+<url>
+  <loc>https://raj-rathod.github.io/DSA-visualisation-in-angular/non-primitive/non-linear/tree</loc>
+  <lastmod>2022-10-14</lastmod>
+  <priority>.90</priority>
+</url>
+
+<url>
+  <loc>https://raj-rathod.github.io/DSA-visualisation-in-angular/non-primitive/non-linear/graph</loc>
+  <lastmod>2022-10-14</lastmod>
+  <priority>.90</priority>
+</url>
+
+<url>
+  <loc>https://raj-rathod.github.io/DSA-visualisation-in-angular/non-primitive/non-linear/trie</loc>
+  <lastmod>2022-10-14</lastmod>
+  <priority>.90</priority>
+</url>
+
+<url>
+  <loc>https://raj-rathod.github.io/DSA-visualisation-in-angular/non-primitive/non-linear/hash-table</loc>
+  <lastmod>2022-10-14</lastmod>
+  <priority>.90</priority>
+</url>
+
+<url>
+  <loc>https://raj-rathod.github.io/DSA-visualisation-in-angular/algorithm/backtracking</loc>
+  <lastmod>2022-10-14</lastmod>
+  <priority>.90</priority>
+</url>
+
+<url>
+  <loc>https://raj-rathod.github.io/DSA-visualisation-in-angular/algorithm/brute-force</loc>
+  <lastmod>2022-10-14</lastmod>
+  <priority>.90</priority>
+</url>
+
+<url>
+  <loc>https://raj-rathod.github.io/DSA-visualisation-in-angular/algorithm/divide-and-conquer</loc>
+  <lastmod>2022-10-14</lastmod>
+  <priority>.90</priority>
+</url>
+
+<url>
+  <loc>https://raj-rathod.github.io/DSA-visualisation-in-angular/algorithm/dynamic-programming</loc>
+  <lastmod>2022-10-14</lastmod>
+  <priority>.90</priority>
+</url>
+
+<url>
+  <loc>https://raj-rathod.github.io/DSA-visualisation-in-angular/algorithm/greedy</loc>
+  <lastmod>2022-10-14</lastmod>
+  <priority>.90</priority>
+</url>
+
+<url>
+  <loc>https://raj-rathod.github.io/DSA-visualisation-in-angular/algorithm/recursive</loc>
+  <lastmod>2022-10-14</lastmod>
+  <priority>.90</priority>
+</url>
+
+<url>
+  <loc>https://raj-rathod.github.io/DSA-visualisation-in-angular/algorithm/searching</loc>
+  <lastmod>2022-10-14</lastmod>
+  <priority>.90</priority>
+</url>
+
+<url>
+  <loc>https://raj-rathod.github.io/DSA-visualisation-in-angular/algorithm/sorting</loc>
+  <lastmod>2022-10-14</lastmod>
+  <priority>.90</priority>
+</url>
+
+</urlset>

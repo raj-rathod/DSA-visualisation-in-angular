@@ -1,3 +1,9 @@
-<div class="container">
-    <router-outlet></router-outlet>
+<div class="d-flex flex-column vh-100">
+    <div class="container mb-auto">
+        <app-navbar></app-navbar>
+        <div class="margin-top">
+            <router-outlet></router-outlet>
+        </div>
+    </div>
+    <app-footer></app-footer>
 </div>

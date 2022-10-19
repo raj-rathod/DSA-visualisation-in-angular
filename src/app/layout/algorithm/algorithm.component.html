@@ -1,6 +1,17 @@
-<div class="d-flex align-items-center float-start btn bg-info px-lg-3 px-2 py-lg-2 py-1 mt-lg-3 mt-1" (click)="gotoBack()">
-    <img src="assets/icons/Back-white.png" alt="">
-    <p class="m-0 ms-1 text-light fw-bold d-lg-block d-none">Back</p>
+<h1 class="text-center">Algorithms</h1>
+<div class="mt-md-4 mt-3" [innerHtml]="algorithmMetaData.defination"></div>
+<div class="mt-md-4 mt-3" [innerHtml]="algorithmMetaData.characteristics"></div>
+<div class="mt-md-4 mt-3" [innerHtml]="algorithmMetaData.properties"></div>
+<div class="mt-md-4 mt-3" [innerHtml]="algorithmMetaData.types"></div>
+<div class="mt-md-4 mt-3 d-flex align-items-center horizontal-scroll">
+    <ng-container *ngFor="let data of algorithms; let i = index">
+     <div *ngIf="i !=0" class="box p-lg-2 p-1 px-lg-3 px-2 tab me-lg-4 me-3" [routerLink]="data.route">
+          <p class="m-0">{{data.name}}</p>
+     </div>
+    </ng-container>
+   
 </div>
-<h1 class="text-center mt-5">Algorithms List</h1>
+<div class="mt-md-4 mt-3" [innerHtml]="algorithmMetaData.others"></div>
+<div class="mt-md-4 mt-3" [innerHtml]="algorithmMetaData.advantages"></div>
+<div class="mt-md-4 mt-3" [innerHtml]="algorithmMetaData.disadvantages"></div>
 

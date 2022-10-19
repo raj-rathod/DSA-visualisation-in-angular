@@ -1,5 +1,4 @@
 import { Component, ElementRef, OnInit } from '@angular/core';
-import { Location } from '@angular/common';
 import { MatDialog } from '@angular/material/dialog';
 import { SingleValueInputDialogComponent } from 'src/app/shared/components/single-value-input-dialog/single-value-input-dialog.component';
 import { stackPushElement } from 'src/app/helper/single-input-meta-data';
@@ -14,7 +13,6 @@ export class QueueComponent implements OnInit {
   queueMetaData = queueMetaData;
   queueData:string[] = [];
   constructor(
-    private location: Location,
     private elRef: ElementRef,
     private matDialog: MatDialog
   ) { }
@@ -22,9 +20,7 @@ export class QueueComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  gotoBack(): void {
-    this.location.back();
-  }
+
   operations(index: number): void {
     const opRef = this.elRef.nativeElement.querySelectorAll('.stkOp');
     for(let i = 0; i < opRef.length; i++){
@@ -58,9 +54,6 @@ pushElement(): void {
     SingleValueInputDialogComponent,
     {
       disableClose: true,
-      position:{
-          top:'120px'
-      },
       data: stackPushElement
     }
   );

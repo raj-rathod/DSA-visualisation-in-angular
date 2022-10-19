@@ -12,8 +12,12 @@ const routes: Routes = [
     path: 'data-structure', component: DataStructureComponent
   },
   {
-    path: 'algorithm', component: AlgorithmComponent
+    path: 'algorithm', 
+    loadChildren: () =>
+    import('./components/Algorithms/algorithms.module').then(
+      (m) => m.AlgorithmsModule),
   },
+
   {
     path:'primitive',
     loadChildren: () =>

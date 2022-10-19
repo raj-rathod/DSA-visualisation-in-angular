@@ -8,10 +8,10 @@ const operations: string[] = [
      'Enqueue', 'Dequeue', 'Peek'
 ];
 const applications: string[] = [
-     '<b>Multi programming</b>: Multi programming means when multiple programs are running in the main memory. It is essential to organize these multiple programs are organized as queues',
-     '<b>Network</b>: In a network , a queue is used in devices such as a router or a switch. Another application of a queue is a mail queue',
-     '<b>Job Scheduling</b>: The computer has a task to execute a particular number of jobs that are scheduled to be execute one after another. These jobs are assigned one by one to the processor which is organized using a queue',
-     '<b>Shared resoures</b>: Queues are used as waiting lists for a single resoure',
+     '<b>Multi programming</b>:  Multi programming means when multiple programs are running in the main memory. It is essential to organize these multiple programs are organized as queues',
+     '<b>Network</b>:  In a network , a queue is used in devices such as a router or a switch. Another application of a queue is a mail queue',
+     '<b>Job Scheduling</b>:  The computer has a task to execute a particular number of jobs that are scheduled to be execute one after another. These jobs are assigned one by one to the processor which is organized using a queue',
+     '<b>Shared resoures</b>:  Queues are used as waiting lists for a single resoure',
      'Breadth first traversal or BFS',
      'Level order tree traversal',
      'Reverse a path in BST using queue',

@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { Location } from '@angular/common';
 
 @Component({
   selector: 'app-boolean',
@@ -9,14 +8,8 @@ import { Location } from '@angular/common';
 export class BooleanComponent implements OnInit {
 
   constructor(
-    private location: Location
   ) { }
 
   ngOnInit(): void {
   }
-
-  gotoBack(): void {
-    this.location.back();
-  }
-
 }

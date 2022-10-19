@@ -17,17 +17,6 @@ const routes: Routes = [
   },
   {
     path: 'array', component: ArrayComponent,
-    children:[
-      {
-        path: '', redirectTo:'one-dimension', pathMatch:'full',
-      },
-      {
-        path: 'one-dimension', component: OneDimensionComponent
-      },
-      {
-        path: 'two-dimension', component: TwoDimensionComponent
-      }
-    ]
   },
   {
     path: 'stack', component: StackComponent
@@ -37,20 +26,6 @@ const routes: Routes = [
   },
   {
     path: 'linked-list', component: LinkedListComponent,
-    children:[
-      {
-        path: '', redirectTo:'single-linked-list', pathMatch:'full',
-      },
-      {
-        path: 'single-linked-list', component: SingleLinkedListComponent
-      },
-      {
-        path: 'double-linked-list', component: DoubleLinkedListComponent
-      },
-      {
-        path: 'circular-linked-list', component: CircularLinkedListComponent
-      }
-    ]
   }
 ];
 

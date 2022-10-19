@@ -1,71 +1,119 @@
 <h5>Single linked list operations</h5>
-<div class="d-flex mt-4 flex-wrap">
-    <div class="box p-lg-2 p-1 px-lg-3 px-2 btn me-lg-4 me-3 mb-2 sigleOp" 
-    data-bs-toggle="modal" data-bs-target="#input-dialog"
+<div class="d-flex mt-4 horizontal-scroll">
+    <div 
+    [class]="operations.Creation === operationStep 
+    ?'box box-active p-lg-2 p-1 px-lg-3 px-2 tab me-lg-4 me-3 mb-2'
+    :'box p-lg-2 p-1 px-lg-3 px-2 tab me-lg-4 me-3 mb-2'"
     (click)="createLinkedList()">
         <p class="m-0">Create Linked List</p>
     </div>
-     <ng-container *ngIf="linkedlist.length>0">
-        <div class="box p-lg-2 p-1 px-lg-3 px-2 btn me-lg-4 me-3 mb-2 sigleOp" (click)="operationSelection(1)">
+     <ng-container *ngIf="singleLinkedList.head !== null">
+        <div 
+        [class]="operations.Insertion === operationStep 
+        ?'box box-active p-lg-2 p-1 px-lg-3 px-2 tab me-lg-4 me-3 mb-2'
+        :'box p-lg-2 p-1 px-lg-3 px-2 tab me-lg-4 me-3 mb-2'"
+         (click)="operationSelection(1)">
             <p class="m-0">Insertion</p>
         </div>
-        <div class="box p-lg-2 p-1 px-lg-3 px-2 btn me-lg-4 me-3 mb-2 sigleOp" (click)="operationSelection(2)">
+        <div 
+        [class]="operations.Updation === operationStep 
+        ?'box box-active p-lg-2 p-1 px-lg-3 px-2 tab me-lg-4 me-3 mb-2'
+        :'box p-lg-2 p-1 px-lg-3 px-2 tab me-lg-4 me-3 mb-2'"
+        (click)="operationSelection(2)">
             <p class="m-0">Upadation</p>
         </div>
-        <div class="box p-lg-2 p-1 px-lg-3 px-2 btn me-lg-4 me-3 mb-2 sigleOp" (click)="operationSelection(3)">
+        <div 
+        [class]="operations.Deletion === operationStep 
+        ?'box box-active p-lg-2 p-1 px-lg-3 px-2 tab me-lg-4 me-3 mb-2'
+        :'box p-lg-2 p-1 px-lg-3 px-2 tab me-lg-4 me-3 mb-2'"
+        (click)="operationSelection(3)">
             <p class="m-0">Deletion</p>
+        </div>
+        <div 
+        [class]="operations.Reverse === operationStep 
+        ?'box box-active p-lg-2 p-1 px-lg-3 px-2 tab me-lg-4 me-3 mb-2'
+        :'box p-lg-2 p-1 px-lg-3 px-2 tab me-lg-4 me-3 mb-2'"
+        (click)="reverseLinkedList()">
+            <p class="m-0">Reverse Linked List</p>
         </div>
      </ng-container>
 </div>
 
-<ng-container *ngIf="insertionShown">
+<ng-container *ngIf="operations.Insertion === operationStep && singleLinkedList.head !== null">
 <h5 class="mt-3">Single linked list Insertion</h5>
-<div class="d-flex mt-4 flex-wrap">
-    <div class="box p-lg-2 p-1 px-lg-3 px-2 btn me-lg-4 me-3 mb-2 sigleIn" 
+<div class="d-flex mt-4 horizontal-scroll">
+    <div 
+    [class]=" insertOperationStep === insertOperations.InsertAtFirst ?
+    'box box-active p-lg-2 p-1 px-lg-3 px-2 tab me-lg-4 me-3 mb-2 ':
+    'box p-lg-2 p-1 px-lg-3 px-2 tab me-lg-4 me-3 mb-2'" 
     (click)="insertAtHead()">
         <p class="m-0">Insert At Head</p>
     </div>
-    <div class="box p-lg-2 p-1 px-lg-3 px-2 btn me-lg-4 me-3 mb-2 sigleIn" 
+    <div 
+    [class]=" insertOperationStep === insertOperations.InsertAtEnd ?
+    'box box-active p-lg-2 p-1 px-lg-3 px-2 tab me-lg-4 me-3 mb-2 ':
+    'box p-lg-2 p-1 px-lg-3 px-2 tab me-lg-4 me-3 mb-2'" 
     (click)="insertAtTail()">
         <p class="m-0">Insert At Tail</p>
     </div>
-    <div class="box p-lg-2 p-1 px-lg-3 px-2 btn me-lg-4 me-3 mb-2 sigleIn"
-    
+    <div 
+    [class]=" insertOperationStep === insertOperations.InsertAtPosition ?
+    'box box-active p-lg-2 p-1 px-lg-3 px-2 tab me-lg-4 me-3 mb-2 ':
+    'box p-lg-2 p-1 px-lg-3 px-2 tab me-lg-4 me-3 mb-2'" 
      (click)="insertAtPosition()">
         <p class="m-0">Insert At Position</p>
     </div>
 </div>
 </ng-container>
-<ng-container *ngIf="updationShown">
+<ng-container *ngIf="operations.Updation === operationStep && singleLinkedList.head !== null">
     <h5 class="mt-3">Single linked list Upadation</h5>
-    <div class="d-flex mt-4 flex-wrap">
-        <div class="box p-lg-2 p-1 px-lg-3 px-2 btn me-lg-4 me-3 mb-2 sigleUp" 
+    <div class="d-flex mt-4 horizontal-scroll">
+        <div 
+        [class]=" updateOperationStep === updateOperations.UpdateAtFirst ?
+        'box box-active p-lg-2 p-1 px-lg-3 px-2 tab me-lg-4 me-3 mb-2':
+        'box p-lg-2 p-1 px-lg-3 px-2 tab me-lg-4 me-3 mb-2'" 
         
         (click)="updateAtHead()">
             <p class="m-0">Update At Head</p>
         </div>
-        <div class="box p-lg-2 p-1 px-lg-3 px-2 btn me-lg-4 me-3 mb-2 sigleUp" 
+        <div 
+        [class]=" updateOperationStep === updateOperations.UpdateAtEnd ?
+        'box box-active p-lg-2 p-1 px-lg-3 px-2 tab me-lg-4 me-3 mb-2':
+        'box p-lg-2 p-1 px-lg-3 px-2 tab me-lg-4 me-3 mb-2'" 
       
         (click)="updateAtTail()">
             <p class="m-0">Update At Tail</p>
         </div>
-        <div class="box p-lg-2 p-1 px-lg-3 px-2 btn me-lg-4 me-3 mb-2 sigleUp" 
-        data-bs-toggle="modal" data-bs-target="#update-at-index-dialog"
+        <div 
+        [class]=" updateOperationStep === updateOperations.UpdateAtPosition ?
+        'box box-active p-lg-2 p-1 px-lg-3 px-2 tab me-lg-4 me-3 mb-2':
+        'box p-lg-2 p-1 px-lg-3 px-2 tab me-lg-4 me-3 mb-2'" 
         (click)="updateAtPosition()">
             <p class="m-0">Update At Position</p>
         </div>
     </div>
 </ng-container>
-<ng-container *ngIf="deletionShown">
+<ng-container *ngIf="operations.Deletion === operationStep && singleLinkedList.head !== null">
     <h5 class="mt-3">Single linked list Deletion</h5>
-    <div class="d-flex mt-4 flex-wrap">
-        <div class="box p-lg-2 p-1 px-lg-3 px-2 btn me-lg-4 me-3 mb-2 sigleDel" (click)="operationDeletion(0)">
+    <div class="d-flex mt-4 horizontal-scroll">
+        <div 
+        [class]=" deleteOperationStep === deleteOperations.DeleteAtFirst ?
+        'box box-active p-lg-2 p-1 px-lg-3 px-2 tab me-lg-4 me-3 mb-2':
+        'box p-lg-2 p-1 px-lg-3 px-2 tab me-lg-4 me-3 mb-2'" 
+        (click)="deleteOperation(0)">
             <p class="m-0">Delete At Head</p>
         </div>
-        <div class="box p-lg-2 p-1 px-lg-3 px-2 btn me-lg-4 me-3 mb-2 sigleDel" (click)="operationDeletion(1)">
+        <div
+        [class]=" deleteOperationStep === deleteOperations.DeleteAtEnd ?
+        'box box-active p-lg-2 p-1 px-lg-3 px-2 tab me-lg-4 me-3 mb-2':
+        'box p-lg-2 p-1 px-lg-3 px-2 tab me-lg-4 me-3 mb-2'" 
+        (click)="deleteOperation(1)">
             <p class="m-0">Delete At Tail</p>
         </div>
-        <div class="box p-lg-2 p-1 px-lg-3 px-2 btn me-lg-4 me-3 mb-2 sigleDel" 
+        <div 
+        [class]=" deleteOperationStep === deleteOperations.DeleteAtPosition?
+        'box box-active p-lg-2 p-1 px-lg-3 px-2 tab me-lg-4 me-3 mb-2':
+        'box p-lg-2 p-1 px-lg-3 px-2 tab me-lg-4 me-3 mb-2'"  
         (click)="deleteAtPosition()">
             <p class="m-0">Delete At Position</p>
         </div>
@@ -74,31 +122,5 @@
 <h5 class=" mt-5">
     Single linked list
 </h5>
-<div class="mt-4 d-flex">
-    <div class="d-flex align-items-center" *ngFor="let node of linkedlist; let i=index">
-        <div class="data-section border border-end-0 border-2 border-info">
-            <p class="m-0">{{node.data}}</p>
-        </div>
-        <div class="link-section border border-2 border-danger">
-            <p class="m-0">Link</p>
-        </div>
-        <div class="arrow">
-            <img src="assets/icons/link-arrow.jpg" width="30" height="10" alt="">
-        </div>
-        <p *ngIf="i=== linkedlist.length-1" class="m-0 ms-1">Null</p>
-    </div>
-    <ng-container *ngIf="linkedlist.length===0">
-        <div class="d-flex align-items-center">
-            <div class="data-section border border-end-0 border-2 border-info">
-                <p class="m-0">Null</p>
-            </div>
-            <div class="link-section border border-2 border-danger">
-                <p class="m-0">Link</p>
-            </div>
-            <div class="arrow">
-                <img src="assets/icons/link-arrow.jpg" width="30" height="10" alt="">
-            </div>
-            <p class="m-0 ms-1">Null</p>
-        </div>
-    </ng-container>
+<div class="mt-4 d-flex horizontal-scroll" [innerHTML]="helper.singleLinkedList(singleLinkedList.head)">
 </div>

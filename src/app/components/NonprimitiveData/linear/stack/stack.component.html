@@ -1,15 +1,11 @@
-<div class="d-flex align-items-center float-start btn bg-info px-lg-3 px-2 py-lg-2 py-1 mt-lg-3 mt-1" (click)="gotoBack()">
-    <img src="assets/icons/Back-white.png" alt="">
-    <p class="m-0 ms-1 text-light fw-bold d-lg-block d-none">Back</p>
-</div>
-<h1 class="text-center mt-5">Stack</h1>
+<h1 class="text-center">Stack</h1>
 <div class="mt-md-5 mt-3" [innerHtml]="stackMetaData.defination"></div>
 <div class="mt-md-4 mt-3" [innerHtml]="stackMetaData.example"></div>
 <div class="mt-md-4 mt-3" [innerHtml]="stackMetaData.properties"></div>
 <div class="mt-md-4 mt-3" [innerHtml]="stackMetaData.operations"></div>
 <div class="mt-5">
     <h5>Stack operations</h5>
-    <div class="d-flex flex-wrap align-items-center mt-3">
+    <div class="d-flex horizontal-scroll align-items-center mt-3">
         <div class="box p-lg-2 p-1 px-lg-3 px-2 btn me-lg-4 me-3 mb-2 stkOp"
          (click)="pushElement()">
             <p class="m-0">Push</p>

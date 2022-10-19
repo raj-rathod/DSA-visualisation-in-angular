@@ -161,3 +161,73 @@ export const insertionSortMetaData: Algorithms = {
 }
 
 // ------------------------------------- End ----------------------------------------------------------------//
+
+// ------------------------------------- Merge sort ---------------------------------------------------------//
+
+const mergeSortData = {
+  defination: `The Merge Sort algorithm is a sorting algorithm that is based on the Divide and Conquer paradigm. In this algorithm, 
+    the array is initially divided into two equal halves and then they are combined in a sorted manner
+    </br>
+    Think of it as a recursive algorithm continuously splits the array in half until it cannot be further divided. 
+    This means that if the array becomes empty or has only one element left, the dividing will stop, 
+    i.e. it is the base case to stop the recursion. If the array has multiple elements, split the array into 
+    halves and recursively invoke the merge sort on each of the halves. Finally, when both halves are sorted, 
+    the merge operation is applied. Merge operation is the process of taking two smaller sorted arrays and 
+    combining them to eventually make a larger one
+  `,
+  flowChart:"assets/ds-image/DSA1.jpg",
+  explainImage:"assets/ds-image/DSA1.jpg",
+  workingProcedure:[
+    'mergeSort(arr[], l,  r)',
+    'If r > l',
+    `Find the middle point to divide the array into two halves: middle m = l + (r – l)/2`,
+    `Call mergeSort for first half: mergeSort(arr, l, m)`,
+    `Call mergeSort for second half: mergeSort(arr, m + 1, r)`,
+    `Merge the two halves sorted in steps 2 and 3: merge(arr, l, m, r)`
+  ],
+  properties:[
+    `Merge Sort is useful for sorting linked lists.`,
+    `Merge Sort is a stable sort which means that the same element in an array maintain 
+      their original positions with respect to each other.`,
+    `Overall time complexity of Merge sort is O(nLogn). It is more efficient as it is in worst 
+      case also the runtime is O(nlogn)`,
+    `The space complexity of Merge sort is O(n). This means that this algorithm takes a lot of space and may 
+      slower down operations for the last data sets.`
+  ],
+  applications:[
+    `Merge Sort is useful for sorting linked lists in O(n Log n) time`,
+    `Merge sort can be implemented without extra space for linked lists`,
+    `Merge sort is used for counting inversions in a list`,
+    `Merge sort is used in external sorting`
+  ],
+  advantages: [
+    `Merge sort can efficiently sort a list in O(n*log(n)) time`,
+    `Fast for large arrays unlike selection, insertion, and bubble sort it doesn't go through the whole array many times`,
+  ],
+  disadvantages: [
+    `For small datasets, merge sort is slower than other sorting algorithms`,
+    `For the temporary array, mergesort requires an additional space of O(n)`,
+    `Even if the array is sorted, the merge sort goes through the entire process`
+  ],
+  performance:[
+    'Worst Case Time Complexity [ Big-O ]: O(n*log n)',
+    'Best Case Time Complexity [Big-omega]: O(n*log n)',
+    'Average Time Complexity [Big-theta]: O(n*log n)',
+    'Space Complexity: O(n)'
+  ]
+
+}
+
+export const mergeSortMetaData: Algorithms = {
+  defination: Helper.setHeader(mergeSortData.defination),
+  properties: Helper.setListwithTitleHtml('Merge Sort Properties', mergeSortData.properties),
+  explainImage: Helper.setExampleImage('Merge Sort Explain Image', mergeSortData.explainImage),
+  flowChart: Helper.setExampleImage('Merge Sort Flowchart',mergeSortData.flowChart),
+  advantage: Helper.setListwithTitleHtml('Merge Sort Advantages',mergeSortData.advantages),
+  disadvantage: Helper.setListwithTitleHtml('Merge Sort Disadvantages',mergeSortData.disadvantages),
+  applications: Helper.setListwithTitleHtml('Merge Sort Applications',mergeSortData.applications),
+  other: Helper.setListwithTitleHtml('Merge Sort Performance',mergeSortData.performance),
+  workingProcedure: Helper.setListwithTitleHtml('Follow the below steps to solve the problem',mergeSortData.workingProcedure),
+}
+
+// ------------------------------------- End ----------------------------------------------------------------//

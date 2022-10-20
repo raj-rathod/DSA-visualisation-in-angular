@@ -231,3 +231,79 @@ export const mergeSortMetaData: Algorithms = {
 }
 
 // ------------------------------------- End ----------------------------------------------------------------//
+
+// -------------------------------- Quick Sort --------------------------------------------------------------//
+
+const quickSortData = {
+  defination:`Quick sort is a fast sorting algorithm used to sort a list of elements. Quick sort algorithm is 
+    invented by C. A. R. Hoare.
+    </br>
+    The quick sort algorithm attempts to separate the list of elements into two parts and then sort each part recursively. 
+    That means it use divide and conquer strategy. In quick sort, the partition of the list is performed based on the 
+    element called pivot. Here pivot element is one of the elements in the list.
+    </br>
+    The list is divided into two partitions such that "all elements to the left of pivot are smaller than the pivot 
+    and all elements to the right of pivot are greater than or equal to the pivot".
+  `,
+  flowChart:"assets/ds-image/DSA1.jpg",
+  explainImage:"assets/ds-image/DSA1.jpg",
+  workingProcedure:[
+    'Consider the first element of the list as pivot (i.e., Element at first position in the list)',
+    'Define two variables i and j. Set i and j to first and last elements of the list respectively',
+    'Increment i until list[i] > pivot then stop',
+    'Decrement j until list[j] < pivot then stop',
+    'If i < j then exchange list[i] and list[j]',
+    'Repeat steps 3,4 & 5 until i > j',
+    'Exchange the pivot element with list[j] element'
+  ],
+  properties:[
+    'Quick Sort is useful for sorting arrays',
+    `In efficient implementations Quick Sort is not a stable sort, meaning that the relative order of equal 
+      sort items is not preserved`,
+    `Overall time complexity of Quick Sort is O(nlogn). In the worst case, it makes O(n**2) comparisons, 
+      though this behavior is rare`,
+    `The space complexity of Quick Sort is O(logn). It is an in-place sort (i.e. it doesn’t require any extra storage)`
+  ],
+  applications:[
+    `Commercial Computing is used in various government and private organizations for the purpose of sorting various data like 
+      sorting files by name/date/price, sorting of students by their roll no., sorting of account profile by given id, etc.`,
+    `The sorting algorithm is used for information searching and as Quicksort is the fastest algorithm so it is 
+      widely used as a better way of searching`,
+    `It is used everywhere where a stable sort is not needed`,
+    `Quicksort is a cache-friendly algorithm as it has a good locality of reference when used for arrays`,
+    `It is tail -recursive and hence all the call optimization can be done`,
+    `It is an in-place sort that does not require any extra storage memory`,
+    `Variants of Quicksort are used to separate the Kth smallest or largest elements`
+  ],
+  advantages: [
+    `It is in-place since it uses only a small auxiliary stack`,
+    `It requires only n (log n) time to sort n items`,
+    `It has an extremely short inner loop`,
+  ],
+  disadvantages: [
+    `It is recursive. Especially, if recursion is not available, the implementation is extremely complicated`,
+    `It requires quadratic (i.e., n**2) time in the worst-case`,
+    `It is fragile, i.e. a simple mistake in the implementation can go unnoticed and cause it to perform badly`
+  ],
+  performance:[
+    'Worst Case Time Complexity [ Big-O ]: O(n**2)',
+    'Best Case Time Complexity [Big-omega]: O(nlog n)',
+    'Average Time Complexity [Big-theta]: O(nlog n)',
+    'Space Complexity: O(logn)'
+  ]
+
+}
+
+export const quickSortMetaData: Algorithms = {
+  defination: Helper.setHeader(quickSortData.defination),
+  properties: Helper.setListwithTitleHtml('Quick Sort Properties',quickSortData.properties),
+  explainImage: Helper.setExampleImage('Quick Sort Explain Image', quickSortData.explainImage),
+  flowChart: Helper.setExampleImage('Quick Sort Flowchart',quickSortData.flowChart),
+  advantage: Helper.setListwithTitleHtml('Quick Sort Advantages',quickSortData.advantages),
+  disadvantage: Helper.setListwithTitleHtml('Quick Sort Disadvantages',quickSortData.disadvantages),
+  applications: Helper.setListwithTitleHtml('Quick Sort Applications',quickSortData.applications),
+  other: Helper.setListwithTitleHtml('Quick Sort Performance',quickSortData.performance),
+  workingProcedure: Helper.setListwithTitleHtml('Follow the below steps to solve the problem',quickSortData.workingProcedure),
+}
+
+// ------------------------------------- End ----------------------------------------------------------------//

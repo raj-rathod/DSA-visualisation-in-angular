@@ -307,3 +307,71 @@ export const quickSortMetaData: Algorithms = {
 }
 
 // ------------------------------------- End ----------------------------------------------------------------//
+
+// ------------------------------------- Counting Sort ------------------------------------------------------//
+
+const countingSortData = {
+  defination: `Counting sort is a sorting algorithm that sorts the elements of an array by counting the number 
+    of occurrences of each unique element in the array. The count is stored in an auxiliary array and 
+    the sorting is done by mapping the count as an index of the auxiliary array.`,
+  flowChart:"assets/ds-image/DSA1.jpg",
+  explainImage:"assets/ds-image/DSA1.jpg",
+  workingProcedure:[
+    `Iterate through the input array to find the highest value`,
+    `Declare a new array with the value 0 and a size of max+1`,
+    `Count each element in the array and increment its value in the auxiliary array generated at the corresponding index`,
+    `Add current and previous frequency to the auxiliary array to find the cumulative sum`,
+    `The cumulative value now represents the element's actual position in the sorted input array`,
+    `Begin iterating through the auxiliary array from 0 to max`,
+    `Put 0 at the corresponding index and reduce the count by 1, which will indicate the element's 
+      second position in the input array if it exists`,
+    `Now put the array you got in the previous step into the actual input array`
+  ],
+  properties:[
+    `Like other algorithms this sorting algorithm is not a comparison-based algorithm, 
+     it hashes the value in a temporary count array and uses them for sorting`,
+    `It uses a temporary array making it a non In Place algorithm`,
+    `Counting sort is not a stable algorithm. But it can be made stable with some code changes`,
+    `It is often used as a sub-routine to another sorting algorithm like radix sort`,
+    `Counting sort can be extended to work for negative inputs also`
+  ],
+  applications:[
+    `If the range of input data is not much bigger than the number of objects to be sorted, counting sort is efficient
+      </br>
+      Consider the following scenario: the data is 10, 5, 10K, 5K, and the input sequence is 1 to 10K
+    `,
+    `It isn't a sorting system based on comparisons. It has an O(n) running time complexity, 
+     with space proportional to the data range`,
+    `Counting sort counts the occurrences of the data object in O using partial hashing (1)`
+
+  ],
+  advantages: [
+    `Counting sort generally performs faster than all comparison-based sorting algorithms, 
+    such as merge sort and quicksort, if the range of input is of the order of the number of input`,
+    `Counting sort is easy to code`
+  ],
+  disadvantages: [
+    `Counting sort doesn’t work on decimal values`,
+    `Counting sort is inefficient if the range of values to be sorted is very large`
+  ],
+  performance:[
+    'Worst Case Time Complexity [ Big-O ]: O(N+M)',
+    'Best Case Time Complexity [Big-omega]: O(N+M)',
+    'Average Time Complexity [Big-theta]: O(N+M)',
+    'Space Complexity: O(N+M)'
+  ]
+}
+
+export const countingSortMetaData: Algorithms = {
+  defination: Helper.setHeader(countingSortData.defination),
+  properties: Helper.setListwithTitleHtml('Counting Sort Properties',countingSortData.properties),
+  explainImage: Helper.setExampleImage('Counting Sort Explain Image',countingSortData.explainImage),
+  flowChart: Helper.setExampleImage('Counting Sort Flowchart',countingSortData.flowChart),
+  advantage: Helper.setListwithTitleHtml('Counting Sort Advantages',countingSortData.advantages),
+  disadvantage: Helper.setListwithTitleHtml('Counting Sort Disadvantages',countingSortData.disadvantages),
+  applications: Helper.setListwithTitleHtml('Counting Sort Applications',countingSortData.applications),
+  other: Helper.setListwithTitleHtml('Counting Sort Performance',countingSortData.performance),
+  workingProcedure: Helper.setListwithTitleHtml('Follow the below steps to solve the problem',countingSortData.workingProcedure),
+}
+
+// ------------------------------------- End ----------------------------------------------------------------//

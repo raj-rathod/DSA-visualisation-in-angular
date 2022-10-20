@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { countingSortMetaData } from 'src/app/core/algorithms/sorting-meta-data';
 
 @Component({
   selector: 'app-counting-sort',
@@ -6,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./counting-sort.component.css']
 })
 export class CountingSortComponent implements OnInit {
-
+  countingSortMetaData = countingSortMetaData;
   constructor() { }
 
   ngOnInit(): void {

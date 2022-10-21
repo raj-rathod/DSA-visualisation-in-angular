@@ -352,7 +352,9 @@ const countingSortData = {
   ],
   disadvantages: [
     `Counting sort doesn’t work on decimal values`,
-    `Counting sort is inefficient if the range of values to be sorted is very large`
+    `Counting sort is inefficient if the range of values to be sorted is very large`,
+    `What if the elements are in the range from 1 to n**2? We can’t use counting sort because counting sort will
+     take O(n**2) which is worse than comparison-based sorting algorithms`
   ],
   performance:[
     'Worst Case Time Complexity [ Big-O ]: O(N+M)',
@@ -378,6 +380,65 @@ export const countingSortMetaData: Algorithms = {
 
 // ------------------------------------- End ----------------------------------------------------------------//
 
+const radixSortData = {
+  defination: `Radix sort is an algorithm that uses counting sort as a subroutine to sort an array of integers/strings in 
+    either ascending or descending order. The main idea of radix sort revolves around applying counting sort digit by 
+    digit on the given array`,
+  flowChart:"assets/ds-image/DSA1.jpg",
+  explainImage:"assets/ds-image/DSA1.jpg",
+  workingProcedure:[
+    `Find the maximum element of the array, let it be max`,
+    `Find the number of digits in max, let it be k`,
+    `For each, i ranging from 1 To k, apply the counting sort algorithm for the i^{th} 
+      least-significant digit of each element. If any element has less than i digits consider 0 at its 
+      place (Because 29 can also be represented as 029)`
+  ],
+  properties:[
+    `It makes assumptions about the data like the data must be between a range of elements`,
+    `Input array must have the elements with the same radix and width`,
+    `Radix sort works on sorting based on an individual digit or letter position`,
+    `We must start sorting from the rightmost position and use a stable algorithm at each position`,
+    `Radix sort is not an in-place algorithm as it uses a temporary count array`
+  ],
+  applications:[
+    `The Radix sort algorithm is used in a typical computer, a sequential random-access machine, multiple fields key records`,
+    `While creating a suffix array, use the DC3 algorithm (Kärkkäinen-Sanders-Burkhardt)`,
+    `The Radix sort algorithm locates locations where there are numbers in extensive ranges`
+  ],
+  advantages: [
+    `Fast when the keys are short, i.e. when the array element range is small`,
+    `Used in suffix arrays construction algorithms such as Manber's and the DC3 algorithm`,
+    `Radix Sort is a stable sort because it maintains the relative order of elements with equal values`
+  ],
+  disadvantages: [
+    `The Radix Sort algorithm is less flexible than other sorts because it is based on digits or letters. 
+      As a result, for each different type of data, it must be rewritten`,
+    `Radix sort has a higher constant than other sorting algorithms`,
+    `It takes up more space than Quicksort, which is used for in-place sorting`,
+    `Radix sort may be slower than other sorting algorithms such as merge sort and Quicksort if the operations 
+      are inefficient. These operations include sub-inset lists and delete functions, as well as the process 
+      of isolating the desired digits`,
+    `Because it is based on digits or letters, the radix sort is less flexible than other sorts. 
+      If the data type must be rewritten, so must the Radix sort`
+  ],
+  performance:[
+    'Worst Case Time Complexity [ Big-O ]: O(N+K)',
+    'Best Case Time Complexity [Big-omega]: O(N+K)',
+    'Average Time Complexity [Big-theta]: O(N+K)',
+    'Space Complexity: O(MAX)'
+  ]
 
+}
+export const radixSortMetaData: Algorithms = {
+  defination: Helper.setHeader(radixSortData.defination),
+  properties: Helper.setListwithTitleHtml('Radix Sort Properties',radixSortData.properties),
+  explainImage: Helper.setExampleImage('Radix Sort Explain Image',radixSortData.explainImage),
+  flowChart: Helper.setExampleImage('Radix Sort Flowchart',radixSortData.flowChart),
+  advantage: Helper.setListwithTitleHtml('Radix Sort Advantages',radixSortData.advantages),
+  disadvantage: Helper.setListwithTitleHtml('Radix Sort Disadvantages',radixSortData.disadvantages),
+  applications: Helper.setListwithTitleHtml('Radix Sort Applications',radixSortData.applications),
+  other: Helper.setListwithTitleHtml('Radix Sort Performance',radixSortData.performance),
+  workingProcedure: Helper.setListwithTitleHtml('Follow the below steps to solve the problem',radixSortData.workingProcedure),
+}
 
 // ------------------------------------- End ----------------------------------------------------------------//

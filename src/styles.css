@@ -36,6 +36,16 @@ body {
   ;
 }
 
+::-moz-selection { 
+  color: black;
+  background: rgba(16, 203, 236, 0.76);;
+}
+
+::selection {
+  color: black;
+  background: rgba(16, 203, 236, 0.76);
+}
+
 .navbar-toggler {
   font-size: 14px !important;
 }

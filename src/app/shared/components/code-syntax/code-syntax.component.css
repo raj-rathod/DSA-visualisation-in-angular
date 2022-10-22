@@ -1,0 +1,33 @@
+:host {
+    position: fixed;
+    left: auto;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 70%;
+    min-width: 250px;
+    z-index: 9999;
+    padding: 24px;
+    background: rgba(16, 203, 236, 0.45);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(7.7px);
+    -webkit-backdrop-filter: blur(7.7px);
+    border: 1px solid rgba(16, 203, 236, 0.6);
+    border-radius: 10px 0px 0px 10px;
+    overflow: auto;
+}
+#code-highlight-conatiner{
+    padding: 24px;
+}
+@media(max-width:992px){
+    :host{
+        width: 90%;
+        padding: 20px;
+    }
+}
+@media(max-width:558px){
+    :host{
+        width: 100%;
+        padding: 16px;
+    }
+}

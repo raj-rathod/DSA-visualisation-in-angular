@@ -1,0 +1,14 @@
+<section>
+    <div class="btn btn-warning float-start"(click)="closeDrawer()">
+       <p class="m-0 text-light">Cancel</p>
+    </div>
+    <h2 class="mb-4 text-center">{{codeHighlight.title}}</h2>
+
+    <section class="mt-3" *ngFor="let codeItem of codeHighlight.codes">
+    <p class="m-0 mb-2">{{codeItem?.description}}</p>
+    <pre><code class="language-typescript">
+    {{codeItem.code}}
+    </code></pre>
+    </section>
+   
+</section>

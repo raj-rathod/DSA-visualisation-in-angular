@@ -11,6 +11,7 @@ import { CountingSortComponent } from './counting-sort/counting-sort.component';
 import { RadixSortComponent } from './radix-sort/radix-sort.component';
 import { BucketSortComponent } from './bucket-sort/bucket-sort.component';
 import { ShellSortComponent } from './shell-sort/shell-sort.component';
+import { SharedModule } from 'src/app/shared/components/shared.module';
 
 
 @NgModule({
@@ -26,6 +27,6 @@ import { ShellSortComponent } from './shell-sort/shell-sort.component';
     BucketSortComponent,
     ShellSortComponent
   ],
-  imports: [CommonModule, SortingRoutingModule]
+  imports: [CommonModule, SortingRoutingModule,SharedModule]
 })
 export class SortingModule {}

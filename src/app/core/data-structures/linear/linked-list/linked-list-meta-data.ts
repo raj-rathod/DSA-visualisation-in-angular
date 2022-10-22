@@ -1,4 +1,5 @@
 import { Helper } from "src/app/helper/helper";
+import { CodeHighLight } from "src/app/shared/interfaces/code-highlight.interface";
 import { DS } from "src/app/shared/interfaces/data-structure.interface";
 
 const defination: string = "A linked list is a linear data structure as well as a dynamic data structure."+
@@ -75,4 +76,182 @@ export const linkedListMetaData: DS = {
      advantage: Helper.setListwithTitleHtml('Advantages', advantage),
      disadvantage: Helper.setListwithTitleHtml('Disadvantage', disadvantage),
      
+}
+
+export const SingleLinkedListCode:CodeHighLight={
+     title:`Single Linked List`,
+     codes:[
+     {
+          description:`Single link node class code snippet`,
+          code:`export class SingleLinkNode {
+          data: number;
+          next: SingleLinkNode | any;
+     
+          constructor(data: number) {
+          this.data = data;
+          this.next = null;
+          }
+     }`
+     },
+     {
+          description:'Convert an array into single linked list',
+          code:`createSingleLinkedList(arr: number[]): void {
+          for (let i = 0; i < arr.length; i++) {
+            const node = new SingleLinkNode(arr[i]);
+            if (i === 0) {
+                 this.head = node;
+                 this.currentNode = this.head;
+            } else {
+                 this.currentNode.next = node;
+                 this.currentNode = node;
+            }
+          }
+     }`
+     },
+     {
+          description:'Insert Node at the start of the linked list',
+          code:`insertNodeAtFirst(element: number): void {
+          const node = new SingleLinkNode(element);
+          this.currentNode = this.head;
+          this.head = node;
+          this.head.next = this.currentNode;
+     }`
+     },
+     {
+          description:'Insert Node at the end of the linked list',
+          code:`insertNodeAtEnd(element: number): void {
+          const node = new SingleLinkNode(element);
+          if (this.head != null) {
+               this.currentNode = this.head;
+               while (this.currentNode.next !== null) {
+               this.currentNode = this.currentNode.next;
+               }
+               this.currentNode.next = node;
+          } else {
+               this.head = node;
+          }
+     }`
+     },
+     {
+          description:'Insert Node at the specific position of the linked list',
+          code:`insertNodeAtPosition(element: number, position: number): void {
+          if (position === 1 || this.head === null) {
+               this.insertNodeAtFirst(element);
+               return;
+          }
+          const node = new SingleLinkNode(element);
+          let count = 1;
+          this.currentNode = this.head;
+          this.previousNode = this.head;
+          while (this.currentNode.next !== null) {
+               if (count === position) {
+               break;
+               }
+               count++;
+               this.previousNode = this.currentNode;
+               this.currentNode = this.currentNode.next;
+          }
+          node.next = this.currentNode;
+          this.previousNode.next = node;
+     }`
+     },
+     {
+          description:'Delete first node of the linked list',
+          code:`deleteAtFirst(): void {
+          if (this.head !== null) {
+               this.head = this.head.next;
+          }
+     }`
+     },
+     {
+          description:'Delete last node of the linked list',
+          code:`deleteAtEnd(): void {
+          if (this.head !== null) {
+               this.currentNode = this.head;
+               this.previousNode = null;
+               while (this.currentNode.next != null) {
+                    this.previousNode = this.currentNode;
+                    this.currentNode = this.currentNode.next;
+               }
+               if (this.previousNode != null) {
+                   this.previousNode.next = null;
+               } else {
+                   this.head = null;
+               }
+          }
+     }`
+     },
+     {
+          description:'Delete a specific position node of the linked list',
+          code:`deleteAtPosition(position: number): void {
+          if (position === 1 || this.head === null) {
+               this.deleteAtFirst();
+               return;
+          }
+          let count = 0;
+          this.currentNode = this.head;
+          while (this.currentNode.next !== null) {
+               count++;
+               if (count === position) {
+               break;
+               }
+          
+               this.previousNode = this.currentNode;
+               this.currentNode = this.currentNode.next;
+          }
+          if (count === position) {
+               this.previousNode.next = this.currentNode.next;
+          }
+     }`
+     },
+     {
+          description:'Convert single linked list into circular linked list',
+          code:` convertToCircularLinkedList(): void {
+          if (this.head != null) {
+               this.currentNode = this.head;
+               while (this.currentNode.next !== null) {
+                  this.currentNode = this.currentNode.next;
+               }
+               this.currentNode.next = this.head;
+          }
+     }`
+     },
+     {
+          description:'Check single linked list is circular linked list or not',
+          code:`isCircularLinkedList(): boolean {
+          if (this.head === null) {
+               return false;
+          } else {
+               this.currentNode = this.head.next;
+               while (this.currentNode.next !== null) {
+                    if (this.currentNode === this.head) {
+                         return true;
+                    }
+                    this.currentNode = this.currentNode.next;
+               }
+               return false;
+          }
+     }`
+     },
+     {
+          description:'Reverse a single linked list',
+          code:`reverseASingleLinkedList(): SingleLinkNode | null {
+          if (this.head === null) {
+               return this.head;
+          } else {
+               this.currentNode = this.head.next;
+               this.previousNode = this.head;
+               this.previousNode.next = null;
+               while (this.currentNode !== null) {
+                    let temp = this.currentNode;
+                    this.currentNode = this.currentNode.next;
+                    temp.next = this.previousNode;
+                    this.previousNode = temp;
+               }
+               return this.previousNode;
+          }
+     }`
+     },
+     
+     ]
 }

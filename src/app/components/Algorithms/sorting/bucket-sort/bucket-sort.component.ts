@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { bucketSortMetaData } from 'src/app/core/algorithms/sorting-meta-data';
+import { HighlightService } from 'src/app/shared/services/highlight-syntax.service';
 
 @Component({
   selector: 'app-bucket-sort',
@@ -8,9 +9,12 @@ import { bucketSortMetaData } from 'src/app/core/algorithms/sorting-meta-data';
 })
 export class BucketSortComponent implements OnInit {
   bucketSortMetaData = bucketSortMetaData;
-  constructor() { }
+  constructor(
+    private highlightSyntax: HighlightService
+  ) { }
 
   ngOnInit(): void {
+    this.highlightSyntax.highlightAll();
   }
 
 }

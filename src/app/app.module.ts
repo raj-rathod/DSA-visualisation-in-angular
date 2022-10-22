@@ -26,9 +26,9 @@ import { FormsModule } from '@angular/forms';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    SharedModule
+    SharedModule,
   ],
-  providers: [],
+  
   bootstrap: [AppComponent]
 })
 export class AppModule { }

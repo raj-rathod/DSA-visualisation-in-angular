@@ -53,8 +53,12 @@ export class SingleLinkedListComponent implements OnInit {
   sideDrawer(): void{
     if(this.menuState === 'out'){
       this.menuState = 'in';
+      document.body.style.overflow = 'hidden';
+      document.body.style.marginRight = '8px';
     }else{
       this.menuState = 'out';
+      document.body.style.overflow = 'visible';
+      document.body.style.marginRight = '0px';
     }
   }
 

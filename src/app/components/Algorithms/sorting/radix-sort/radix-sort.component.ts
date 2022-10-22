@@ -10,7 +10,6 @@ export class RadixSortComponent implements OnInit {
   radixSortMetaData = radixSortMetaData;
   constructor() { }
 
-  ngOnInit(): void {
+  ngOnInit(): void { 
   }
-
 }

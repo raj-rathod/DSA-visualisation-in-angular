@@ -13,9 +13,11 @@
     backdrop-filter: blur(7.7px);
     -webkit-backdrop-filter: blur(7.7px);
     border: 1px solid rgba(16, 203, 236, 0.6);
-
     border-radius: 10px 0px 0px 10px;
     overflow: auto;
+}
+#code-highlight-conatiner{
+    padding: 24px;
 }
 @media(max-width:992px){
     :host{

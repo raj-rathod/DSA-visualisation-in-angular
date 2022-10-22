@@ -1,4 +1,5 @@
 import { Helper } from "src/app/helper/helper";
+import { CodeHighLight } from "src/app/shared/interfaces/code-highlight.interface";
 import { DS } from "src/app/shared/interfaces/data-structure.interface";
 
 const defination: string = "A linked list is a linear data structure as well as a dynamic data structure."+
@@ -75,4 +76,20 @@ export const linkedListMetaData: DS = {
      advantage: Helper.setListwithTitleHtml('Advantages', advantage),
      disadvantage: Helper.setListwithTitleHtml('Disadvantage', disadvantage),
      
+}
+
+export const SingleLinkedListCode:CodeHighLight={
+     title:`Single Linked List`,
+     codes:[
+     {
+     description:`Single linked node class code snippet`,
+     code:`console.log('Hello world');
+    console.log('Hello world');`
+     },
+     {
+     description:`Single linked node class code snippet`,
+     code:`console.log('Hello world');
+    console.log('Hello world');`
+     }
+     ]
 }

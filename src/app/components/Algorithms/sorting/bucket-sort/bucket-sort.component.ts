@@ -34,7 +34,6 @@ export class BucketSortComponent implements OnInit {
     }else{
       this.menuState = 'out';
     }
-   
   }
 
 }

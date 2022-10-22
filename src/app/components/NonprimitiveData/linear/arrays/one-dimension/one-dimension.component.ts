@@ -171,7 +171,6 @@ export class OneDimensionComponent implements OnInit {
     this.updateOperationStep = this.updateOperations.UpdateAtPosition;
     const matDialogRef = this.matDialog.open(DoubleValueInputDialogComponent, {
       disableClose: true,
-
       data: insertAtIndex,
     });
     matDialogRef.afterClosed().subscribe((result) => {

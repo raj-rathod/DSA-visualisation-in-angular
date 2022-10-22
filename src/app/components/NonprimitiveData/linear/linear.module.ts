@@ -11,6 +11,7 @@ import { TwoDimensionComponent } from './arrays/two-dimension/two-dimension.comp
 import { SingleLinkedListComponent } from './linked-list/single-linked-list/single-linked-list.component';
 import { DoubleLinkedListComponent } from './linked-list/double-linked-list/double-linked-list.component';
 import { CircularLinkedListComponent } from './linked-list/circular-linked-list/circular-linked-list.component';
+import { SharedModule } from 'src/app/shared/components/shared.module';
 
 
 @NgModule({
@@ -29,6 +30,7 @@ import { CircularLinkedListComponent } from './linked-list/circular-linked-list/
     CommonModule, 
     LinearDataRoutingModule,
     MatDialogModule ,
+    SharedModule
   ]
 })
 export class LinearDataModule {}

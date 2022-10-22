@@ -10,14 +10,29 @@ import {
 import { DoubleValueInputDialogComponent } from 'src/app/shared/components/double-value-input-dialog/double-value-input-dialog.component';
 import { SingleValueInputDialogComponent } from 'src/app/shared/components/single-value-input-dialog/single-value-input-dialog.component';
 import { DeletionOperations, InsertionOperations, Operations, UpdationOperations } from 'src/app/shared/enums/basic.enum';
-import { Node } from '../node';
+import { animate, state, style, transition, trigger } from '@angular/animations';
+import { CodeHighLight } from 'src/app/shared/interfaces/code-highlight.interface';
+import { SingleLinkedListCode } from 'src/app/core/data-structures/linear/linked-list/linked-list-meta-data';
 @Component({
   selector: 'app-single-linked-list',
   templateUrl: './single-linked-list.component.html',
   styleUrls: ['./single-linked-list.component.css'],
+  animations: [
+    trigger('slideInOut', [
+      state('in', style({
+        transform: 'translate3d(0,0,0)'
+      })),
+      state('out', style({
+        transform: 'translate3d(100%, 0, 0)'
+      })),
+      transition('in => out', animate('400ms ease-in-out')),
+      transition('out => in', animate('400ms ease-in-out'))
+    ]),
+  ]
 })
 export class SingleLinkedListComponent implements OnInit {
   helper = Helper;
+  menuState = 'out';
   operationStep = -1;
   insertOperationStep = -1;
   deleteOperationStep = -1;
@@ -27,12 +42,26 @@ export class SingleLinkedListComponent implements OnInit {
   deleteOperations = DeletionOperations;
   updateOperations = UpdationOperations;
   singleLinkedList: SingleLinkedList;
+  codeHighlightData: CodeHighLight = SingleLinkedListCode;
   constructor( private matDialog: MatDialog) {
    this.singleLinkedList = new SingleLinkedList();
   }
 
   ngOnInit(): void {
-   
+  }
+
+  sideDrawer(): void{
+    if(this.menuState === 'out'){
+      this.menuState = 'in';
+    }else{
+      this.menuState = 'out';
+    }
+  }
+
+  viewSourceCode(): void {
+    this.operationSelection(this.operations.SourceCode);
+    this.sideDrawer();
+
   }
 
   operationSelection(index: number): void {

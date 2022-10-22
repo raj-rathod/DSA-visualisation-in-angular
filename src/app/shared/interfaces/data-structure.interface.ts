@@ -1,3 +1,5 @@
+import { CodeHighLight } from "./code-highlight.interface";
+
 export interface DS{
      defination: string;
      properties: string;
@@ -11,4 +13,5 @@ export interface DS{
      memoryRepresentation?: string;
      terminologies?: string;
      other?: string;
+     souurceCode?:CodeHighLight;
 }

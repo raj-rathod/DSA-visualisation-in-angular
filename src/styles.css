@@ -64,26 +64,26 @@ pre[class*="language-"] {
 .box-data {
   background: rgba(16, 203, 236, 0.76);
   border-radius: 8px !important;
-  color: white;
+  color: #000;
   box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
   font-weight: 500;
   min-width: fit-content;
 }
 
 .box-data:hover {
-  color: #000;
+  color: white;
 }
 
 .box {
   background: rgba(16, 203, 236, 0.76);
   border-radius: 8px !important;
-  color: white;
+  color: #000;
   font-weight: 500;
   min-width: fit-content;
 }
 
 .box:hover {
-  color: #000;
+  color: white;
 }
 
 .box-active {
@@ -100,7 +100,7 @@ pre[class*="language-"] {
 
 .btn-bg {
   background: rgba(16, 203, 236, 0.76);
-  color: white;
+  color: black;
   box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
   font-weight: 700;
 }
@@ -108,7 +108,7 @@ pre[class*="language-"] {
 .btn-bg-unactive {
   background: rgba(16, 203, 236, 0.76);
   box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
-  color: white;
+  color: black;
   font-weight: 700;
   opacity: 0.5;
 }

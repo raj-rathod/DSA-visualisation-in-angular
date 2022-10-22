@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NavigationEnd, NavigationStart, Router } from '@angular/router';
+import { NavigationEnd, Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -7,7 +7,9 @@ import { NavigationEnd, NavigationStart, Router } from '@angular/router';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  constructor(private router: Router) { }
+  constructor(
+    private router: Router,
+  ) { }
 
   ngOnInit() {
       this.router.events.subscribe((evt) => {
@@ -16,5 +18,6 @@ export class AppComponent {
           }
           window.scrollTo(0, 0)
       });
+      
   }
 }

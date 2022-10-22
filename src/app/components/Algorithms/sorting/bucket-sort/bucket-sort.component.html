@@ -8,14 +8,5 @@
 <div class="mt-md-4 mt-3" [innerHtml]="bucketSortMetaData.other"></div>
 <div class="mt-md-4 mt-3" [innerHtml]="bucketSortMetaData.advantage"></div>
 <div class="mt-md-4 mt-3" [innerHtml]="bucketSortMetaData.disadvantage"></div>
-<pre class="language-javascript">
-    <code>
-        const test = 'test';
-        console.log('Hello world');
-    </code>
-</pre>
-<div class="btn btn-primary"(click)="sideDrawer()">
-  Test
-</div>
 
-<app-code-syntax [@slideInOut]="menuState"></app-code-syntax>
+<app-code-syntax [@slideInOut]="menuState" (sideDrawerClose)="sideDrawer()"></app-code-syntax>

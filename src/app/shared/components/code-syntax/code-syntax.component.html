@@ -1,1 +1,19 @@
-<p>code-syntax works!</p>
+<section>
+    <div class="btn btn-warning float-start"(click)="closeDrawer()">
+       <p class="m-0 text-light">Cancel</p>
+    </div>
+    <h2 class="mb-4 text-center">{{codeHighlight.title}}</h2>
+
+    <section>
+        <ng-container *ngFor="let codeItem of codeHighlight.codes">
+    <p>{{codeItem?.description}}</p>
+    <pre>
+    <code class="language-javascript">
+    const test = 'test';
+    console.log('Hello world');
+    </code>
+    </pre>
+        </ng-container>
+    </section>
+   
+</section>

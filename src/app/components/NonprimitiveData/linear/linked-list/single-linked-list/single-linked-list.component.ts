@@ -65,7 +65,6 @@ export class SingleLinkedListComponent implements OnInit {
   viewSourceCode(): void {
     this.operationSelection(this.operations.SourceCode);
     this.sideDrawer();
-
   }
 
   operationSelection(index: number): void {

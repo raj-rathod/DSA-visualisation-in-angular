@@ -29,6 +29,13 @@
         (click)="operationSelection(3)">
             <p class="m-0">Deletion</p>
         </div>
+        <div 
+        [class]="operations.SourceCode === operationStep 
+        ?'box box-active p-lg-2 p-1 px-lg-3 px-2 tab me-lg-4 me-3 mb-2'
+        :'box p-lg-2 p-1 px-lg-3 px-2 tab me-lg-4 me-3 mb-2'"
+        (click)="viewSourceCode()">
+            <p class="m-0">View Source Code</p>
+        </div>
      </ng-container>
 </div>
 <ng-container *ngIf="operations.Insertion === operationStep && doubleLinkedList.head !== null">
@@ -115,3 +122,4 @@
     Double linked list
 </h5>
 <div class="mt-4 d-flex horizontal-scroll" [innerHTML]="helper.doubleLinkedList(doubleLinkedList.head)"></div>
+<app-code-syntax [codeHighlight]="codeHighlightData" [@slideInOut]="menuState" (sideDrawerClose)="sideDrawer()"></app-code-syntax>

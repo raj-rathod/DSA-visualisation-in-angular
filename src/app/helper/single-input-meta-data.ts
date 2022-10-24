@@ -13,6 +13,12 @@ export const likedListInput: SingleInputField ={
    multiple:true
 }
 
+export const TreeInput: SingleInputField ={
+   title: "Enter the tree elements",
+   placeholder: "space separated numbers like 1 2 3",
+   multiple:true
+}
+
 export const singleInput: SingleInputField ={
    title: "Enter the single input",
    placeholder:"Enter value",

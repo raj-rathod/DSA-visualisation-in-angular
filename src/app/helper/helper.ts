@@ -23,6 +23,7 @@ export class Helper{
      }
 
      static treeRepresentation(node: any):string {
+          if(node === null) return '';
           const { data, leftChild, rightChild } = node;
           return `
           <div class="node-element">
@@ -144,6 +145,36 @@ export class Helper{
                          <p class="m-0 ms-1">Null</p>
                     </div>`;
           }
+     }
+
+     static arrayRepresent(arr: number[]): string {
+         let arrHtml= `<div class="d-flex horizontal-scroll">
+         <div class='me-lg-3 me-2 mb-2'>
+             <div class='border border-2 border-info'>
+               <div class="tab w-100 px-lg-3 px-2 py-lg-2 py-1 text-center
+                    border-bottom border-2 border-danger"
+                    >
+                   <p class="m-0">Index</p>
+               </div>
+               <div class='tab w-100 px-lg-3 px-2 py-lg-2 py-1 text-center'>
+                 <p class="m-0">Data</p>
+               </div>
+             </div>
+         </div>`;
+         let arrIterations = ``;
+         arr.forEach((item, index)=>{
+            arrIterations+=`<div class='me-lg-3 me-2 mb-2' *ngFor="let data of createdArr; let i = index">
+            <div class='border border-2 border-info'>
+               <div class="index tab w-100 px-lg-3 px-2 py-lg-2 py-1 text-center border-bottom border-2 border-danger">
+                   <p class="m-0">${index}</p>
+               </div>
+               <div class="data tab w-100 px-lg-3 px-2 py-lg-2 py-1 text-center">
+                 <p class="m-0">${item}</p>
+               </div>
+            </div>
+         </div>`
+         });
+         return arrHtml+= arrIterations + `</div>`;
      }
     
 }

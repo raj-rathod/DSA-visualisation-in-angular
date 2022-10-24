@@ -70,13 +70,13 @@
         <p class="m-0">Post-order Traversal</p>
     </div>
 </div>
+<div [innerHtml]="traversalData" *ngIf="operations.Traversal === operationStep"></div>
 <div class="horizontal-scroll mt-2" *ngIf="binaryTree.root!==null">
     <div class="tree">
         <div class="node node--root" [innerHTML]="helper.treeRepresentation(binaryTree.root)"></div>
     </div>
 </div>
 <div [innerHtml]="treeInfo()" *ngIf="binaryTree.root!==null"></div>
-<div [innerHtml]="traversalData" *ngIf="operations.Traversal === operationStep"></div>
 <div class="mt-md-4 mt-3" [innerHtml]="binaryTreeMetaData.type"></div>
 <div class="mt-md-4 mt-3" [innerHtml]="binaryTreeMetaData.properties"></div>
 <div class="mt-md-4 mt-3" [innerHtml]="binaryTreeMetaData.applications"></div>

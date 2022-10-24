@@ -1,4 +1,5 @@
 import { Helper } from 'src/app/helper/helper';
+import { CodeHighLight } from 'src/app/shared/interfaces/code-highlight.interface';
 import { DS } from 'src/app/shared/interfaces/data-structure.interface';
 
 const treeData = {
@@ -95,8 +96,8 @@ const binaryTree = {
     'A binary tree is a tree data structure in which each node has at most two children, which are referred to as the left child and the right child.',
   example: 'assets/ds-image/binary-tree.jpg',
   properties: [
-    'The maximum number of nodes at level ‘l’ of a binary tree is 2l',
-    'The Maximum number of nodes in a binary tree of height ‘h’ is 2h – 1',
+    'The maximum number of nodes at level ‘l’ of a binary tree is 2**l',
+    'The Maximum number of nodes in a binary tree of height ‘h’ is 2**h – 1',
     'In a Binary Tree with N nodes, minimum possible height or the minimum number of levels is Log2(N+1)',
     'A Binary Tree with L leaves has at least | Log2L |+ 1   levels',
     ' In Binary tree where every node has 0 or 2 children, the number of leaf nodes is always one more than nodes with two children',
@@ -374,3 +375,140 @@ export const heapMetaData: DS = {
     heapTree.applications
   ),
 };
+
+export const binaryTreeCodeData: CodeHighLight = {
+   title:`Binary Tree`,
+   codes:[
+    {
+      description:`Node class of the binary tree`,
+      code:`export class BinaryTreeNode {
+        leftChild: BinaryTreeNode | any;
+        rightChild: BinaryTreeNode | any;
+        data: number;
+      
+        constructor(data: number) {
+          this.leftChild = null;
+          this.rightChild = null;
+          this.data = data;
+        }
+    }`
+    },
+    {
+      description:`Convert an array into a binary tree`,
+      code:`insertNodeAtLevel(arr: number[], index: number): BinaryTreeNode {
+        let node: BinaryTreeNode | any = null;
+        if (index < arr.length) {
+          node = new BinaryTreeNode(arr[index]);
+          node.leftChild = this.insertNodeAtLevel(arr, 2 * index + 1);
+          node.rightChild = this.insertNodeAtLevel(arr, 2 * index + 2);
+        }
+        return node;
+    }`
+    },
+    {
+      description:`Height of binary tree`,
+      code:`heightOfBinaryTree(root: BinaryTreeNode): number {
+        if (root === null) return 0;
+        let lHeight = this.heightOfBinaryTree(root.leftChild) + 1;
+        let rHeight = this.heightOfBinaryTree(root.rightChild) + 1;
+        return Math.max(lHeight, rHeight);
+    }`
+    },
+    {
+      description:`Total nodes in the binary tree`,
+      code:`totalNodesCount(root: BinaryTreeNode): number {
+        if (root === null) return 0;
+        let count = 1;
+        count += this.totalNodesCount(root.leftChild);
+        count += this.totalNodesCount(root.rightChild);
+        return count;
+    }`
+    },
+    {
+      description:`Get Last Node of binary tree`,
+      code:`getLastNodeItsParent(
+        root: BinaryTreeNode | null,
+        parentNode: BinaryTreeNode | null,
+        level: number
+      ): void {
+        if (root == null) {
+          return;
+        }
+        if (level === 1) {
+          this.lastNode = root;
+          this.lastNodeParent = parentNode;
+        }
+        this.getLastNodeItsParent(root.leftChild, root, level - 1);
+        this.getLastNodeItsParent(root.rightChild, root, level - 1);
+    }`
+    },
+    {
+      description:`Delete last node from the binary tree`,
+      code:`deleteLastNode(root: BinaryTreeNode): void {
+        if (root === null) {
+          return;
+        }
+        const treeHeight = this.heightOfBinaryTree(root);
+        this.getLastNodeItsParent(root, null, treeHeight);
+        if (this.lastNode !== null && this.lastNodeParent !== null) {
+          if (this.lastNodeParent?.rightChild != null) {
+            this.lastNodeParent.rightChild = null;
+          } else {
+            this.lastNodeParent.leftChild = null;
+          }
+        } else {
+          this.root = null;
+        }
+    }`
+    },
+    {
+      description:`Search a node in the binary tree`,
+      code:`searchNode(root: BinaryTreeNode, key: number): void {
+        if (root === null || this.findNode != null) {
+          return;
+        }
+    
+        if (root.data === key) {
+          this.findNode = root;
+          return;
+        }
+    
+        this.searchNode(root.leftChild, key);
+        this.searchNode(root.rightChild, key);
+    }`
+    },
+    {
+      description:`In-order traversal of binary tree`,
+      code:`inOrderTraversal(root: BinaryTreeNode): number[] {
+        let nodeData: number[] = [];
+        if (root === null) return [];
+        nodeData = nodeData.concat(this.inOrderTraversal(root.leftChild));
+        nodeData.push(root.data);
+        nodeData = nodeData.concat(this.inOrderTraversal(root.rightChild));
+        return nodeData;
+    }`
+    },
+    {
+      description:`Pre-order traversal of binary tree`,
+      code:` preOrderTraversal(root: BinaryTreeNode): number[] {
+        let nodeData: number[] = [];
+        if (root === null) return [];
+        nodeData.push(root.data);
+        nodeData = nodeData.concat(this.preOrderTraversal(root.leftChild));
+        nodeData = nodeData.concat(this.preOrderTraversal(root.rightChild));
+        return nodeData;
+    }`
+    },
+    {
+      description:`Post-order traversal of binary tree`,
+      code:`postOrderTraversal(root: BinaryTreeNode): number[] {
+        let nodeData: number[] = [];
+        if (root === null) return [];
+        nodeData = nodeData.concat(this.postOrderTraversal(root.leftChild));
+        nodeData = nodeData.concat(this.postOrderTraversal(root.rightChild));
+        nodeData.push(root.data);
+        return nodeData;
+    }`
+    },
+   ]
+}

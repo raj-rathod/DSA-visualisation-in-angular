@@ -5,7 +5,9 @@ export enum Operations{
     Deletion,
     Reverse,
     Rotate,
-    SourceCode
+    SourceCode,
+    Search,
+    Traversal,
 }
 
 export enum InsertionOperations{
@@ -24,4 +26,10 @@ export enum UpdationOperations{
     UpdateAtFirst = 0,
     UpdateAtEnd,
     UpdateAtPosition
+}
+
+export enum TraversalOperations{
+    Inorder= 0,
+    Preorder,
+    Postorder
 }

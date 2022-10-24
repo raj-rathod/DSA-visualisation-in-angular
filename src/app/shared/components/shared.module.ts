@@ -5,13 +5,15 @@ import { SingleValueInputDialogComponent } from './single-value-input-dialog/sin
 import { DoubleValueInputDialogComponent } from './double-value-input-dialog/double-value-input-dialog.component';
 import { MatrixInputDialogComponent } from './matrix-input-dialog/matrix-input-dialog.component';
 import { CodeSyntaxComponent } from './code-syntax/code-syntax.component';
+import { SearchResultComponent } from './search-result/search-result.component';
 
 @NgModule({
   declarations: [
      SingleValueInputDialogComponent,
      DoubleValueInputDialogComponent,
      MatrixInputDialogComponent,
-     CodeSyntaxComponent
+     CodeSyntaxComponent,
+     SearchResultComponent
   ],
   imports: [
     CommonModule,

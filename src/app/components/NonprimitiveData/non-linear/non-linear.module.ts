@@ -10,6 +10,8 @@ import { BinarySearchTreeComponent } from './tree/binary-search-tree/binary-sear
 import { AvlTreeComponent } from './tree/avl-tree/avl-tree.component';
 import { BTreeComponent } from './tree/b-tree/b-tree.component';
 import { HeapTreeComponent } from './tree/heap-tree/heap-tree.component';
+import { MatDialogModule } from '@angular/material/dialog';
+import { SharedModule } from 'src/app/shared/components/shared.module';
 
 
 @NgModule({
@@ -24,6 +26,11 @@ import { HeapTreeComponent } from './tree/heap-tree/heap-tree.component';
     BTreeComponent,
     HeapTreeComponent
   ],
-  imports: [CommonModule, NonLinearDataRoutingModule]
+  imports: [
+    CommonModule, 
+    NonLinearDataRoutingModule,
+    MatDialogModule,
+    SharedModule
+  ]
 })
 export class NonLinearDataModule {}

@@ -29,7 +29,7 @@ import { SharedModule } from 'src/app/shared/components/shared.module';
   imports: [
     CommonModule, 
     LinearDataRoutingModule,
-    MatDialogModule ,
+    MatDialogModule,
     SharedModule
   ]
 })

@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { AlgorithmComponent } from './layout/algorithm/algorithm.component';
 import { DataStructureComponent } from './layout/data-structure/data-structure.component';
 import { HomeComponent } from './layout/home/home.component';
+import { PageNotFoundComponent } from './layout/page-not-found/page-not-found.component';
 
 const routes: Routes = [
   {
@@ -31,7 +32,7 @@ const routes: Routes = [
             (m) => m.NonPrimitiveDataModule),
   },
   {
-    path: '**', component: HomeComponent
+    path: '**', component: PageNotFoundComponent
   }
 ];
 

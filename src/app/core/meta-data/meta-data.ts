@@ -37,6 +37,12 @@ export const socialLinkes: SocialLink[] = [
 
     },
     {
+        name: "Twitter",
+        image:"assets/icons/twitter.svg",
+        url: "https://twitter.com/Rajesh946055"
+
+    },
+    {
         name: "github",
         image: "assets/icons/github.png",
         url: "https://github.com/raj-rathod"

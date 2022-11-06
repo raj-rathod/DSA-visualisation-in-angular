@@ -10,6 +10,7 @@ import { FooterComponent } from './layout/footer/footer.component';
 import { NavbarComponent } from './layout/navbar/navbar.component';
 import { SearchRoutePipe } from './shared/pipes/search-route';
 import { FormsModule } from '@angular/forms';
+import { PageNotFoundComponent } from './layout/page-not-found/page-not-found.component';
 
 
 @NgModule({
@@ -20,6 +21,7 @@ import { FormsModule } from '@angular/forms';
     DataStructureComponent,
     FooterComponent,
     NavbarComponent,
+    PageNotFoundComponent,
   ],
   imports: [
     FormsModule,

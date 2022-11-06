@@ -58,8 +58,8 @@ const selectionSortData = {
     Initially, the sorted part is empty and the unsorted part is the entire list. <br>
     The smallest element is selected from the unsorted array and swapped with the leftmost element, and that element becomes 
     a part of the sorted array. This process continues moving unsorted array boundary by one element to the right.`,
-    flowChart:"assets/ds-image/DSA1.jpg",
-    explainImage:"assets/ds-image/DSA1.jpg",
+    flowChart:"assets/ds-image/DSA-404.webp",
+    explainImage:"assets/ds-image/DSA-404.webp",
     workingProcedure:[
         'Initialize minimum value(minValue) to location 0.',
         'Traverse the array to find the minimum element in the array.',
@@ -107,8 +107,8 @@ const insertionSortData = {
   defination: `Insertion sort is a simple sorting algorithm that works similar to the way you sort playing cards 
     in your hands. The array is virtually split into a sorted and an unsorted part. Values from the unsorted part 
     are picked and placed at the correct position in the sorted part`,
-  flowChart:"assets/ds-image/DSA1.jpg",
-  explainImage:"assets/ds-image/DSA1.jpg",
+  flowChart:"assets/ds-image/DSA-404.webp",
+  explainImage:"assets/ds-image/DSA-404.webp",
   workingProcedure:[
     'Iterate from arr[1] to arr[N] over the array',
     'Compare the current element (key) to its predecessor',
@@ -175,8 +175,8 @@ const mergeSortData = {
     the merge operation is applied. Merge operation is the process of taking two smaller sorted arrays and 
     combining them to eventually make a larger one
   `,
-  flowChart:"assets/ds-image/DSA1.jpg",
-  explainImage:"assets/ds-image/DSA1.jpg",
+  flowChart:"assets/ds-image/DSA-404.webp",
+  explainImage:"assets/ds-image/DSA-404.webp",
   workingProcedure:[
     'mergeSort(arr[], l,  r)',
     'If r > l',
@@ -245,8 +245,8 @@ const quickSortData = {
     The list is divided into two partitions such that "all elements to the left of pivot are smaller than the pivot 
     and all elements to the right of pivot are greater than or equal to the pivot".
   `,
-  flowChart:"assets/ds-image/DSA1.jpg",
-  explainImage:"assets/ds-image/DSA1.jpg",
+  flowChart:"assets/ds-image/DSA-404.webp",
+  explainImage:"assets/ds-image/DSA-404.webp",
   workingProcedure:[
     'Consider the first element of the list as pivot (i.e., Element at first position in the list)',
     'Define two variables i and j. Set i and j to first and last elements of the list respectively',
@@ -314,8 +314,8 @@ const countingSortData = {
   defination: `Counting sort is a sorting algorithm that sorts the elements of an array by counting the number 
     of occurrences of each unique element in the array. The count is stored in an auxiliary array and 
     the sorting is done by mapping the count as an index of the auxiliary array.`,
-  flowChart:"assets/ds-image/DSA1.jpg",
-  explainImage:"assets/ds-image/DSA1.jpg",
+  flowChart:"assets/ds-image/DSA-404.webp",
+  explainImage:"assets/ds-image/DSA-404.webp",
   workingProcedure:[
     `Iterate through the input array to find the highest value`,
     `Declare a new array with the value 0 and a size of max+1`,
@@ -384,8 +384,8 @@ const radixSortData = {
   defination: `Radix sort is an algorithm that uses counting sort as a subroutine to sort an array of integers/strings in 
     either ascending or descending order. The main idea of radix sort revolves around applying counting sort digit by 
     digit on the given array`,
-  flowChart:"assets/ds-image/DSA1.jpg",
-  explainImage:"assets/ds-image/DSA1.jpg",
+  flowChart:"assets/ds-image/DSA-404.webp",
+  explainImage:"assets/ds-image/DSA-404.webp",
   workingProcedure:[
     `Find the maximum element of the array, let it be max`,
     `Find the number of digits in max, let it be k`,
@@ -449,8 +449,8 @@ const bucketSortData = {
   defination: `Bucket sort is a sorting technique that uses the Scatter-Gather-Approach to sort the array. 
     It divides the unsorted array into separate groups and calls them buckets. Sort the individual buckets, 
     and then gather them all together to form the final sorted array`,
-  flowChart: 'assets/ds-image/DSA1.jpg',
-  explainImage: 'assets/ds-image/DSA1.jpg',
+  flowChart: 'assets/ds-image/DSA-404.webp',
+  explainImage: 'assets/ds-image/DSA-404.webp',
   workingProcedure: [
     `If All the elements are in the range of [0,1] then no need to follow initial two steps
     and in third step create 10 empty buckets and in step four bucketIndex = array[i]*10`,

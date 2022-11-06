@@ -1,6 +1,22 @@
 {
   "name": "dsa-visualisation",
-  "version": "0.0.0",
+  "description": "DSA Visualization is a project on data structures and algorithms. In this project all points of data structures and algorithms like as working approach, properties, operations, applications, advantages and disadvantages are well explained and visualize the operations for better understanding",
+  "version": "0.0.1",
+  "keywords": [
+    "Dsa",
+    "Data structures and algorithms",
+    "leetcode solution",
+    "algorithms",
+    "data structures",
+    "faang interviews",
+    "dsa learning series",
+    "dsa questions",
+    "dsa practice",
+    "dsa visualization",
+    "faang preparation",
+    "faang questions",
+    "dsa project"
+  ],
   "scripts": {
     "ng": "ng",
     "start": "ng serve",

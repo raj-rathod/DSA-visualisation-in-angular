@@ -1,8 +1,84 @@
 <h1 class="text-center">Binary Search Tree</h1>
 <div class="mt-md-4 mt-3" [innerHtml]="binarySearchTreeMetaData.defination"></div>
 <div class="mt-md-4 mt-3" [innerHtml]="binarySearchTreeMetaData.example"></div>
+<div class="d-flex mt-4 horizontal-scroll">
+    <div 
+    [class]="operations.Creation === operationStep 
+    ?'box box-active p-lg-2 p-1 px-lg-3 px-2 tab me-lg-4 me-3 mb-2'
+    :'box p-lg-2 p-1 px-lg-3 px-2 tab me-lg-4 me-3 mb-2'"
+    (click)="createBinarySearchTree()">
+        <p class="m-0">Create Binary Tree</p>
+    </div>
+    <ng-container *ngIf="binarySearchTree.root !== null">
+        <div 
+        [class]="operations.Insertion === operationStep 
+        ?'box box-active p-lg-2 p-1 px-lg-3 px-2 tab me-lg-4 me-3 mb-2'
+        :'box p-lg-2 p-1 px-lg-3 px-2 tab me-lg-4 me-3 mb-2'"
+        (click)="insertNode()">
+            <p class="m-0">Insert Node</p>
+        </div>
+        <div 
+        [class]="operations.Deletion === operationStep 
+        ?'box box-active p-lg-2 p-1 px-lg-3 px-2 tab me-lg-4 me-3 mb-2'
+        :'box p-lg-2 p-1 px-lg-3 px-2 tab me-lg-4 me-3 mb-2'"
+        (click)="deleteNode()">
+            <p class="m-0">Delete Node</p>
+        </div>
+        <div 
+        [class]="operations.Search === operationStep 
+        ?'box box-active p-lg-2 p-1 px-lg-3 px-2 tab me-lg-4 me-3 mb-2'
+        :'box p-lg-2 p-1 px-lg-3 px-2 tab me-lg-4 me-3 mb-2'"
+        (click)="searchNode()">
+            <p class="m-0">Search Node</p>
+        </div>
+        <div 
+        [class]="operations.Traversal === operationStep 
+        ?'box box-active p-lg-2 p-1 px-lg-3 px-2 tab me-lg-4 me-3 mb-2'
+        :'box p-lg-2 p-1 px-lg-3 px-2 tab me-lg-4 me-3 mb-2'"
+        (click)="treeTraversal()">
+            <p class="m-0">Tree Traversal</p>
+        </div>
+    </ng-container>
+    <div 
+    [class]="operations.SourceCode === operationStep 
+    ?'box box-active p-lg-2 p-1 px-lg-3 px-2 tab me-lg-4 me-3 mb-2'
+    :'box p-lg-2 p-1 px-lg-3 px-2 tab me-lg-4 me-3 mb-2'"
+    (click)="viewSourceCode()">
+        <p class="m-0">View Code</p>
+    </div>
+</div>
+<div class="d-flex mt-4 horizontal-scroll" *ngIf="operations.Traversal === operationStep">
+    <div 
+    [class]="traversalOptions.Inorder === traversalOptionStep 
+    ?'box box-active p-lg-2 p-1 px-lg-3 px-2 tab me-lg-4 me-3 mb-2'
+    :'box p-lg-2 p-1 px-lg-3 px-2 tab me-lg-4 me-3 mb-2'"
+    (click)="inorderTraversal()">
+        <p class="m-0">In-order Traversal</p>
+    </div>
+    <div 
+    [class]="traversalOptions.Preorder === traversalOptionStep 
+    ?'box box-active p-lg-2 p-1 px-lg-3 px-2 tab me-lg-4 me-3 mb-2'
+    :'box p-lg-2 p-1 px-lg-3 px-2 tab me-lg-4 me-3 mb-2'"
+    (click)="preorderTraversal()">
+        <p class="m-0">Pre-order Traversal</p>
+    </div>
+    <div 
+    [class]="traversalOptions.Postorder === traversalOptionStep 
+    ?'box box-active p-lg-2 p-1 px-lg-3 px-2 tab me-lg-4 me-3 mb-2'
+    :'box p-lg-2 p-1 px-lg-3 px-2 tab me-lg-4 me-3 mb-2'"
+    (click)="postorderTraversal()">
+        <p class="m-0">Post-order Traversal</p>
+    </div>
+</div>
+<div [innerHtml]="traversalData" *ngIf="operations.Traversal === operationStep"></div>
+<div class="horizontal-scroll mt-2" *ngIf="binarySearchTree.root!==null">
+    <div class="tree">
+        <div class="node node--root" [innerHTML]="helper.treeRepresentation(binarySearchTree.root)"></div>
+    </div>
+</div>
 <div class="mt-md-4 mt-3" [innerHtml]="binarySearchTreeMetaData.properties"></div>
 <div class="mt-md-4 mt-3" [innerHtml]="binarySearchTreeMetaData.operations"></div>
 <div class="mt-md-4 mt-3" [innerHtml]="binarySearchTreeMetaData.applications"></div>
 <div class="mt-md-4 mt-3" [innerHtml]="binarySearchTreeMetaData.advantage"></div>
 <div class="mt-md-4 mt-3" [innerHtml]="binarySearchTreeMetaData.disadvantage"></div>
+<app-code-syntax [codeHighlight]="codeHighlightData" [@slideInOut]="menuState" (sideDrawerClose)="sideDrawer()"></app-code-syntax>

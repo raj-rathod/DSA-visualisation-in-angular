@@ -10,49 +10,49 @@
   "icons": [
     {
       "src": "assets/icons/dsa-logo-72.png",
-      "sizes": "72x72",
+      "sizes": "72x70",
       "type": "image/png",
       "purpose": "maskable any"
     },
     {
       "src": "assets/icons/dsa-logo-96.png",
-      "sizes": "96x96",
+      "sizes": "96x93",
       "type": "image/png",
       "purpose": "maskable any"
     },
     {
       "src": "assets/icons/dsa-logo-128.png",
-      "sizes": "128x128",
+      "sizes": "128x124",
       "type": "image/png",
       "purpose": "maskable any"
     },
     {
       "src": "assets/icons/dsa-logo-144.png",
-      "sizes": "144x144",
+      "sizes": "144x140",
       "type": "image/png",
       "purpose": "maskable any"
     },
     {
-      "src": "assets/icons/icon-152x152.png",
-      "sizes": "152x152",
+      "src": "assets/icons/dsa-logo-152.png",
+      "sizes": "152x148",
       "type": "image/png",
       "purpose": "maskable any"
     },
     {
       "src": "assets/icons/dsa-logo-192.png",
-      "sizes": "192x192",
+      "sizes": "192x186",
       "type": "image/png",
       "purpose": "maskable any"
     },
     {
       "src": "assets/icons/dsa-logo-384.png",
-      "sizes": "384x384",
+      "sizes": "384x373",
       "type": "image/png",
       "purpose": "maskable any"
     },
     {
       "src": "assets/icons/dsa-logo-512.png",
-      "sizes": "512x512",
+      "sizes": "512x497",
       "type": "image/png",
       "purpose": "maskable any"
     }

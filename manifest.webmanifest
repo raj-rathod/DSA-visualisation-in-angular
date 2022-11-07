@@ -1,0 +1,60 @@
+{
+  "name": "DSA | Visualization",
+  "short_name": "DSA",
+  "theme_color": "#10cbecc2",
+  "background_color": "#fafafa",
+  "description": "All the points of data structures and algorithms like as working approach, properties, operations, applications, advantages and disadvantages are well explained and visualize the operations for better understanding",
+  "display": "standalone",
+  "scope": "./",
+  "start_url": "./",
+  "icons": [
+    {
+      "src": "assets/icons/dsa-logo-72.png",
+      "sizes": "72x70",
+      "type": "image/png",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "assets/icons/dsa-logo-96.png",
+      "sizes": "96x93",
+      "type": "image/png",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "assets/icons/dsa-logo-128.png",
+      "sizes": "128x124",
+      "type": "image/png",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "assets/icons/dsa-logo-144.png",
+      "sizes": "144x140",
+      "type": "image/png",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "assets/icons/dsa-logo-152.png",
+      "sizes": "152x148",
+      "type": "image/png",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "assets/icons/dsa-logo-192.png",
+      "sizes": "192x186",
+      "type": "image/png",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "assets/icons/dsa-logo-384.png",
+      "sizes": "384x373",
+      "type": "image/png",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "assets/icons/dsa-logo-512.png",
+      "sizes": "512x497",
+      "type": "image/png",
+      "purpose": "maskable any"
+    }
+  ]
+}

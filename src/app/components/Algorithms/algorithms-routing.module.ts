@@ -4,7 +4,7 @@ import { AlgorithmComponent } from 'src/app/layout/algorithm/algorithm.component
 
 const routes: Routes = [
   {
-      path: '', component: AlgorithmComponent 
+      path: '', component: AlgorithmComponent, 
   },
   {
       path:'backtracking',

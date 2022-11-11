@@ -79,6 +79,18 @@ export const pageMetaData = {
         keywords:`Algorithms, Algorithms Visualization, Sort, Search, Divide and conquer, Recursive, Advanced Algorithms, 
            Backtracking, Greedy, Dynamic Programming, Properties, Time Complexity, Space Complexity, Working Approach, Flowchart`,
     },
+    primitiveDataType:{
+        title:"Primitive Data Types | DSA Visualization",
+        description:`Primitive data types are a set of basic data types from which all other data types are constructed`,
+        keywords:`Primitive Data Types, Integer, Float, Double, Boolean, String, Character`
+    },
+    nonPrimitiveDataType:{
+        title:"Non-primitive Data Types | DSA Visualization",
+        description:`Non-Primitive data types are user-defined data types and they can be easily created or modified by 
+        the users. They can be used to store multiple values and invoke methods to perform certain operations`,
+        keywords:`Non-Primitive data types, Array, Object, Class, Stack, Queue, Linked List, Single Linked List, 
+        Double Linked List, Circular Linked List, Trees, Trie, Heap, Graph, Hash Table , Advanced Data Structures`
+    },
     pageNotFound:{
         title:"404 Page Not Found | DSA Visualization",
         description:"Looking for something? We're sorry. The Web address you entered is not a functioning page on our site",

@@ -27,12 +27,14 @@ const routes: Routes = [
 
   {
     path:'primitive',
+    data: pageMetaData.primitiveDataType,
     loadChildren: () =>
           import('./components/primitiveData/primitivedata.module').then(
             (m) => m.PrimitiveDataModule),
   },
   {
     path:'non-primitive',
+    data: pageMetaData.nonPrimitiveDataType,
     loadChildren: () =>
           import('./components/NonprimitiveData/non-primitiveData.module').then(
             (m) => m.NonPrimitiveDataModule),

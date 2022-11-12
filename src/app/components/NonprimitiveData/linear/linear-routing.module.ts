@@ -11,29 +11,36 @@ import { SingleLinkedListComponent } from './linked-list/single-linked-list/sing
 import { QueueComponent } from './queue/queue.component';
 import { StackComponent } from './stack/stack.component';
 
-
 const routes: Routes = [
   {
-    path: '', redirectTo:'array', pathMatch:'full',
+    path: '',
+    redirectTo: 'array',
+    pathMatch: 'full',
   },
   {
-    path: 'array', 
+    path: 'array',
     data: pageMetaData.array,
     component: ArrayComponent,
   },
   {
-    path: 'stack', component: StackComponent, data: pageMetaData.stack
+    path: 'stack',
+    component: StackComponent,
+    data: pageMetaData.stack,
   },
   {
-    path: 'queue', component: QueueComponent, data: pageMetaData.queue
+    path: 'queue',
+    component: QueueComponent,
+    data: pageMetaData.queue,
   },
   {
-    path: 'linked-list', component: LinkedListComponent, data: pageMetaData.linkedList
-  }
+    path: 'linked-list',
+    component: LinkedListComponent,
+    data: pageMetaData.linkedList,
+  },
 ];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
 export class LinearDataRoutingModule {}

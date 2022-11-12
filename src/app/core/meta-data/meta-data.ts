@@ -122,5 +122,34 @@ export const pageMetaData = {
         application of the linked list and advantages and disadvantages of the linked list`,
         keywords:`Linked List, Single Linked List, Double Linked List, Circular Linked List, Linked List Operations, 
         Linked List Visualization, Linked List Properties, Linked List Operations, Reverse Linked List`
+    },
+    tree:{
+        title:"Tree Operations and Visualization | DSA Visualization",
+        description:`What is the tree in data structure, and what is the tree structure, and what is the application 
+        of the tree structure, and what is binary tree , binary search tree, avl tree etc. and what is the properties 
+        of tree structure, advantages and disadvantages of the tree structure`,
+        keywords: `Tree structure, Binary Tree, Avl Tree, Binary Search Tree, Delete A Node, Insert A Node, 
+        Height Of Tree, Level Of Tree, In-order Traversal, Pre-order Traversal, Post-order Traversal, Leaf Node, Root Node`,
+    },
+    graph:{
+        title:" Graph Operations and Visualization | DSA Visualization",
+        description:`What is the graph structure, and what is the application of the graph structure, graph operations 
+        and visualization, properties of the graph structure, advantages and disadvantages of the graph structure`,
+        keywords:`Graph Structure, Graph Operations, Graph Visualization, Graph Properties, Graph Advantages, Graph Disadvantages
+        Königsberg Bridge Problem, Shortest Path, Spanning Tree, Minimum Spanning Tree, Single Shortest Path, Dijkstra's Algorithm`
+    },
+    trie:{
+        title:"Trie Structure and Visualization | DSA Visualization",
+        description:`What is the trie structure, and what is the application of trie structure, properties of the trie structure,
+        advantages and disadvantages of the trie structure`,
+        keywords:`Trie Structure, Trie Properties, Trie Applications, Trie Advantages, Trie Disadvantages, Dictionary Search
+        Phone Directory Search, Auto Suggestion`,
+    },
+    hashTable:{
+        title:"Hashing and Hash table | Hash Function | DSA Visualization",
+        description:`What is hashing and hash function and what is hash table, properties of the hash function and hashing, 
+        sufficient hash function, applications of the hash table and hash function, advantages and disadvantages of hashing and hash table`,
+        keywords:`Hash Function, Hash Table, Hashing, Encription, Decription, Fastest Search Method`
     }
+
 }

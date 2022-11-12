@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { pageMetaData } from 'src/app/core/meta-data/meta-data';
 import { ArrayComponent } from './arrays/array/array.component';
 import { OneDimensionComponent } from './arrays/one-dimension/one-dimension.component';
 import { TwoDimensionComponent } from './arrays/two-dimension/two-dimension.component';
@@ -16,16 +17,18 @@ const routes: Routes = [
     path: '', redirectTo:'array', pathMatch:'full',
   },
   {
-    path: 'array', component: ArrayComponent,
+    path: 'array', 
+    data: pageMetaData.array,
+    component: ArrayComponent,
   },
   {
-    path: 'stack', component: StackComponent
+    path: 'stack', component: StackComponent, data: pageMetaData.stack
   },
   {
-    path: 'queue', component: QueueComponent
+    path: 'queue', component: QueueComponent, data: pageMetaData.queue
   },
   {
-    path: 'linked-list', component: LinkedListComponent,
+    path: 'linked-list', component: LinkedListComponent, data: pageMetaData.linkedList
   }
 ];
 

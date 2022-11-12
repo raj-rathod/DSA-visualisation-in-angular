@@ -38,6 +38,14 @@ _If you like this project, please leave me a star._ &#9733;
 - Sort
 - Search
 
+## Matrix Operations | Matrix Transpose | Matrix Diagonals | Matrix Adjacents | Matrix Visualization
+
+### What is the matrix?
+
+>Matrix, a set of numbers arranged in rows and columns so as to form a two-dimension array.
+
+<img src="https://raw.githubusercontent.com/raj-rathod/DSA-visualisation-in-angular/main/src/assets/ds-image/dsa-visualization-matrix-operations.webp"/>
+
 <hr>
 
 

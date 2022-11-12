@@ -26,7 +26,7 @@ _If you like this project, please leave me a star._ &#9733;
     - [Array](https://github.com/raj-rathod/DSA-visualisation-in-angular/tree/rajesh/src/app/components/NonprimitiveData/linear/arrays/README.md)
     - [Matrix](https://github.com/raj-rathod/DSA-visualisation-in-angular/tree/rajesh/src/app/components/NonprimitiveData/linear/arrays/README.md)
     - [Stack](https://github.com/raj-rathod/DSA-visualisation-in-angular/blob/rajesh/src/app/components/NonprimitiveData/linear/stack/README.md)
-    - [Queue](https://github.com/raj-rathod/DSA-visualisation-in-angular/blob/rajesh/src/app/components/NonprimitiveData/linear/queue/README.md)
+    - [Queue](https://github.com/raj-rathod/DSA-visualisation-in-angular/blob/rajesh/src/app/components/NonprimitiveData/linear/queue/README.MD)
     - Linked List
   - **Non-linear Data Structures**
     - Tree

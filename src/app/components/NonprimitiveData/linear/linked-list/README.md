@@ -5,7 +5,7 @@
 ![GitHub issues](https://img.shields.io/github/issues-raw/raj-rathod/DSA-visualisation-in-angular)
 
 <p align='center' >
-<img src="./src/assets/icons/dsa-logo.png"/>
+<img src="https://raw.githubusercontent.com/raj-rathod/DSA-visualisation-in-angular/main/src/assets/icons/dsa-logo.png"/>
 </p>
 
 # Data structure and algorithms visualization [![Tweet](https://img.shields.io/twitter/url/http/shields.io.svg?style=social)](https://twitter.com/intent/tweet?text=Visualization%20is%20the%20better%20way%20to%20understand%20of%20the%20things&url=https://raj-rathod.github.io/DSA-visualisation-in-angular/&via=Rajesh946055&hashtags=dsa,faang,datastructures,Algorithms,developers)
@@ -19,50 +19,27 @@ Visualization  is the better way to understand of the things
 
 _If you like this project, please leave me a star._ &#9733;
 
-## Table of Contents
+## Linked List | Linked List Operations | Linked List Properties | Linked List Applications | Linked List Visualization 
 
-- ### Data Structures
-  - **Linear Data Structures**
-    - [Array](https://github.com/raj-rathod/DSA-visualisation-in-angular/tree/rajesh/src/app/components/NonprimitiveData/linear/arrays/README.md)
-    - [Matrix](https://github.com/raj-rathod/DSA-visualisation-in-angular/tree/rajesh/src/app/components/NonprimitiveData/linear/arrays/README.md)
-    - [Stack](https://github.com/raj-rathod/DSA-visualisation-in-angular/blob/rajesh/src/app/components/NonprimitiveData/linear/stack/README.md)
-    - [Queue](https://github.com/raj-rathod/DSA-visualisation-in-angular/blob/rajesh/src/app/components/NonprimitiveData/linear/queue/README.MD)
-    - [Linked List](https://github.com/raj-rathod/DSA-visualisation-in-angular/tree/rajesh/src/app/components/NonprimitiveData/linear/linked-list/README.md)
-  - **Non-linear Data Structures**
-    - Tree
-    - Graph
-    - Trie
-    - Hash Table
-- ### Algorithms
-  - **Sorting**
-    - Selection Sort
-    - Insertion Sort
-    - Merge Sort 
-    - Quick Sort
-    - Counting Sort
-    - Radix Sort
-    - Bucket Sort
-    - Shell Sort
-    - Heap Sort
-  - **Searching**
-    - Linear Search
-    - Binary Search
-    - Jump Search
-    - Interpolation Search
-    - Exponential Search
-    - Fibonacci Search
-  - **Divide and Conquer**
-    - Merge Sort
-    - Quick Sort
-    - Strassen's Algorithm
-    - Closest Pair of Points
-    - Karatsuba Algorithm
-  - **Recursive**
-  - **Dynamic Programming**
-  - **Greedy**
-  - **Backtracking**
-  - **Hashing**
-  - **Randomized**
+### What is Linked List?
+
+>A linked list is a linear data structure as well as a dynamic data structure.A linked list consists of nodes where each node contains a data field and reference(address) to the next node in the list
+
+<img src="https://github.com/raj-rathod/DSA-visualisation-in-angular/blob/main/src/assets/ds-image/linked-list.jpg?raw=true">
+
+### Linked List Types
+- **Single Linked List:** A single linked list is the most common type of linked list. Each node have data and an address field that contains a reference to the next node
+- **Double Linked List:** In the double linked list, there are three fields that are the previous pointer, that contain a reference to the previous node.Then there is the data, and last you have the next pointer, that containes a reference to the next node. Thus you can go in both direction
+- **Circular Linked List:** The circular linked listis extremely similar to the single linked list. The only difference is that the last node is connected with first node, forming a circular loop in the circular linked list
+
+### Linked List Operations
+- Insertion
+- Deletion
+- Sort
+- Search
+
+<hr>
+
 
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
@@ -82,6 +59,3 @@ Please read the [Contribute guide](.github/CONTRIBUTING.md)
  Let me know your views or any changes or improvements or contribute to make better for others 
  
  :heart: ***Thank you all for Forking this repository and contribute***  :heart:
-
-
-

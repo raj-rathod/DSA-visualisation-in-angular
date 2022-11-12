@@ -95,5 +95,32 @@ export const pageMetaData = {
         title:"404 Page Not Found | DSA Visualization",
         description:"Looking for something? We're sorry. The Web address you entered is not a functioning page on our site",
         noIndex:"noindex"
+    },
+    array:{
+        title: "Array and Matrix Operations | DSA Visualization",
+        description: `What is an array and matrix, properties of array and matrix, algorithms of array and matrix operations,
+        applications of array and matrix, advantages and disadvantages of the array and matrix data structures`,
+        keywords:`Array, Multi-dimensional array, Matrix, Algorithms, Visual, Array Operations, Array Representation, Array Questions`
+    },
+    stack:{
+        title:"Stack Operations and Visualization | DSA Visualization",
+        description:`What is the stack, what is the use of the stack, stack operations and visualization, push and 
+        pop operations in stack, applications of the stack, properties of the stack, advantages and disadvantages of the stack`,
+        keywords:`Stack, Use Of Stack, Stack Operations, Stack Properties, Stack Applications, Push, Pop, Stack Overflow`
+    },
+    queue:{
+        title:"Queue Operations and Visualization | DSA Visualization",
+        description:`What is the queue, what is the use of the queue, queue operations and visualizations, enqueue and dequeue 
+        operations in the queue, application and properties of the queue, advantages and disadvantages of the queue`,
+        keywords:`Queue, Priority Queue, Queue Operations, Queue Properties, Queue Applications, Queue Advantages, 
+        Queue Disadvantages, Enqueue and Dequeue Operations`
+    },
+    linkedList:{
+        title:"Linked List Operations and Visualization | Dsa Visualization",
+        description:`What is the linked list, what is the use of the linked list, what is the single linked list, 
+        what is the use of the single linked list, what is the double linked list, what is the use of the double linked list,
+        application of the linked list and advantages and disadvantages of the linked list`,
+        keywords:`Linked List, Single Linked List, Double Linked List, Circular Linked List, Linked List Operations, 
+        Linked List Visualization, Linked List Properties, Linked List Operations, Reverse Linked List`
     }
 }

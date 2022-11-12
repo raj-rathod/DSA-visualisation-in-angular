@@ -19,7 +19,7 @@ Visualization  is the better way to understand of the things
 
 _If you like this project, please leave me a star._ &#9733;
 
-## Array | Array Operations | Array Properties | Advantages And Disadvantages of Array
+## Array | Array Operations | Array Properties | Array Applications | Array Visualization
 
 ### What is an array ?
 

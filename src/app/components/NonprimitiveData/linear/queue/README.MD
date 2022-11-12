@@ -19,17 +19,17 @@ Visualization  is the better way to understand of the things
 
 _If you like this project, please leave me a star._ &#9733;
 
-## Stack | Stack Operations | Stack Properties| Stack Application | Stack Visualization
+## Queue | Queue Operations | Queue Properties | Queue Applications | Queue Visualization 
 
-### What is stcack ?
+### What is queue?
 
->The stack data structure is a linear data structure that accompanies a principle known as LIFO(Last In First Out).
+>A Queue is a linear data structure which follows the particular order inwhich the operations are performed. The order is FIFO(First In Firts Out).
 
-<img src="https://github.com/raj-rathod/DSA-visualisation-in-angular/blob/main/src/assets/ds-image/stack.jpg?raw=true">
+<img src="https://github.com/raj-rathod/DSA-visualisation-in-angular/blob/main/src/assets/ds-image/queue.jpg?raw=true">
 
 ### Stack Operations
-- Push 
-- Pop
+- Enqueue
+- Dequeue
 - Peek
 
 <hr>

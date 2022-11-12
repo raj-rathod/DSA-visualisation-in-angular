@@ -23,8 +23,8 @@ _If you like this project, please leave me a star._ &#9733;
 
 - ### Data Structures
   - **Linear Data Structures**
-    - Array
-    - Matrix
+    - [Array](https://github.com/raj-rathod/DSA-visualisation-in-angular/tree/rajesh/src/app/components/NonprimitiveData/linear/arrays#readme)
+    - [Matrix](https://github.com/raj-rathod/DSA-visualisation-in-angular/tree/rajesh/src/app/components/NonprimitiveData/linear/arrays#readme)
     - Stack
     - Queue
     - Linked List

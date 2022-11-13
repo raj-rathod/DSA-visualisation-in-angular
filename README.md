@@ -20,6 +20,29 @@ Visualization  is the better way to understand of the things
 _If you like this project, please leave me a star._ &#9733;
 
 ## Table of Contents
+```mermaid
+graph TD;
+    DSA-Visualization-->Data-Structure;
+    DSA-Visualization-->Algorithms;
+    Data-Structure-->Linear;
+    Data-Structure-->Non-linear;
+    Linear-->Array;
+    Linear-->Stack;
+    Linear-->Queue;
+    Linear-->Linked-List;
+    Non-linear-->Tree;
+    Non-linear-->Graph;
+    Non-linear-->Trie;
+    Non-linear-->Hash-Table;
+    Algorithms-->Sorting;
+    Algorithms-->Searching;
+    Algorithms-->Divide-And-Conquer;
+    Algorithms-->Recursive;
+    Algorithms-->Dynamic-Programming;
+    Algorithms-->Greedy;
+    Algorithms-->Backtracking;
+    Algorithms-->Hashing; 
+```
 
 - ### Data Structures
   - **Linear Data Structures**

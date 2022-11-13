@@ -19,21 +19,16 @@ Visualization  is the better way to understand of the things
 
 _If you like this project, please leave me a star._ &#9733;
 
-## Tree | Tree Operations | Tree Properties | Tree Applications | Tree Visualization
+## Binary Search Tree | Binary Search Tree Operations | Binary Search Tree Properties | Binary Search Tree Applications | Binary Search Tree Visualization
 
-### What is the tree ?
+### What is the binary search tree ?
 
->A tree is a non-linear type of data structure that organizes data hierarchically. It consists of nodes connected by edges. Each node contains a value and may or may not have a child node
+>A binary search tree (BST), also called an ordered or sorted binary tree, is a rooted binary tree data structure with the key of each internal node being greater than all the keys in the respective node's left subtree and less than the ones in its right subtree. The time complexity of operations on the binary search tree is directly proportional to the height of the tree
 
-<img src="https://github.com/raj-rathod/DSA-visualisation-in-angular/blob/main/src/assets/ds-image/tree.jpg?raw=true">
+<img src="https://github.com/raj-rathod/DSA-visualisation-in-angular/blob/rajesh/src/assets/ds-image/binary-search-tree.jpg?raw=true">
 
-### Types of the tree
-- [Binary Tree](https://github.com/raj-rathod/DSA-visualisation-in-angular/blob/rajesh/src/app/components/NonprimitiveData/non-linear/tree/binary-tree/README.md)
-- [Binary Search Tree](https://github.com/raj-rathod/DSA-visualisation-in-angular/blob/rajesh/src/app/components/NonprimitiveData/non-linear/tree/binary-search-tree/README.md)
-- AVL Tree
-- Heap Tree
 
-### Tree Operations
+### Binary Search Tree Operations
 - Insert Node
 - Delete Node
 - Height of the Tree

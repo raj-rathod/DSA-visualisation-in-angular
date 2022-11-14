@@ -19,19 +19,13 @@ Visualization  is the better way to understand of the things
 
 _If you like this project, please leave me a star._ &#9733;
 
-## Tree | Tree Operations | Tree Properties | Tree Applications | Tree Visualization
+## AVL Tree | AVL Tree Operations | AVL Tree Properties | AVL Tree Applications | AVL Tree Visualization
 
-### What is the tree ?
+### What is the avl tree ?
 
->A tree is a non-linear type of data structure that organizes data hierarchically. It consists of nodes connected by edges. Each node contains a value and may or may not have a child node
+>An AVL tree in data structure is a binary tree that is self-balanced by checking the balance factor of every node. It means that the height of the left subtree and the right subtree is balanced. The balance factor should either be -1, 0, or 1. The maximum height difference between the left and right sub-trees can only be 1. In case, the difference is greater than 1, then we must re-balance the tree to make it valid using rotation techniques
 
-<img src="https://github.com/raj-rathod/DSA-visualisation-in-angular/blob/main/src/assets/ds-image/tree.jpg?raw=true">
-
-### Types of the tree
-- [Binary Tree](https://github.com/raj-rathod/DSA-visualisation-in-angular/blob/rajesh/src/app/components/NonprimitiveData/non-linear/tree/binary-tree/README.md)
-- [Binary Search Tree](https://github.com/raj-rathod/DSA-visualisation-in-angular/blob/rajesh/src/app/components/NonprimitiveData/non-linear/tree/binary-search-tree/README.md)
-- [AVL Tree](https://github.com/raj-rathod/DSA-visualisation-in-angular/blob/rajesh/src/app/components/NonprimitiveData/non-linear/tree/avl-tree/README.md)
-- Heap Tree
+<img src="https://github.com/raj-rathod/DSA-visualisation-in-angular/blob/rajesh/src/assets/ds-image/avl-tree.jpg?raw=true">
 
 ### Tree Operations
 - Insert Node
@@ -40,6 +34,8 @@ _If you like this project, please leave me a star._ &#9733;
 - Find Node
 - Levels of the Tree
 - Tree Traversal
+- Rotation
+
 
 <hr>
 

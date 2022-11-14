@@ -19,27 +19,23 @@ Visualization  is the better way to understand of the things
 
 _If you like this project, please leave me a star._ &#9733;
 
-## Tree | Tree Operations | Tree Properties | Tree Applications | Tree Visualization
+## Heap Tree | Heap Tree Operations | Heap Tree Properties | Heap Tree Applications | Heap Tree Visualization
 
-### What is the tree ?
+### What is the heap tree ?
 
->A tree is a non-linear type of data structure that organizes data hierarchically. It consists of nodes connected by edges. Each node contains a value and may or may not have a child node
+>A Heap is a special Tree-based data structure in which the tree is a complete binary tree. Generally, Heaps can be of two types:
+Max-Heap: In a Max-Heap the key present at the root node must be greatest among the keys present at all of it’s children. The same property must be recursively true for all sub-trees in that Binary Tree.
+Min-Heap: In a Min-Heap the key present at the root node must be minimum among the keys present at all of it’s children. The same property must be recursively true for all sub-trees in that Binary Tree.
 
-<img src="https://github.com/raj-rathod/DSA-visualisation-in-angular/blob/main/src/assets/ds-image/tree.jpg?raw=true">
+<img src="https://github.com/raj-rathod/DSA-visualisation-in-angular/blob/rajesh/src/assets/ds-image/heap-tree.jpg?raw=true">
 
-### Types of the tree
-- [Binary Tree](https://github.com/raj-rathod/DSA-visualisation-in-angular/blob/rajesh/src/app/components/NonprimitiveData/non-linear/tree/binary-tree/README.md)
-- [Binary Search Tree](https://github.com/raj-rathod/DSA-visualisation-in-angular/blob/rajesh/src/app/components/NonprimitiveData/non-linear/tree/binary-search-tree/README.md)
-- [AVL Tree](https://github.com/raj-rathod/DSA-visualisation-in-angular/blob/rajesh/src/app/components/NonprimitiveData/non-linear/tree/avl-tree/README.md)
-- [Heap Tree](https://github.com/raj-rathod/DSA-visualisation-in-angular/blob/rajesh/src/app/components/NonprimitiveData/non-linear/tree/heap-tree/README.md)
 
-### Tree Operations
-- Insert Node
-- Delete Node
-- Height of the Tree
-- Find Node
-- Levels of the Tree
-- Tree Traversal
+### Heap Tree Operations
+- Max Heap
+- Min Heap
+- Heap Sort
+- Priority Queue
+
 
 <hr>
 

@@ -5,7 +5,7 @@
 ![GitHub issues](https://img.shields.io/github/issues-raw/raj-rathod/DSA-visualisation-in-angular)
 
 <p align='center' >
-<img src="./src/assets/icons/dsa-logo.png"/>
+<img src="https://raw.githubusercontent.com/raj-rathod/DSA-visualisation-in-angular/main/src/assets/icons/dsa-logo.png"/>
 </p>
 
 # Data structure and algorithms visualization [![Tweet](https://img.shields.io/twitter/url/http/shields.io.svg?style=social)](https://twitter.com/intent/tweet?text=Visualization%20is%20the%20better%20way%20to%20understand%20of%20the%20things&url=https://raj-rathod.github.io/DSA-visualisation-in-angular/&via=Rajesh946055&hashtags=dsa,faang,datastructures,Algorithms,developers)
@@ -19,73 +19,25 @@ Visualization  is the better way to understand of the things
 
 _If you like this project, please leave me a star._ &#9733;
 
-## Table of Contents
-```mermaid
-graph TD;
-    DSA-Visualization-->Data-Structure;
-    DSA-Visualization-->Algorithms;
-    Data-Structure-->Linear;
-    Data-Structure-->Non-linear;
-    Linear-->Array;
-    Linear-->Stack;
-    Linear-->Queue;
-    Linear-->Linked-List;
-    Non-linear-->Tree;
-    Non-linear-->Graph;
-    Non-linear-->Trie;
-    Non-linear-->Hash-Table;
-    Algorithms-->Sorting;
-    Algorithms-->Searching;
-    Algorithms-->Divide-And-Conquer;
-    Algorithms-->Recursive;
-    Algorithms-->Dynamic-Programming;
-    Algorithms-->Greedy;
-    Algorithms-->Backtracking;
-    Algorithms-->Hashing; 
-```
+## Binary Search Tree | Binary Search Tree Operations | Binary Search Tree Properties | Binary Search Tree Applications | Binary Search Tree Visualization
 
-- ### Data Structures
-  - **Linear Data Structures**
-    - [Array](https://github.com/raj-rathod/DSA-visualisation-in-angular/tree/rajesh/src/app/components/NonprimitiveData/linear/arrays/README.md)
-    - [Matrix](https://github.com/raj-rathod/DSA-visualisation-in-angular/tree/rajesh/src/app/components/NonprimitiveData/linear/arrays/README.md)
-    - [Stack](https://github.com/raj-rathod/DSA-visualisation-in-angular/blob/rajesh/src/app/components/NonprimitiveData/linear/stack/README.md)
-    - [Queue](https://github.com/raj-rathod/DSA-visualisation-in-angular/blob/rajesh/src/app/components/NonprimitiveData/linear/queue/README.MD)
-    - [Linked List](https://github.com/raj-rathod/DSA-visualisation-in-angular/tree/rajesh/src/app/components/NonprimitiveData/linear/linked-list/README.md)
-  - **Non-linear Data Structures**
-    - [Tree](https://github.com/raj-rathod/DSA-visualisation-in-angular/blob/rajesh/src/app/components/NonprimitiveData/non-linear/tree/README.md)
-    - Graph
-    - Trie
-    - Hash Table
-- ### Algorithms
-  - **Sorting**
-    - Selection Sort
-    - Insertion Sort
-    - Merge Sort 
-    - Quick Sort
-    - Counting Sort
-    - Radix Sort
-    - Bucket Sort
-    - Shell Sort
-    - Heap Sort
-  - **Searching**
-    - Linear Search
-    - Binary Search
-    - Jump Search
-    - Interpolation Search
-    - Exponential Search
-    - Fibonacci Search
-  - **Divide and Conquer**
-    - Merge Sort
-    - Quick Sort
-    - Strassen's Algorithm
-    - Closest Pair of Points
-    - Karatsuba Algorithm
-  - **Recursive**
-  - **Dynamic Programming**
-  - **Greedy**
-  - **Backtracking**
-  - **Hashing**
-  - **Randomized**
+### What is the binary search tree ?
+
+>A binary search tree (BST), also called an ordered or sorted binary tree, is a rooted binary tree data structure with the key of each internal node being greater than all the keys in the respective node's left subtree and less than the ones in its right subtree. The time complexity of operations on the binary search tree is directly proportional to the height of the tree
+
+<img src="https://github.com/raj-rathod/DSA-visualisation-in-angular/blob/rajesh/src/assets/ds-image/binary-search-tree.jpg?raw=true">
+
+
+### Binary Search Tree Operations
+- Insert Node
+- Delete Node
+- Height of the Tree
+- Find Node
+- Levels of the Tree
+- Tree Traversal
+
+<hr>
+
 
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
@@ -105,6 +57,3 @@ Please read the [Contribute guide](.github/CONTRIBUTING.md)
  Let me know your views or any changes or improvements or contribute to make better for others 
  
  :heart: ***Thank you all for Forking this repository and contribute***  :heart:
-
-
-

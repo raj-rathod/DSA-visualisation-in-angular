@@ -5,7 +5,7 @@
 ![GitHub issues](https://img.shields.io/github/issues-raw/raj-rathod/DSA-visualisation-in-angular)
 
 <p align='center' >
-<img src="./src/assets/icons/dsa-logo.png"/>
+<img src="https://raw.githubusercontent.com/raj-rathod/DSA-visualisation-in-angular/main/src/assets/icons/dsa-logo.png"/>
 </p>
 
 # Data structure and algorithms visualization [![Tweet](https://img.shields.io/twitter/url/http/shields.io.svg?style=social)](https://twitter.com/intent/tweet?text=Visualization%20is%20the%20better%20way%20to%20understand%20of%20the%20things&url=https://raj-rathod.github.io/DSA-visualisation-in-angular/&via=Rajesh946055&hashtags=dsa,faang,datastructures,Algorithms,developers)
@@ -19,73 +19,26 @@ Visualization  is the better way to understand of the things
 
 _If you like this project, please leave me a star._ &#9733;
 
-## Table of Contents
-```mermaid
-graph TD;
-    DSA-Visualization-->Data-Structure;
-    DSA-Visualization-->Algorithms;
-    Data-Structure-->Linear;
-    Data-Structure-->Non-linear;
-    Linear-->Array;
-    Linear-->Stack;
-    Linear-->Queue;
-    Linear-->Linked-List;
-    Non-linear-->Tree;
-    Non-linear-->Graph;
-    Non-linear-->Trie;
-    Non-linear-->Hash-Table;
-    Algorithms-->Sorting;
-    Algorithms-->Searching;
-    Algorithms-->Divide-And-Conquer;
-    Algorithms-->Recursive;
-    Algorithms-->Dynamic-Programming;
-    Algorithms-->Greedy;
-    Algorithms-->Backtracking;
-    Algorithms-->Hashing; 
-```
+## AVL Tree | AVL Tree Operations | AVL Tree Properties | AVL Tree Applications | AVL Tree Visualization
 
-- ### Data Structures
-  - **Linear Data Structures**
-    - [Array](https://github.com/raj-rathod/DSA-visualisation-in-angular/tree/rajesh/src/app/components/NonprimitiveData/linear/arrays/README.md)
-    - [Matrix](https://github.com/raj-rathod/DSA-visualisation-in-angular/tree/rajesh/src/app/components/NonprimitiveData/linear/arrays/README.md)
-    - [Stack](https://github.com/raj-rathod/DSA-visualisation-in-angular/blob/rajesh/src/app/components/NonprimitiveData/linear/stack/README.md)
-    - [Queue](https://github.com/raj-rathod/DSA-visualisation-in-angular/blob/rajesh/src/app/components/NonprimitiveData/linear/queue/README.MD)
-    - [Linked List](https://github.com/raj-rathod/DSA-visualisation-in-angular/tree/rajesh/src/app/components/NonprimitiveData/linear/linked-list/README.md)
-  - **Non-linear Data Structures**
-    - [Tree](https://github.com/raj-rathod/DSA-visualisation-in-angular/blob/rajesh/src/app/components/NonprimitiveData/non-linear/tree/README.md)
-    - Graph
-    - Trie
-    - Hash Table
-- ### Algorithms
-  - **Sorting**
-    - Selection Sort
-    - Insertion Sort
-    - Merge Sort 
-    - Quick Sort
-    - Counting Sort
-    - Radix Sort
-    - Bucket Sort
-    - Shell Sort
-    - Heap Sort
-  - **Searching**
-    - Linear Search
-    - Binary Search
-    - Jump Search
-    - Interpolation Search
-    - Exponential Search
-    - Fibonacci Search
-  - **Divide and Conquer**
-    - Merge Sort
-    - Quick Sort
-    - Strassen's Algorithm
-    - Closest Pair of Points
-    - Karatsuba Algorithm
-  - **Recursive**
-  - **Dynamic Programming**
-  - **Greedy**
-  - **Backtracking**
-  - **Hashing**
-  - **Randomized**
+### What is the avl tree ?
+
+>An AVL tree in data structure is a binary tree that is self-balanced by checking the balance factor of every node. It means that the height of the left subtree and the right subtree is balanced. The balance factor should either be -1, 0, or 1. The maximum height difference between the left and right sub-trees can only be 1. In case, the difference is greater than 1, then we must re-balance the tree to make it valid using rotation techniques
+
+<img src="https://github.com/raj-rathod/DSA-visualisation-in-angular/blob/rajesh/src/assets/ds-image/avl-tree.jpg?raw=true">
+
+### Tree Operations
+- Insert Node
+- Delete Node
+- Height of the Tree
+- Find Node
+- Levels of the Tree
+- Tree Traversal
+- Rotation
+
+
+<hr>
+
 
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
@@ -105,6 +58,3 @@ Please read the [Contribute guide](.github/CONTRIBUTING.md)
  Let me know your views or any changes or improvements or contribute to make better for others 
  
  :heart: ***Thank you all for Forking this repository and contribute***  :heart:
-
-
-

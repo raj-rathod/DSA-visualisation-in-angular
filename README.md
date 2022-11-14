@@ -46,13 +46,13 @@ graph TD;
 
 - ### Data Structures
   - **Linear Data Structures**
-    - [Array](https://github.com/raj-rathod/DSA-visualisation-in-angular/tree/rajesh/src/app/components/NonprimitiveData/linear/arrays/README.md)
-    - [Matrix](https://github.com/raj-rathod/DSA-visualisation-in-angular/tree/rajesh/src/app/components/NonprimitiveData/linear/arrays/README.md)
-    - [Stack](https://github.com/raj-rathod/DSA-visualisation-in-angular/blob/rajesh/src/app/components/NonprimitiveData/linear/stack/README.md)
-    - [Queue](https://github.com/raj-rathod/DSA-visualisation-in-angular/blob/rajesh/src/app/components/NonprimitiveData/linear/queue/README.MD)
-    - [Linked List](https://github.com/raj-rathod/DSA-visualisation-in-angular/tree/rajesh/src/app/components/NonprimitiveData/linear/linked-list/README.md)
+    - [Array](https://github.com/raj-rathod/DSA-visualisation-in-angular/blob/main/src/app/components/NonprimitiveData/linear/arrays/README.md)
+    - [Matrix](https://github.com/raj-rathod/DSA-visualisation-in-angular/blob/main/src/app/components/NonprimitiveData/linear/arrays/README.md)
+    - [Stack](https://github.com/raj-rathod/DSA-visualisation-in-angular/blob/main/src/app/components/NonprimitiveData/linear/stack/README.md)
+    - [Queue](https://github.com/raj-rathod/DSA-visualisation-in-angular/blob/main/src/app/components/NonprimitiveData/linear/queue/README.MD)
+    - [Linked List](https://github.com/raj-rathod/DSA-visualisation-in-angular/blob/main/src/app/components/NonprimitiveData/linear/linked-list/README.md)
   - **Non-linear Data Structures**
-    - [Tree](https://github.com/raj-rathod/DSA-visualisation-in-angular/blob/rajesh/src/app/components/NonprimitiveData/non-linear/tree/README.md)
+    - [Tree](https://github.com/raj-rathod/DSA-visualisation-in-angular/blob/main/src/app/components/NonprimitiveData/non-linear/tree/README.md)
     - Graph
     - Trie
     - Hash Table

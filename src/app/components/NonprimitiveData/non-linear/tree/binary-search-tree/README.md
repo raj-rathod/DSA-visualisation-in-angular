@@ -25,7 +25,7 @@ _If you like this project, please leave me a star._ &#9733;
 
 >A binary search tree (BST), also called an ordered or sorted binary tree, is a rooted binary tree data structure with the key of each internal node being greater than all the keys in the respective node's left subtree and less than the ones in its right subtree. The time complexity of operations on the binary search tree is directly proportional to the height of the tree
 
-<img src="https://github.com/raj-rathod/DSA-visualisation-in-angular/blob/rajesh/src/assets/ds-image/binary-search-tree.jpg?raw=true">
+<img src="https://github.com/raj-rathod/DSA-visualisation-in-angular/blob/main/src/assets/ds-image/binary-search-tree.jpg?raw=true">
 
 
 ### Binary Search Tree Operations

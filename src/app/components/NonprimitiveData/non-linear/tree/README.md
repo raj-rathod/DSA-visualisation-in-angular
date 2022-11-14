@@ -28,10 +28,10 @@ _If you like this project, please leave me a star._ &#9733;
 <img src="https://github.com/raj-rathod/DSA-visualisation-in-angular/blob/main/src/assets/ds-image/tree.jpg?raw=true">
 
 ### Types of the tree
-- [Binary Tree](https://github.com/raj-rathod/DSA-visualisation-in-angular/blob/rajesh/src/app/components/NonprimitiveData/non-linear/tree/binary-tree/README.md)
-- [Binary Search Tree](https://github.com/raj-rathod/DSA-visualisation-in-angular/blob/rajesh/src/app/components/NonprimitiveData/non-linear/tree/binary-search-tree/README.md)
-- [AVL Tree](https://github.com/raj-rathod/DSA-visualisation-in-angular/blob/rajesh/src/app/components/NonprimitiveData/non-linear/tree/avl-tree/README.md)
-- [Heap Tree](https://github.com/raj-rathod/DSA-visualisation-in-angular/blob/rajesh/src/app/components/NonprimitiveData/non-linear/tree/heap-tree/README.md)
+- [Binary Tree](https://github.com/raj-rathod/DSA-visualisation-in-angular/blob/main/src/app/components/NonprimitiveData/non-linear/tree/binary-tree/README.md)
+- [Binary Search Tree](https://github.com/raj-rathod/DSA-visualisation-in-angular/blob/main/src/app/components/NonprimitiveData/non-linear/tree/binary-search-tree/README.md)
+- [AVL Tree](https://github.com/raj-rathod/DSA-visualisation-in-angular/blob/main/src/app/components/NonprimitiveData/non-linear/tree/avl-tree/README.md)
+- [Heap Tree](https://github.com/raj-rathod/DSA-visualisation-in-angular/blob/main/src/app/components/NonprimitiveData/non-linear/tree/heap-tree/README.md)
 
 ### Tree Operations
 - Insert Node

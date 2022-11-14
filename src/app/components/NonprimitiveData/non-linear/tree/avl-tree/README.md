@@ -25,7 +25,7 @@ _If you like this project, please leave me a star._ &#9733;
 
 >An AVL tree in data structure is a binary tree that is self-balanced by checking the balance factor of every node. It means that the height of the left subtree and the right subtree is balanced. The balance factor should either be -1, 0, or 1. The maximum height difference between the left and right sub-trees can only be 1. In case, the difference is greater than 1, then we must re-balance the tree to make it valid using rotation techniques
 
-<img src="https://github.com/raj-rathod/DSA-visualisation-in-angular/blob/rajesh/src/assets/ds-image/avl-tree.jpg?raw=true">
+<img src="https://github.com/raj-rathod/DSA-visualisation-in-angular/blob/main/src/assets/ds-image/avl-tree.jpg?raw=true">
 
 ### Tree Operations
 - Insert Node

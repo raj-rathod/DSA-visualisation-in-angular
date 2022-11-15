@@ -36,7 +36,7 @@ _If you like this project, please leave me a star._ &#9733;
 - Levels of the Tree
 - Tree Traversal
 
-<hr>
+## [Learn More About Binary Tree 👈](https://raj-rathod.github.io/DSA-visualisation-in-angular/)
 
 
 ## Contributing

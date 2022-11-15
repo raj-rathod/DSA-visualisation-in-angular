@@ -53,9 +53,9 @@ graph TD;
     - [Linked List](https://github.com/raj-rathod/DSA-visualisation-in-angular/blob/main/src/app/components/NonprimitiveData/linear/linked-list/README.md)
   - **Non-linear Data Structures**
     - [Tree](https://github.com/raj-rathod/DSA-visualisation-in-angular/blob/main/src/app/components/NonprimitiveData/non-linear/tree/README.md)
-    - Graph
-    - Trie
-    - Hash Table
+    - [Graph](https://github.com/raj-rathod/DSA-visualisation-in-angular/blob/main/src/app/components/NonprimitiveData/non-linear/graph/README.md)
+    - [Trie](https://github.com/raj-rathod/DSA-visualisation-in-angular/blob/main/src/app/components/NonprimitiveData/non-linear/trie/README.md)
+    - [Hash Table](https://github.com/raj-rathod/DSA-visualisation-in-angular/blob/main/src/app/components/NonprimitiveData/non-linear/hash-table/README.md)
 - ### Algorithms
   - **Sorting**
     - Selection Sort

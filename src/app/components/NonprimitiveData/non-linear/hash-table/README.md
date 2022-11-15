@@ -41,8 +41,6 @@ _If you like this project, please leave me a star._ &#9733;
 
 ## [Learn More About Hash Table 👈](https://raj-rathod.github.io/DSA-visualisation-in-angular/)
 
-<hr>
-
 
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.

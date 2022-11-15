@@ -38,8 +38,7 @@ _If you like this project, please leave me a star._ &#9733;
 - Sort
 - Search
 
-<hr>
-
+## [Learn More About Linked List 👈](https://raj-rathod.github.io/DSA-visualisation-in-angular/)
 
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.

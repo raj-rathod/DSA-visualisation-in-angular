@@ -27,12 +27,12 @@ _If you like this project, please leave me a star._ &#9733;
 
 <img src="https://github.com/raj-rathod/DSA-visualisation-in-angular/blob/main/src/assets/ds-image/queue.jpg?raw=true">
 
-### Stack Operations
+### Queue Operations
 - Enqueue
 - Dequeue
 - Peek
 
-<hr>
+## [Learn More About Queue 👈](https://raj-rathod.github.io/DSA-visualisation-in-angular/)
 
 
 ## Contributing

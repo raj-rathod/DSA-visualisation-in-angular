@@ -38,8 +38,6 @@ Trie is also known as the digital tree or prefix tree. The position of a node in
 
 ## [Learn More About Trie 👈](https://raj-rathod.github.io/DSA-visualisation-in-angular/)
 
-<hr>
-
 
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.

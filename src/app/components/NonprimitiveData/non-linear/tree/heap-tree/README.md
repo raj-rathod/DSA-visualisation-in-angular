@@ -36,8 +36,7 @@ Min-Heap: In a Min-Heap the key present at the root node must be minimum among t
 - Heap Sort
 - Priority Queue
 
-
-<hr>
+## [Learn More About Heap Tree 👈](https://raj-rathod.github.io/DSA-visualisation-in-angular/)
 
 
 ## Contributing

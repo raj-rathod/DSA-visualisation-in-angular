@@ -46,7 +46,7 @@ _If you like this project, please leave me a star._ &#9733;
 
 <img src="https://raw.githubusercontent.com/raj-rathod/DSA-visualisation-in-angular/main/src/assets/ds-image/dsa-visualization-matrix-operations.webp"/>
 
-<hr>
+## [Learn More About Array 👈](https://raj-rathod.github.io/DSA-visualisation-in-angular/)
 
 
 ## Contributing

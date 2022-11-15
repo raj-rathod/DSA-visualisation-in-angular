@@ -32,7 +32,7 @@ _If you like this project, please leave me a star._ &#9733;
 - Pop
 - Peek
 
-<hr>
+## [Learn More About Stack 👈](https://raj-rathod.github.io/DSA-visualisation-in-angular/)
 
 
 ## Contributing

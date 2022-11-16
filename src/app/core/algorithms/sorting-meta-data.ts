@@ -534,3 +534,61 @@ export const bucketSortMetaData: Algorithms = {
 }
 
 // ------------------------------------- End ----------------------------------------------------------------//
+
+// ------------------------------------ Shell Sort ----------------------------------------------------------//
+
+const shellSortData = {
+  defination: `Shell sort is mainly a variation of Insertion Sort. In insertion sort, we move elements only one position ahead.
+  When an element has to be moved far ahead, many movements are involved. The idea of ShellSort is to allow the exchange 
+  of far items. In Shell sort, we make the array gap-sorted for a large value of gap. We keep reducing the value of gap 
+  until it becomes 1. An array is said to be gap-sorted if all sublists of every gap’th element are sorted.`,
+  flowChart: 'assets/ds-image/DSA-404.webp',
+  explainImage: 'assets/ds-image/DSA-404.webp',
+  workingProcedure:[
+    'Initialize the value of gap size. Example: gap',
+    ' Divide the list into smaller sub-part. Each must have equal intervals to gap',
+    'Sort these sub-lists using insertion sort',
+    'Repeat this step 2 until the list is sorted and gap size is 1'
+  ],
+  properties:[
+    'Comparison-based sorting technique',
+    'Inplace sorting technique just like insertion sort',
+    'Works very well for medium-sized datasets',
+    'Unstable sorting technique'
+  ],
+  applications:[
+    'Shell sort is a replacement of insertion sort when insertion sort is taking too much execution time',
+    'We use shell sort when the call of the stack is overhead',
+    ' Shell sort is applicable when recursion exceeds a particular limit'
+  ],
+  advantages: [
+    'Shell sort algorithm is only efficient for finite number of elements in an array',
+    'Shell sort algorithm is 5.32 x faster than bubble sort algorithm'
+  ],
+  disadvantages: [
+    'Shell sort algorithm is complex in structure and bit more difficult to understand',
+    'Shell sort algorithm is significantly slower than the merge sort, quick sort and heap sort algorithms'
+  ],
+  performance:[
+   `<b>Worst Case Complexity:</b>  less than or equal to O(n2)`,
+   `<b>Best Case Complexity:</b> O(n*log n)`,
+   `<b>Average Case Complexity:</b> O(n*log n) It is around O(n1.25).`,
+   `<b>Note:</b> The complexity depends on the interval chosen. The above complexities differ for different 
+   increment sequences chosen. Best increment sequence is unknown`
+  ]
+
+}
+
+export const shellSortMetaData: Algorithms = {
+  defination: Helper.setHeader(shellSortData.defination),
+  properties: Helper.setListwithTitleHtml('Properties of Shell Sort',shellSortData.properties),
+  explainImage: Helper.setExampleImage('Shell Sort Image',shellSortData.explainImage),
+  flowChart: Helper.setExampleImage('Flowchart of Shell Sort',shellSortData.flowChart),
+  advantage: Helper.setListwithTitleHtml('Advantages of Shell Sort',shellSortData.advantages),
+  disadvantage: Helper.setListwithTitleHtml('Disadvantages of Shell Sort',shellSortData.disadvantages),
+  applications: Helper.setListwithTitleHtml('Applications of Shell Sort',shellSortData.applications),
+  other: Helper.setListwithTitleHtml('Performance of Shell Sort',shellSortData.performance),
+  workingProcedure: Helper.setListwithTitleHtml('Follow the below steps to solve the problem',shellSortData.workingProcedure),
+}
+
+// ------------------------------------ End -----------------------------------------------------------------//

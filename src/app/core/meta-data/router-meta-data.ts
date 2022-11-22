@@ -7,7 +7,7 @@ export const dataStructure: RouterLinkData[] = [
     },
     {
         name: "Arrays",
-        route: "/non-primitive/linear/array/"
+        route: "/non-primitive/linear/array"
     },
     {
         name: "Stack",

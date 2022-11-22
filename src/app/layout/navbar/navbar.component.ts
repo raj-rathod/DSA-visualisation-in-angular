@@ -1,5 +1,7 @@
 import { Component, ElementRef, OnInit } from '@angular/core';
-import { algorithms, dataStructure, divideAndConquerLinks, searchingLinks, sorting } from 'src/app/core/meta-data/router-meta-data';
+import { algorithms, dataStructure } from 'src/app/core/meta-data/router-meta-data';
+import { Helper } from 'src/app/helper/helper';
+import { RouterLinkData } from 'src/app/shared/interfaces/meta-data.interface';
 
 @Component({
   selector: 'app-navbar',
@@ -9,13 +11,11 @@ import { algorithms, dataStructure, divideAndConquerLinks, searchingLinks, sorti
 export class NavbarComponent implements OnInit {
   dataStructure = dataStructure;
   algorithms = algorithms
-  searchData = dataStructure.concat(algorithms, sorting, searchingLinks, divideAndConquerLinks);
+  searchData: RouterLinkData[] = Helper.allRoutesData();;
   searchKey = '';
   constructor(
     private elRef: ElementRef
-  ) { 
-    this.searchData = [...new Set(this.searchData.map(s => JSON.stringify(s)))].map(s => JSON.parse(s));
-  }
+  ) {}
 
   ngOnInit(): void {
   }

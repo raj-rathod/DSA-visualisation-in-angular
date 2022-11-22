@@ -13,6 +13,7 @@ import { FormsModule } from '@angular/forms';
 import { PageNotFoundComponent } from './layout/page-not-found/page-not-found.component';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
+import { BreadcrumbsComponent } from './layout/breadcrumbs/breadcrumbs.component';
 
 
 @NgModule({
@@ -24,6 +25,7 @@ import { environment } from '../environments/environment';
     FooterComponent,
     NavbarComponent,
     PageNotFoundComponent,
+    BreadcrumbsComponent,
   ],
   imports: [
     FormsModule,

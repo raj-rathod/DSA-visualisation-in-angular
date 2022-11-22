@@ -1,3 +1,6 @@
+import { algorithms, dataStructure, divideAndConquerLinks, searchingLinks, sorting } from "../core/meta-data/router-meta-data";
+import { RouterLinkData } from "../shared/interfaces/meta-data.interface";
+
 export class Helper{
      static setListwithTitleHtml(title: string, list:string[]): string{
           let listHtml = `<h4>${title}</h4>`;
@@ -175,6 +178,12 @@ export class Helper{
          </div>`
          });
          return arrHtml+= arrIterations + `</div>`;
+     }
+
+     static allRoutesData(): RouterLinkData[] {
+          const routesArr = dataStructure.concat(algorithms, sorting, searchingLinks, divideAndConquerLinks);
+          return [...new Set(routesArr.map(s => JSON.stringify(s)))].map(s => JSON.parse(s));
+          
      }
     
 }

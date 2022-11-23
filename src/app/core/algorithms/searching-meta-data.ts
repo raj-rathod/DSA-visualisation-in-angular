@@ -151,3 +151,117 @@ export const binarySearchMetaData : Algorithms = {
 }
 
 // -----------------------------------  End   ----------------------------------------------//
+
+// -----------------------------------  Jump Search   ----------------------------------------------//
+
+const jumpSearchData = {
+  defination:`Jump Search is a searching algorithm for sorted arrays. The basic idea is to check fewer elements by 
+  jumping ahead by fixed steps or skipping some elements in place of searching all elements.`,
+  flowChart: 'assets/ds-image/DSA-404.webp',
+  explainImage: 'assets/ds-image/DSA-404.webp',
+  properties:[
+    `This algorithm works only for sorted input arrays`,
+    `Optimal size of the block to be skipped is √n, thus resulting in the time complexity O(√n2)`,
+    `The time complexity of this algorithm lies in between linear search (O(n)) and binary search (O(log n))`,
+    `It is also called block search algorithm`,
+    `If we compare it with linear and binary search then it comes out then it is better than linear search but 
+    not better than binary search`,
+    `<b>linear search  <  jump search  <  binary search </b>`
+  ],
+  workingProcedure:[
+    `Start from index 0`,
+    `Jump head by 'B'(B = √N) elements. Current position = Current position + B. 
+    If position is out of element list, set current position to last position`,
+    `If element at current position < target element, then do Linear Search on element from position 
+    current position -B to current position else go to step 2.If current position is last position. Exit. Element not found`
+  ],
+  applications:[
+    `If jumping back in a list takes significantly more time than jumping forward then one should use this algorithm`
+  ],
+  advantages: [
+    `It is faster than the linear search technique which has a time complexity of O(n) for searching an element`
+  ],
+  disadvantages: [
+    `It is slower than binary search algorithm which searches an element in O(log n)`,
+    `It requires the input array to be sorted`
+  ],
+  performance: [
+    `Worst case time complexity: O(√N)`,
+    `Average case time complexity: O(√N)`,
+    `Best case time complexity: O(1)`,
+    `Space complexity: O(1)`
+  ],
+};
+
+export const jumpSearchMeatData : Algorithms = {
+    defination: Helper.setHeader(jumpSearchData.defination),
+    properties: Helper.setListwithTitleHtml('Properties of Jump Search', jumpSearchData.properties),
+    explainImage: Helper.setExampleImage('Jump Search Image', jumpSearchData.explainImage),
+    flowChart: Helper.setExampleImage('Flowchart of Jump Search', jumpSearchData.flowChart),
+    advantage: Helper.setListwithTitleHtml('Advantages of Jump Search', jumpSearchData.advantages),
+    disadvantage: Helper.setListwithTitleHtml('Disadvantages of Jump Search', jumpSearchData.disadvantages),
+    applications: Helper.setListwithTitleHtml('Applications of Jump Search', jumpSearchData.applications),
+    other: Helper.setListwithTitleHtml('Performance of Jump Search', jumpSearchData.performance),
+    workingProcedure: Helper.setListwithTitleHtml('Follow the below steps to solve the problem', jumpSearchData.workingProcedure),
+}
+
+// -----------------------------------  End   ----------------------------------------------//
+
+// -----------------------------  Interpolation Search  ------------------------------------//
+
+const interpolationSearchData = {
+  defination:`The Interpolation Search is an improvement over Binary Search for instances, where the values in a sorted 
+  array are uniformly distributed. Interpolation constructs new data points within the range of a discrete set of known 
+  data points. Binary Search always goes to the middle element to check. On the other hand, interpolation search may go to
+  different locations according to the value of the key being searched. For example, if the value of the key is closer to the 
+  last element, interpolation search is likely to start search toward the end side.`,
+  flowChart: 'assets/ds-image/DSA-404.webp',
+  explainImage: 'assets/ds-image/DSA-404.webp',
+  properties: [
+    `Interpolation searching algorithm is only used when the elements in an array is sorted and uniformly distributed`,
+    `pos = low + ((target – A[low]) * (high – low) / (A[high] – A[low]))`
+  ],
+  workingProcedure: [
+    `<b>pos = low + ((target – A[low]) * (high – low) / (A[high] – A[low]))</b>`,
+    `In a loop, calculate the value of pos using the above formula`,
+    `If it is a match, return the index of the item, and exit`,
+    `If the item is less than the element at position pos, calculate the target position of the left sub-array. 
+    Otherwise calculate the same in the right sub-array`,
+    `Repeat until a match is found or the search space reduces to zero`
+  ],
+  applications: [
+    `Since the major requirement to use Interpolation Search is that the data set must be sorted and uniformly distributed, it has a very 
+    limited number of applications in real life, where data is actually quite randomised`,
+    `Interpolation Search Algorithm is a search algorithm that has been inspired by the way humans search through a telephone book for a particular name,
+     the key value by which the book's entries are ordered`
+  ],
+  advantages: [
+    `When all elements in the list are sorted and evenly distributed, then executing time of 
+    Interpolation search algorithm is log(log n)`
+  ],
+  disadvantages: [
+    `However, When the elements in the list are increased exponentially, then executing time of Interpolation search algorithm is 0(n)`
+  ],
+  performance: [
+    `Worst case time complexity: O(N)`,
+    `Average case time complexity: O(log log N)`,
+    `Best case time complexity: O(1)`,
+    `Space complexity: O(1)`
+  ]
+};
+
+export const interpolationSearchMetaData : Algorithms = {
+  defination: Helper.setHeader(interpolationSearchData.defination),
+  properties: Helper.setListwithTitleHtml('Properties of Interpolation Search', interpolationSearchData.properties),
+  explainImage: Helper.setExampleImage('Interpolation Search Image', interpolationSearchData.explainImage),
+  flowChart: Helper.setExampleImage('Flowchart of Interpolation Search', interpolationSearchData.flowChart),
+  advantage: Helper.setListwithTitleHtml('Advantages of Interpolation Search', interpolationSearchData.advantages),
+  disadvantage: Helper.setListwithTitleHtml('Disadvantages of Interpolation Search', interpolationSearchData.disadvantages),
+  applications: Helper.setListwithTitleHtml('Applications of Interpolation Search', interpolationSearchData.applications),
+  other: Helper.setListwithTitleHtml('Performance of Interpolation Search', interpolationSearchData.performance),
+  workingProcedure: Helper.setListwithTitleHtml('Follow the below steps to solve the problem', interpolationSearchData.workingProcedure),
+}
+
+// -----------------------------------  End   ----------------------------------------------//
+
+

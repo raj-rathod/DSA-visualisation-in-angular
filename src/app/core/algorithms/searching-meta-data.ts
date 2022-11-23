@@ -86,3 +86,68 @@ export const linearSearchMetaData: Algorithms = {
 }
 
 // -----------------------------------  End   ----------------------------------------------//
+
+// ----------------------------------  Binary Search ---------------------------------------//
+
+const binarySearchData = {
+  defination:`Binary Search is a searching algorithm used in a sorted array by repeatedly dividing the search interval in half. 
+  The idea of binary search is to use the information that the array is sorted and reduce the time complexity to O(Log n)`,
+  flowChart: 'assets/ds-image/DSA-404.webp',
+  explainImage: 'assets/ds-image/DSA-404.webp',
+  properties: [
+    `The pre-condition for the binary search is that the elements must be arranged in a sorted order`,
+    `The implementation of binary search is limited as it can be implemented only on those data structures 
+    that have two-way traversal`,
+    `It is based on the divide and conquer approach`,
+    `It is preferrable for the large-size data sets`,
+    `It can be implemented only on a singledimensional array`
+  ],
+  workingProcedure:[
+    `Compare 'x' with the middle element`,
+    `If 'x' matches with the middle element, we return the mid index`,
+    `Else If 'x' is greater than the mid element, then 'x' can only lie in the right half subarray after the mid element. 
+    So we recur for the right half`,
+    `Else ('x' is smaller) recur for the left half`
+  ],
+  advantage: [
+    `It is better than a linear search algorithm since its run time complexity is O(Log n)`,
+    `At each iteration, the binary search algorithm eliminates half of the list and significantly reduces the search space`,
+    `The binary search algorithm works even when the array is rotated by some position and finds the target element`
+  ],
+  disadvantage: [
+    `The recursive method uses stack space`,
+    `Programming binary search algorithm is error prone and difficult`,
+    `The interaction of binary search with memory hierarchy i.e. caching is poor.
+    (because of its random access nature)`
+  ],
+  applications: [
+    `Find an element in a sorted array`,
+    `Find the first value greater than or equal to x in a given array of sorted integers`,
+    `Find the frequency of a given target value in an array of integers`,
+    `Dictionary: In the dictionary, all the words are arranged in lexicographical order, therefore, 
+    to find a particular word, we can simply binary search to find the alphabets without having to go through each word`,
+    `Find if a number is a square of any integer: To check if a number is a square of any integer, run a binary search from 1
+     to num and check if the square of mid is equal to num.`
+  ],
+  performance: [
+    `Best Case Time Complexity of Binary Search: O(1)`,
+    `Average Case Time Complexity of Binary Search: O(logN)`,
+    `Worst Case Time Complexity of Binary Search: O(logN)`,
+    `Space Complexity of Binary Search: O(1) for iterative, O(logN) for recursive`
+  ],
+
+};
+
+export const binarySearchMetaData : Algorithms = {
+    defination: Helper.setHeader(binarySearchData.defination),
+    properties: Helper.setListwithTitleHtml('Properties of Binary Search', binarySearchData.properties),
+    explainImage: Helper.setExampleImage('Binary Search Image', binarySearchData.explainImage),
+    flowChart: Helper.setExampleImage('Flowchart of Binary Search', binarySearchData.flowChart),
+    advantage: Helper.setListwithTitleHtml('Advantages of Binary Search', binarySearchData.advantage),
+    disadvantage: Helper.setListwithTitleHtml('Disadvantages of Binary Search', binarySearchData.disadvantage),
+    applications: Helper.setListwithTitleHtml('Applications of Binary Search', binarySearchData.applications),
+    other: Helper.setListwithTitleHtml('Performance of Binary Search', binarySearchData.performance),
+    workingProcedure: Helper.setListwithTitleHtml('Follow the below steps to solve the problem', binarySearchData.workingProcedure),
+}
+
+// -----------------------------------  End   ----------------------------------------------//

@@ -264,4 +264,61 @@ export const interpolationSearchMetaData : Algorithms = {
 
 // -----------------------------------  End   ----------------------------------------------//
 
+// --------------------------------  Exponential Search ------------------------------------//
+
+const exponentialSearchData = {
+  defination:`Exponential search allows for searching through a sorted, unbounded list for a specified input value 
+  (the search "key"). The algorithm consists of two stages. The first stage determines a range in which the search
+  key would reside if it were in the list. In the second stage, a binary search is performed on this range. In the first stage, 
+  assuming that the list is sorted in ascending order, the algorithm looks for the first exponent, j, where the value 2^j is greater 
+  than the search key. This value, 2^j becomes the upper bound for the binary search with the previous power of 2, 2^(j - 1), being the 
+  lower bound for the binary search`,
+  flowChart: 'assets/ds-image/DSA-404.webp',
+  explainImage: 'assets/ds-image/DSA-404.webp',
+  properties: [
+    `Finding the range in which the key could sit`,
+    `Applying binary search in this range`,
+    `Exponential search algorithm (also called doubling search, galloping search, Struzik search) is a search algorithm, 
+    created by Jon Bentley and Andrew Chi-Chih Yao in 1976, for searching sorted, unbounded/infinite lists`
+  ],
+  workingProcedure: [
+    `Start with value i=1`,
+    `Check for a condition i < n and Array[i]<=key, where n is the number of items in the array and key is the element being sought`,
+    `Increment value of I in powers of 2, that is, i=i*2`,
+    `Keep on incrementing the value of 'i' until the condition is met`,
+    `Apply binary on the range i/2 to the end of Array - binarySearch(Array, i/2, min(i,n-1))`
+  ],
+  applications: [
+    `Exponential Binary Search is useful for unbounded searches where size of array is infinite`,
+    `It works better than Binary Search for bounded arrays when the element to be searched is closer to the beginning of the array.`
+  ],
+  advantages: [
+    `Exponential Binary Search is useful for unbounded searches where size of array is infinite`,
+  ],
+  disadvantages: [
+    `The list should be sorted to perform the exponential search, if the list is unsorted, it will give wrong results`
+  ],
+  performance: [
+    `Worst case time complexity: O(log i) where i is the index of the element being searched`,
+    `Average case time complexity: O(log i)`,
+    `Best case time complexity: O(1)`,
+    `Space complexity: O(1)`
+  ]
+
+};
+
+export const exponentialSearchMetaData: Algorithms = {
+  defination: Helper.setHeader(exponentialSearchData.defination),
+  properties: Helper.setListwithTitleHtml('Properties of Exponential Search', exponentialSearchData.properties),
+  explainImage: Helper.setExampleImage('Exponential Search Image', exponentialSearchData.explainImage),
+  flowChart: Helper.setExampleImage('Flowchart of Exponential Search', exponentialSearchData.flowChart),
+  advantage: Helper.setListwithTitleHtml('Advantages of Exponential Search', exponentialSearchData.advantages),
+  disadvantage: Helper.setListwithTitleHtml('Disadvantages of Exponential Search', exponentialSearchData.disadvantages),
+  applications: Helper.setListwithTitleHtml('Applications of Exponential Search', exponentialSearchData.applications),
+  other: Helper.setListwithTitleHtml('Performance of Exponential Search', exponentialSearchData.performance),
+  workingProcedure: Helper.setListwithTitleHtml('Follow the below steps to solve the problem', exponentialSearchData.workingProcedure),
+}
+
+// -----------------------------------  End   ----------------------------------------------//
+
 

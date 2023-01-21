@@ -58,8 +58,8 @@ const selectionSortData = {
     Initially, the sorted part is empty and the unsorted part is the entire list. <br>
     The smallest element is selected from the unsorted array and swapped with the leftmost element, and that element becomes 
     a part of the sorted array. This process continues moving unsorted array boundary by one element to the right.`,
-    flowChart:"assets/ds-image/DSA-404.webp",
-    explainImage:"assets/ds-image/DSA-404.webp",
+    flowChart:"assets/ds-image/selection-sort-flowchart.jpg",
+    explainImage:"assets/ds-image/selection-sort.jpg",
     workingProcedure:[
         'Initialize minimum value(minValue) to location 0.',
         'Traverse the array to find the minimum element in the array.',

@@ -88,10 +88,10 @@ export const algorithms: RouterLinkData[] = [
 ];
 
 export const sorting: RouterLinkData[] = [
-    {
-        name: "Bubble Sort",
-        route: "/algorithm/sorting/bubble-sort"
-    },
+    // {
+    //     name: "Bubble Sort",
+    //     route: "/algorithm/sorting/bubble-sort"
+    // },
     {
         name: "Selection Sort",
         route: "/algorithm/sorting/selection-sort"
@@ -151,10 +151,10 @@ export const searchingLinks: RouterLinkData[] = [
         name: "Exponential Search",
         route: "/algorithm/searching/exponential-search"
     },
-    {
-        name: "Fibonacci Search",
-        route: "/algorithm/searching/fibonacci-search"
-    },
+    // {
+    //     name: "Fibonacci Search",
+    //     route: "/algorithm/searching/fibonacci-search"
+    // },
 ];
 
 export const divideAndConquerLinks: RouterLinkData[] = [
@@ -166,16 +166,16 @@ export const divideAndConquerLinks: RouterLinkData[] = [
         name: "Quick Sort",
         route: "/algorithm/sorting/quick-sort"
     },
-    {
-        name: "Strassen's Algorithm",
-        route: "/algorithm/divide-and-conquer/strassen"
-    },
-    {
-        name: "Closest Pair of Points",
-        route: "/algorithm/divide-and-conquer/closest-pair-of-points"
-    },
-    {
-        name: "Karatsuba Algorithm",
-        route: "/algorithm/divide-and-conquer/karatsuba"
-    }
+    // {
+    //     name: "Strassen's Algorithm",
+    //     route: "/algorithm/divide-and-conquer/strassen"
+    // },
+    // {
+    //     name: "Closest Pair of Points",
+    //     route: "/algorithm/divide-and-conquer/closest-pair-of-points"
+    // },
+    // {
+    //     name: "Karatsuba Algorithm",
+    //     route: "/algorithm/divide-and-conquer/karatsuba"
+    // }
 ];

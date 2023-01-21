@@ -57,7 +57,7 @@ export const contact: string[] =[
 
 export const pageMetaData = {
     home:{
-        title:"Data Structures and Algorithms | Visualization",
+        title:"Data Structures and Algorithms | DSA Visualization",
         description:`All the points of data structures and algorithms like as working approach, properties, 
           operations, applications, advantages and disadvantages are well explained and visualize the operations 
           for better understanding`,
@@ -116,7 +116,7 @@ export const pageMetaData = {
         Queue Disadvantages, Enqueue and Dequeue Operations`
     },
     linkedList:{
-        title:"Linked List Operations and Visualization | Dsa Visualization",
+        title:"Linked List Operations and Visualization | DSA Visualization",
         description:`What is the linked list, what is the use of the linked list, what is the single linked list, 
         what is the use of the single linked list, what is the double linked list, what is the use of the double linked list,
         application of the linked list and advantages and disadvantages of the linked list`,

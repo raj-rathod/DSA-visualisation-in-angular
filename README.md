@@ -58,7 +58,7 @@ graph TD;
     - [Hash Table](https://github.com/raj-rathod/DSA-visualisation-in-angular/blob/main/src/app/components/NonprimitiveData/non-linear/hash-table/README.md)
 - ### Algorithms
   - **Sorting**
-    - Selection Sort
+    - [Selection Sort](https://github.com/raj-rathod/DSA-visualisation-in-angular/tree/main/src/app/components/Algorithms/sorting/selection-sort/README.md)
     - Insertion Sort
     - Merge Sort 
     - Quick Sort

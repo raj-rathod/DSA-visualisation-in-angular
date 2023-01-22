@@ -107,8 +107,8 @@ const insertionSortData = {
   defination: `Insertion sort is a simple sorting algorithm that works similar to the way you sort playing cards 
     in your hands. The array is virtually split into a sorted and an unsorted part. Values from the unsorted part 
     are picked and placed at the correct position in the sorted part`,
-  flowChart:"assets/ds-image/DSA-404.webp",
-  explainImage:"assets/ds-image/DSA-404.webp",
+  flowChart:"assets/ds-image/insertion-sort-flowchart.jpg",
+  explainImage:"assets/ds-image/insertion-sort.jpg",
   workingProcedure:[
     'Iterate from arr[1] to arr[N] over the array',
     'Compare the current element (key) to its predecessor',

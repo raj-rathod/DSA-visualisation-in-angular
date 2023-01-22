@@ -59,7 +59,7 @@ graph TD;
 - ### Algorithms
   - **Sorting**
     - [Selection Sort](https://github.com/raj-rathod/DSA-visualisation-in-angular/tree/main/src/app/components/Algorithms/sorting/selection-sort/README.md)
-    - Insertion Sort
+    - [Insertion Sort](https://github.com/raj-rathod/DSA-visualisation-in-angular/tree/main/src/app/components/Algorithms/sorting/insertion-sort/README.md)
     - Merge Sort 
     - Quick Sort
     - Counting Sort

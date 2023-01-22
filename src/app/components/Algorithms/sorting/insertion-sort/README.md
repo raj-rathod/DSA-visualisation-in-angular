@@ -19,32 +19,28 @@ Visualization  is the better way to understand of the things
 
 _If you like this project, please leave me a star._ &#9733;
 
-## Selection Sort | Selection Sort Properties | Selection Sort Applications | Selection Sort Visualization | Selection Sort Complexity | Selection Sort Space Complexity
+## Insertion Sort | Insertion Sort Properties | Insertion Sort Applications | Insertion Sort Visualization | Insertion Sort Complexity | Insertion Sort Space Complexity
 
-### What is Selection Sort ?
+### What is Insertion Sort ?
 
->Selection sort is a simple sorting algorithm. This sorting algorithm is an in-place comparison-based algorithm in which the list is divided into two parts, the sorted part at the left end and the unsorted part at the right end. Initially, the sorted part is empty and the unsorted part is the entire list.
-The smallest element is selected from the unsorted array and swapped with the leftmost element, and that element becomes a part of the sorted array. This process continues moving unsorted array boundary by one element to the right
+>Insertion sort is a simple sorting algorithm that works similar to the way you sort playing cards in your hands. The array is virtually split into a sorted and an unsorted part. Values from the unsorted part are picked and placed at the correct position in the sorted part
 
-### Selection Sort Flowchart 
+### Insertion Sort Flowchart 
+- Iterate from arr[1] to arr[N] over the array
+- Compare the current element (key) to its predecessor
+- If the key element is smaller than its predecessor, compare it to the elements before. Move the greater elements one position up to  make space for the swapped element
 
-- Initialize minimum value(minValue) to location 0.
-- Traverse the array to find the minimum element in the array.
-- While traversing if any element smaller than minValue is found then swap both the values.
-- Then, increment minValue to point to the next element.
-- Repeat until the array is sorted.
-
-<img src="https://github.com/raj-rathod/DSA-visualisation-in-angular/blob/main/src/assets/ds-image/selection-sort-flowchart.jpg?raw=true">
+<img src="https://github.com/raj-rathod/DSA-visualisation-in-angular/blob/main/src/assets/ds-image/insertion-sort-flowchart.jpg?raw=true">
 
 <br>
 
-### Selection Sort Example
+### Insertion Sort Example
 
 <br>
 
-<img src="https://github.com/raj-rathod/DSA-visualisation-in-angular/blob/main/src/assets/ds-image/selection-sort.jpg?raw=true">
+<img src="https://github.com/raj-rathod/DSA-visualisation-in-angular/blob/main/src/assets/ds-image/insertion-sort.jpg?raw=true">
 
-## [Learn More About Selection Sort 👈](https://raj-rathod.github.io/DSA-visualisation-in-angular/)
+## [Learn More About Insertion Sort 👈](https://raj-rathod.github.io/DSA-visualisation-in-angular/)
 
 
 ## Contributing

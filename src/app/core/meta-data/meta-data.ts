@@ -28,7 +28,7 @@ export const socialLinkes: SocialLink[] = [
     {
         name:"Instagram",
         image:"assets/icons/instagram.svg",
-        url: "https://www.instagram.com/raj_rathod1313/"
+        url: "https://www.instagram.com/dsa_visualization/"
     },
     {
         name: "Linkedin",

@@ -175,15 +175,15 @@ const mergeSortData = {
     the merge operation is applied. Merge operation is the process of taking two smaller sorted arrays and 
     combining them to eventually make a larger one
   `,
-  flowChart:"assets/ds-image/DSA-404.webp",
-  explainImage:"assets/ds-image/DSA-404.webp",
+  flowChart:"assets/ds-image/merge-sort-flowchart.jpg",
+  explainImage:"assets/ds-image/merge-sort.jpg",
   workingProcedure:[
-    'mergeSort(arr[], l,  r)',
-    'If r > l',
-    `Find the middle point to divide the array into two halves: middle m = l + (r – l)/2`,
-    `Call mergeSort for first half: mergeSort(arr, l, m)`,
-    `Call mergeSort for second half: mergeSort(arr, m + 1, r)`,
-    `Merge the two halves sorted in steps 2 and 3: merge(arr, l, m, r)`
+    'mergeSort(arr[], left,  right)',
+    'If right > left',
+    `Find the middle point to divide the array into two halves: middle m = left + (right – left)/2`,
+    `Call mergeSort for first half: mergeSort(arr, lrft, m)`,
+    `Call mergeSort for second half: mergeSort(arr, m + 1, right)`,
+    `Merge the two halves sorted  merge(arr, left, m, right)`
   ],
   properties:[
     `Merge Sort is useful for sorting linked lists.`,

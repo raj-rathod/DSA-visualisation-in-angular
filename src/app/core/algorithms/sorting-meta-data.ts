@@ -245,8 +245,8 @@ const quickSortData = {
     The list is divided into two partitions such that "all elements to the left of pivot are smaller than the pivot 
     and all elements to the right of pivot are greater than or equal to the pivot".
   `,
-  flowChart:"assets/ds-image/DSA-404.webp",
-  explainImage:"assets/ds-image/DSA-404.webp",
+  flowChart:"assets/ds-image/comming-soon.jpg",
+  explainImage:"assets/ds-image/comming-soon.jpg",
   workingProcedure:[
     'Consider the first element of the list as pivot (i.e., Element at first position in the list)',
     'Define two variables i and j. Set i and j to first and last elements of the list respectively',
@@ -314,8 +314,8 @@ const countingSortData = {
   defination: `Counting sort is a sorting algorithm that sorts the elements of an array by counting the number 
     of occurrences of each unique element in the array. The count is stored in an auxiliary array and 
     the sorting is done by mapping the count as an index of the auxiliary array.`,
-  flowChart:"assets/ds-image/DSA-404.webp",
-  explainImage:"assets/ds-image/DSA-404.webp",
+  flowChart:"assets/ds-image/comming-soon.jpg",
+  explainImage:"assets/ds-image/comming-soon.jpg",
   workingProcedure:[
     `Iterate through the input array to find the highest value`,
     `Declare a new array with the value 0 and a size of max+1`,
@@ -384,8 +384,8 @@ const radixSortData = {
   defination: `Radix sort is an algorithm that uses counting sort as a subroutine to sort an array of integers/strings in 
     either ascending or descending order. The main idea of radix sort revolves around applying counting sort digit by 
     digit on the given array`,
-  flowChart:"assets/ds-image/DSA-404.webp",
-  explainImage:"assets/ds-image/DSA-404.webp",
+  flowChart:"assets/ds-image/comming-soon.jpg",
+  explainImage:"assets/ds-image/comming-soon.jpg",
   workingProcedure:[
     `Find the maximum element of the array, let it be max`,
     `Find the number of digits in max, let it be k`,
@@ -449,8 +449,8 @@ const bucketSortData = {
   defination: `Bucket sort is a sorting technique that uses the Scatter-Gather-Approach to sort the array. 
     It divides the unsorted array into separate groups and calls them buckets. Sort the individual buckets, 
     and then gather them all together to form the final sorted array`,
-  flowChart: 'assets/ds-image/DSA-404.webp',
-  explainImage: 'assets/ds-image/DSA-404.webp',
+  flowChart: 'assets/ds-image/comming-soon.jpg',
+  explainImage: 'assets/ds-image/comming-soon.jpg',
   workingProcedure: [
     `If All the elements are in the range of [0,1] then no need to follow initial two steps
     and in third step create 10 empty buckets and in step four bucketIndex = array[i]*10`,
@@ -542,8 +542,8 @@ const shellSortData = {
   When an element has to be moved far ahead, many movements are involved. The idea of ShellSort is to allow the exchange 
   of far items. In Shell sort, we make the array gap-sorted for a large value of gap. We keep reducing the value of gap 
   until it becomes 1. An array is said to be gap-sorted if all sublists of every gap’th element are sorted.`,
-  flowChart: 'assets/ds-image/DSA-404.webp',
-  explainImage: 'assets/ds-image/DSA-404.webp',
+  flowChart: 'assets/ds-image/comming-soon.jpg',
+  explainImage: 'assets/ds-image/comming-soon.jpg',
   workingProcedure:[
     'Initialize the value of gap size. Example: gap',
     ' Divide the list into smaller sub-part. Each must have equal intervals to gap',

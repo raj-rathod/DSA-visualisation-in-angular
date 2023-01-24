@@ -14,7 +14,7 @@ export class Helper{
      }
 
      static setExampleImage(title:string, url:string): string {
-      return `<h4>${title}</h4> <img src="${url}" class="img-fluid" alt="${title}" />`;
+      return `<h4>${title}</h4> <div class="text-center"><img src="${url}" class="img-fluid col-md-7" alt="${title}" /></div>`;
      }
 
      static setHeader(header:string):string {

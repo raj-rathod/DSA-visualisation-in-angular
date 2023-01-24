@@ -248,13 +248,17 @@ const quickSortData = {
   flowChart:"assets/ds-image/comming-soon.jpg",
   explainImage:"assets/ds-image/comming-soon.jpg",
   workingProcedure:[
+    'quickSort(arr, left, right)',
+    'if right > left',
+    'pivotIndex = partition(arr, left, right)<br> quickSort(arr, left, pivotIndex-1)<br> quickSort(arr, pivotIndex+1, right)',
+    '<b>Below Partition Flow</b>',
     'Consider the first element of the list as pivot (i.e., Element at first position in the list)',
     'Define two variables i and j. Set i and j to first and last elements of the list respectively',
-    'Increment i until list[i] > pivot then stop',
-    'Decrement j until list[j] < pivot then stop',
+    'Increment i until list[i] < pivot then stop',
+    'Decrement j until list[j] > pivot then stop',
     'If i < j then exchange list[i] and list[j]',
     'Repeat steps 3,4 & 5 until i > j',
-    'Exchange the pivot element with list[j] element'
+    'Exchange the pivot element with list[j] element and return j'
   ],
   properties:[
     'Quick Sort is useful for sorting arrays',

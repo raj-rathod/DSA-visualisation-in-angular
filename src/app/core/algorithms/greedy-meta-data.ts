@@ -8,7 +8,7 @@ const greedyData = {
    This algorithm may not produce the best result for all the problems. It's because it always goes for the local best 
    choice to produce the global best result.
    `,
-   example: 'assets/ds-image/DSA-404.webp',
+   example: 'assets/ds-image/comming-soon.jpg',
    properties:[
     `<b>Greedy Choice Property:</b> If an optimal solution to the problem can be found by choosing the best choice at 
     each step without reconsidering the previous steps once chosen, the problem can be solved using a greedy approach. 

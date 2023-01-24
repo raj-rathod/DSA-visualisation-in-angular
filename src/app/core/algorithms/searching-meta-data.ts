@@ -31,8 +31,8 @@ const linearSearchData = {
   defination: `Linear Search is defined as a sequential search algorithm that starts at one end and goes through each 
   element of a list until the desired element is found, otherwise the search continues till the end of the data set. 
   It is the easiest searching algorithm`,
-  flowChart: 'assets/ds-image/DSA-404.webp',
-  explainImage: 'assets/ds-image/DSA-404.webp',
+  flowChart: 'assets/ds-image/comming-soon.jpg',
+  explainImage: 'assets/ds-image/comming-soon.jpg',
   workingProcedure: [
     `Start from the leftmost element of arr and one by one compare 'x' with each element of arr`,
     `If 'x' matches with an element, return the index`,
@@ -92,8 +92,8 @@ export const linearSearchMetaData: Algorithms = {
 const binarySearchData = {
   defination:`Binary Search is a searching algorithm used in a sorted array by repeatedly dividing the search interval in half. 
   The idea of binary search is to use the information that the array is sorted and reduce the time complexity to O(Log n)`,
-  flowChart: 'assets/ds-image/DSA-404.webp',
-  explainImage: 'assets/ds-image/DSA-404.webp',
+  flowChart: 'assets/ds-image/comming-soon.jpg',
+  explainImage: 'assets/ds-image/comming-soon.jpg',
   properties: [
     `The pre-condition for the binary search is that the elements must be arranged in a sorted order`,
     `The implementation of binary search is limited as it can be implemented only on those data structures 
@@ -157,8 +157,8 @@ export const binarySearchMetaData : Algorithms = {
 const jumpSearchData = {
   defination:`Jump Search is a searching algorithm for sorted arrays. The basic idea is to check fewer elements by 
   jumping ahead by fixed steps or skipping some elements in place of searching all elements.`,
-  flowChart: 'assets/ds-image/DSA-404.webp',
-  explainImage: 'assets/ds-image/DSA-404.webp',
+  flowChart: 'assets/ds-image/comming-soon.jpg',
+  explainImage: 'assets/ds-image/comming-soon.jpg',
   properties:[
     `This algorithm works only for sorted input arrays`,
     `Optimal size of the block to be skipped is √n, thus resulting in the time complexity O(√n2)`,
@@ -215,8 +215,8 @@ const interpolationSearchData = {
   data points. Binary Search always goes to the middle element to check. On the other hand, interpolation search may go to
   different locations according to the value of the key being searched. For example, if the value of the key is closer to the 
   last element, interpolation search is likely to start search toward the end side.`,
-  flowChart: 'assets/ds-image/DSA-404.webp',
-  explainImage: 'assets/ds-image/DSA-404.webp',
+  flowChart: 'assets/ds-image/comming-soon.jpg',
+  explainImage: 'assets/ds-image/comming-soon.jpg',
   properties: [
     `Interpolation searching algorithm is only used when the elements in an array is sorted and uniformly distributed`,
     `pos = low + ((target – A[low]) * (high – low) / (A[high] – A[low]))`
@@ -273,8 +273,8 @@ const exponentialSearchData = {
   assuming that the list is sorted in ascending order, the algorithm looks for the first exponent, j, where the value 2^j is greater 
   than the search key. This value, 2^j becomes the upper bound for the binary search with the previous power of 2, 2^(j - 1), being the 
   lower bound for the binary search`,
-  flowChart: 'assets/ds-image/DSA-404.webp',
-  explainImage: 'assets/ds-image/DSA-404.webp',
+  flowChart: 'assets/ds-image/comming-soon.jpg',
+  explainImage: 'assets/ds-image/comming-soon.jpg',
   properties: [
     `Finding the range in which the key could sit`,
     `Applying binary search in this range`,

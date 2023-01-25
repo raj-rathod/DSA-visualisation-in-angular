@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { pageMetaData } from './core/meta-data/meta-data';
-import { AlgorithmComponent } from './layout/algorithm/algorithm.component';
 import { DataStructureComponent } from './layout/data-structure/data-structure.component';
 import { HomeComponent } from './layout/home/home.component';
 import { PageNotFoundComponent } from './layout/page-not-found/page-not-found.component';

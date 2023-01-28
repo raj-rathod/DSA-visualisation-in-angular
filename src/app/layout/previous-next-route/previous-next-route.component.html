@@ -1,0 +1,10 @@
+<div class="container margin-top">
+    <div class="d-flex justify-content-between" *ngIf="selectedRoute > -1">
+        <div class="box p-lg-2 p-1 px-lg-3 px-2 tab" (click)="previousRoute()">
+            <p class="m-0">Previous</p>
+        </div>
+        <div class="box p-lg-2 p-1 px-lg-3 px-2 tab" (click)="nextRoute()">
+            <p class="m-0">Next</p>
+        </div>
+    </div>
+</div>

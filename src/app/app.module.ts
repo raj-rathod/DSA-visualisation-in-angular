@@ -14,6 +14,7 @@ import { PageNotFoundComponent } from './layout/page-not-found/page-not-found.co
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
 import { BreadcrumbsComponent } from './layout/breadcrumbs/breadcrumbs.component';
+import { PreviousNextRouteComponent } from './layout/previous-next-route/previous-next-route.component';
 
 
 @NgModule({
@@ -26,6 +27,7 @@ import { BreadcrumbsComponent } from './layout/breadcrumbs/breadcrumbs.component
     NavbarComponent,
     PageNotFoundComponent,
     BreadcrumbsComponent,
+    PreviousNextRouteComponent,
   ],
   imports: [
     FormsModule,

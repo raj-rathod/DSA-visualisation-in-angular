@@ -150,6 +150,53 @@ export const pageMetaData = {
         description:`What is hashing and hash function and what is hash table, properties of the hash function and hashing, 
         sufficient hash function, applications of the hash table and hash function, advantages and disadvantages of hashing and hash table`,
         keywords:`Hash Function, Hash Table, Hashing, Encription, Decription, Fastest Search Method`
+    },
+    sorting:{
+        title:'Sorting Algorithms | Sorting Algorithms Type | DSA Visualization',
+        description:`What is sorting algorithms, it's different types, properties of sorting algorithms and time complexity`,
+        keywords:`Sorting Algorithms, Sorting Algorithms Type, Merge Sort, Quick Sort, Insertion Sort, Selection Sort, Counting Sort
+        , Bucket Sort, Radix Sort, Heap Sort, Shell Sort`,
+    },
+    searching:{
+        title: `Search Algorithms | Search Algorithms Type | DSA Visualization`,
+        description: `What is search algorithms, it's different types, properties of search algorithms, applications and time complexity`,
+        keywords:`Search Algorithms, Searching Algorithms, Linear Search, Binary Search, Jump Search, 
+        Interpolation Search, Exponential Search`,
+    },
+    bruteForce:{
+        title:`Brute Force Algorithms | Brute Force Approach | DSA Visualization`,
+        description:`What is the brute force, properties of brute force algorithms and advantage and disadvantage of brute force algorithms`,
+        keywords:`Brute Force Algorithms, Brute Force Approach, Simple Problems`,
+    },
+    backtracking:{
+        title: `Backtracking Algorithm | Backtracking Algorithm Properties | Application of Backtracking | DSA Visualization`,
+        description:`What is the backtracking algorithm, properties of backtracking algorithms, applications of backtracking algorithms
+        and types of backtracking algorithms problems`,
+        keywords:`Backtracking, Backtracking Algorithms, Applications of Backtracking, Properties of Backtracking, 
+        Backtracking Algorithms Flowchart`,
+    },
+    divideAndConquer:{
+        title:`Divide and Conquer Algorithms | Properties of  Divide and Conquer Algorithms | DSA Visualization`,
+        description:`What is the divide and conquer algorithm, properties of divide and conquer algorithms, 
+        applications of the divide and conquer algorithm and examples of the algorithm`,
+        keywords:`Divide And Conquer Algorithms, Examples of Divide and Conquer, Properties of Divide and Conquer`
+    },
+    dynamicPrograming:{
+        title: `Dynamic Programming | Dynamic Programming Algorithms | Dynamic Programming Approach | DSA Visualization`,
+        description: `What is dynamic programming, properties and applications of dynamic programming, advantage and disadvantage of 
+        dynamic programming and examples of dynamic programming`,
+        keywords: `Dynamic Programming, Properties and Applications of Dynamic Programming, Examples of Dynamic Programming`,
+    },
+    greedy:{
+        title:`Greedy Algorithms | Properties of Greedy Algorithms | Types Greedy Algorithms | DSA Visualization`,
+        description:`What is greedy algorithms, properties and applications of greedy algorithms, advantage and disadvantage of
+        greedy algorithms and examples of greedy algorithms`,
+        keywords:`Greedy algorithms, Properties and Applications of Greedy Algorithms, Example of Greedy Algorithms,`
+    },
+    recursive: {
+        title:`Recursive algorithms | Recursion | Use Of Recursion | DSA Visualization `,
+        description:`What is the recursion, properties of the recursion, types of the recursion, What is the role 
+        of the stack in recursion, what is the call stack`,
+        keywords:`Recursion, Recursion Algorithms, Call Stack, Recursion Types, Application of the recursion`
     }
-
 }

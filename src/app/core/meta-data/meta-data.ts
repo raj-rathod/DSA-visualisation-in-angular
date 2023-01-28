@@ -198,5 +198,97 @@ export const pageMetaData = {
         description:`What is the recursion, properties of the recursion, types of the recursion, What is the role 
         of the stack in recursion, what is the call stack`,
         keywords:`Recursion, Recursion Algorithms, Call Stack, Recursion Types, Application of the recursion`
-    }
+    },
+    selectionSort: {
+        title: `Selection Sort | Selection Sort Algorithms | Selection Sort Flowcahrt | DSA Visualization`,
+        description:`What is the selection sort, flowchat and algorithm of selection sort, working procedure and visualization 
+        of selection sort, properties and applications of selection sort and time complexity`,
+        keywords:`Selection Sort, Selection Sort Algorithms, Selection Sort Flowchart, Selection Sort time complexity, 
+        Selection Sort Advantage and Disadvantage`
+    },
+    insertionSort: {
+        title: `Insertion Sort | Insertion Sort Algorithms | Insertion Sort Flowcahrt | DSA Visualization`,
+        description:`What is the Insertion sort, flowchat and algorithm of Insertion sort, working procedure and visualization 
+        of Insertion sort, properties and applications of Insertion sort and time complexity`,
+        keywords:`Insertion Sort, Insertion Sort Algorithms, Insertion Sort Flowchart, Insertion Sort time complexity, 
+        Insertion Sort Advantage and Disadvantage`
+    },
+    mergeSort: {
+        title: `Merge Sort | Merge Sort Algorithms | Merge Sort Flowcahrt | DSA Visualization`,
+        description:`What is the Merge sort, flowchat and algorithm of Merge sort, working procedure and visualization 
+        of Merge sort, properties and applications of Merge sort and time complexity`,
+        keywords:`Merge Sort, Merge Sort Algorithms, Merge Sort Flowchart, Merge Sort time complexity, 
+        Merge Sort Advantage and Disadvantage`
+    },
+    quickSort: {
+        title: `Quick Sort | Quick Sort Algorithms | Quick Sort Flowcahrt | DSA Visualization`,
+        description:`What is the Quick sort, flowchat and algorithm of Quick sort, working procedure and visualization 
+        of Quick sort, properties and applications of Quick sort and time complexity`,
+        keywords:`Quick Sort, Quick Sort Algorithms, Quick Sort Flowchart, Quick Sort time complexity, 
+        Quick Sort Advantage and Disadvantage`
+    },
+    countingSort: {
+        title: `Counting Sort | Counting Sort Algorithms | Counting Sort Flowcahrt | DSA Visualization`,
+        description:`What is the Counting sort, flowchat and algorithm of Counting sort, working procedure and visualization 
+        of Counting sort, properties and applications of Counting sort and time complexity`,
+        keywords:`Counting Sort, Counting Sort Algorithms, Counting Sort Flowchart, Counting Sort time complexity, 
+        Counting Sort Advantage and Disadvantage`
+    },
+    radixSort: {
+        title: `Radix Sort | Radix Sort Algorithms | Radix Sort Flowcahrt | DSA Visualization`,
+        description:`What is the Radix sort, flowchat and algorithm of Radix sort, working procedure and visualization 
+        of Radix sort, properties and applications of Radix sort and time complexity`,
+        keywords:`Radix Sort, Radix Sort Algorithms, Radix Sort Flowchart, Radix Sort time complexity, 
+        Radix Sort Advantage and Disadvantage`
+    },
+    bucketSort: {
+        title: `Bucket Sort | Bucket Sort Algorithms | Bucket Sort Flowcahrt | DSA Visualization`,
+        description:`What is the Bucket sort, flowchat and algorithm of Bucket sort, working procedure and visualization 
+        of Bucket sort, properties and applications of Bucket sort and time complexity`,
+        keywords:`Bucket Sort, Bucket Sort Algorithms, Bucket Sort Flowchart, Bucket Sort time complexity, 
+        Bucket Sort Advantage and Disadvantage`
+    },
+    shellSort: {
+        title: `Shell Sort | Shell Sort Algorithms | Shell Sort Flowcahrt | DSA Visualization`,
+        description:`What is the Shell sort, flowchat and algorithm of Shell sort, working procedure and visualization 
+        of Shell sort, properties and applications of Shell sort and time complexity`,
+        keywords:`Shell Sort, Shell Sort Algorithms, Shell Sort Flowchart, Shell Sort time complexity, 
+        Shell Sort Advantage and Disadvantage`
+    },
+    linearSearch: {
+        title: `Linear Search | Linear Search Algorithms | Linear Search Flowcahrt | DSA Visualization`,
+        description:`What is the Linear Search, flowchat and algorithm of Linear Search, working procedure and visualization 
+        of Linear Search, properties and applications of Linear Search and time complexity`,
+        keywords:`Linear Search, Linear Search Algorithms, Linear Search Flowchart, Linear Search time complexity, 
+        Linear Search Advantage and Disadvantage`
+    },
+    binarySearch: {
+        title: `Binary Search | Binary Search Algorithms | Binary Search Flowcahrt | DSA Visualization`,
+        description:`What is the Binary Search, flowchat and algorithm of Binary Search, working procedure and visualization 
+        of Binary Search, properties and applications of Binary Search and time complexity`,
+        keywords:`Binary Search, Binary Search Algorithms, Binary Search Flowchart, Binary Search time complexity, 
+        Binary Search Advantage and Disadvantage`
+    },
+    jumpSearch: {
+        title: `Jump Search | Jump Search Algorithms | Jump Search Flowcahrt | DSA Visualization`,
+        description:`What is the Jump Search, flowchat and algorithm of Jump Search, working procedure and visualization 
+        of Jump Search, properties and applications of Jump Search and time complexity`,
+        keywords:`Jump Search, Jump Search Algorithms, Jump Search Flowchart, Jump Search time complexity, 
+        Jump Search Advantage and Disadvantage`
+    },
+    interpolationSearch: {
+        title: `Interpolation Search | Interpolation Search Algorithms | Interpolation Search Flowcahrt | DSA Visualization`,
+        description:`What is the Interpolation Search, flowchat and algorithm of Interpolation Search, working procedure and visualization 
+        of Interpolation Search, properties and applications of Interpolation Search and time complexity`,
+        keywords:`Interpolation Search, Interpolation Search Algorithms, Interpolation Search Flowchart, Interpolation Search time complexity, 
+        Interpolation Search Advantage and Disadvantage`
+    },
+    exponentialSearch: {
+        title: `Exponential Search | Exponential Search Algorithms | Exponential Search Flowcahrt | DSA Visualization`,
+        description:`What is the Exponential Search, flowchat and algorithm of Exponential Search, working procedure and visualization 
+        of Exponential Search, properties and applications of Exponential Search and time complexity`,
+        keywords:`Exponential Search, Exponential Search Algorithms, Exponential Search Flowchart, Exponential Search time complexity, 
+        Exponential Search Advantage and Disadvantage`
+    },
+
 }

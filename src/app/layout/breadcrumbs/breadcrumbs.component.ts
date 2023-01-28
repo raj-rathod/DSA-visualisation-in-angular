@@ -1,4 +1,4 @@
-import { Component, ElementRef, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { NavigationEnd, Router, Event as NavigationEvent } from '@angular/router';
 import { Helper } from 'src/app/helper/helper';
 import { RouterLinkData } from 'src/app/shared/interfaces/meta-data.interface';
@@ -13,7 +13,6 @@ export class BreadcrumbsComponent implements OnInit {
   selectedRoute = -1;
   constructor(
     private router: Router,
-    private elRef: ElementRef,
   ) { }
 
   ngOnInit(): void {

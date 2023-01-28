@@ -1,5 +1,5 @@
 .margin-top{
-    margin-top: 90px;
+    margin-top: 20px;
 }
 .social-media{
     background: white;
@@ -23,6 +23,7 @@
     color: black !important;
     text-decoration: none;
 }
+
 @media(max-width:992px) {
     .image-size{
         width: 150px;

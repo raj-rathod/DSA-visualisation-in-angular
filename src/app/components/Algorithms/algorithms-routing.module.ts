@@ -9,6 +9,7 @@ const routes: Routes = [
   },
   {
       path:'backtracking',
+      data: pageMetaData.backtracking,
       loadChildren: () => import('./backtracking/backtracking.module').then(m => m.BacktrackingModule)
   },
   {
@@ -18,14 +19,17 @@ const routes: Routes = [
   },
   {
       path: 'divide-and-conquer',
+      data: pageMetaData.divideAndConquer,
       loadChildren: () => import('./divide-and-conquer/divide-and-conquer.module').then(m => m.DivideAndConquerModule)
   },
   {
       path: 'dynamic-programming',
+      data: pageMetaData.dynamicPrograming,
       loadChildren: () => import('./dynamic-programming/dynamic-programming.module').then(m => m.DynamicProgrammingModule)
   },
   {
       path: 'greedy',
+      data: pageMetaData.greedy,
       loadChildren: () => import('./greedy/greedy.module').then(m => m.GreedyModule)
   },
   {
@@ -34,6 +38,7 @@ const routes: Routes = [
   },
   {
       path: 'recursive',
+      data: pageMetaData.recursive,
       loadChildren: () => import('./recursive/recursive.module').then(m => m.RecursiveModule)
   },
   {

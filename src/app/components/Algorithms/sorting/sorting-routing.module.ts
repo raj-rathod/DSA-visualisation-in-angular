@@ -10,6 +10,7 @@ import { RadixSortComponent } from './radix-sort/radix-sort.component';
 import { SelectionSortComponent } from './selection-sort/selection-sort.component';
 import { ShellSortComponent } from './shell-sort/shell-sort.component';
 import { SortingAlgorithmComponent } from './sorting-algorithm/sorting-algorithm.component';
+import { pageMetaData } from 'src/app/core/meta-data/meta-data';
 
 const routes: Routes = [
   {
@@ -19,28 +20,44 @@ const routes: Routes = [
     path: 'bubble-sort', component: BubbleSortComponent
   },
   {
-    path: 'selection-sort', component: SelectionSortComponent
+    path: 'selection-sort', 
+    data: pageMetaData.selectionSort,
+    component: SelectionSortComponent
   },
   {
-    path: 'insertion-sort', component: InsertionSortComponent
+    path: 'insertion-sort', 
+    data: pageMetaData.insertionSort,
+    component: InsertionSortComponent
   },
   {
-    path: 'merge-sort', component: MergeSortComponent
+    path: 'merge-sort', 
+    data: pageMetaData.mergeSort,
+    component: MergeSortComponent
   },
   {
-    path: 'quick-sort', component: QuickSortComponent
+    path: 'quick-sort', 
+    data: pageMetaData.quickSort,
+    component: QuickSortComponent
   },
   {
-    path: 'counting-sort', component: CountingSortComponent
+    path: 'counting-sort', 
+    data: pageMetaData.countingSort,
+    component: CountingSortComponent
   },
   {
-    path: 'radix-sort', component: RadixSortComponent
+    path: 'radix-sort',
+    data: pageMetaData.radixSort, 
+    component: RadixSortComponent
   },
   {
-    path: 'bucket-sort', component: BucketSortComponent
+    path: 'bucket-sort', 
+    data: pageMetaData.bucketSort,
+    component: BucketSortComponent
   },
   {
-    path: 'shell-sort', component: ShellSortComponent
+    path: 'shell-sort', 
+    data: pageMetaData.shellSort,
+    component: ShellSortComponent
   }
 ];
 

@@ -7,25 +7,36 @@ import { InterpolationSearchComponent } from './interpolation-search/interpolati
 import { JumpSearchComponent } from './jump-search/jump-search.component';
 import { LinearSearchComponent } from './linear-search/linear-search.component';
 import { SearchingAlgorithmComponent } from './searching-algorithm/searching-algorithm.component';
+import { pageMetaData } from 'src/app/core/meta-data/meta-data';
 
 const routes: Routes = [
   {
     path:'', component: SearchingAlgorithmComponent
   },
   {
-    path: 'linear-search', component: LinearSearchComponent
+    path: 'linear-search', 
+    data: pageMetaData.linearSearch,
+    component: LinearSearchComponent
   },
   {
-    path: 'binary-search', component: BinarySearchComponent
+    path: 'binary-search', 
+    data: pageMetaData.binarySearch,
+    component: BinarySearchComponent
   },
   {
-    path: 'jump-search', component: JumpSearchComponent
+    path: 'jump-search', 
+    data: pageMetaData.jumpSearch,
+    component: JumpSearchComponent
   },
   {
-    path: 'interpolation-search', component: InterpolationSearchComponent
+    path: 'interpolation-search',
+    data: pageMetaData.interpolationSearch,
+    component: InterpolationSearchComponent
   },
   {
-    path: 'exponential-search', component: ExponentialSearchComponent
+    path: 'exponential-search', 
+    data: pageMetaData.exponentialSearch,
+    component: ExponentialSearchComponent
   },
   {
     path: 'fibonacci-search', component: FibonacciSearchComponent

@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { pageMetaData } from 'src/app/core/meta-data/meta-data';
 import { AlgorithmComponent } from 'src/app/layout/algorithm/algorithm.component';
 
 const routes: Routes = [
@@ -12,6 +13,7 @@ const routes: Routes = [
   },
   {
       path: 'brute-force',
+      data: pageMetaData.bruteForce,
       loadChildren: () => import('./brute-force/brute-force.module').then(m => m.BruteForceModule)
   },
   {
@@ -36,10 +38,12 @@ const routes: Routes = [
   },
   {
       path: 'searching',
+      data: pageMetaData.searching,
       loadChildren: () => import('./searching/searching.module').then(m => m.SearchingModule)
   },
   {
       path: 'sorting',
+      data: pageMetaData.sorting,
       loadChildren: () => import('./sorting/sorting.module').then(m => m.SortingModule)
   }
 

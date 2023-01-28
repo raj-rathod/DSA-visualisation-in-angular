@@ -150,6 +150,22 @@ export const pageMetaData = {
         description:`What is hashing and hash function and what is hash table, properties of the hash function and hashing, 
         sufficient hash function, applications of the hash table and hash function, advantages and disadvantages of hashing and hash table`,
         keywords:`Hash Function, Hash Table, Hashing, Encription, Decription, Fastest Search Method`
+    },
+    sorting:{
+        title:'Sorting Algorithms | Sorting Algorithms Type | DSA Visualization',
+        description:`What is sorting algorithms, it's different types, properties of sorting algorithms and time complexity`,
+        keywords:`Sorting Algorithms, Sorting Algorithms Type, Merge Sort, Quick Sort, Insertion Sort, Selection Sort, Counting Sort
+        , Bucket Sort, Radix Sort, Heap Sort, Shell Sort`,
+    },
+    searching:{
+        title: `Search Algorithms | Search Algorithms Type | DSA Visualization`,
+        description: `What is search algorithms, it's different types, properties of search algorithms, applications and time complexity`,
+        keywords:`Search Algorithms, Searching Algorithms, Linear Search, Binary Search, Jump Search, 
+        Interpolation Search, Exponential Search`,
+    },
+    bruteForce:{
+        title:`Brute Force Algorithms | Brute Force Approach | DSA Visualization`,
+        description:`What is the brute force, properties of brute force algorithms and advantage and disadvantage of brute force algorithms`,
+        keywords:`Brute Force Algorithms, Brute Force Approach, Simple Problems`,
     }
-
 }

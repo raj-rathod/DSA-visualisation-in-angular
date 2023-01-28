@@ -65,10 +65,10 @@ export const algorithms: RouterLinkData[] = [
         name: "Greedy",
         route: "/algorithm/greedy"
     },
-    {
-        name: "Hashing",
-        route: "/non-primitive/non-linear/hash-table"
-    },
+    // {
+    //     name: "Hashing",
+    //     route: "/non-primitive/non-linear/hash-table"
+    // },
     // {
     //     name: "Randomized",
     //     route: "/algorithm/randomized"

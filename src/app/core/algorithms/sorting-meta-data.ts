@@ -245,7 +245,7 @@ const quickSortData = {
     The list is divided into two partitions such that "all elements to the left of pivot are smaller than the pivot 
     and all elements to the right of pivot are greater than or equal to the pivot".
   `,
-  flowChart:"assets/ds-image/comming-soon.jpg",
+  flowChart:"assets/ds-image/quick-sort-flowchart.jpg",
   explainImage:"assets/ds-image/comming-soon.jpg",
   workingProcedure:[
     'quickSort(arr, left, right)',

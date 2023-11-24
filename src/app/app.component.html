@@ -1,11 +1,9 @@
-<div class="d-flex flex-column vh-100">
-    <div class="container mb-auto">
-        <app-navbar></app-navbar>
-        <div class="margin-top">
-            <app-breadcrumbs></app-breadcrumbs>
-            <router-outlet></router-outlet>
-        </div>
+<div class="container">
+    <app-navbar></app-navbar>
+    <div class="margin-top">
+        <app-breadcrumbs></app-breadcrumbs>
+        <router-outlet></router-outlet>
     </div>
-    <app-previous-next-route></app-previous-next-route>
-    <app-footer></app-footer>
 </div>
+<app-previous-next-route></app-previous-next-route>
+<app-footer></app-footer>

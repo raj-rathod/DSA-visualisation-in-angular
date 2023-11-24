@@ -19,6 +19,25 @@ export const projects: Projects[] = [
     }
 ];
 
+export const WebBredcrumb: Projects[] = [
+    {
+        name: "Home",
+        url: "/"
+    },
+    {
+        name: "About",
+        url: "https://raj-rathod.github.io/rajesh-rathore/"
+    },
+    {
+        name: "Contact",
+        url: "https://www.instagram.com/raj_rathod1313/"
+    },
+    {
+        name: "Blogs",
+        url: "https://dev.to/rajrathod"
+    }
+];
+
 export const socialLinkes: SocialLink[] = [
     {
         name:"Facebook",
@@ -50,10 +69,6 @@ export const socialLinkes: SocialLink[] = [
     }
 ];
 
-export const contact: string[] =[
-    "rajeshrathore05011998@gmail.com",
-    "9148002717",
-];
 
 export const pageMetaData = {
     home:{

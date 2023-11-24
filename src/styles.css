@@ -13,6 +13,14 @@ body {
   word-spacing: 0.2rem;
 }
 
+a{
+  text-decoration: none;
+  color: #000;
+}
+a:hover{
+  color: #E8EAEA;
+}
+
 pre[class*="language-"] {
   padding: 0px !important;
 }

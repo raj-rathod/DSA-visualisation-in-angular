@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { contact, projects, socialLinkes } from 'src/app/core/meta-data/meta-data';
+import {WebBredcrumb, socialLinkes } from 'src/app/core/meta-data/meta-data';
 
 @Component({
   selector: 'app-footer',
@@ -7,10 +7,8 @@ import { contact, projects, socialLinkes } from 'src/app/core/meta-data/meta-dat
   styleUrls: ['./footer.component.css']
 })
 export class FooterComponent implements OnInit {
-  projects = projects;
+  webBredcrumb = WebBredcrumb;
   socialLinkes = socialLinkes;
-  contact = contact;
-
   constructor() { }
 
   ngOnInit(): void {

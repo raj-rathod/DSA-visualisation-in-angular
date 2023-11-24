@@ -1,44 +1,26 @@
-<section class="margin-top social-media">
-    <div class="container py-3">
-       <div class="d-flex justify-content-between align-items-center">
-        <p class="m-0 d-none d-md-block fw-bold">Connect with me</p>
-        <div class="d-flex flex-row">
-          <ng-container *ngFor="let social of socialLinkes">
-             <a class="ms-3" [href]="social?.url" target="_blank" rel="noopener noreferrer">
-                <img width="32" height="32" [src]="social?.image" [alt]="social?.name"/>
-             </a>
-          </ng-container>
-        </div>
-       </div>
-    </div>
-</section>
-<section class="bg-footer">
-<div class="container py-4">
-    <div class="row">
-        <div class="col-lg-4 col-md-6">
-                <h4 class="fw-bold">Rajesh Rathore</h4>
-                <p class="fs-small col-xl-10">I am a 𝗙𝗿𝗼𝗻𝘁𝗲𝗻𝗱 𝗗𝗲𝘃𝗲𝗹𝗼𝗽𝗲𝗿 with almost 2+ years of experience, specializing in 𝗔𝗻𝗴𝘂𝗹𝗮𝗿 𝟭𝟬+ and 𝗥𝗲𝘀𝘁 𝗔𝗣𝗜'𝘀 integration. I have extensive experience in 𝗛𝗧𝗠𝗟𝟱, 𝗖𝗦𝗦𝟯, 𝗕𝗼𝗼𝘁𝘀𝘁𝗿𝗮𝗽, 𝗧𝘆𝗽𝗲𝗦𝗰𝗿𝗶𝗽𝘁, 𝗝𝗮𝘃𝗮𝗦𝗰𝗿𝗶𝗽𝘁 and various open-source frameworks such as 𝗡𝗼𝗱𝗲𝗝𝗦, 𝗘𝘅𝗽𝗿𝗲𝘀𝘀𝗝𝗦, 𝗔𝗻𝗴𝘂𝗹𝗮𝗿𝗝𝗦, 𝗠𝗼𝗻𝗴𝗼𝗗𝗕. I am skilled in the use of these frameworks to develop web applications based on 𝗦𝗶𝗻𝗴𝗹𝗲 𝗣𝗮𝗴𝗲 𝗔𝗽𝗽𝗹𝗶𝗰𝗮𝘁𝗶𝗼𝗻𝘀 (𝗦𝗣𝗔) and 𝗠𝗼𝗱𝗲𝗹-𝗩𝗶𝗲𝘄-𝗖𝗼𝗻𝘁𝗿𝗼𝗹𝗹𝗲𝗿 (𝗠𝗩𝗖) architectures.
-                </p>
-        </div>
-        <div class="col-lg-3 col-md-6  text-lg-start text-center mb-3">
-            <img class="image-size" fetchpriority="high" src="assets/icons/rajesh-rathore.webp" alt="Rajesh Rathore">
-        </div>
-        <div class="col-lg-5 col-md-12">
-            <div class="d-flex justify-content-between">
-                <div>
-                    <h4 class="fw-bold mb-2">Projects</h4>
-                    <ng-container *ngFor="let project of projects">
-                        <p class="m-0 mb-2  fs-small"><a [href]="project?.url" target="_blank" rel="noopener noreferrer" class="item-link">{{project?.name}}</a></p>
-                    </ng-container>
+<section class="bg-footer mt-4">
+    <div class="container py-4">
+        <div class="d-flex justify-content-center">
+            <div class="mt-4">
+                <h3 class="mb-4 mt-5 text-center"><a href="https://raj-rathod.github.io/DSA-visualisation-in-angular/"
+                        target="new">DSA Visualization</a></h3>
+                <div class="d-flex justify-content-center">
+                    <div class="me-3" *ngFor="let webCrum of webBredcrumb">
+                        <a class="text-uppercase" target="new" aria-current="page"
+                            [href]="webCrum.url">{{webCrum.name}}</a>
+                    </div>
+
                 </div>
-                <div class="d-md-block d-none">
-                    <h4 class="fw-bold mb-2">Contact</h4>
-                    <ng-container *ngFor="let contact of contact">
-                        <p class="m-0 mb-2 fs-small">{{contact}}</p>
+
+                <p class="mt-4 fw-bold text-center">Stay In Touch</p>
+                <div class="d-flex justify-content-center mt-2">
+                    <ng-container *ngFor="let social of socialLinkes">
+                        <a class="ms-3" [href]="social?.url" target="_blank" rel="noopener noreferrer">
+                            <img width="26" height="26" [src]="social?.image" [alt]="social?.name" />
+                        </a>
                     </ng-container>
                 </div>
             </div>
         </div>
-     </div>
-</div>
+    </div>
 </section>

@@ -29,7 +29,7 @@
               "src/favicon.ico",
               "src/assets",
               "src/manifest.webmanifest",
-              "src/manifest.webmanifest"
+              "src/browserconfig.xml"
             ],
             "styles": [
               "src/styles.css",

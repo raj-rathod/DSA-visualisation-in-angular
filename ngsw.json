@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1700789216944,
+  "timestamp": 1700878813483,
   "index": "https://raj-rathod.github.io/DSA-visualisation-in-angular/index.html",
   "assetGroups": [
     {
@@ -96,6 +96,11 @@
         "https://raj-rathod.github.io/DSA-visualisation-in-angular/assets/icons/rajesh-rathore.png",
         "https://raj-rathod.github.io/DSA-visualisation-in-angular/assets/icons/rajesh-rathore.webp",
         "https://raj-rathod.github.io/DSA-visualisation-in-angular/assets/icons/twitter.svg",
+        "https://raj-rathod.github.io/DSA-visualisation-in-angular/assets/seo/apple-touch-icon.png",
+        "https://raj-rathod.github.io/DSA-visualisation-in-angular/assets/seo/favicon-16x16.png",
+        "https://raj-rathod.github.io/DSA-visualisation-in-angular/assets/seo/favicon-32x32.png",
+        "https://raj-rathod.github.io/DSA-visualisation-in-angular/assets/seo/mstile-150x150.png",
+        "https://raj-rathod.github.io/DSA-visualisation-in-angular/assets/seo/safari-pinned-tab.svg",
         "https://raj-rathod.github.io/DSA-visualisation-in-angular/assets/sitemap/sitemap.xml"
       ],
       "patterns": []
@@ -169,9 +174,14 @@
     "https://raj-rathod.github.io/DSA-visualisation-in-angular/assets/icons/rajesh-rathore.png": "37ef2a0da1209a84a3e1aec0cb4c7e10a0e8558b",
     "https://raj-rathod.github.io/DSA-visualisation-in-angular/assets/icons/rajesh-rathore.webp": "040a37bd61803fab93a55601ecb0181ee77f15e7",
     "https://raj-rathod.github.io/DSA-visualisation-in-angular/assets/icons/twitter.svg": "105d278a21ef8b6fca7b9fed1de8ab564a602fe4",
+    "https://raj-rathod.github.io/DSA-visualisation-in-angular/assets/seo/apple-touch-icon.png": "d5f90d101b02d3b07286128ddb6754a47aa93caa",
+    "https://raj-rathod.github.io/DSA-visualisation-in-angular/assets/seo/favicon-16x16.png": "5759a692f573632b95400b8e7e40d33f47790875",
+    "https://raj-rathod.github.io/DSA-visualisation-in-angular/assets/seo/favicon-32x32.png": "a3917243d2efae92e2c5f47830884420c02b861d",
+    "https://raj-rathod.github.io/DSA-visualisation-in-angular/assets/seo/mstile-150x150.png": "8c054f969b8ba6ba16a0b28da424e7f858cd10e7",
+    "https://raj-rathod.github.io/DSA-visualisation-in-angular/assets/seo/safari-pinned-tab.svg": "680c7d12f136176a54ce6b477d9b846edd4c9499",
     "https://raj-rathod.github.io/DSA-visualisation-in-angular/assets/sitemap/sitemap.xml": "d5b8ab44cb0501dbfbb6332d87a85e330ac0c427",
-    "https://raj-rathod.github.io/DSA-visualisation-in-angular/favicon.ico": "22f6a4a3bcaafafb0254e0f2fa4ceb89e505e8b2",
-    "https://raj-rathod.github.io/DSA-visualisation-in-angular/index.html": "293f2d8e43b2c2a63a3808040b7b924245688a6a",
+    "https://raj-rathod.github.io/DSA-visualisation-in-angular/favicon.ico": "512b5370e3e10afe395424abd69ffdc2e27d0266",
+    "https://raj-rathod.github.io/DSA-visualisation-in-angular/index.html": "a6719ca6d845548d2ad5bc77f83db78f34f02577",
     "https://raj-rathod.github.io/DSA-visualisation-in-angular/main.fc0f05eb012dd6489c15.js": "f193913cf6bd7af583d389209026d0ec9d978ab5",
     "https://raj-rathod.github.io/DSA-visualisation-in-angular/manifest.webmanifest": "78e7d4c41e6dfe8972067102d59e59f5eb1e5cff",
     "https://raj-rathod.github.io/DSA-visualisation-in-angular/polyfills.66aa7433feb1a3481f47.js": "72d0579f7d4778e52aed41c4a0ba07ea0276f428",

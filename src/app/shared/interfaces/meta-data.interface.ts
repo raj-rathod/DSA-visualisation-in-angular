@@ -1,6 +1,7 @@
 export interface Projects{
     name: string;
     url: string;
+    description?: string;
 }
 
 export interface SocialLink{

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {WebBredcrumb, socialLinkes } from 'src/app/core/meta-data/meta-data';
+import {Project, WebBredcrumb, socialLinkes } from 'src/app/core/meta-data/meta-data';
 
 @Component({
   selector: 'app-footer',
@@ -7,11 +7,16 @@ import {WebBredcrumb, socialLinkes } from 'src/app/core/meta-data/meta-data';
   styleUrls: ['./footer.component.css']
 })
 export class FooterComponent implements OnInit {
+  projects = Project;
   webBredcrumb = WebBredcrumb;
   socialLinkes = socialLinkes;
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  redirect(url: string): void {
+    window.open(url,'new');
   }
 
 

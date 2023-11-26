@@ -1,21 +1,25 @@
 import { Projects, SocialLink } from "src/app/shared/interfaces/meta-data.interface";
 
-export const projects: Projects[] = [
-    {
-        name: "DSA Visualisation",
-        url: "https://raj-rathod.github.io/DSA-visualisation-in-angular/"
-    },
+export const Project: Projects[] = [
     {
         name: "DSA methods npm package",
-        url: "https://www.npmjs.com/package/@raj-rathod/dsa-methods"
+        url: "https://www.npmjs.com/package/@raj-rathod/dsa-methods",
+        description: "This package is developed for functionality of data structures and algorithms, some standard examples of algorithms are implemented"
+    },
+    {
+        name: "PATH FINDING WITH DIJKSTRA",
+        url: "https://dsa-visualization.github.io/shortest-path-finding/",
+        description:"Dijkstra's algorithm is an algorithm for finding the shortest paths between nodes in a weighted graph, which may represent, for example, road networks. It was conceived by computer scientist Edsger W. Dijkstra in 1956 and published three years later."
     },
     {
         name: "Calendar without api",
-        url: "https://raj-rathod.github.io/Calendar_without_Third_Party_api/"
+        url: "https://raj-rathod.github.io/Calendar_without_Third_Party_api/",
+        description:"This project is a Custom Calendar, it is build without any third party libraries and API's, it contains a search section for searching a day on particular date , u can simply enter date in format dd/mm/yyyy and get result as a day name"
     },
     {
         name: "Tic Tac Toe",
-        url: "https://raj-rathod.github.io/tic-toc-game/"
+        url: "https://raj-rathod.github.io/tic-toc-game/",
+        description:"It's very famous game any one can easily play and even easily develop . It is really time pass game during school time and even any time with your friends and girlfriend. Any one can play and even easily understand the game . I also developed this game just for fun and play it with my friends and I am waiting for playing with my girlfriend"
     }
 ];
 
@@ -78,7 +82,7 @@ export const pageMetaData = {
           for better understanding`,
         keywords:`Algorithms, Leetcode, Dsa, Data Structures and Algorithms, Data Structures, Dsa Learning Series, Dsa questions, 
           Dsa practice, Placemnet Preparation, DSA Visualization, Dsa problems, Faang interview, Faang preparation, 
-          Faang questions, Dsa short notes`
+          Faang questions, Dsa short notes, data structures and algorithms visualization, data structure visualization, data structures visualization, visualization of data structures`
     },
     dataStructure:{
         title:"Data structure | DSA Visualization",

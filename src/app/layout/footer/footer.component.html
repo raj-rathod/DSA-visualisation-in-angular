@@ -1,5 +1,19 @@
-<section class="bg-footer mt-4">
-    <div class="container py-4">
+
+<div class="container">
+    <div class="mt-4 d-flex align-items-center horizontal-scroll pt-3">
+        <div 
+        class="project-card floating-card me-3 p-md-4 p-3 col-md-4 col-12 tab" 
+        *ngFor="let project of projects"
+        (click)="redirect(project.url)"
+        >
+            <h4 class="text-uppercase">{{project.name}}</h4>
+              <p class="m-0">{{project.description!.length > 80 ? project.description!.substring(0,80)+'...' :project.description }}</p>
+        </div>
+    </div>
+</div>
+
+<section class="bg-footer">
+    <div class="container pb-4 pt-5">
         <div class="d-flex justify-content-center">
             <div class="mt-4">
                 <h3 class="mb-4 mt-5 text-center"><a href="https://raj-rathod.github.io/DSA-visualisation-in-angular/"

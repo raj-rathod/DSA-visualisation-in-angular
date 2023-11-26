@@ -6,8 +6,8 @@
     box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
 .bg-footer{
-    -webkit-clip-path: polygon(10% 20%, 90% 20%, 100% 0, 100% 100%, 0 100%, 0 0);
-    clip-path: polygon(10% 20%, 90% 20%, 100% 0, 100% 100%, 0 100%, 0 0);
+    -webkit-clip-path: polygon(0 20%, 20% 10%, 40% 20%, 60% 10%, 80% 20%, 100% 10%, 100% 100%, 0% 100%);
+    clip-path: polygon(0 20%, 20% 10%, 40% 20%, 60% 10%, 80% 20%, 100% 10%, 100% 100%, 0% 100%);
     background:rgba(16, 203, 236, 0.76);
     box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
@@ -25,3 +25,30 @@
     color: black !important;
     text-decoration: none;
 }
+
+
+.project-card {
+    background-color: #ebeeef;
+    /* min-width: fit-content; */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.7s ease-in;
+  }
+
+  .project-card:hover{
+    background-color: rgba(16, 203, 236, 0.76);
+  }
+
+
+  @keyframes float {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+
+  .floating-card {
+    animation: float 2s infinite;
+  }

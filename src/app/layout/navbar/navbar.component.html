@@ -1,4 +1,5 @@
-<nav class="navbar navbar-expand-lg navbar-light pt-lg-3 pt-2 fixed-top bg-white">
+<div class="container">
+  <nav class="navbar navbar-expand-lg navbar-light pt-lg-3 pt-2 fixed-top bg-white">
     <div class="container">
       <a class="navbar-brand fw-bold" routerLink="/">DSA Visualization</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleMenu" aria-controls="navbarToggleMenu" aria-expanded="false" aria-label="Toggle navigation">
@@ -6,6 +7,17 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarToggleMenu">
         <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item dropdown">
+            <p class="nav-link dropdown-toggle active m-0"  id="navbarDropdownMenuLink1" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Interview Questions
+            </p>
+            <ul class="dropdown-menu data-link-dropdown-menu" aria-labelledby="navbarDropdownMenuLink1">
+              <li *ngFor="let data of interviewQuestions" [routerLink]="data.route" (click)="closeCollapse()">
+                <p class="m-0 px-3 py-1">{{data.name}}</p>
+              </li>
+              
+            </ul>
+        </li>
             <li class="nav-item dropdown">
                 <p class="nav-link dropdown-toggle active m-0"  id="navbarDropdownMenuLink1" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                   Data Structures
@@ -43,4 +55,6 @@
         </div>
       </div>
     </div>
-  </nav>
+</nav>
+
+</div>

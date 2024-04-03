@@ -179,3 +179,14 @@ export const divideAndConquerLinks: RouterLinkData[] = [
     //     route: "/algorithm/divide-and-conquer/karatsuba"
     // }
 ];
+
+export const interviewQuestions: RouterLinkData[] = [
+    {
+        name: "Angular",
+        route: "/interview-questions/angular"
+    },
+    {
+        name: "JavaScript",
+        route: "/interview-questions/javascript"
+    }
+];

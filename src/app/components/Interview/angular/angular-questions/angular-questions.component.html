@@ -1,0 +1,6 @@
+<app-breadcrumbs [selectedRoute]="currentQuestion-1" [routersData]="routesData"></app-breadcrumbs>
+<div class="chip mb-2">
+    {{currentQuestion}}/{{totalQuestion}}
+</div>
+<div class="question-conationer" [innerHTML]="question"></div>
+<app-previous-next-route [selectedRoute]="currentQuestion-1" [routersData]="routesData"></app-previous-next-route>

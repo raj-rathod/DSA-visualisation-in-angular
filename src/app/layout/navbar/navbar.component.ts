@@ -1,5 +1,5 @@
 import { Component, ElementRef, OnInit } from '@angular/core';
-import { algorithms, dataStructure } from 'src/app/core/meta-data/router-meta-data';
+import { algorithms, dataStructure, interviewQuestions } from 'src/app/core/meta-data/router-meta-data';
 import { Helper } from 'src/app/helper/helper';
 import { RouterLinkData } from 'src/app/shared/interfaces/meta-data.interface';
 
@@ -10,6 +10,7 @@ import { RouterLinkData } from 'src/app/shared/interfaces/meta-data.interface';
 })
 export class NavbarComponent implements OnInit {
   dataStructure = dataStructure;
+  interviewQuestions = interviewQuestions;
   algorithms = algorithms
   searchData: RouterLinkData[] = Helper.allRoutesData();;
   searchKey = '';

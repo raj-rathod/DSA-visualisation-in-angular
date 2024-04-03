@@ -1,3 +1,8 @@
 .margin-top{
     margin-top: 70px;
 }
+@media (max-width: 767.98px) {
+    .margin-top{
+        margin-top: 50px;
+    }
+}

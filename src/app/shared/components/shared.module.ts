@@ -6,6 +6,8 @@ import { DoubleValueInputDialogComponent } from './double-value-input-dialog/dou
 import { MatrixInputDialogComponent } from './matrix-input-dialog/matrix-input-dialog.component';
 import { CodeSyntaxComponent } from './code-syntax/code-syntax.component';
 import { SearchResultComponent } from './search-result/search-result.component';
+import { BreadcrumbsComponent } from 'src/app/layout/breadcrumbs/breadcrumbs.component';
+import { PreviousNextRouteComponent } from 'src/app/layout/previous-next-route/previous-next-route.component';
 
 @NgModule({
   declarations: [
@@ -13,7 +15,9 @@ import { SearchResultComponent } from './search-result/search-result.component';
      DoubleValueInputDialogComponent,
      MatrixInputDialogComponent,
      CodeSyntaxComponent,
-     SearchResultComponent
+     SearchResultComponent,
+     BreadcrumbsComponent,
+     PreviousNextRouteComponent
   ],
   imports: [
     CommonModule,
@@ -21,6 +25,8 @@ import { SearchResultComponent } from './search-result/search-result.component';
   ],
   exports:[
     CodeSyntaxComponent,
+    BreadcrumbsComponent,
+    PreviousNextRouteComponent
   ]
   
 })

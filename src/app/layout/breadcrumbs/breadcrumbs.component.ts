@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { NavigationEnd, Router, Event as NavigationEvent } from '@angular/router';
 import { Helper } from 'src/app/helper/helper';
 import { RouterLinkData } from 'src/app/shared/interfaces/meta-data.interface';
@@ -9,8 +9,8 @@ import { RouterLinkData } from 'src/app/shared/interfaces/meta-data.interface';
   styleUrls: ['./breadcrumbs.component.css']
 })
 export class BreadcrumbsComponent implements OnInit {
-  routersData: RouterLinkData[] = Helper.allRoutesData();
-  selectedRoute = -1;
+  @Input() routersData: RouterLinkData[] = [];
+  @Input() selectedRoute = -1;
   constructor(
     private router: Router,
   ) { }
@@ -27,6 +27,10 @@ export class BreadcrumbsComponent implements OnInit {
         element?.scrollIntoView({behavior: "smooth", block: "nearest", inline: "nearest"});
       }
     });
+   if(this.selectedRoute > -1){
+    const element = document.getElementById('routerLink'+this.selectedRoute);
+    element?.scrollIntoView({behavior: "smooth", block: "nearest", inline: "nearest"});
+   }
   }
 
   routePage(routeLink: string, routeIndex: number): void {

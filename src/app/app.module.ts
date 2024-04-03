@@ -13,8 +13,8 @@ import { FormsModule } from '@angular/forms';
 import { PageNotFoundComponent } from './layout/page-not-found/page-not-found.component';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
-import { BreadcrumbsComponent } from './layout/breadcrumbs/breadcrumbs.component';
-import { PreviousNextRouteComponent } from './layout/previous-next-route/previous-next-route.component';
+import { DsaMainComponent } from './layout/dsa-main/dsa-main.component';
+import { InterviewQuestionComponent } from './layout/interview-question/interview-question.component';
 
 
 @NgModule({
@@ -26,8 +26,8 @@ import { PreviousNextRouteComponent } from './layout/previous-next-route/previou
     FooterComponent,
     NavbarComponent,
     PageNotFoundComponent,
-    BreadcrumbsComponent,
-    PreviousNextRouteComponent,
+    DsaMainComponent,
+    InterviewQuestionComponent,
   ],
   imports: [
     FormsModule,

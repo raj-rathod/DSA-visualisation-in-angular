@@ -1,4 +1,5 @@
-import { algorithms, dataStructure, divideAndConquerLinks, searchingLinks, sorting } from "../core/meta-data/router-meta-data";
+import { algorithms, dataStructure, divideAndConquerLinks, interviewQuestions, searchingLinks, sorting } from "../core/meta-data/router-meta-data";
+import { InterviewQuestion } from "../shared/interfaces/interview-questions.interface";
 import { RouterLinkData } from "../shared/interfaces/meta-data.interface";
 
 export class Helper{
@@ -181,9 +182,24 @@ export class Helper{
      }
 
      static allRoutesData(): RouterLinkData[] {
-          const routesArr = dataStructure.concat(algorithms, sorting, searchingLinks, divideAndConquerLinks);
+          const routesArr = dataStructure.concat(algorithms, sorting, searchingLinks, divideAndConquerLinks,interviewQuestions);
           return [...new Set(routesArr.map(s => JSON.stringify(s)))].map(s => JSON.parse(s));
           
+     }
+
+     static setAllInterviewQuestionRoute(baseUrl:string, questionsData:InterviewQuestion[]): RouterLinkData[] {
+         if(questionsData.length){
+            const route: RouterLinkData[] = [];
+            questionsData.forEach(question =>{
+               route.push({
+                    name: question.question,
+                    route: baseUrl+question.slug
+               })
+            });
+          return route
+         }else{
+          return []
+         }
      }
     
 }

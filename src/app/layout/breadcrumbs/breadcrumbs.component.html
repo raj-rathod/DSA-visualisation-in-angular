@@ -3,7 +3,7 @@
      <div [id]="'routerLink'+i" 
           [class]="selectedRoute === i ? 'box-active p-lg-2 p-1 px-lg-3 px-2 tab me-lg-4 me-3':'box p-lg-2 p-1 px-lg-3 px-2 tab me-lg-4 me-3'" 
           (click)="routePage(data.route, i)">
-          <p class="m-0">{{data.name}}</p>
+          <p class="m-0" [title]="data.name">{{data.name.length > 20 ? data.name.substring(0,20)+'...': data.name}}</p>
      </div>
     </ng-container>
 

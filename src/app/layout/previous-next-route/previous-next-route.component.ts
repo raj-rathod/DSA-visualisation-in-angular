@@ -1,6 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { NavigationEnd, Router, Event as NavigationEvent } from '@angular/router';
-import { Helper } from 'src/app/helper/helper';
 import { RouterLinkData } from 'src/app/shared/interfaces/meta-data.interface';
 
 @Component({
@@ -9,8 +8,9 @@ import { RouterLinkData } from 'src/app/shared/interfaces/meta-data.interface';
   styleUrls: ['./previous-next-route.component.css']
 })
 export class PreviousNextRouteComponent implements OnInit {
-  routersData: RouterLinkData[] = Helper.allRoutesData();
-  selectedRoute = -1;
+  @Input() routersData: RouterLinkData[] = [];
+  @Input() selectedRoute = -1;
+ 
   constructor(
     private router: Router,
   ) { }

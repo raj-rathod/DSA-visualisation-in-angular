@@ -1,0 +1,9 @@
+.margin-top{
+    margin-top: 90px;
+    min-height: 500px;
+}
+@media(max-width:992px){
+    .margin-top{
+        margin-top: 70px;
+    }
+}

@@ -6,6 +6,7 @@ import { HomeComponent } from './layout/home/home.component';
 import { PageNotFoundComponent } from './layout/page-not-found/page-not-found.component';
 import { DsaMainComponent } from './layout/dsa-main/dsa-main.component';
 import { InterviewQuestionComponent } from './layout/interview-question/interview-question.component';
+import { ProblemSolvingComponent } from './layout/problem-solving/problem-solving.component';
 
 const routes: Routes = [
   {
@@ -62,6 +63,18 @@ const routes: Routes = [
           (m) => m.JavascriptModule
         )
       }
+    ]
+  },
+  {
+    path:'problem-solving-trick',
+    component: ProblemSolvingComponent,
+    children:[
+      {
+        path:'',
+        loadChildren: () => import('./components/problem-solving/problem-solving.module').then(
+          (m) => m.ProblemSolvingModule
+        )
+      },
     ]
   },
   {

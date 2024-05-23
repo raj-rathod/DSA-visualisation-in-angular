@@ -15,6 +15,7 @@ import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
 import { DsaMainComponent } from './layout/dsa-main/dsa-main.component';
 import { InterviewQuestionComponent } from './layout/interview-question/interview-question.component';
+import { ProblemSolvingComponent } from './layout/problem-solving/problem-solving.component';
 
 
 @NgModule({
@@ -28,6 +29,7 @@ import { InterviewQuestionComponent } from './layout/interview-question/intervie
     PageNotFoundComponent,
     DsaMainComponent,
     InterviewQuestionComponent,
+    ProblemSolvingComponent,
   ],
   imports: [
     FormsModule,

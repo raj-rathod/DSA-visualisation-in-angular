@@ -5,9 +5,6 @@ import { JavascriptQuestionsComponent } from './javascript-questions/javascript-
 const routes: Routes = [
   {
     path:'', component: JavascriptQuestionsComponent
-  },
-  {
-    path:':slug', component: JavascriptQuestionsComponent
   }
 ];
 

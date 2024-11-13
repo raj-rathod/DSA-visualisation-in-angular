@@ -468,6 +468,10 @@ li {
   font-weight: 500;
 }
 
+.question-conationer{
+  padding-bottom: 16px !important;
+}
+
 @media(max-width:992px) {
   .cdk-overlay-pane {
     width: 45%;
